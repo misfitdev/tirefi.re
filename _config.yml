@@ -1,18 +1,12 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: tirefi.re
 email: tirefire@tirefi.re
-description: > # Tires are not prone to self-ignition as a tire must be heated to at least 400 °C (750 °F) for a period of several minutes prior to ignition.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://tirefi.re" # the base hostname & protocol for your site
+description: > 
+  Tires are not prone to self-ignition as a tire must be heated to at least 400 °C (750 °F) for a period of several minutes prior to ignition.
+baseurl: "" 
+url: "https://tirefi.re"
 twitter_username: tirefirebot
-github_username:  tirefire
+github_username: tirefire
 
 emptyArray: []
 
@@ -20,24 +14,37 @@ emptyArray: []
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
-      type: "pages" # previously `post` in Jekyll 2.2.
+      path: ""
+      type: "pages"
     values:
       webring: true
 
-# Build settings
+# Build settings - GitHub Pages compatible
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jemoji
+  - jekyll-github-metadata
+
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+
+# GitHub Pages settings
+repository: misfitdev/tirefi.re
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
   - README.md
   - vendor
+  - .travis.yml
+  - docker-compose.yml
+  - Makefile
+
+# Analytics
 google_analytics_tracking_id: UA-79918240-1

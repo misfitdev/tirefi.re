@@ -14,7 +14,7 @@ permalink: /.wip/
 <div class="sections-grid">
     <div class="section-card">
         <div class="section-icon">☁️</div>
-        <h3><a href="/aws/">AWS</a></h3>
+        <h3><a href="/.wip/aws/">AWS</a></h3>
         <p>Amazon's infinite money extraction service</p>
     </div>
 
@@ -92,7 +92,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🚀</div>
-        <h3><a href="/devops/">DevOps</a></h3>
+        <h3><a href="/.wip/devops/">DevOps</a></h3>
         <p>You build it, you break it, you cry about it</p>
     </div>
 
@@ -104,7 +104,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🐳</div>
-        <h3><a href="/docker/">Docker</a></h3>
+        <h3><a href="/.wip/docker/">Docker</a></h3>
         <p>Containerizing your problems since 2013</p>
     </div>
 
@@ -158,7 +158,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🚨</div>
-        <h3><a href="/incident-management/">Incident Management</a></h3>
+        <h3><a href="/.wip/incident-management/">Incident Management</a></h3>
         <p>Managing incidents by creating more incidents</p>
     </div>
 
@@ -194,7 +194,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">📊</div>
-        <h3><a href="/monitoring/">Monitoring</a></h3>
+        <h3><a href="/.wip/monitoring/">Monitoring</a></h3>
         <p>Watching everything burn in real-time</p>
     </div>
 
@@ -236,7 +236,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">⚙️</div>
-        <h3><a href="/ops/">Ops</a></h3>
+        <h3><a href="/.wip/ops/">Ops</a></h3>
         <p>Where hope goes to die</p>
     </div>
 
@@ -278,7 +278,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🎭</div>
-        <h3><a href="/puppet/">Puppet</a></h3>
+        <h3><a href="/.wip/puppet/">Puppet</a></h3>
         <p>Configuration management with strings attached</p>
     </div>
 
@@ -296,7 +296,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🪣</div>
-        <h3><a href="/s3/">S3</a></h3>
+        <h3><a href="/.wip/s3/">S3</a></h3>
         <p>Simple Storage Service: simply not working</p>
     </div>
 

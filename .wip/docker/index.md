@@ -27,7 +27,76 @@ permalink: /.wip/docker/
                         <h5>🐋 docker</h5>
                         <div class="container-layer">
                             <h6>🐳 moby</h6>
-                            <p class="inception-text">...containers all the way down</p>
+                            <div class="container-layer">
+                                <strong>🐋 docker</strong>
+                                <div class="container-layer">
+                                    <strong>📦 moby</strong>
+                                    <div class="container-layer">
+                                        <em>🐳 docker</em>
+                                        <div class="container-layer">
+                                            <em>🐋 moby</em>
+                                            <div class="container-layer">
+                                                <small>🐳 docker</small>
+                                                <div class="container-layer">
+                                                    <small>📦 moby</small>
+                                                    <div class="container-layer">
+                                                        <span class="tiny">🐋 docker</span>
+                                                        <div class="container-layer">
+                                                            <span class="tiny">🐳 moby</span>
+                                                            <div class="container-layer">
+                                                                <span class="micro">📦 docker</span>
+                                                                <div class="container-layer">
+                                                                    <span class="micro">🐋 moby</span>
+                                                                    <div class="container-layer">
+                                                                        <span class="nano">🐳 docker</span>
+                                                                        <div class="container-layer">
+                                                                            <span class="nano">📦 moby</span>
+                                                                            <div class="container-layer">
+                                                                                <span class="pico">🐋 docker</span>
+                                                                                <div class="container-layer">
+                                                                                    <span class="pico">🐳 moby</span>
+                                                                                    <div class="container-layer">
+                                                                                        <span class="femto">📦 docker</span>
+                                                                                        <div class="container-layer">
+                                                                                            <span class="femto">🐋 moby</span>
+                                                                                            <div class="container-layer">
+                                                                                                <span class="atto">🐳 docker</span>
+                                                                                                <div class="container-layer">
+                                                                                                    <span class="atto">📦 moby</span>
+                                                                                                    <div class="container-layer">
+                                                                                                        <span class="zepto">🐋 docker</span>
+                                                                                                        <div class="container-layer">
+                                                                                                            <span class="zepto">🐳 moby</span>
+                                                                                                            <div class="final-container">
+                                                                                                                <div class="kernel-truth">
+                                                                                                                    <span class="yocto">🎯 /proc/1/root/proc/1/root/...</span>
+                                                                                                                    <div class="victory-text">
+                                                                                                                        <p class="achievement">🎉 You found the kernel!</p>
+                                                                                                                        <p class="reality-check">Reality: It's turtles all the way down.</p>
+                                                                                                                        <p class="exit-code">Exit code: ∞ (container overflow)</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,6 +132,14 @@ permalink: /.wip/docker/
                         <code>docker-compose up -d</code>
                         <p>Start 47 containers to run one simple web app</p>
                     </div>
+                    <div class="command-item">
+                        <code>docker exec -it container_name /bin/bash</code>
+                        <p>Enter the nested nightmare (prepare to get lost)</p>
+                    </div>
+                    <div class="command-item">
+                        <code>docker run --privileged --pid=host -it alpine nsenter -t 1 -m -u -n -i sh</code>
+                        <p>Break out of the container matrix (sometimes)</p>
+                    </div>
                 </div>
             </div>
 
@@ -76,6 +153,9 @@ permalink: /.wip/docker/
                     <li>Moby Dick was actually about a DevOps engineer chasing the perfect container orchestration</li>
                     <li>The real treasure was the disk space we wasted along the way</li>
                     <li>Every container thinks it's the only container that matters</li>
+                    <li>Container escape vulnerabilities are just features for the determined</li>
+                    <li>The docker/moby directory structure is a recursive metaphor for containerization itself</li>
+                    <li>Building images is fast, debugging why they don't work is eternal</li>
                 </ul>
             </div>
 
@@ -84,6 +164,24 @@ permalink: /.wip/docker/
                 <p>In the beginning, there was a VM. It was heavy and slow, but it worked. Then came containers - lightweight, fast, and ephemeral. Like a butterfly emerging from a cocoon, except the butterfly is on fire and the cocoon was also on fire.</p>
                 
                 <p>Docker promised us reproducible environments, but instead gave us reproducible problems. The beauty of containers is that you can now fail consistently across all environments.</p>
+                
+                <p>The nested docker/moby/docker/moby structure above isn't just art - it's a perfect representation of how container namespaces actually work. Each layer thinks it's the "real" system, blissfully unaware of the containers above and below it.</p>
+                
+                <p>Eventually, if you go deep enough, you reach the host kernel - the one true source of truth. But by then, you've forgotten why you started this journey in the first place.</p>
+            </div>
+
+            <div class="escape-sequence">
+                <h3>🔓 Container Escape Sequence</h3>
+                <p>If you've made it this far down the rabbit hole, here's how to get back to reality:</p>
+                <ol>
+                    <li><code>Ctrl+C</code> - Stop what you're doing</li>
+                    <li><code>exit</code> - Exit the current shell</li>
+                    <li><code>docker stop $(docker ps -q)</code> - Stop all containers</li>
+                    <li><code>docker system prune -a --volumes</code> - Clean up the mess</li>
+                    <li>Take a walk - Remember what the sun looks like</li>
+                    <li>Question your life choices</li>
+                    <li>Return to your IDE and do it all again tomorrow</li>
+                </ol>
             </div>
         </div>
     </div>
@@ -91,7 +189,7 @@ permalink: /.wip/docker/
 
 <div class="navigation-footer">
     <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/kubernetes/" class="nav-button">Next Disaster: Kubernetes →</a>
+    <a href="/.wip/monitoring/" class="nav-button">Next Disaster: Monitoring →</a>
 </div>
 
 <style>
@@ -149,14 +247,23 @@ permalink: /.wip/docker/
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .container-layer {
     border: 1px dashed rgba(0, 123, 255, 0.5);
     border-radius: 10px;
-    padding: 1.5rem;
-    margin: 1rem;
+    padding: 1rem;
+    margin: 0.8rem;
     background: rgba(0, 123, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.container-layer:hover {
+    background: rgba(0, 123, 255, 0.1);
+    border-color: rgba(0, 123, 255, 0.7);
 }
 
 .container-layer h3, .container-layer h4, .container-layer h5, .container-layer h6 {
@@ -164,11 +271,55 @@ permalink: /.wip/docker/
     margin: 0.5rem 0;
 }
 
-.inception-text {
-    color: #6c757d;
-    font-style: italic;
-    margin: 1rem 0 0 0;
+.final-container {
+    background: rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
 }
+
+.kernel-truth {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 5px;
+    padding: 0.8rem;
+    margin: 0.3rem;
+}
+
+.victory-text {
+    margin-top: 0.5rem;
+}
+
+.achievement {
+    color: #00ff00;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 0.2rem 0;
+}
+
+.reality-check {
+    color: #ffa500;
+    font-style: italic;
+    font-size: 0.7em;
+    margin: 0.2rem 0;
+}
+
+.exit-code {
+    color: #ff6b6b;
+    font-family: monospace;
+    font-size: 0.6em;
+    margin: 0.2rem 0;
+}
+
+.tiny { font-size: 0.8em; }
+.micro { font-size: 0.7em; }
+.nano { font-size: 0.6em; }
+.pico { font-size: 0.5em; }
+.femto { font-size: 0.4em; }
+.atto { font-size: 0.3em; }
+.zepto { font-size: 0.25em; }
+.yocto { font-size: 0.2em; }
 
 .content-text {
     font-size: 1.1rem;
@@ -235,6 +386,7 @@ permalink: /.wip/docker/
     font-family: 'Courier New', monospace;
     margin-bottom: 0.8rem;
     overflow-x: auto;
+    font-size: 0.9rem;
 }
 
 .command-item p {
@@ -294,6 +446,42 @@ permalink: /.wip/docker/
     line-height: 1.6;
 }
 
+.escape-sequence {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.escape-sequence h3 {
+    color: #ff4444;
+    margin-bottom: 1rem;
+}
+
+.escape-sequence p {
+    color: #ffaaaa;
+    margin-bottom: 1rem;
+}
+
+.escape-sequence ol {
+    color: #ddd;
+    padding-left: 1.5rem;
+}
+
+.escape-sequence li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.escape-sequence code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffa500;
+}
+
 .navigation-footer {
     display: flex;
     justify-content: space-between;
@@ -327,11 +515,15 @@ permalink: /.wip/docker/
     
     .container-layer {
         margin: 0.5rem;
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .command-item code {
         font-size: 0.8rem;
+    }
+    
+    .docker-inception {
+        max-height: 400px;
     }
 }
 </style>

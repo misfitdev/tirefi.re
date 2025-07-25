@@ -16,10 +16,25 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1f1f1f 100%);
+            color: #d4d4d4;
             line-height: 1.6;
             min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/tirefirebillow.gif') center center;
+            background-size: cover;
+            opacity: 0.03;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
@@ -28,13 +43,34 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        .site-header {
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 3px solid #ff4500;
-            padding: 1rem 0;
+        /* DevOpsDays Ukraine Banner */
+        .ukraine-banner {
+            background: linear-gradient(90deg, #0057B7 50%, #FFDD00 50%);
+            color: #000;
+            text-align: center;
+            padding: 0.8rem 0;
+            font-weight: bold;
+            font-size: 0.9rem;
             position: sticky;
             top: 0;
+            z-index: 200;
+        }
+
+        .ukraine-banner::before {
+            content: "🇺🇦 ";
+        }
+
+        .ukraine-banner::after {
+            content: " 🇺🇦";
+        }
+
+        /* Header */
+        .site-header {
+            background: rgba(20, 20, 20, 0.95);
+            border-bottom: 2px solid #8B4513;
+            padding: 1rem 0;
+            position: sticky;
+            top: 42px;
             z-index: 100;
             backdrop-filter: blur(10px);
         }
@@ -45,17 +81,30 @@
             align-items: center;
         }
 
+        .site-title-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .site-title {
             font-size: 2rem;
             font-weight: bold;
-            color: #ff4500;
+            color: #CD853F;
             text-decoration: none;
-            text-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+            text-shadow: 0 0 8px rgba(205, 133, 63, 0.3);
+            margin-bottom: 0.3rem;
         }
 
         .site-title:hover {
-            color: #ff6500;
-            text-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+            color: #D2691E;
+            text-shadow: 0 0 15px rgba(210, 105, 30, 0.4);
+        }
+
+        .putin-message {
+            font-size: 0.8rem;
+            color: #999;
+            font-style: italic;
         }
 
         .nav-menu {
@@ -65,7 +114,7 @@
         }
 
         .nav-menu a {
-            color: #e0e0e0;
+            color: #d4d4d4;
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
@@ -73,8 +122,20 @@
         }
 
         .nav-menu a:hover {
-            background: rgba(255, 69, 0, 0.2);
-            color: #ff4500;
+            background: rgba(205, 133, 63, 0.2);
+            color: #CD853F;
+        }
+
+        .wip-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #8B4513, #CD853F);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Main content */
@@ -91,14 +152,13 @@
 
         .memorial-intro h1 {
             font-size: 3rem;
-            color: #ff4500;
+            color: #CD853F;
             margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+            text-shadow: 0 0 20px rgba(205, 133, 63, 0.3);
         }
 
         .memorial-subtitle {
-            font-size: 1.2rem;
-            color: #ccc;
+            color: #999;
             font-style: italic;
         }
 
@@ -110,8 +170,8 @@
         }
 
         .memorial-card {
-            background: rgba(255, 69, 0, 0.1);
-            border: 1px solid rgba(255, 69, 0, 0.3);
+            background: rgba(205, 133, 63, 0.08);
+            border: 1px solid rgba(205, 133, 63, 0.2);
             border-radius: 10px;
             padding: 2rem;
             text-align: center;
@@ -120,8 +180,8 @@
 
         .memorial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
-            border-color: rgba(255, 69, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(205, 133, 63, 0.15);
+            border-color: rgba(205, 133, 63, 0.4);
         }
 
         .memorial-flame {
@@ -131,24 +191,24 @@
         }
 
         @keyframes flicker {
-            0% { opacity: 0.8; }
+            0% { opacity: 0.7; }
             100% { opacity: 1; }
         }
 
         .memorial-card h3 {
-            color: #ff4500;
+            color: #CD853F;
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
 
         .memorial-title {
-            color: #ffa500;
+            color: #D2691E;
             font-weight: bold;
             margin-bottom: 1rem;
         }
 
         .memorial-cause {
-            color: #ccc;
+            color: #999;
             font-style: italic;
             line-height: 1.5;
         }
@@ -161,55 +221,145 @@
         }
 
         .memorial-thanks h2 {
-            color: #ff4500;
+            color: #CD853F;
             text-align: center;
             margin-bottom: 2rem;
         }
 
         .memorial-thanks p {
             margin-bottom: 1rem;
-            color: #e0e0e0;
+            color: #d4d4d4;
         }
 
         .memorial-footer {
             text-align: center;
             margin: 3rem 0;
             padding: 2rem;
-            border-top: 1px solid rgba(255, 69, 0, 0.3);
+            border-top: 1px solid rgba(205, 133, 63, 0.2);
         }
 
         .memorial-footer em {
-            color: #ffa500;
+            color: #D2691E;
             font-size: 1.1rem;
         }
 
         /* Footer */
         .site-footer {
-            background: rgba(0, 0, 0, 0.8);
-            border-top: 1px solid rgba(255, 69, 0, 0.3);
+            background: rgba(20, 20, 20, 0.9);
+            border-top: 1px solid rgba(205, 133, 63, 0.2);
             padding: 2rem 0;
             text-align: center;
-            color: #888;
+            color: #666;
         }
 
-        .wip-badge {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff4500, #ff6500);
-            color: white;
-            padding: 0.3rem 0.8rem;
+        /* Hero section */
+        .hero {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: rgba(205, 133, 63, 0.08);
             border-radius: 20px;
-            font-size: 0.8rem;
+            border: 1px solid rgba(205, 133, 63, 0.2);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('/tirefirebillow.gif') center center;
+            background-size: cover;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #CD853F;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(205, 133, 63, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #D2691E;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #999;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Sections grid */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .section-card {
+            background: rgba(205, 133, 63, 0.05);
+            border: 1px solid rgba(205, 133, 63, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .section-card:hover {
+            background: rgba(205, 133, 63, 0.1);
+            border-color: rgba(205, 133, 63, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(205, 133, 63, 0.1);
+        }
+
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-card h3 a {
+            color: #CD853F;
+            text-decoration: none;
+            font-size: 1.2rem;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        }
+
+        .section-card h3 a:hover {
+            color: #D2691E;
+            text-decoration: underline;
+        }
+
+        .section-card p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
+    <div class="ukraine-banner">
+        Attend DevOpsDays Ukraine 2024! 🇺🇦 Support Ukraine! Слава Україні!
+    </div>
+
     <header class="site-header">
         <div class="container">
             <div class="header-content">
-                <a href="/.wip/" class="site-title">🔥 tirefi.re</a>
+                <div class="site-title-section">
+                    <a href="/.wip/" class="site-title">🔥 tirefi.re</a>
+                    <div class="putin-message">Пу́тін хуйло́</div>
+                </div>
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="/.wip/">Home</a></li>

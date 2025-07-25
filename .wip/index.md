@@ -188,7 +188,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🔬</div>
-        <h3><a href="/microservices/">Microservices</a></h3>
+        <h3><a href="/.wip/microservices/">Microservices</a></h3>
         <p>Distributed monoliths with extra steps</p>
     </div>
 

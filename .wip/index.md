@@ -5,6 +5,7 @@ permalink: /.wip/
 ---
 
 <div class="hero">
+    <div class="hero-gif" onclick="openOverlay()"></div>
     <h1>🔥 This is a tire fire 🔥</h1>
     <p class="hero-subtitle">Where operations goes to burn eternally</p>
     <p class="hero-description">Tires are not prone to self-ignition as a tire must be heated to at least 400 °C (750 °F) for a period of several minutes prior to ignition. Unfortunately, your infrastructure has no such safety mechanisms.</p>

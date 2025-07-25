@@ -36,6 +36,10 @@ kramdown:
 # GitHub Pages settings
 repository: misfitdev/tirefi.re
 
+# Include dotfiles and directories that Jekyll normally ignores
+include:
+  - .wip
+
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -302,7 +302,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">⚡</div>
-        <h3><a href="/serverless/">Serverless</a></h3>
+        <h3><a href="/.wip/serverless/">Serverless</a></h3>
         <p>No servers! (Just someone else's servers)</p>
     </div>
 

@@ -1,0 +1,28 @@
+## Current Work Session
+
+**Task**: Migrate top 5 priority directories to .wip/ in order
+**Status**: IN PROGRESS
+**Started**: 2025-07-27
+
+### Migration Queue (in order)
+1. [x] /serverless/ ← CURRENT
+2. [ ] /systemd/  
+3. [ ] /windows/
+4. [ ] /chef/
+5. [ ] /weblogic/
+
+### Current Phase: /serverless/
+- [ ] Examine existing /serverless/ content
+- [ ] Create .wip/serverless/index.md with satirical content
+- [ ] Update .wip/index.md link
+- [ ] Apply consistent styling
+
+### Actions Planned
+1. Research existing serverless disaster content
+2. Create comprehensive serverless page following .wip/dns/ pattern
+3. Focus on "No servers! (Just someone else's servers)" theme
+4. Include technical accuracy with satirical commentary
+5. Continue with systemd after completion
+
+---
+Session tracking for Claude workflow management

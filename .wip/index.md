@@ -98,7 +98,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🌐</div>
-        <h3><a href="/dns/">DNS</a></h3>
+        <h3><a href="/.wip/dns/">DNS</a></h3>
         <p>It's always DNS. Always.</p>
     </div>
 

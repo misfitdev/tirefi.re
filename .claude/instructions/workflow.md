@@ -3,13 +3,33 @@
 ## Project Overview
 tirefi.re is a fun and sarcastic devops shitposting site that is used to make fun of tech and society. It's a Jekyll-based static site hosted on GitHub Pages, focused on providing satirical commentary on technology vendors, DevOps practices, and infrastructure pain points.
 
+## NEXT SESSION ACTION PLAN 🎯
+
+**Current Status**: 10 directories migrated to `.wip/`, 45+ remaining
+**Next Task**: Pick ONE directory from the high-priority list below and migrate it to `.wip/`
+
+**Recommended Next Targets** (pick one):
+- `/serverless/` - "No servers! (Just someone else's servers)"
+- `/systemd/` - "Doing everything so you don't have to understand anything"  
+- `/windows/` - "Blue screens of death in the cloud"
+- `/weblogic/` - "Logic not included"
+- `/chef/` - "Too many cooks in the infrastructure kitchen"
+
+**Migration Steps**:
+1. Examine existing content in `/[chosen-directory]/`
+2. Create `.wip/[directory]/index.md` following `.wip/dns/` pattern
+3. Update `.wip/index.md` to point to new location
+4. Use satirical voice with technical accuracy
+
+**Full remaining directory list**: See `.claude/instructions/architexture.md` for complete 45+ directory list
+
 ## Development Workflow Rules
 
 ### State Management
 - Always maintain `.claude/state/` and `.claude/instructions/` directories
 - Update state files ONLY after successful commits
 - Create `.claude/state/pending` file BEFORE making changes, remove AFTER successful commit
-- Include these workflow instructions in the instruction file
+- Keep migration status updated in `architexture.md`
 
 ### User Preferences
 - User prefers structured answers (bullets, tables) over rambling paragraphs
@@ -32,7 +52,7 @@ tirefi.re is a fun and sarcastic devops shitposting site that is used to make fu
 - **Voice**: Satirical, sarcastic, technical humor
 - **Audience**: DevOps/SRE professionals who appreciate cynical tech commentary
 - **Quality**: Technical accuracy required even in satirical content
-- **Style**: Follow `.wip/aws/` pattern for new content sections
+- **Style**: Follow `.wip/aws/` and `.wip/dns/` patterns for new content sections
 
 ### Architecture
 - **Platform**: Jekyll static site generator
@@ -41,7 +61,7 @@ tirefi.re is a fun and sarcastic devops shitposting site that is used to make fu
 - **Content Structure**: Topic-based directories, migrating to `.wip/` pattern
 - **Security**: Static site security model, Dependabot for vulnerability management
 
-## Current Technical Status
+## Current Technical Status (Updated 2025-07-27)
 
 ### Security Posture
 - ✅ **Current**: All critical security updates applied (nokogiri 1.18.9, activesupport 7.0.7.1)
@@ -49,67 +69,45 @@ tirefi.re is a fun and sarcastic devops shitposting site that is used to make fu
 - ✅ **Infrastructure**: GitHub Pages provides baseline security
 
 ### Content Migration Status
-- ✅ **Reference Pattern**: `.wip/aws/` shows target style
-- ✅ **Partial Migration**: Some content already in `.wip/`
-- 🔄 **In Progress**: Migrating legacy topic directories to `.wip/` structure
-- 📋 **Pending**: Apply consistent styling across all migrated content
+- ✅ **Completed**: 10 directories migrated to `.wip/` (aws, devops, docker, dns, incident-management, microservices, monitoring, ops, puppet, s3)
+- 🔄 **In Progress**: Systematic migration of remaining 45+ legacy directories
+- 📋 **Templates**: `.wip/aws/` and `.wip/dns/` show established patterns
 
 ### Development Environment
 - ✅ **Local Development**: Docker + Makefile setup functional
 - ✅ **Dependency Management**: GitHub Pages gem provides Jekyll stack
 - ✅ **Version Control**: Clean Git workflow, proper branch protection
 
-## Current Priority Items
+## Migration Template Process
 
-### Phase 1: Content Migration (CURRENT)
-1. **Copy catastrophe dirs from project root into `.wip/`** 
-   - Target dirs: devops/, s3/, monitoring/, ops/, incident-management/, etc.
-   - Update their style similar to the `.wip/aws/` implementation
-   - Maintain satirical content while improving presentation
+### Standard Migration Workflow
+1. **Create pending state**: Update `.claude/state/pending` with chosen directory
+2. **Examine source**: Look at existing `/[directory]/` content and structure
+3. **Create new content**: Build `.wip/[directory]/index.md` with:
+   - Jekyll front matter (`layout: wip`, `title`, `permalink: /.wip/[directory]/`)
+   - Page header with breadcrumb navigation
+   - Status banner appropriate to the technology
+   - Main content with satirical commentary
+   - Technical sections (commands, concepts, troubleshooting)
+   - Fun facts section with humor
+   - Philosophy/conclusion section
+   - Navigation footer
+   - Custom CSS styling consistent with other `.wip/` pages
+4. **Update index**: Modify `.wip/index.md` to link to new location
+5. **Complete state**: Update `.claude/state/pending` with completion status
+6. **Update docs**: Refresh `architexture.md` migration status if needed
 
-### Phase 2: Style Standardization
-2. **Standardize `.wip/` content styling**
-   - Apply consistent layout patterns
-   - Ensure responsive design
-   - Maintain satirical voice while improving UX
-
-### Phase 3: Infrastructure Enhancement
-3. **Optimize Jekyll performance**
-   - Review build times
-   - Optimize asset loading
-   - Enhance SEO while maintaining satirical edge
-
-## Workflow Patterns
-
-### Content Development
-1. **Research Target**: Understand the technology/vendor being satirized
-2. **Technical Accuracy**: Ensure satirical content is technically sound
-3. **Style Consistency**: Follow `.wip/` patterns
-4. **Local Testing**: Use `make fire-up` for preview
-5. **Iterative Refinement**: Build on existing satirical themes
-
-### Code/Infrastructure Changes
-1. **Security First**: Prioritize any security-related updates
-2. **GitHub Pages Compatibility**: Ensure all changes work with hosting platform
-3. **Performance**: Monitor impact on build times and site speed
-4. **Documentation**: Update `.claude/instructions/` for significant changes
-
-### Quality Standards
+### Content Quality Standards
 - **Technical Accuracy**: Even satirical content must be technically correct
 - **Voice Consistency**: Maintain sarcastic DevOps commentary style
-- **User Experience**: Balance humor with usability
+- **User Experience**: Balance humor with usability and informativeness
 - **Mobile Friendly**: Ensure responsive design works well
+- **SEO Friendly**: Use proper headings and semantic structure
 
 ## Recent Major Changes
-- ✅ **Security Updates**: Applied critical CVE patches (July 2025)
-- ✅ **Architecture Documentation**: Updated `.claude/instructions/architexture.md`
-- ✅ **Dependency Management**: Migrated to github-pages gem for compatibility
-
-## Next Session Priorities
-1. **Content Migration**: Continue copying legacy dirs to `.wip/` with style updates
-2. **Style Analysis**: Review `.wip/aws/` pattern for replication guidelines
-3. **Content Quality**: Ensure migrated content maintains satirical voice
-4. **Performance**: Monitor Jekyll build performance during migration
+- ✅ **DNS Migration**: Completed 2025-07-27 - comprehensive DNS disaster page
+- ✅ **Architecture Documentation**: Updated with complete migration status
+- ✅ **Workflow Documentation**: Added next-session action plan
 
 ## Development Commands
 ```bash
@@ -128,8 +126,9 @@ bundle exec htmlproofer ./_site
 ## Key Files & Directories
 - **Configuration**: `_config.yml` (Jekyll settings)
 - **Dependencies**: `Gemfile` (GitHub Pages compatible)
-- **Content WIP**: `.wip/` (new content structure)
-- **Legacy Content**: Topic dirs in root (aws/, devops/, s3/, etc.)
+- **Content WIP**: `.wip/` (new content structure - 10 directories migrated)
+- **Legacy Content**: 45+ topic dirs in root still need migration
 - **Layouts**: `_layouts/` (Jekyll templates)
 - **Styles**: `_sass/` (SCSS stylesheets)
 - **Documentation**: `.claude/instructions/` (workflow and architecture docs)
+- **Migration Status**: See `architexture.md` for complete directory lists

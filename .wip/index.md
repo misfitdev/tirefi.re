@@ -62,7 +62,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">👨‍🍳</div>
-        <h3><a href="/chef/">Chef</a></h3>
+        <h3><a href="/.wip/chef/">Chef</a></h3>
         <p>Too many cooks in the infrastructure kitchen</p>
     </div>
 
@@ -344,7 +344,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">☕</div>
-        <h3><a href="/weblogic/">WebLogic</a></h3>
+        <h3><a href="/.wip/weblogic/">WebLogic</a></h3>
         <p>Logic not included</p>
     </div>
 

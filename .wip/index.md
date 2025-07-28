@@ -326,7 +326,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">⚙️</div>
-        <h3><a href="/systemd/">SystemD</a></h3>
+        <h3><a href="/.wip/systemd/">SystemD</a></h3>
         <p>Doing everything so you don't have to understand anything</p>
     </div>
 
@@ -356,7 +356,7 @@ permalink: /.wip/
 
     <div class="section-card">
         <div class="section-icon">🪟</div>
-        <h3><a href="/windows/">Windows</a></h3>
+        <h3><a href="/.wip/windows/">Windows</a></h3>
         <p>Blue screens of death in the cloud</p>
     </div>
 

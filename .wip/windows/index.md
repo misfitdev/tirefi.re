@@ -5,182 +5,237 @@ permalink: /.wip/windows/
 ---
 
 <style>
-.windows-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  line-height: 1.6;
-  color: #333;
-}
+/* Windows-specific styles — layout vars from wip.html */
+/* The BSOD box keeps its classic blue — that's the joke */
 
 .header-section {
   text-align: center;
   margin: 2rem 0;
   padding: 2rem;
-  background: linear-gradient(135deg, #0078d4, #005a9e);
-  border-radius: 10px;
-  color: white;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid #0078d4;
   position: relative;
   overflow: hidden;
+}
+
+.header-section h1 {
+  color: var(--text-bright);
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .header-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
+  inset: -50%;
   width: 200%;
   height: 200%;
   background: repeating-linear-gradient(
     45deg,
     transparent,
-    transparent 10px,
-    rgba(255,255,255,0.05) 10px,
-    rgba(255,255,255,0.05) 20px
+    transparent 12px,
+    rgba(0, 120, 212, 0.04) 12px,
+    rgba(0, 120, 212, 0.04) 24px
   );
-  animation: bsod-scroll 15s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes bsod-scroll {
-  0% { transform: translateX(-50px) translateY(-50px); }
-  100% { transform: translateX(50px) translateY(50px); }
+  0%   { transform: translateX(-40px) translateY(-40px); }
+  100% { transform: translateX(40px)  translateY(40px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header-section::before {
+    animation: bsod-scroll 18s linear infinite;
+  }
 }
 
 .disaster-level {
-  background: #e74c3c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 25px;
   display: inline-block;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 0.4rem 1.2rem;
   font-weight: bold;
-  margin: 1rem 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  animation: error-pulse 2s infinite;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0.75rem 0;
 }
 
 @keyframes error-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); background: #c0392b; }
+  0%, 100% { border-color: var(--danger); color: var(--danger); }
+  50%       { border-color: #0078d4; color: #0078d4; }
 }
 
-.breadcrumb {
-  margin: 1rem 0;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.breadcrumb a {
-  color: #0078d4;
-  text-decoration: none;
-}
-
-.content-section {
-  background: white;
-  margin: 2rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid #0078d4;
+@media (prefers-reduced-motion: no-preference) {
+  .disaster-level {
+    animation: error-pulse 2.5s infinite;
+  }
 }
 
 .warning-box {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 5px;
-  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--danger);
+  padding: 1rem 1.25rem;
   margin: 1rem 0;
-  border-left: 4px solid #f39c12;
 }
 
+.warning-box h3 {
+  color: var(--danger);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.warning-box p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.warning-box strong { color: var(--text); }
+
+/* The BSOD box: keep the authentic blue — it's iconic, not decorative */
 .bsod-box {
   background: #0000aa;
   color: #ffffff;
   padding: 2rem;
-  border-radius: 5px;
-  margin: 1rem 0;
-  font-family: 'Courier New', monospace;
+  margin: 1.25rem 0;
+  font-family: 'Courier New', 'Courier', monospace;
   font-size: 0.9rem;
   white-space: pre-line;
+  border: 2px solid #0000cc;
 }
 
+/* Windows terminal = green-on-dark, like the real thing */
 .command-box {
-  background: #1a1a1a;
-  color: #00ff00;
+  background: #0a0a0a;
+  color: #00cc00;
   padding: 1rem;
-  border-radius: 5px;
-  margin: 1rem 0;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  margin: 0.75rem 0;
   overflow-x: auto;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre;
 }
 
 .fun-fact {
-  background: #e8f5e8;
-  border-left: 4px solid #27ae60;
-  padding: 1rem;
+  background: var(--surface);
+  border-left: 3px solid var(--green);
+  padding: 1rem 1.25rem;
   margin: 1rem 0;
-  border-radius: 0 5px 5px 0;
+}
+
+.fun-fact p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.fun-fact p:last-child { margin-bottom: 0; }
+.fun-fact strong { color: var(--text); }
+
+.fun-fact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.fun-fact ul li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+}
+
+.fun-fact ul li:last-child { border-bottom: none; }
+
+.fun-fact ul li::before {
+  content: "> ";
+  color: var(--green);
+  font-weight: bold;
 }
 
 .version-comparison {
-  background: #f8f9fa;
-  border: 2px solid #dee2e6;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 2rem 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+  padding: 1px;
+  margin: 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
 }
 
 .version-box {
-  background: white;
+  background: var(--surface);
   padding: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
+
+.version-box h4 {
+  color: #4da6ff;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.version-box p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.version-box strong { color: var(--text); }
 
 .disaster-image {
   text-align: center;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .disaster-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+}
+
+.disaster-image p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
 }
 
 .nav-footer {
-  background: #34495e;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  padding: 1.5rem;
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0;
+}
+
+.nav-footer h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .nav-footer a {
-  color: #3498db;
+  color: var(--text-dim);
   text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.1s;
 }
 
 .nav-footer a:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .windows-page {
-    padding: 0 1rem;
-  }
-  
-  .header-section, .content-section {
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  
   .version-comparison {
     grid-template-columns: 1fr;
   }

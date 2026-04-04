@@ -177,97 +177,10 @@ permalink: /.wip/microservices/
 </div>
 
 <style>
-.page-header {
-    margin-bottom: 3rem;
-}
-
-.breadcrumb {
-    color: #888;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: #ff4500;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    color: #ff4500;
-    margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-    color: #aaa;
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.content-section {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-}
-
-.status-banner.warning {
-    background: rgba(255, 165, 0, 0.2);
-    border: 1px solid rgba(255, 165, 0, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem auto;
-    display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-}
-
-.content-text p {
-    margin-bottom: 1.5rem;
-}
-
-.quote-box {
-    background: rgba(255, 69, 0, 0.1);
-    border-left: 4px solid #ff4500;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.quote-box blockquote {
-    margin: 0;
-    font-style: italic;
-}
-
-.quote-box cite {
-    display: block;
-    margin-top: 1rem;
-    color: #ffa500;
-    font-size: 0.9rem;
-}
-
 .microservices-evolution {
     background: rgba(128, 0, 128, 0.1);
-    border: 1px solid rgba(128, 0, 128, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -284,9 +197,9 @@ permalink: /.wip/microservices/
 }
 
 .stage {
-    background: rgba(128, 0, 128, 0.05);
-    border: 1px solid rgba(128, 0, 128, 0.2);
-    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1.5rem;
 }
 
@@ -297,15 +210,15 @@ permalink: /.wip/microservices/
 }
 
 .stage p {
-    color: #ddd;
+    color: var(--text);
     font-size: 0.9rem;
     margin: 0;
 }
 
 .service-map {
     background: rgba(0, 100, 200, 0.1);
-    border: 1px solid rgba(0, 100, 200, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -326,8 +239,8 @@ permalink: /.wip/microservices/
 
 .service-node {
     background: rgba(65, 105, 225, 0.2);
-    border: 2px solid rgba(65, 105, 225, 0.5);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1rem;
     text-align: center;
     font-family: monospace;
@@ -350,7 +263,7 @@ permalink: /.wip/microservices/
 }
 
 .map-caption {
-    color: #888;
+    color: var(--text-dim);
     font-style: italic;
     font-size: 0.8rem;
     text-align: center;
@@ -358,9 +271,9 @@ permalink: /.wip/microservices/
 }
 
 .microservices-problems {
-    background: rgba(255, 69, 0, 0.05);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -378,8 +291,8 @@ permalink: /.wip/microservices/
 
 .problem-card {
     background: rgba(255, 69, 0, 0.1);
-    border: 1px solid rgba(255, 69, 0, 0.3);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1.5rem;
 }
 
@@ -390,48 +303,15 @@ permalink: /.wip/microservices/
 }
 
 .problem-card p {
-    color: #ddd;
+    color: var(--text);
     margin: 0;
     font-size: 0.9rem;
 }
 
-.fun-facts {
-    background: rgba(255, 69, 0, 0.05);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.fun-facts h3 {
-    color: #ff4500;
-    margin-bottom: 1rem;
-}
-
-.fun-facts ul {
-    list-style: none;
-    padding: 0;
-}
-
-.fun-facts li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 69, 0, 0.1);
-    color: #ccc;
-}
-
-.fun-facts li:last-child {
-    border-bottom: none;
-}
-
-.fun-facts li:before {
-    content: "🔬 ";
-    margin-right: 0.5rem;
-}
-
 .microservices-bingo {
     background: rgba(0, 255, 0, 0.1);
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -449,8 +329,8 @@ permalink: /.wip/microservices/
 
 .bingo-cell {
     background: rgba(0, 255, 0, 0.1);
-    border: 2px solid rgba(0, 255, 0, 0.3);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1rem;
     text-align: center;
     color: #90ee90;
@@ -465,8 +345,8 @@ permalink: /.wip/microservices/
 
 .monolith-comparison {
     background: rgba(255, 215, 0, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -480,8 +360,8 @@ permalink: /.wip/microservices/
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -505,7 +385,7 @@ permalink: /.wip/microservices/
 .comparison-col {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-    color: #ddd;
+    color: var(--text);
     font-size: 0.9rem;
 }
 
@@ -518,7 +398,7 @@ permalink: /.wip/microservices/
     margin: 3rem 0;
     padding: 2rem;
     background: rgba(255, 69, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .wisdom-quote {
@@ -529,40 +409,12 @@ permalink: /.wip/microservices/
 }
 
 .wisdom-subtitle {
-    color: #aaa;
+    color: var(--text-dim);
     font-size: 0.95rem;
 }
 
-.navigation-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-
-.nav-button {
-    background: rgba(255, 69, 0, 0.2);
-    border: 1px solid rgba(255, 69, 0, 0.4);
-    color: #ff4500;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    flex: 1;
-    text-align: center;
-}
-
-.nav-button:hover {
-    background: rgba(255, 69, 0, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
-}
-
 @media (max-width: 768px) {
-    .navigation-footer {
-        flex-direction: column;
-    }
+    
     
     .evolution-stages {
         grid-template-columns: 1fr;

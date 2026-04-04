@@ -130,53 +130,6 @@ permalink: /.wip/dns/
 </div>
 
 <style>
-.page-header {
-    margin-bottom: 3rem;
-}
-
-.breadcrumb {
-    color: #888;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: #ff4500;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    color: #ff4500;
-    margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-    color: #aaa;
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.content-section {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-}
-
-.status-banner.error {
-    background: rgba(255, 0, 0, 0.2);
-    border: 1px solid rgba(255, 0, 0, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .dns-haiku-container {
     text-align: center;
     margin: 2rem 0 3rem;
@@ -185,59 +138,29 @@ permalink: /.wip/dns/
 .dns-haiku-image {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 69, 0, 0.3);
+    border-radius: 0;
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .dns-haiku-image:hover {
     border-color: rgba(255, 69, 0, 0.6);
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
+
+    
 }
 
 .haiku-caption {
     margin-top: 1rem;
-    color: #aaa;
+    color: var(--text-dim);
     font-style: italic;
-    font-size: 0.9rem;
-}
-
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-}
-
-.content-text p {
-    margin-bottom: 1.5rem;
-}
-
-.quote-box {
-    background: rgba(255, 69, 0, 0.1);
-    border-left: 4px solid #ff4500;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.quote-box blockquote {
-    margin: 0;
-    font-style: italic;
-}
-
-.quote-box cite {
-    display: block;
-    margin-top: 1rem;
-    color: #ffa500;
     font-size: 0.9rem;
 }
 
 .dns-resolution-steps {
     background: rgba(0, 123, 255, 0.1);
-    border: 1px solid rgba(0, 123, 255, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -248,18 +171,18 @@ permalink: /.wip/dns/
 }
 
 .resolution-step {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    background: var(--surface);
+    border-radius: 0;
     padding: 1rem;
     margin: 1rem 0;
     border-left: 4px solid #007bff;
-    color: #ddd;
+    color: var(--text);
 }
 
 .dns-record-types {
     background: rgba(40, 167, 69, 0.1);
-    border: 1px solid rgba(40, 167, 69, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -270,12 +193,12 @@ permalink: /.wip/dns/
 }
 
 .record-type {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    background: var(--surface);
+    border-radius: 0;
     padding: 1rem;
     margin: 1rem 0;
     border-left: 4px solid #28a745;
-    color: #ddd;
+    color: var(--text);
 }
 
 .record-type strong {
@@ -285,8 +208,8 @@ permalink: /.wip/dns/
 
 .troubleshooting-guide {
     background: rgba(255, 193, 7, 0.1);
-    border: 1px solid rgba(255, 193, 7, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -297,7 +220,7 @@ permalink: /.wip/dns/
 }
 
 .troubleshooting-guide ol {
-    color: #ddd;
+    color: var(--text);
     padding-left: 1.5rem;
 }
 
@@ -306,43 +229,10 @@ permalink: /.wip/dns/
     line-height: 1.5;
 }
 
-.fun-facts {
-    background: rgba(255, 69, 0, 0.05);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.fun-facts h3 {
-    color: #ff4500;
-    margin-bottom: 1rem;
-}
-
-.fun-facts ul {
-    list-style: none;
-    padding: 0;
-}
-
-.fun-facts li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 69, 0, 0.1);
-    color: #ccc;
-}
-
-.fun-facts li:last-child {
-    border-bottom: none;
-}
-
-.fun-facts li:before {
-    content: "🌐 ";
-    margin-right: 0.5rem;
-}
-
 .dns-philosophy {
     background: rgba(108, 117, 125, 0.1);
-    border: 1px solid rgba(108, 117, 125, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -357,36 +247,8 @@ permalink: /.wip/dns/
     line-height: 1.6;
 }
 
-.navigation-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-
-.nav-button {
-    background: rgba(255, 69, 0, 0.2);
-    border: 1px solid rgba(255, 69, 0, 0.4);
-    color: #ff4500;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    flex: 1;
-    text-align: center;
-}
-
-.nav-button:hover {
-    background: rgba(255, 69, 0, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
-}
-
 @media (max-width: 768px) {
-    .navigation-footer {
-        flex-direction: column;
-    }
+    
     
     .dns-resolution-steps,
     .dns-record-types,

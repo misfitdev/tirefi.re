@@ -193,57 +193,10 @@ permalink: /.wip/docker/
 </div>
 
 <style>
-.page-header {
-    margin-bottom: 3rem;
-}
-
-.breadcrumb {
-    color: #888;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: #ff4500;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    color: #ff4500;
-    margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-    color: #aaa;
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.content-section {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-}
-
-.status-banner.warning {
-    background: rgba(255, 165, 0, 0.2);
-    border: 1px solid rgba(255, 165, 0, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .docker-inception {
     background: rgba(0, 123, 255, 0.1);
-    border: 2px solid rgba(0, 123, 255, 0.3);
-    border-radius: 15px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
@@ -253,11 +206,11 @@ permalink: /.wip/docker/
 }
 
 .container-layer {
-    border: 1px dashed rgba(0, 123, 255, 0.5);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1rem;
     margin: 0.8rem;
-    background: rgba(0, 123, 255, 0.05);
+    background: var(--surface);
     transition: all 0.3s ease;
 }
 
@@ -273,16 +226,16 @@ permalink: /.wip/docker/
 
 .final-container {
     background: rgba(255, 215, 0, 0.2);
-    border: 2px solid rgba(255, 215, 0, 0.5);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1rem;
     margin: 0.5rem;
 }
 
 .kernel-truth {
     background: rgba(0, 255, 0, 0.1);
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    border-radius: 5px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 0.8rem;
     margin: 0.3rem;
 }
@@ -321,40 +274,10 @@ permalink: /.wip/docker/
 .zepto { font-size: 0.25em; }
 .yocto { font-size: 0.2em; }
 
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-}
-
-.content-text p {
-    margin-bottom: 1.5rem;
-}
-
-.quote-box {
-    background: rgba(255, 69, 0, 0.1);
-    border-left: 4px solid #ff4500;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.quote-box blockquote {
-    margin: 0;
-    font-style: italic;
-}
-
-.quote-box cite {
-    display: block;
-    margin-top: 1rem;
-    color: #ffa500;
-    font-size: 0.9rem;
-}
-
 .docker-commands {
     background: rgba(33, 37, 41, 0.8);
-    border: 1px solid rgba(0, 123, 255, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -371,18 +294,18 @@ permalink: /.wip/docker/
 }
 
 .command-item {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+    background: var(--bg);
+    border-radius: 0;
     padding: 1.5rem;
     border-left: 4px solid #007bff;
 }
 
 .command-item code {
     display: block;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--bg);
     color: #00ff00;
     padding: 0.8rem;
-    border-radius: 5px;
+    border-radius: 0;
     font-family: 'Courier New', monospace;
     margin-bottom: 0.8rem;
     overflow-x: auto;
@@ -395,43 +318,10 @@ permalink: /.wip/docker/
     font-style: italic;
 }
 
-.fun-facts {
-    background: rgba(255, 69, 0, 0.05);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.fun-facts h3 {
-    color: #ff4500;
-    margin-bottom: 1rem;
-}
-
-.fun-facts ul {
-    list-style: none;
-    padding: 0;
-}
-
-.fun-facts li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 69, 0, 0.1);
-    color: #ccc;
-}
-
-.fun-facts li:last-child {
-    border-bottom: none;
-}
-
-.fun-facts li:before {
-    content: "🐳 ";
-    margin-right: 0.5rem;
-}
-
 .container-philosophy {
     background: rgba(108, 117, 125, 0.1);
-    border: 1px solid rgba(108, 117, 125, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -448,8 +338,8 @@ permalink: /.wip/docker/
 
 .escape-sequence {
     background: rgba(255, 0, 0, 0.1);
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -465,7 +355,7 @@ permalink: /.wip/docker/
 }
 
 .escape-sequence ol {
-    color: #ddd;
+    color: var(--text);
     padding-left: 1.5rem;
 }
 
@@ -475,43 +365,15 @@ permalink: /.wip/docker/
 }
 
 .escape-sequence code {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--surface);
     padding: 0.2rem 0.4rem;
-    border-radius: 3px;
+    border-radius: 0;
     font-family: 'Courier New', Courier, monospace;
     color: #ffa500;
 }
 
-.navigation-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-
-.nav-button {
-    background: rgba(255, 69, 0, 0.2);
-    border: 1px solid rgba(255, 69, 0, 0.4);
-    color: #ff4500;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    flex: 1;
-    text-align: center;
-}
-
-.nav-button:hover {
-    background: rgba(255, 69, 0, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
-}
-
 @media (max-width: 768px) {
-    .navigation-footer {
-        flex-direction: column;
-    }
+    
     
     .container-layer {
         margin: 0.5rem;

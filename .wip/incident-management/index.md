@@ -108,57 +108,10 @@ permalink: /.wip/incident-management/
 </div>
 
 <style>
-.page-header {
-    margin-bottom: 3rem;
-}
-
-.breadcrumb {
-    color: #888;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: #ff4500;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    color: #ff4500;
-    margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-    color: #aaa;
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.content-section {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 3rem;
-}
-
-.status-banner.critical {
-    background: rgba(220, 20, 60, 0.2);
-    border: 1px solid rgba(220, 20, 60, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .incident-chant {
     background: rgba(139, 0, 0, 0.2);
-    border: 1px solid rgba(139, 0, 0, 0.4);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
@@ -176,26 +129,6 @@ permalink: /.wip/incident-management/
     0% { opacity: 1; }
     50% { opacity: 0.7; }
     100% { opacity: 1; }
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 2rem auto;
-    display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-}
-
-.content-text p {
-    margin-bottom: 1.5rem;
 }
 
 .incident-roles {
@@ -216,8 +149,8 @@ permalink: /.wip/incident-management/
 
 .role-card {
     background: rgba(255, 69, 0, 0.1);
-    border: 1px solid rgba(255, 69, 0, 0.3);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 1.5rem;
 }
 
@@ -227,68 +160,15 @@ permalink: /.wip/incident-management/
 }
 
 .role-card p {
-    color: #ccc;
+    color: var(--text);
     font-style: italic;
     margin: 0;
-}
-
-.quote-box {
-    background: rgba(255, 69, 0, 0.1);
-    border-left: 4px solid #ff4500;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.quote-box blockquote {
-    margin: 0;
-    font-style: italic;
-}
-
-.quote-box cite {
-    display: block;
-    margin-top: 1rem;
-    color: #ffa500;
-    font-size: 0.9rem;
-}
-
-.fun-facts {
-    background: rgba(255, 69, 0, 0.05);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.fun-facts h3 {
-    color: #ff4500;
-    margin-bottom: 1rem;
-}
-
-.fun-facts ul {
-    list-style: none;
-    padding: 0;
-}
-
-.fun-facts li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 69, 0, 0.1);
-    color: #ccc;
-}
-
-.fun-facts li:last-child {
-    border-bottom: none;
-}
-
-.fun-facts li:before {
-    content: "🚨 ";
-    margin-right: 0.5rem;
 }
 
 .incident-timeline {
     background: rgba(30, 30, 30, 0.5);
-    border: 1px solid rgba(255, 69, 0, 0.2);
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
@@ -302,45 +182,17 @@ permalink: /.wip/incident-management/
     padding: 1rem;
     margin: 1rem 0;
     border-left: 3px solid #ff4500;
-    background: rgba(255, 69, 0, 0.05);
-    border-radius: 0 5px 5px 0;
-    color: #ddd;
+    background: var(--surface);
+    border-radius: 0;
+    color: var(--text);
 }
 
 .timeline-item strong {
     color: #ffa500;
 }
 
-.navigation-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 3rem 0;
-}
-
-.nav-button {
-    background: rgba(255, 69, 0, 0.2);
-    border: 1px solid rgba(255, 69, 0, 0.4);
-    color: #ff4500;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    flex: 1;
-    text-align: center;
-}
-
-.nav-button:hover {
-    background: rgba(255, 69, 0, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
-}
-
 @media (max-width: 768px) {
-    .navigation-footer {
-        flex-direction: column;
-    }
+    
     
     .role-grid {
         grid-template-columns: 1fr;

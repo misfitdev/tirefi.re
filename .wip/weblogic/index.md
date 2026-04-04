@@ -5,195 +5,259 @@ permalink: /.wip/weblogic/
 ---
 
 <style>
-.weblogic-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  line-height: 1.6;
-  color: #333;
-}
+/* WebLogic-specific styles — layout vars from wip.html */
 
 .header-section {
   text-align: center;
   margin: 2rem 0;
   padding: 2rem;
-  background: linear-gradient(135deg, #ed4c4c, #c0392b);
-  border-radius: 10px;
-  color: white;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--danger);
   position: relative;
   overflow: hidden;
+}
+
+.header-section h1 {
+  color: var(--text-bright);
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .header-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
+  inset: -50%;
   width: 200%;
   height: 200%;
   background: repeating-linear-gradient(
     45deg,
     transparent,
-    transparent 10px,
-    rgba(255,255,255,0.1) 10px,
-    rgba(255,255,255,0.1) 20px
+    transparent 12px,
+    rgba(232, 64, 64, 0.04) 12px,
+    rgba(232, 64, 64, 0.04) 24px
   );
-  animation: java-burn 25s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes java-burn {
-  0% { transform: translateX(-50px) translateY(-50px); }
-  100% { transform: translateX(50px) translateY(50px); }
+  0%   { transform: translateX(-40px) translateY(-40px); }
+  100% { transform: translateX(40px)  translateY(40px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header-section::before {
+    animation: java-burn 28s linear infinite;
+  }
 }
 
 .disaster-level {
-  background: #e74c3c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 25px;
   display: inline-block;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 0.4rem 1.2rem;
   font-weight: bold;
-  margin: 1rem 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  animation: enterprise-pulse 2s infinite;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0.75rem 0;
 }
 
 @keyframes enterprise-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); background: #c0392b; }
+  0%, 100% { border-color: var(--danger); color: var(--danger); }
+  50%       { border-color: var(--accent); color: var(--accent); }
 }
 
-.breadcrumb {
-  margin: 1rem 0;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.breadcrumb a {
-  color: #ed4c4c;
-  text-decoration: none;
-}
-
-.content-section {
-  background: white;
-  margin: 2rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid #ed4c4c;
+@media (prefers-reduced-motion: no-preference) {
+  .disaster-level {
+    animation: enterprise-pulse 2.5s infinite;
+  }
 }
 
 .warning-box {
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 5px;
-  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--danger);
+  padding: 1rem 1.25rem;
   margin: 1rem 0;
-  border-left: 4px solid #f39c12;
+}
+
+.warning-box h3 {
+  color: var(--danger);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.warning-box p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.warning-box strong {
+  color: var(--text);
 }
 
 .error-box {
-  background: #f8d7da;
-  border: 2px solid #ed4c4c;
-  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--danger);
+  border-top: 3px solid var(--danger);
   padding: 1.5rem;
-  margin: 1rem 0;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  padding-top: 2.25rem;
+  margin: 1.25rem 0;
   position: relative;
-  color: #721c24;
 }
 
 .error-box::before {
-  content: "💥 WEBLOGIC EXCEPTION 💥";
+  content: "[ WEBLOGIC EXCEPTION ]";
   position: absolute;
-  top: -15px;
-  left: 20px;
-  background: #ed4c4c;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
+  top: 0;
+  left: 0;
+  background: var(--danger);
+  color: #000;
+  padding: 0.2rem 0.75rem;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.error-box p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.error-box strong {
+  color: var(--text);
 }
 
 .command-box {
-  background: #2c3e50;
-  color: #ecf0f1;
+  background: #080808;
+  color: var(--text);
   padding: 1rem;
-  border-radius: 5px;
-  margin: 1rem 0;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  margin: 0.75rem 0;
   overflow-x: auto;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre;
 }
 
 .fun-fact {
-  background: #e8f5e8;
-  border-left: 4px solid #27ae60;
-  padding: 1rem;
+  background: var(--surface);
+  border-left: 3px solid var(--green);
+  padding: 1rem 1.25rem;
   margin: 1rem 0;
-  border-radius: 0 5px 5px 0;
+}
+
+.fun-fact p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.fun-fact p:last-child { margin-bottom: 0; }
+
+.fun-fact strong { color: var(--text); }
+
+.fun-fact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.fun-fact ul li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+}
+
+.fun-fact ul li:last-child { border-bottom: none; }
+
+.fun-fact ul li::before {
+  content: "> ";
+  color: var(--green);
+  font-weight: bold;
 }
 
 .edition-comparison {
-  background: #f8f9fa;
-  border: 2px solid #dee2e6;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 2rem 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+  padding: 1px;
+  margin: 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
 }
 
 .edition-box {
-  background: white;
+  background: var(--surface);
   padding: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
+
+.edition-box h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.edition-box p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.edition-box strong { color: var(--text); }
 
 .disaster-image {
   text-align: center;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .disaster-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+}
+
+.disaster-image p {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
 }
 
 .nav-footer {
-  background: #34495e;
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  padding: 1.5rem;
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0;
+}
+
+.nav-footer h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .nav-footer a {
-  color: #3498db;
+  color: var(--text-dim);
   text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.1s;
 }
 
 .nav-footer a:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .weblogic-page {
-    padding: 0 1rem;
-  }
-  
-  .header-section, .content-section {
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  
   .edition-comparison {
     grid-template-columns: 1fr;
   }

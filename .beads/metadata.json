@@ -1,7 +1,7 @@
 {
   "database": "dolt",
   "backend": "dolt",
-  "dolt_mode": "server",
+  "dolt_mode": "embedded",
   "dolt_database": "tirefi.re",
-  "project_id": "ca69ce94-a3d0-4599-883b-458b092874e4"
+  "project_id": "fe9a1acb-b7cd-40d0-8d44-75ad89a77bd2"
 }

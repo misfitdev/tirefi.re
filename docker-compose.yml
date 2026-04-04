@@ -1,13 +1,15 @@
 services:
   tirefire:
-    image: jekyll/jekyll:pages
-    platform: linux/amd64
+    build:
+      context: .
+      platforms:
+        - linux/amd64
     command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
     ports:
       - 4000:4000
     volumes:
       - .:/srv/jekyll
-      - bundle_cache:/usr/local/bundle
+      - bundle_cache:/usr/gem
 
 volumes:
   bundle_cache:

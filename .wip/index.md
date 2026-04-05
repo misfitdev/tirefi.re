@@ -70,7 +70,7 @@ permalink: /.wip/
         <a href="/.wip/windows/"><span class="item-name">windows</span><span class="item-desc">Blue screens of death in the cloud</span></a>
     </li>
     <li class="filter-separator" id="filterSeparator" aria-hidden="true" style="display:none">
-        <div class="filter-separator-inner">by tag</div>
+        <div class="filter-separator-inner"></div>
     </li>
     <li class="filter-item" data-name="in memoriam" data-desc="The ones we lost along the way" data-tags="">
         <a href="/.wip/in-memoriam/"><span class="item-name">in memoriam</span><span class="item-desc">The ones we lost along the way</span></a>

@@ -134,7 +134,7 @@ permalink: /.wip/
         });
 
         var showSep = textMatches.length > 0 && tagMatches.length > 0;
-        separator.style.display = showSep ? '' : 'none';
+        separator.style.display = showSep ? 'list-item' : 'none';
 
         if (tagMatches.length) {
             /* Insert separator first, then tag matches after it */

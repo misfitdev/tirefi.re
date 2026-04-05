@@ -21,11 +21,6 @@ permalink: /.wip/ops/
         <div class="command-showcase">
             <div class="terminal-window">
                 <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-button red"></span>
-                        <span class="terminal-button yellow"></span>
-                        <span class="terminal-button green"></span>
-                    </div>
                     <div class="terminal-title">production-firefighting.sh</div>
                 </div>
                 <div class="terminal-content">
@@ -129,7 +124,7 @@ permalink: /.wip/ops/
 
 <div class="navigation-footer">
     <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/sysadmin-day/" class="nav-button">Next Disaster: Sysadmin Day →</a>
+    <a href="/.wip/systemd/" class="nav-button">Next Disaster: systemd →</a>
 </div>
 
 <style>
@@ -138,48 +133,29 @@ permalink: /.wip/ops/
 }
 
 .terminal-window {
-    background: #1e1e1e;
-    border-radius: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
     overflow: hidden;
-    
-    font-family: 'Courier New', monospace;
+    font-family: var(--font);
 }
 
 .terminal-header {
-    background: #323233;
-    padding: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    background: var(--surface-hi);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 1rem;
 }
-
-.terminal-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.terminal-button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.terminal-button.red { background: #ff5f56; }
-.terminal-button.yellow { background: #ffbd2e; }
-.terminal-button.green { background: #27ca3f; }
 
 .terminal-title {
-    color: #fff;
+    color: var(--text-dim);
     font-size: 0.9rem;
 }
 
 .terminal-content {
     padding: 1.5rem;
-    background: #1e1e1e;
 }
 
 .command-line {
-    color: #00ff00;
+    color: var(--text-bright);
     margin: 0.5rem 0;
     font-size: 0.9rem;
 }
@@ -189,7 +165,7 @@ permalink: /.wip/ops/
 }
 
 .prompt {
-    color: #ff6b6b;
+    color: var(--danger);
     margin-right: 0.5rem;
 }
 
@@ -200,19 +176,18 @@ permalink: /.wip/ops/
 }
 
 .command-output.error {
-    color: #ff6b6b;
+    color: var(--danger);
 }
 
 .ops-tools {
-    background: rgba(0, 100, 0, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .ops-tools h3 {
-    color: #32cd32;
+    color: var(--text-bright);
     margin-bottom: 2rem;
 }
 
@@ -222,14 +197,13 @@ permalink: /.wip/ops/
 }
 
 .tool-era {
-    background: var(--surface);
-    border-left: 4px solid #32cd32;
+    background: var(--surface-hi);
+    border-left: 4px solid var(--border-hi);
     padding: 1.5rem;
-    border-radius: 0;
 }
 
 .tool-era h4 {
-    color: #90ee90;
+    color: var(--text-bright);
     margin-bottom: 0.8rem;
 }
 
@@ -239,38 +213,35 @@ permalink: /.wip/ops/
 }
 
 .ops-philosophy {
-    background: rgba(128, 0, 128, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .ops-philosophy h3 {
-    color: #da70d6;
+    color: var(--text-bright);
     margin-bottom: 1rem;
 }
 
 .ops-philosophy p {
-    color: #dda0dd;
+    color: var(--text);
     line-height: 1.6;
 }
 
 .troubleshooting-guide {
-    background: rgba(220, 20, 60, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .troubleshooting-guide h3 {
-    color: #dc143c;
+    color: var(--text-bright);
     margin-bottom: 1.5rem;
 }
 
 .troubleshooting-guide ol {
-    color: #ffb6c1;
     padding-left: 1.5rem;
 }
 
@@ -280,12 +251,10 @@ permalink: /.wip/ops/
 }
 
 @media (max-width: 768px) {
-    
-    
     .terminal-content {
         padding: 1rem;
     }
-    
+
     .command-line {
         font-size: 0.8rem;
         word-break: break-all;

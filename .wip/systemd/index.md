@@ -198,12 +198,6 @@ permalink: /.wip/systemd/
     margin: 2rem 0 3rem;
 }
 
-.hero-image:hover {
-    border-color: rgba(34, 139, 34, 0.6);
-
-    
-}
-
 .hero-caption {
     margin-top: 1rem;
     color: var(--text-dim);
@@ -211,136 +205,53 @@ permalink: /.wip/systemd/
     font-size: 0.9rem;
 }
 
-.systemd-components {
-    background: rgba(34, 139, 34, 0.1);
+.systemd-components,
+.systemctl-commands,
+.unit-file-anatomy,
+.systemd-philosophy,
+.troubleshooting-systemd,
+.systemd-evolution,
+.blob-warning {
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
-.systemd-components h3 {
-    color: #228b22;
-    margin-bottom: 1.5rem;
+.blob-warning {
+    border-left: 4px solid var(--danger);
 }
 
-.component-item {
-    background: var(--surface);
-    border-radius: 0;
+.component-item,
+.command-item,
+.unit-section,
+.philosophy-point {
+    background: transparent;
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 4px solid #228b22;
+    border-left: 4px solid var(--border-hi);
     color: var(--text);
 }
 
-.component-item strong {
-    color: #228b22;
-    font-family: monospace;
-}
-
-.systemctl-commands {
-    background: rgba(255, 165, 0, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.systemctl-commands h3 {
-    color: #ffa500;
-    margin-bottom: 1.5rem;
-}
-
-.command-item {
-    background: var(--surface);
-    border-radius: 0;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #ffa500;
+.component-item strong,
+.unit-section strong {
+    font-family: var(--font);
 }
 
 .command-item code {
     display: block;
     background: var(--bg);
-    color: #00ff00;
+    color: var(--text);
     padding: 0.8rem;
-    border-radius: 0;
-    font-family: 'Courier New', monospace;
     margin-bottom: 0.8rem;
     overflow-x: auto;
     font-size: 0.9rem;
 }
 
 .command-item p {
-    color: #adb5bd;
+    color: var(--text-dim);
     margin: 0;
     font-style: italic;
-}
-
-.unit-file-anatomy {
-    background: rgba(0, 123, 255, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.unit-file-anatomy h3 {
-    color: #007bff;
-    margin-bottom: 1.5rem;
-}
-
-.unit-section {
-    background: var(--surface);
-    border-radius: 0;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #007bff;
-    color: var(--text);
-}
-
-.unit-section strong {
-    color: #007bff;
-    font-family: monospace;
-}
-
-.systemd-philosophy {
-    background: rgba(138, 43, 226, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.systemd-philosophy h3 {
-    color: #8a2be2;
-    margin-bottom: 1.5rem;
-}
-
-.philosophy-point {
-    background: var(--surface);
-    border-radius: 0;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #8a2be2;
-    color: var(--text);
-}
-
-.philosophy-point strong {
-    color: #8a2be2;
-}
-
-.troubleshooting-systemd {
-    background: rgba(220, 53, 69, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.troubleshooting-systemd h3 {
-    color: #dc3545;
-    margin-bottom: 1.5rem;
 }
 
 .troubleshooting-systemd ol {
@@ -354,52 +265,16 @@ permalink: /.wip/systemd/
 }
 
 .troubleshooting-systemd code {
-    background: var(--surface);
+    background: var(--bg);
     padding: 0.2rem 0.4rem;
-    border-radius: 0;
-    font-family: 'Courier New', monospace;
-    color: #ffa500;
 }
 
-.systemd-evolution {
-    background: rgba(108, 117, 125, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.systemd-evolution h3 {
-    color: #6c757d;
-    margin-bottom: 1rem;
-}
-
-.systemd-evolution p {
-    color: #adb5bd;
-    line-height: 1.6;
-}
-
-.blob-warning {
-    background: rgba(255, 0, 0, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.blob-warning h3 {
-    color: #ff4444;
-    margin-bottom: 1rem;
-}
-
+.systemd-evolution p,
 .blob-warning p {
-    color: #ffaaaa;
     line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    
-    
     .systemd-components,
     .systemctl-commands,
     .unit-file-anatomy,
@@ -407,7 +282,7 @@ permalink: /.wip/systemd/
     .troubleshooting-systemd {
         padding: 1.5rem;
     }
-    
+
     .component-item,
     .command-item,
     .unit-section,

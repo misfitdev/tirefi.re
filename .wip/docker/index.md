@@ -194,9 +194,8 @@ permalink: /.wip/docker/
 
 <style>
 .docker-inception {
-    background: rgba(0, 123, 255, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
@@ -207,35 +206,26 @@ permalink: /.wip/docker/
 
 .container-layer {
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 1rem;
     margin: 0.8rem;
     background: var(--surface);
-    transition: all 0.3s ease;
-}
-
-.container-layer:hover {
-    background: rgba(0, 123, 255, 0.1);
-    border-color: rgba(0, 123, 255, 0.7);
 }
 
 .container-layer h3, .container-layer h4, .container-layer h5, .container-layer h6 {
-    color: #007bff;
+    color: var(--text-bright);
     margin: 0.5rem 0;
 }
 
 .final-container {
-    background: rgba(255, 215, 0, 0.2);
-    border: 1px solid var(--border);
-    border-radius: 0;
+    background: var(--surface);
+    border: 1px solid var(--border-hi);
     padding: 1rem;
     margin: 0.5rem;
 }
 
 .kernel-truth {
-    background: rgba(0, 255, 0, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 0.8rem;
     margin: 0.3rem;
 }
@@ -245,22 +235,22 @@ permalink: /.wip/docker/
 }
 
 .achievement {
-    color: #00ff00;
+    color: var(--success);
     font-weight: bold;
     font-size: 0.8em;
     margin: 0.2rem 0;
 }
 
 .reality-check {
-    color: #ffa500;
+    color: var(--text-dim);
     font-style: italic;
     font-size: 0.7em;
     margin: 0.2rem 0;
 }
 
 .exit-code {
-    color: #ff6b6b;
-    font-family: monospace;
+    color: var(--danger);
+    font-family: var(--font);
     font-size: 0.6em;
     margin: 0.2rem 0;
 }
@@ -275,16 +265,10 @@ permalink: /.wip/docker/
 .yocto { font-size: 0.2em; }
 
 .docker-commands {
-    background: rgba(33, 37, 41, 0.8);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
-}
-
-.docker-commands h3 {
-    color: #007bff;
-    margin-bottom: 2rem;
 }
 
 .command-list {
@@ -295,63 +279,39 @@ permalink: /.wip/docker/
 
 .command-item {
     background: var(--bg);
-    border-radius: 0;
     padding: 1.5rem;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--border-hi);
 }
 
 .command-item code {
     display: block;
     background: var(--bg);
-    color: #00ff00;
+    color: var(--text-bright);
     padding: 0.8rem;
-    border-radius: 0;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font);
     margin-bottom: 0.8rem;
     overflow-x: auto;
     font-size: 0.9rem;
 }
 
 .command-item p {
-    color: #adb5bd;
+    color: var(--text-dim);
     margin: 0;
     font-style: italic;
 }
 
 .container-philosophy {
-    background: rgba(108, 117, 125, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
-}
-
-.container-philosophy h3 {
-    color: #6c757d;
-    margin-bottom: 1rem;
-}
-
-.container-philosophy p {
-    color: #adb5bd;
-    line-height: 1.6;
 }
 
 .escape-sequence {
-    background: rgba(255, 0, 0, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
-}
-
-.escape-sequence h3 {
-    color: #ff4444;
-    margin-bottom: 1rem;
-}
-
-.escape-sequence p {
-    color: #ffaaaa;
-    margin-bottom: 1rem;
 }
 
 .escape-sequence ol {
@@ -367,23 +327,20 @@ permalink: /.wip/docker/
 .escape-sequence code {
     background: var(--surface);
     padding: 0.2rem 0.4rem;
-    border-radius: 0;
-    font-family: 'Courier New', Courier, monospace;
-    color: #ffa500;
+    font-family: var(--font);
+    color: var(--text-bright);
 }
 
 @media (max-width: 768px) {
-    
-    
     .container-layer {
         margin: 0.5rem;
         padding: 0.8rem;
     }
-    
+
     .command-item code {
         font-size: 0.8rem;
     }
-    
+
     .docker-inception {
         max-height: 400px;
     }

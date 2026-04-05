@@ -24,32 +24,6 @@ permalink: /.wip/weblogic/
   margin-bottom: 0.75rem;
 }
 
-.header-section::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 12px,
-    rgba(232, 64, 64, 0.04) 12px,
-    rgba(232, 64, 64, 0.04) 24px
-  );
-  pointer-events: none;
-}
-
-@keyframes java-burn {
-  0%   { transform: translateX(-40px) translateY(-40px); }
-  100% { transform: translateX(40px)  translateY(40px); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header-section::before {
-    animation: java-burn 28s linear infinite;
-  }
-}
 
 .disaster-level {
   display: inline-block;
@@ -63,16 +37,6 @@ permalink: /.wip/weblogic/
   margin: 0.75rem 0;
 }
 
-@keyframes enterprise-pulse {
-  0%, 100% { border-color: var(--danger); color: var(--danger); }
-  50%       { border-color: var(--border-hi); color: var(--text-bright); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .disaster-level {
-    animation: enterprise-pulse 2.5s infinite;
-  }
-}
 
 .warning-box {
   background: var(--surface);
@@ -103,22 +67,7 @@ permalink: /.wip/weblogic/
   border: 1px solid var(--danger);
   border-top: 3px solid var(--danger);
   padding: 1.5rem;
-  padding-top: 2.25rem;
   margin: 1.25rem 0;
-  position: relative;
-}
-
-.error-box::before {
-  content: "[ WEBLOGIC EXCEPTION ]";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--danger);
-  color: #000;
-  padding: 0.2rem 0.75rem;
-  font-weight: bold;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
 }
 
 .error-box p {
@@ -132,7 +81,7 @@ permalink: /.wip/weblogic/
 }
 
 .command-box {
-  background: #080808;
+  background: var(--bg);
   color: var(--text);
   padding: 1rem;
   margin: 0.75rem 0;
@@ -145,7 +94,7 @@ permalink: /.wip/weblogic/
 
 .fun-fact {
   background: var(--surface);
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--success);
   padding: 1rem 1.25rem;
   margin: 1rem 0;
 }
@@ -177,7 +126,7 @@ permalink: /.wip/weblogic/
 
 .fun-fact ul li::before {
   content: "> ";
-  color: var(--green);
+  color: var(--success);
   font-weight: bold;
 }
 
@@ -249,7 +198,6 @@ permalink: /.wip/weblogic/
   text-decoration: none;
   margin: 0 0.5rem;
   font-size: 0.9rem;
-  transition: color 0.1s;
 }
 
 .nav-footer a:hover {
@@ -556,7 +504,6 @@ wls:/domain/serverConfig> shutdown('AdminServer', 'Server', force='true')
     <a href="/.wip/windows/">Windows</a> |
     <a href="/.wip/systemd/">systemd</a> |
     <a href="/.wip/chef/">Chef</a> |
-    <a href="/ibm/">IBM</a> |
     <a href="/.wip/">← Back to Disaster Hub</a>
   </div>
 </div>

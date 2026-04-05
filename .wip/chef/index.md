@@ -14,41 +14,12 @@ permalink: /.wip/chef/
   background: var(--surface);
   border: 1px solid var(--border);
   border-top: 3px solid var(--danger);
-  position: relative;
-  overflow: hidden;
 }
 
 .header-section h1 {
   color: var(--text-bright);
   font-size: 1.8rem;
   margin-bottom: 0.75rem;
-}
-
-@keyframes kitchen-fire {
-  0%   { transform: translateX(-40px) translateY(-40px); }
-  100% { transform: translateX(40px)  translateY(40px); }
-}
-
-.header-section::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 12px,
-    rgba(232, 64, 64, 0.04) 12px,
-    rgba(232, 64, 64, 0.04) 24px
-  );
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .header-section::before {
-    animation: kitchen-fire 25s linear infinite;
-  }
 }
 
 .disaster-level {
@@ -61,17 +32,6 @@ permalink: /.wip/chef/
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   margin: 0.75rem 0;
-}
-
-@keyframes burn-pulse {
-  0%, 100% { border-color: var(--danger); color: var(--danger); }
-  50%       { border-color: var(--border-hi); color: var(--text-bright); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .disaster-level {
-    animation: burn-pulse 2.5s infinite;
-  }
 }
 
 .warning-box {
@@ -103,22 +63,7 @@ permalink: /.wip/chef/
   border: 1px solid var(--border-hi);
   border-top: 3px solid var(--border-hi);
   padding: 1.5rem;
-  padding-top: 2.25rem;
   margin: 1.25rem 0;
-  position: relative;
-}
-
-.recipe-box::before {
-  content: "[ RECIPE DISASTER ]";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--text-bright);
-  color: #000;
-  padding: 0.2rem 0.75rem;
-  font-weight: bold;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
 }
 
 .recipe-box h3 {
@@ -151,7 +96,7 @@ permalink: /.wip/chef/
 
 .fun-fact {
   background: var(--surface);
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--border-hi);
   padding: 1rem 1.25rem;
   margin: 1rem 0;
 }
@@ -189,7 +134,7 @@ permalink: /.wip/chef/
 
 .fun-fact ul li::before {
   content: "> ";
-  color: var(--green);
+  color: var(--border-hi);
   font-weight: bold;
 }
 
@@ -263,7 +208,6 @@ permalink: /.wip/chef/
   text-decoration: none;
   margin: 0 0.5rem;
   font-size: 0.9rem;
-  transition: color 0.1s;
 }
 
 .nav-footer a:hover {
@@ -280,12 +224,12 @@ permalink: /.wip/chef/
 
 <div class="chef-page">
   <div class="breadcrumb">
-    <a href="/">🏠 Home</a> → <a href="/.wip/">🔥 Active Disasters</a> → Chef
+    <a href="/">Home</a> → <a href="/.wip/">Active Disasters</a> → Chef
   </div>
 
   <div class="header-section">
     <h1>Chef: Too Many Cooks in the Infrastructure Kitchen</h1>
-    <div class="disaster-level">🚨 CONFIGURATION MANAGEMENT DISASTER 🚨</div>
+    <div class="disaster-level">CONFIGURATION MANAGEMENT DISASTER</div>
     <p><em>"chef exec kitchen test --yolo"</em></p>
   </div>
 
@@ -295,7 +239,7 @@ permalink: /.wip/chef/
   </div>
 
   <div class="content-section">
-    <h2>🎭 The Configuration Management Revolution</h2>
+    <h2>The Configuration Management Revolution</h2>
     <p>Chef promised to bring order to the chaos of server management. Instead, it brought a different kind of chaos—one with recipes, cookbooks, and enough Ruby DSL to make your head spin faster than a KitchenAid mixer.</p>
     
     <p>What started as a simple idea ("let's describe infrastructure as code") became a complex ecosystem of knife commands, berkshelf dependencies, and Test Kitchen environments that somehow made managing servers more complicated than just logging in and editing files manually.</p>
@@ -308,7 +252,7 @@ permalink: /.wip/chef/
   </div>
 
   <div class="content-section">
-    <h2>🔪 Essential Chef Survival Commands</h2>
+    <h2>Essential Chef Survival Commands</h2>
     <p>Because knife cuts both ways (and usually toward your fingers):</p>
 
     <h3>Knife Commands (The Swiss Army Disaster)</h3>
@@ -387,10 +331,10 @@ berks update
   </div>
 
   <div class="content-section">
-    <h2>⚠️ Classic Chef Disasters</h2>
+    <h2>Classic Chef Disasters</h2>
 
     <div class="warning-box">
-      <h3>🔥 The Cookbook Version Hell</h3>
+      <h3>The Cookbook Version Hell</h3>
       <p><strong>Scenario:</strong> Production breaks because a transitive dependency updated and changed behavior.</p>
       <p><strong>Cause:</strong> Cookbook A depends on Cookbook B (>= 1.0), which just released version 2.0 with breaking changes.</p>
       <p><strong>Solution:</strong> Pin ALL the versions and never update anything ever again:</p>
@@ -404,7 +348,7 @@ cookbook 'build-essential', '= 8.2.1'
     </div>
 
     <div class="warning-box">
-      <h3>🔥 The Knife Bootstrap Disaster</h3>
+      <h3>The Knife Bootstrap Disaster</h3>
       <p><strong>Scenario:</strong> Bootstrap fails halfway through, leaving node in broken state.</p>
       <p><strong>Cause:</strong> Network timeout, wrong SSH key, sudo password prompt, or cosmic rays.</p>
       <p><strong>Solution:</strong> Manual cleanup and try again:</p>
@@ -424,7 +368,7 @@ knife bootstrap server --ssh-user ubuntu --sudo --identity-file ~/.ssh/key.pem -
     </div>
 
     <div class="warning-box">
-      <h3>🔥 The Test Kitchen Timeout Terror</h3>
+      <h3>The Test Kitchen Timeout Terror</h3>
       <p><strong>Scenario:</strong> Kitchen test hangs forever during converge phase.</p>
       <p><strong>Cause:</strong> Chef run stuck waiting for a service that will never start.</p>
       <p><strong>Solution:</strong> Kill with fire and investigate:</p>
@@ -444,7 +388,7 @@ sudo chef-client -l debug
   </div>
 
   <div class="content-section">
-    <h2>🏗️ The Chef Ecosystem Evolution</h2>
+    <h2>The Chef Ecosystem Evolution</h2>
 
     <h3>From Opscode to Progress to...</h3>
     <div class="fun-fact">
@@ -457,25 +401,25 @@ sudo chef-client -l debug
 
     <div class="tool-comparison">
       <div class="tool-box">
-        <h4>🔪 Chef (Ruby DSL)</h4>
+        <h4>Chef (Ruby DSL)</h4>
         <p><strong>Strengths:</strong> Powerful, flexible, mature ecosystem</p>
         <p><strong>Weaknesses:</strong> Complex learning curve, Ruby dependency, knife ergonomics</p>
         <p><strong>Best for:</strong> Teams who love Ruby and don't mind complexity</p>
       </div>
       <div class="tool-box">
-        <h4>📜 Ansible (YAML)</h4>
+        <h4>Ansible (YAML)</h4>
         <p><strong>Strengths:</strong> Agentless, simple syntax, quick to learn</p>
         <p><strong>Weaknesses:</strong> YAML limitations, performance at scale</p>
         <p><strong>Best for:</strong> Teams who want simple automation</p>
       </div>
       <div class="tool-box">
-        <h4>🎭 Puppet (Puppet DSL)</h4>
+        <h4>Puppet (Puppet DSL)</h4>
         <p><strong>Strengths:</strong> Declarative model, enterprise features</p>
         <p><strong>Weaknesses:</strong> Yet another DSL to learn, resource complexity</p>
         <p><strong>Best for:</strong> Enterprise environments with compliance needs</p>
       </div>
       <div class="tool-box">
-        <h4>☁️ Terraform (HCL)</h4>
+        <h4>Terraform (HCL)</h4>
         <p><strong>Strengths:</strong> Infrastructure provisioning, cloud native</p>
         <p><strong>Weaknesses:</strong> Not for configuration management</p>
         <p><strong>Best for:</strong> Infrastructure provisioning and cloud resources</p>
@@ -484,7 +428,7 @@ sudo chef-client -l debug
   </div>
 
   <div class="content-section">
-    <h2>🍳 Chef Recipe Anatomy</h2>
+    <h2>Chef Recipe Anatomy</h2>
     <p>A typical Chef recipe contains more ingredients than most actual recipes:</p>
 
     <div class="recipe-box">
@@ -551,7 +495,7 @@ end
   </div>
 
   <div class="content-section">
-    <h2>🎯 The Great Configuration Management Wars</h2>
+    <h2>The Great Configuration Management Wars</h2>
 
     <h3>Chef vs. The World</h3>
     <div class="fun-fact">
@@ -573,7 +517,7 @@ end
   </div>
 
   <div class="content-section">
-    <h2>🎲 Fun Chef Facts</h2>
+    <h2>Fun Chef Facts</h2>
     <div class="fun-fact">
       <ul>
         <li>Chef has more than 4,000 community cookbooks, most of which haven't been updated since 2016</li>
@@ -588,7 +532,7 @@ end
   </div>
 
   <div class="content-section">
-    <h2>☁️ Chef in the Modern Era</h2>
+    <h2>Chef in the Modern Era</h2>
 
     <h3>Chef Automate: Enterprise Complexity Maximized</h3>
     <div class="fun-fact">
@@ -607,7 +551,7 @@ end
   </div>
 
   <div class="content-section">
-    <h2>🔥 Conclusion: The Kitchen That Got Too Hot</h2>
+    <h2>Conclusion: The Kitchen That Got Too Hot</h2>
     <p>Chef represented a pivotal moment in infrastructure management—the transition from manual server administration to infrastructure as code. It succeeded in proving that servers could be managed programmatically and reproducibly.</p>
 
     <p>But like many revolutionary tools, Chef's complexity grew to match its ambitions. What started as a simple idea—describe your infrastructure in code—became a complex ecosystem requiring specialized knowledge, dedicated tooling, and endless debugging.</p>
@@ -627,7 +571,7 @@ end
   </div>
 
   <div class="nav-footer">
-    <h3>🔗 Explore Other Infrastructure Disasters</h3>
+    <h3>Explore Other Infrastructure Disasters</h3>
     <a href="/.wip/puppet/">Puppet</a> |
     <a href="/.wip/docker/">Docker</a> |
     <a href="/.wip/devops/">DevOps</a> |

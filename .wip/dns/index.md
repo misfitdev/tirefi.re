@@ -8,7 +8,7 @@ permalink: /.wip/dns/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>DNS</span>
     </div>
-    <h1>🌐 It's always DNS</h1>
+    <h1>It's always DNS</h1>
     <p class="page-subtitle">The mystery resolver of our digital age</p>
 </div>
 
@@ -36,7 +36,7 @@ permalink: /.wip/dns/
             </div>
 
             <div class="dns-resolution-steps">
-                <h3>🔍 DNS Resolution Process</h3>
+                <h3>DNS Resolution Process</h3>
                 <div class="resolution-step">
                     <strong>Step 1:</strong> Application asks resolver for example.com
                 </div>
@@ -61,7 +61,7 @@ permalink: /.wip/dns/
             </div>
 
             <div class="dns-record-types">
-                <h3>📋 Essential DNS Record Types</h3>
+                <h3>Essential DNS Record Types</h3>
                 <div class="record-type">
                     <strong>A:</strong> Points to an IPv4 address (probably wrong)
                 </div>
@@ -86,7 +86,7 @@ permalink: /.wip/dns/
             </div>
 
             <div class="troubleshooting-guide">
-                <h3>🔧 DNS Troubleshooting Guide</h3>
+                <h3>DNS Troubleshooting Guide</h3>
                 <ol>
                     <li>Check if it's DNS (it is)</li>
                     <li>Clear your DNS cache</li>
@@ -99,7 +99,7 @@ permalink: /.wip/dns/
             </div>
 
             <div class="fun-facts">
-                <h3>🔥 DNS Fun Facts</h3>
+                <h3>DNS Fun Facts</h3>
                 <ul>
                     <li>DNS was designed when the internet had 12 computers, all named after Tolkien characters</li>
                     <li>TTL stands for "Time To Live" but really means "Time To Lie"</li>
@@ -113,7 +113,7 @@ permalink: /.wip/dns/
             </div>
 
             <div class="dns-philosophy">
-                <h3>🌐 The DNS Philosophy</h3>
+                <h3>The DNS Philosophy</h3>
                 <p>DNS operates on the principle of eventual consistency, which in practice means eventually inconsistent. It's a distributed system where everyone agrees on the protocol but disagrees on everything else.</p>
                 
                 <p>The beauty of DNS lies in its simplicity: you ask for a name, you get an address. The horror of DNS lies in its complexity: cache poisoning, race conditions, split-brain scenarios, and the eternal question of whether it's really DNS this time.</p>
@@ -138,16 +138,12 @@ permalink: /.wip/dns/
 .dns-haiku-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0;
     border: 1px solid var(--border);
-    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .dns-haiku-image:hover {
-    border-color: rgba(255, 69, 0, 0.6);
-
-    
+    border-color: var(--border-hi);
 }
 
 .haiku-caption {
@@ -158,64 +154,59 @@ permalink: /.wip/dns/
 }
 
 .dns-resolution-steps {
-    background: rgba(0, 123, 255, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .dns-resolution-steps h3 {
-    color: #007bff;
+    color: var(--text-bright);
     margin-bottom: 1.5rem;
 }
 
 .resolution-step {
-    background: var(--surface);
-    border-radius: 0;
+    background: var(--bg);
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--border-hi);
     color: var(--text);
 }
 
 .dns-record-types {
-    background: rgba(40, 167, 69, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .dns-record-types h3 {
-    color: #28a745;
+    color: var(--text-bright);
     margin-bottom: 1.5rem;
 }
 
 .record-type {
-    background: var(--surface);
-    border-radius: 0;
+    background: var(--bg);
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 4px solid #28a745;
+    border-left: 4px solid var(--border-hi);
     color: var(--text);
 }
 
 .record-type strong {
-    color: #28a745;
-    font-family: monospace;
+    color: var(--text-bright);
+    font-family: var(--font);
 }
 
 .troubleshooting-guide {
-    background: rgba(255, 193, 7, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .troubleshooting-guide h3 {
-    color: #ffc107;
+    color: var(--text-bright);
     margin-bottom: 1.5rem;
 }
 
@@ -230,20 +221,19 @@ permalink: /.wip/dns/
 }
 
 .dns-philosophy {
-    background: rgba(108, 117, 125, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
 .dns-philosophy h3 {
-    color: #6c757d;
+    color: var(--text-bright);
     margin-bottom: 1rem;
 }
 
 .dns-philosophy p {
-    color: #adb5bd;
+    color: var(--text-dim);
     line-height: 1.6;
 }
 

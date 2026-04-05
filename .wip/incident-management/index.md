@@ -104,40 +104,27 @@ permalink: /.wip/incident-management/
 
 <div class="navigation-footer">
     <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/postmortems/" class="nav-button">Next Disaster: Post-mortems →</a>
+    <a href="/.wip/monitoring/" class="nav-button">Next Disaster: Monitoring →</a>
 </div>
 
 <style>
 .incident-chant {
-    background: rgba(139, 0, 0, 0.2);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 2rem 0;
     text-align: center;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font);
 }
 
 .error-rate {
-    color: #ff6b6b;
+    color: var(--danger);
     font-size: 1.2rem;
     margin: 0.5rem 0;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
 }
 
 .incident-roles {
     margin: 3rem 0;
-}
-
-.incident-roles h3 {
-    color: #ff4500;
-    margin-bottom: 2rem;
 }
 
 .role-grid {
@@ -148,14 +135,13 @@ permalink: /.wip/incident-management/
 }
 
 .role-card {
-    background: rgba(255, 69, 0, 0.1);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 1.5rem;
 }
 
 .role-card h4 {
-    color: #ffa500;
+    color: var(--text-bright);
     margin-bottom: 1rem;
 }
 
@@ -166,29 +152,22 @@ permalink: /.wip/incident-management/
 }
 
 .incident-timeline {
-    background: rgba(30, 30, 30, 0.5);
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
-}
-
-.incident-timeline h3 {
-    color: #ff4500;
-    margin-bottom: 2rem;
 }
 
 .timeline-item {
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 3px solid #ff4500;
-    background: var(--surface);
-    border-radius: 0;
+    border-left: 3px solid var(--border-hi);
+    background: transparent;
     color: var(--text);
 }
 
 .timeline-item strong {
-    color: #ffa500;
+    color: var(--text-bright);
 }
 
 @media (max-width: 768px) {

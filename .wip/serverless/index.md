@@ -158,12 +158,6 @@ permalink: /.wip/serverless/
     margin: 2rem 0 3rem;
 }
 
-.hero-image:hover {
-    border-color: rgba(138, 43, 226, 0.6);
-
-    
-}
-
 .hero-caption {
     margin-top: 1rem;
     color: var(--text-dim);
@@ -171,95 +165,42 @@ permalink: /.wip/serverless/
     font-size: 0.9rem;
 }
 
-.serverless-principles {
-    background: rgba(138, 43, 226, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.serverless-principles h3 {
-    color: #8a2be2;
-    margin-bottom: 1.5rem;
-}
-
-.principle-item {
+.serverless-principles,
+.lambda-lifecycle,
+.serverless-vendors,
+.troubleshooting-serverless,
+.serverless-philosophy,
+.tribute-section {
     background: var(--surface);
-    border-radius: 0;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #8a2be2;
-    color: var(--text);
-}
-
-.principle-item strong {
-    color: #8a2be2;
-}
-
-.lambda-lifecycle {
-    background: rgba(255, 165, 0, 0.1);
     border: 1px solid var(--border);
-    border-radius: 0;
     padding: 2rem;
     margin: 3rem 0;
 }
 
-.lambda-lifecycle h3 {
-    color: #ffa500;
+.serverless-principles h3,
+.lambda-lifecycle h3,
+.serverless-vendors h3,
+.troubleshooting-serverless h3,
+.serverless-philosophy h3,
+.tribute-section h3 {
+    color: var(--text-bright);
     margin-bottom: 1.5rem;
 }
 
-.lifecycle-step {
-    background: var(--surface);
-    border-radius: 0;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #ffa500;
-    color: var(--text);
-}
-
-.lifecycle-step strong {
-    color: #ffa500;
-}
-
-.serverless-vendors {
-    background: rgba(0, 123, 255, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.serverless-vendors h3 {
-    color: #007bff;
-    margin-bottom: 1.5rem;
-}
-
+.principle-item,
+.lifecycle-step,
 .vendor-item {
-    background: var(--surface);
-    border-radius: 0;
+    background: var(--surface-hi);
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--border-hi);
     color: var(--text);
 }
 
+.principle-item strong,
+.lifecycle-step strong,
 .vendor-item strong {
-    color: #007bff;
-}
-
-.troubleshooting-serverless {
-    background: rgba(220, 53, 69, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.troubleshooting-serverless h3 {
-    color: #dc3545;
-    margin-bottom: 1.5rem;
+    color: var(--text-bright);
 }
 
 .troubleshooting-serverless ol {
@@ -272,61 +213,20 @@ permalink: /.wip/serverless/
     line-height: 1.5;
 }
 
-.serverless-philosophy {
-    background: rgba(108, 117, 125, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.serverless-philosophy h3 {
-    color: #6c757d;
-    margin-bottom: 1rem;
-}
-
-.serverless-philosophy p {
-    color: #adb5bd;
-    line-height: 1.6;
-}
-
-.tribute-section {
-    background: rgba(40, 167, 69, 0.1);
-    border: 1px solid var(--border);
-    border-radius: 0;
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.tribute-section h3 {
-    color: #28a745;
-    margin-bottom: 1rem;
-}
-
+.serverless-philosophy p,
 .tribute-section p {
-    color: #adb5bd;
+    color: var(--text);
     line-height: 1.6;
-}
-
-.tribute-section a {
-    color: #28a745;
-    text-decoration: none;
-}
-
-.tribute-section a:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    
-    
     .serverless-principles,
     .lambda-lifecycle,
     .serverless-vendors,
     .troubleshooting-serverless {
         padding: 1.5rem;
     }
-    
+
     .principle-item,
     .lifecycle-step,
     .vendor-item {

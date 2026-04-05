@@ -137,22 +137,105 @@
             background: var(--surface-hi);
         }
 
-        .ukraine-link {
-            display: inline-flex;
-            align-items: center;
+        .search-trigger {
             background: transparent;
-            border: 1px solid var(--border);
-            padding: 0 0.75rem;
-            min-height: 44px;
-            text-decoration: none;
+            border: none;
+            border-left: 1px solid var(--border);
             color: var(--text-dim);
-            font-size: 0.75rem;
-            transition: border-color 0.1s, color 0.1s;
+            padding: 0 1rem;
+            min-height: 44px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-family: var(--font);
+            transition: color 0.1s, background 0.1s;
         }
 
-        .ukraine-link:hover {
-            border-color: var(--border-hi);
-            color: var(--text);
+        .search-trigger:hover {
+            color: var(--text-bright);
+            background: var(--surface-hi);
+        }
+
+        /* === SEARCH OVERLAY === */
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 500;
+            display: none;
+            padding: 5rem 1.25rem 2rem;
+            overflow-y: auto;
+        }
+
+        .search-overlay.active {
+            display: block;
+        }
+
+        .search-modal {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border-hi);
+        }
+
+        .search-modal-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-bright);
+            font-family: var(--font);
+            font-size: 0.95rem;
+            padding: 0.85rem 1rem;
+            outline: none;
+        }
+
+        .search-modal-results {
+            list-style: none;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .search-result-item a {
+            display: grid;
+            grid-template-columns: 18ch 1fr;
+            gap: 1.5rem;
+            padding: 0.55rem 1rem;
+            color: inherit;
+            text-decoration: none;
+            font-size: 0.875rem;
+            min-height: 44px;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.08s;
+        }
+
+        .search-result-item a:hover,
+        .search-result-item.sr-focused a {
+            background: var(--surface-hi);
+        }
+
+        .search-result-item .item-name {
+            color: var(--text-bright);
+        }
+
+        .search-result-item .item-desc {
+            color: var(--text-dim);
+            font-size: 0.82rem;
+        }
+
+        .search-empty {
+            padding: 1rem;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        .search-hint {
+            padding: 0.5rem 1rem;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            border-top: 1px solid var(--border);
+            opacity: 0.7;
         }
 
         /* === MAIN CONTENT === */
@@ -652,11 +735,16 @@
                             <li><a href="/.wip/">Home</a></li>
                             <li><a href="/.wip/in-memoriam/">In Memoriam</a></li>
                             <li><a href="/">Classic</a></li>
+                            <li>
+                                <button class="search-trigger" id="searchTrigger" aria-label="Search (press / to open)">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                        <circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="8.5" y1="8.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                            </li>
                         </ul>
                     </nav>
-                    <a href="https://devopsdays.com.ua/" class="ukraine-link" target="_blank" rel="noopener noreferrer" aria-label="DevOpsDays Ukraine — opens in new tab">
-                        DevOpsDays Ukraine
-                    </a>
                 </div>
             </div>
         </div>
@@ -681,7 +769,157 @@
         </div>
     </div>
 
+    <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Site search">
+        <div class="search-modal">
+            <input type="search" id="searchOverlayInput" class="search-modal-input"
+                placeholder="search..." autocomplete="off" spellcheck="false"
+                aria-label="Search topics" aria-controls="searchOverlayResults">
+            <ul class="search-modal-results" id="searchOverlayResults" aria-label="Search results"></ul>
+            <div class="search-hint">↑↓ navigate &nbsp; ↵ open &nbsp; esc close</div>
+        </div>
+    </div>
+
     <script>
+        /* === SITE SEARCH === */
+        (function() {
+            var ITEMS = [
+                {name:'aws',                desc:"Amazon's infinite money extraction service",          tags:'cloud,amazon',                          url:'/.wip/aws/'},
+                {name:'chef',               desc:'Too many cooks in the infrastructure kitchen',        tags:'config-mgmt,configmanagement,ruby',      url:'/.wip/chef/'},
+                {name:'devops',             desc:'You build it, you break it, you cry about it',        tags:'culture,process',                        url:'/.wip/devops/'},
+                {name:'dns',                desc:"It's always DNS. Always.",                            tags:'networking,infra',                       url:'/.wip/dns/'},
+                {name:'docker',             desc:'Containerizing your problems since 2013',             tags:'containers,infra',                       url:'/.wip/docker/'},
+                {name:'incident management',desc:'Managing incidents by creating more incidents',       tags:'incidents,oncall,on-call',               url:'/.wip/incident-management/'},
+                {name:'microservices',      desc:'Distributed monoliths with extra steps',              tags:'containers,architecture,distributed',    url:'/.wip/microservices/'},
+                {name:'monitoring',         desc:'Watching everything burn in real-time',               tags:'observability,incidents,oncall,alerting', url:'/.wip/monitoring/'},
+                {name:'ops',                desc:'Where hope goes to die',                              tags:'culture,oncall,on-call,infra',           url:'/.wip/ops/'},
+                {name:'puppet',             desc:'Configuration management with strings attached',      tags:'config-mgmt,configmanagement,ruby',      url:'/.wip/puppet/'},
+                {name:'s3',                 desc:'Simple storage service. Simply not working.',         tags:'cloud,amazon,storage',                   url:'/.wip/s3/'},
+                {name:'serverless',         desc:'No servers. Just someone else\'s servers.',           tags:'cloud,architecture',                     url:'/.wip/serverless/'},
+                {name:'systemd',            desc:"Doing everything so you don't have to understand anything", tags:'linux,infra,os',                  url:'/.wip/systemd/'},
+                {name:'weblogic',           desc:'Logic not included',                                  tags:'enterprise,java,oracle',                 url:'/.wip/weblogic/'},
+                {name:'windows',            desc:'Blue screens of death in the cloud',                  tags:'enterprise,os,microsoft',                url:'/.wip/windows/'},
+                {name:'in memoriam',        desc:'The ones we lost along the way',                      tags:'',                                       url:'/.wip/in-memoriam/'}
+            ];
+
+            var trigger   = document.getElementById('searchTrigger');
+            var sOverlay  = document.getElementById('searchOverlay');
+            var sInput    = document.getElementById('searchOverlayInput');
+            var sResults  = document.getElementById('searchOverlayResults');
+            var lastFocusedSearch = null;
+            var focusedIdx = -1;
+
+            function fuzzyScore(query, target) {
+                var q = query.toLowerCase(), t = target.toLowerCase();
+                var qi = 0, positions = [];
+                for (var ti = 0; ti < t.length && qi < q.length; ti++) {
+                    if (t[ti] === q[qi]) { positions.push(ti); qi++; }
+                }
+                if (qi < q.length) return 0;
+                var score = 100;
+                score -= positions[0] * 3;
+                for (var i = 1; i < positions.length; i++) {
+                    if (positions[i] === positions[i-1] + 1) score += 15;
+                }
+                var c = positions[0];
+                if (c === 0 || /[\s\-_,]/.test(t[c-1])) score += 25;
+                if (t.indexOf(q) !== -1) score += 20;
+                return Math.max(1, score);
+            }
+
+            function scoreItem(query, item) {
+                return Math.max(
+                    fuzzyScore(query, item.name) * 4,
+                    fuzzyScore(query, item.desc) * 2,
+                    fuzzyScore(query, item.tags.replace(/,/g, ' ')) * 1
+                );
+            }
+
+            function renderResults(query) {
+                sResults.innerHTML = '';
+                focusedIdx = -1;
+                if (!query) return;
+
+                var scored = ITEMS.map(function(item) {
+                    return {item: item, score: scoreItem(query, item)};
+                }).filter(function(s) { return s.score > 0; })
+                  .sort(function(a, b) { return b.score - a.score; });
+
+                if (!scored.length) {
+                    sResults.innerHTML = '<li class="search-empty">no matches</li>';
+                    return;
+                }
+
+                scored.forEach(function(s, idx) {
+                    var li = document.createElement('li');
+                    li.className = 'search-result-item';
+                    li.dataset.idx = idx;
+                    li.innerHTML = '<a href="' + s.item.url + '">' +
+                        '<span class="item-name">' + s.item.name + '</span>' +
+                        '<span class="item-desc">' + s.item.desc + '</span>' +
+                        '</a>';
+                    sResults.appendChild(li);
+                });
+            }
+
+            function moveFocus(dir) {
+                var items = sResults.querySelectorAll('.search-result-item');
+                if (!items.length) return;
+                items[focusedIdx] && items[focusedIdx].classList.remove('sr-focused');
+                focusedIdx = Math.max(0, Math.min(items.length - 1, focusedIdx + dir));
+                items[focusedIdx].classList.add('sr-focused');
+                items[focusedIdx].scrollIntoView({block: 'nearest'});
+            }
+
+            function openSearch(triggerEl) {
+                lastFocusedSearch = triggerEl || document.activeElement;
+                sOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                sInput.value = '';
+                sResults.innerHTML = '';
+                focusedIdx = -1;
+                sInput.focus();
+            }
+
+            function closeSearch() {
+                sOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                if (lastFocusedSearch) lastFocusedSearch.focus();
+            }
+
+            trigger.addEventListener('click', function() { openSearch(trigger); });
+
+            sOverlay.addEventListener('click', function(e) {
+                if (e.target === sOverlay) closeSearch();
+            });
+
+            sInput.addEventListener('input', function() {
+                renderResults(sInput.value.trim());
+                focusedIdx = -1;
+            });
+
+            sInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') { closeSearch(); return; }
+                if (e.key === 'ArrowDown') { e.preventDefault(); moveFocus(1); return; }
+                if (e.key === 'ArrowUp')   { e.preventDefault(); moveFocus(-1); return; }
+                if (e.key === 'Enter') {
+                    var focused = sResults.querySelector('.sr-focused a');
+                    if (focused) { closeSearch(); window.location.href = focused.href; }
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                var tag = document.activeElement && document.activeElement.tagName;
+                if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA' && !sOverlay.classList.contains('active')) {
+                    e.preventDefault();
+                    openSearch();
+                }
+                if (e.key === 'Escape' && sOverlay.classList.contains('active')) {
+                    closeSearch();
+                }
+            });
+        })();
+
+        /* === IMAGE OVERLAY === */
         (function() {
             var overlay = document.getElementById('imageOverlay');
             var closeBtn = document.getElementById('overlayClose');

@@ -1,374 +1,177 @@
 ---
 layout: wip
-title: "This is a tire fire"
+title: "tirefi.re"
 permalink: /.wip/
 ---
 
-<div class="hero">
-    <div class="hero-gif" onclick="openOverlay()"></div>
-    <h1>🔥 This is a tire fire 🔥</h1>
-    <p class="hero-subtitle">Where operations goes to burn eternally</p>
-    <p class="hero-description">Tires are not prone to self-ignition as a tire must be heated to at least 400 °C (750 °F) for a period of several minutes prior to ignition. Unfortunately, your infrastructure has no such safety mechanisms.</p>
+<div class="index-header">
+    <h1>tirefi.re</h1>
+    <p class="index-tagline">the tire fire burns eternal</p>
 </div>
 
-<div class="sections-grid">
-    <div class="section-card">
-        <div class="section-icon">☁️</div>
-        <h3><a href="/.wip/aws/">AWS</a></h3>
-        <p>Amazon's infinite money extraction service</p>
+<div class="filter-controls" id="filterControls">
+    <div class="filter-input-row">
+        <input
+            type="search"
+            id="filterInput"
+            class="filter-input"
+            placeholder="filter..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Filter topics"
+            aria-controls="filterList"
+        >
     </div>
-
-    <div class="section-card">
-        <div class="section-icon">🗂️</div>
-        <h3><a href="/active-directory/">Active Directory</a></h3>
-        <p>Microsoft's gift that keeps on giving... pain</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🏠</div>
-        <h3><a href="/airbnb/">Airbnb</a></h3>
-        <p>Disrupting the hotel industry, one broken deployment at a time</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎨</div>
-        <h3><a href="/americancraft/">American Craft</a></h3>
-        <p>Artisanal infrastructure, handcrafted disasters</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🦘</div>
-        <h3><a href="/australia/">Australia</a></h3>
-        <p>Where everything is upside down, including the servers</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📱</div>
-        <h3><a href="/byod/">BYOD</a></h3>
-        <p>Bring Your Own Disasters</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">☕</div>
-        <h3><a href="/cafepress/">CafePress</a></h3>
-        <p>Custom printed catastrophes</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">⚙️</div>
-        <h3><a href="/cfengine/">CFEngine</a></h3>
-        <p>Configuration management that manages to break everything</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">👨‍🍳</div>
-        <h3><a href="/.wip/chef/">Chef</a></h3>
-        <p>Too many cooks in the infrastructure kitchen</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🆓</div>
-        <h3><a href="/copyleft/">Copyleft</a></h3>
-        <p>Free as in "free to break your production"</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🥶</div>
-        <h3><a href="/cryops/">CryOps</a></h3>
-        <p>Operations so cold, they'll freeze your deployments</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🔒</div>
-        <h3><a href="/cyber/">Cyber</a></h3>
-        <p>Security theater at its finest</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🗣️</div>
-        <h3><a href="/debate/">Debate</a></h3>
-        <p>Arguing about the right way to be wrong</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🚀</div>
-        <h3><a href="/.wip/devops/">DevOps</a></h3>
-        <p>You build it, you break it, you cry about it</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🌐</div>
-        <h3><a href="/.wip/dns/">DNS</a></h3>
-        <p>It's always DNS. Always.</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🐳</div>
-        <h3><a href="/.wip/docker/">Docker</a></h3>
-        <p>Containerizing your problems since 2013</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🗑️</div>
-        <h3><a href="/dumpster/">Dumpster</a></h3>
-        <p>Where good code goes to die</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">⚖️</div>
-        <h3><a href="/elb/">ELB</a></h3>
-        <p>Elastic Load Balancer: elastically breaking under load</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🏦</div>
-        <h3><a href="/equifax/">Equifax</a></h3>
-        <p>Teaching the world about data security, one breach at a time</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📘</div>
-        <h3><a href="/facebook/">Facebook</a></h3>
-        <p>Move fast and break democracy</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎬</div>
-        <h3><a href="/giforgif/">GIF or GIF</a></h3>
-        <p>The eternal pronunciation debate</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🐧</div>
-        <h3><a href="/gnu/">GNU</a></h3>
-        <p>GNU's Not Unix, but it's definitely complicated</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📰</div>
-        <h3><a href="/hackernews/">Hacker News</a></h3>
-        <p>Where everyone's an expert on everything</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">💼</div>
-        <h3><a href="/ibm/">IBM</a></h3>
-        <p>International Business Mistakes</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🚨</div>
-        <h3><a href="/.wip/incident-management/">Incident Management</a></h3>
-        <p>Managing incidents by creating more incidents</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🧰</div>
-        <h3><a href="/infrakit/">InfraKit</a></h3>
-        <p>Some assembly required, instructions not included</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">👩‍💻</div>
-        <h3><a href="/jessfraz/">jessfraz</a></h3>
-        <p>Container goddess and infrastructure prophet</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📝</div>
-        <h3><a href="/logrotate/">Logrotate</a></h3>
-        <p>Rotating logs until they're dizzy</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🙄</div>
-        <h3><a href="/mansplaining/">Mansplaining</a></h3>
-        <p>Let me explain why you're wrong about everything</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🔬</div>
-        <h3><a href="/.wip/microservices/">Microservices</a></h3>
-        <p>Distributed monoliths with extra steps</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📊</div>
-        <h3><a href="/.wip/monitoring/">Monitoring</a></h3>
-        <p>Watching everything burn in real-time</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">💪</div>
-        <h3><a href="/motivation/">Motivation</a></h3>
-        <p>You can do it! (But you probably won't)</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎭</div>
-        <h3><a href="/nicolas-cage/">Nicolas Cage</a></h3>
-        <p>Not the hero we deserved, but the one we got</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🟢</div>
-        <h3><a href="/nodejs/">Node.js</a></h3>
-        <p>JavaScript everywhere! What could go wrong?</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">☕</div>
-        <h3><a href="/openjdk/">OpenJDK</a></h3>
-        <p>Free Java, premium problems</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🔓</div>
-        <h3><a href="/opensource/">Open Source</a></h3>
-        <p>Free software, expensive support</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">☁️</div>
-        <h3><a href="/openstack/">OpenStack</a></h3>
-        <p>Private cloud that's neither private nor cloudy</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">⚙️</div>
-        <h3><a href="/.wip/ops/">Ops</a></h3>
-        <p>Where hope goes to die</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎰</div>
-        <h3><a href="/opsroulette/">Ops Roulette</a></h3>
-        <p>Russian roulette, but with production deployments</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">👥</div>
-        <h3><a href="/pair-programming/">Pair Programming</a></h3>
-        <p>Two people, one keyboard, infinite suffering</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">👨‍💼</div>
-        <h3><a href="/petecheslock/">Pete Cheslock</a></h3>
-        <p>The operations legend himself</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📖</div>
-        <h3><a href="/playbook/">Playbook</a></h3>
-        <p>Rules that nobody follows</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🔍</div>
-        <h3><a href="/postmortems/">Postmortems</a></h3>
-        <p>Learning from mistakes by making new ones</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎪</div>
-        <h3><a href="/president/">President</a></h3>
-        <p>Leadership by chaos</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎭</div>
-        <h3><a href="/.wip/puppet/">Puppet</a></h3>
-        <p>Configuration management with strings attached</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🦠</div>
-        <h3><a href="/quarantined/">Quarantined</a></h3>
-        <p>Isolated for everyone's safety</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">💎</div>
-        <h3><a href="/rvm/">RVM</a></h3>
-        <p>Ruby Version Manager: managing to break Ruby</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🪣</div>
-        <h3><a href="/.wip/s3/">S3</a></h3>
-        <p>Simple Storage Service: simply not working</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">⚡</div>
-        <h3><a href="/.wip/serverless/">Serverless</a></h3>
-        <p>No servers! (Just someone else's servers)</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🎵</div>
-        <h3><a href="/simonandczarfunkel/">Simon and Czarfunkel</a></h3>
-        <p>The sound of containers</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🛹</div>
-        <h3><a href="/sk8-die/">SK8 or Die</a></h3>
-        <p>Extreme operations</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">👨‍💻</div>
-        <h3><a href="/sysadmin-day/">Sysadmin Day</a></h3>
-        <p>One day of appreciation, 364 days of suffering</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">⚙️</div>
-        <h3><a href="/.wip/systemd/">SystemD</a></h3>
-        <p>Doing everything so you don't have to understand anything</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🗓️</div>
-        <h3><a href="/trumpdays/">Trump Days</a></h3>
-        <p>Counting down to chaos</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🌐</div>
-        <h3><a href="/vmworld/">VMworld</a></h3>
-        <p>Virtual machines, real problems</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">☕</div>
-        <h3><a href="/.wip/weblogic/">WebLogic</a></h3>
-        <p>Logic not included</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🤓</div>
-        <h3><a href="/wellactually/">Well Actually</a></h3>
-        <p>Technically correct, the best kind of wrong</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🪟</div>
-        <h3><a href="/.wip/windows/">Windows</a></h3>
-        <p>Blue screens of death in the cloud</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">🖥️</div>
-        <h3><a href="/year-of-cheslock-on-the-desktop/">Year of Cheslock on the Desktop</a></h3>
-        <p>This will definitely be the year</p>
-    </div>
-
-    <div class="section-card">
-        <div class="section-icon">📹</div>
-        <h3><a href="/zoom/">Zoom</a></h3>
-        <p>You're on mute. No, still on mute.</p>
+    <div class="filter-tags" role="group" aria-label="Filter by tag">
+        <button class="tag-btn" data-tag="cloud" type="button">cloud</button>
+        <button class="tag-btn" data-tag="config-mgmt" type="button">config-mgmt</button>
+        <button class="tag-btn" data-tag="containers" type="button">containers</button>
+        <button class="tag-btn" data-tag="observability" type="button">observability</button>
+        <button class="tag-btn" data-tag="incidents" type="button">incidents</button>
+        <button class="tag-btn" data-tag="networking" type="button">networking</button>
+        <button class="tag-btn" data-tag="enterprise" type="button">enterprise</button>
+        <button class="tag-btn" data-tag="linux" type="button">linux</button>
+        <button class="tag-btn" data-tag="culture" type="button">culture</button>
     </div>
 </div>
+
+<ul class="filter-list" id="filterList" aria-label="Topics" aria-live="polite">
+    <li class="filter-item" data-name="aws" data-desc="Amazon's infinite money extraction service" data-tags="cloud">
+        <a href="/.wip/aws/"><span class="item-name">aws</span><span class="item-desc">Amazon's infinite money extraction service</span></a>
+    </li>
+    <li class="filter-item" data-name="chef" data-desc="Too many cooks in the infrastructure kitchen" data-tags="config-mgmt">
+        <a href="/.wip/chef/"><span class="item-name">chef</span><span class="item-desc">Too many cooks in the infrastructure kitchen</span></a>
+    </li>
+    <li class="filter-item" data-name="devops" data-desc="You build it, you break it, you cry about it" data-tags="culture">
+        <a href="/.wip/devops/"><span class="item-name">devops</span><span class="item-desc">You build it, you break it, you cry about it</span></a>
+    </li>
+    <li class="filter-item" data-name="dns" data-desc="It's always DNS. Always." data-tags="networking">
+        <a href="/.wip/dns/"><span class="item-name">dns</span><span class="item-desc">It's always DNS. Always.</span></a>
+    </li>
+    <li class="filter-item" data-name="docker" data-desc="Containerizing your problems since 2013" data-tags="containers">
+        <a href="/.wip/docker/"><span class="item-name">docker</span><span class="item-desc">Containerizing your problems since 2013</span></a>
+    </li>
+    <li class="filter-item" data-name="incident management" data-desc="Managing incidents by creating more incidents" data-tags="incidents">
+        <a href="/.wip/incident-management/"><span class="item-name">incident management</span><span class="item-desc">Managing incidents by creating more incidents</span></a>
+    </li>
+    <li class="filter-item" data-name="microservices" data-desc="Distributed monoliths with extra steps" data-tags="containers">
+        <a href="/.wip/microservices/"><span class="item-name">microservices</span><span class="item-desc">Distributed monoliths with extra steps</span></a>
+    </li>
+    <li class="filter-item" data-name="monitoring" data-desc="Watching everything burn in real-time" data-tags="observability,incidents">
+        <a href="/.wip/monitoring/"><span class="item-name">monitoring</span><span class="item-desc">Watching everything burn in real-time</span></a>
+    </li>
+    <li class="filter-item" data-name="ops" data-desc="Where hope goes to die" data-tags="culture">
+        <a href="/.wip/ops/"><span class="item-name">ops</span><span class="item-desc">Where hope goes to die</span></a>
+    </li>
+    <li class="filter-item" data-name="puppet" data-desc="Configuration management with strings attached" data-tags="config-mgmt">
+        <a href="/.wip/puppet/"><span class="item-name">puppet</span><span class="item-desc">Configuration management with strings attached</span></a>
+    </li>
+    <li class="filter-item" data-name="s3" data-desc="Simple storage service. Simply not working." data-tags="cloud">
+        <a href="/.wip/s3/"><span class="item-name">s3</span><span class="item-desc">Simple storage service. Simply not working.</span></a>
+    </li>
+    <li class="filter-item" data-name="serverless" data-desc="No servers. Just someone else's servers." data-tags="cloud">
+        <a href="/.wip/serverless/"><span class="item-name">serverless</span><span class="item-desc">No servers. Just someone else's servers.</span></a>
+    </li>
+    <li class="filter-item" data-name="systemd" data-desc="Doing everything so you don't have to understand anything" data-tags="linux">
+        <a href="/.wip/systemd/"><span class="item-name">systemd</span><span class="item-desc">Doing everything so you don't have to understand anything</span></a>
+    </li>
+    <li class="filter-item" data-name="weblogic" data-desc="Logic not included" data-tags="enterprise">
+        <a href="/.wip/weblogic/"><span class="item-name">weblogic</span><span class="item-desc">Logic not included</span></a>
+    </li>
+    <li class="filter-item" data-name="windows" data-desc="Blue screens of death in the cloud" data-tags="enterprise">
+        <a href="/.wip/windows/"><span class="item-name">windows</span><span class="item-desc">Blue screens of death in the cloud</span></a>
+    </li>
+    <li class="filter-separator" id="filterSeparator" role="separator" aria-hidden="true">
+        <div class="filter-separator-inner">partial matches</div>
+    </li>
+    <li class="filter-item" data-name="in memoriam" data-desc="The ones we lost along the way" data-tags="">
+        <a href="/.wip/in-memoriam/"><span class="item-name">in memoriam</span><span class="item-desc">The ones we lost along the way</span></a>
+    </li>
+</ul>
+
+<p class="filter-empty" id="filterEmpty" style="display:none">no matches</p>
+
+<script>
+(function() {
+    var input = document.getElementById('filterInput');
+    var list = document.getElementById('filterList');
+    var separator = document.getElementById('filterSeparator');
+    var emptyMsg = document.getElementById('filterEmpty');
+    var tagBtns = document.querySelectorAll('.tag-btn');
+    var items = Array.prototype.slice.call(list.querySelectorAll('.filter-item:not(.filter-separator)'));
+
+    tagBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            btn.classList.toggle('active');
+            filter();
+        });
+    });
+
+    input.addEventListener('input', filter);
+
+    function getActiveTags() {
+        return Array.prototype.slice.call(document.querySelectorAll('.tag-btn.active'))
+            .map(function(b) { return b.dataset.tag; });
+    }
+
+    function textMatches(item, text) {
+        if (!text) return true;
+        var name = (item.dataset.name || '').toLowerCase();
+        var desc = (item.dataset.desc || '').toLowerCase();
+        return name.indexOf(text) !== -1 || desc.indexOf(text) !== -1;
+    }
+
+    function tagMatches(item, tags) {
+        if (!tags.length) return true;
+        var itemTags = (item.dataset.tags || '').split(',').filter(Boolean);
+        return tags.some(function(t) { return itemTags.indexOf(t) !== -1; });
+    }
+
+    function filter() {
+        var text = (input.value || '').toLowerCase().trim();
+        var tags = getActiveTags();
+        var both = text && tags.length;
+        var strong = [], weak = [], hidden = [];
+
+        items.forEach(function(item) {
+            var tm = textMatches(item, text);
+            var tgm = tagMatches(item, tags);
+
+            if (both) {
+                if (tm && tgm)       strong.push(item);
+                else if (tm || tgm)  weak.push(item);
+                else                 hidden.push(item);
+            } else {
+                if (tm && tgm) strong.push(item);
+                else           hidden.push(item);
+            }
+        });
+
+        /* Reorder DOM: strong → separator → weak → hidden */
+        strong.forEach(function(item) { list.insertBefore(item, separator); });
+        list.insertBefore(separator, weak[0] || null);
+        weak.forEach(function(item) { list.appendChild(item); });
+        hidden.forEach(function(item) { list.appendChild(item); });
+
+        strong.forEach(function(i) { i.style.display = ''; });
+        weak.forEach(function(i) { i.style.display = ''; });
+        hidden.forEach(function(i) { i.style.display = 'none'; });
+
+        var showSep = both && strong.length && weak.length;
+        separator.style.display = showSep ? '' : 'none';
+
+        var anyVisible = strong.length + weak.length > 0;
+        emptyMsg.style.display = anyVisible ? 'none' : '';
+
+        /* Fix border-top on first visible item */
+        list.querySelectorAll('.filter-item').forEach(function(item, idx) {
+            item.style.borderTop = '';
+        });
+        var firstVisible = strong[0] || weak[0];
+        if (firstVisible) firstVisible.style.borderTop = '1px solid var(--border)';
+    }
+
+    /* Initial border-top on the actual first item */
+    if (items[0]) items[0].style.borderTop = '1px solid var(--border)';
+})();
+</script>

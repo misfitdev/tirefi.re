@@ -6,7 +6,7 @@ permalink: /.wip/systemd/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>SystemD</span>
+        <a href="/.wip/">Home</a> → <span>SystemD</span>
     </div>
     <h1>⚙️ service blob stop</h1>
     <p class="page-subtitle">Doing everything so you don't have to understand anything</p>

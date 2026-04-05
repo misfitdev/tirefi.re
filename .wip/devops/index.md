@@ -6,7 +6,7 @@ permalink: /.wip/devops/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>DevOps</span>
+        <a href="/.wip/">Home</a> → <span>DevOps</span>
     </div>
     <h1>🚀 , Director of.</h1>
     <p class="page-subtitle">You build it, you break it, you cry about it</p>

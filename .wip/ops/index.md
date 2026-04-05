@@ -6,7 +6,7 @@ permalink: /.wip/ops/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Ops</span>
+        <a href="/.wip/">Home</a> → <span>Ops</span>
     </div>
     <h1>⚙️ here, hold this.</h1>
     <p class="page-subtitle">Production is on fire, but at least we have automation</p>

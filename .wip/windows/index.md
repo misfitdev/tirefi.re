@@ -210,14 +210,14 @@ permalink: /.wip/windows/
 .nav-footer {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--border-hi);
   padding: 1.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
 .nav-footer h3 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
@@ -231,7 +231,7 @@ permalink: /.wip/windows/
 }
 
 .nav-footer a:hover {
-  color: var(--accent);
+  color: var(--text-bright);
   text-decoration: underline;
 }
 

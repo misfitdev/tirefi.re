@@ -6,7 +6,7 @@ permalink: /.wip/incident-management/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Incident Management</span>
+        <a href="/.wip/">Home</a> → <span>Incident Management</span>
     </div>
     <h1>🚨 Hi, who just joined?</h1>
     <p class="page-subtitle">elevated error rates & existential dread</p>

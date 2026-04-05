@@ -6,7 +6,7 @@ permalink: /.wip/docker/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Docker</span>
+        <a href="/.wip/">Home</a> → <span>Docker</span>
     </div>
     <h1>🐳 ಠ_ಠ in docker</h1>
     <p class="page-subtitle">Containerizing disappointment since 2013</p>

@@ -6,7 +6,7 @@ permalink: /.wip/monitoring/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Monitoring</span>
+        <a href="/.wip/">Home</a> → <span>Monitoring</span>
     </div>
     <h1>📊 ಠ_ಠ in our monitoring system</h1>
     <p class="page-subtitle">The forever war: #monitoringsucks vs #monitoringlove</p>

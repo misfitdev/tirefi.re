@@ -6,7 +6,7 @@ permalink: /.wip/puppet/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Puppet</span>
+        <a href="/.wip/">Home</a> → <span>Puppet</span>
     </div>
     <h1>🎭 Puppet is a tirefire</h1>
     <p class="page-subtitle">Configuration management for people who enjoy pain</p>

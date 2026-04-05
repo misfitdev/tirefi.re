@@ -6,7 +6,7 @@ permalink: /.wip/dns/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>DNS</span>
+        <a href="/.wip/">Home</a> → <span>DNS</span>
     </div>
     <h1>🌐 It's always DNS</h1>
     <p class="page-subtitle">The mystery resolver of our digital age</p>

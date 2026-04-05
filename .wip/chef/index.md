@@ -65,7 +65,7 @@ permalink: /.wip/chef/
 
 @keyframes burn-pulse {
   0%, 100% { border-color: var(--danger); color: var(--danger); }
-  50%       { border-color: var(--accent); color: var(--accent); }
+  50%       { border-color: var(--border-hi); color: var(--text-bright); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -100,8 +100,8 @@ permalink: /.wip/chef/
 
 .recipe-box {
   background: var(--surface);
-  border: 1px solid var(--accent);
-  border-top: 3px solid var(--accent);
+  border: 1px solid var(--border-hi);
+  border-top: 3px solid var(--border-hi);
   padding: 1.5rem;
   padding-top: 2.25rem;
   margin: 1.25rem 0;
@@ -113,7 +113,7 @@ permalink: /.wip/chef/
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--accent);
+  background: var(--text-bright);
   color: #000;
   padding: 0.2rem 0.75rem;
   font-weight: bold;
@@ -122,7 +122,7 @@ permalink: /.wip/chef/
 }
 
 .recipe-box h3 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.75rem;
   font-size: 1rem;
 }
@@ -209,7 +209,7 @@ permalink: /.wip/chef/
 }
 
 .tool-box h4 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
@@ -246,14 +246,14 @@ permalink: /.wip/chef/
 .nav-footer {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--border-hi);
   padding: 1.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
 .nav-footer h3 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
@@ -267,7 +267,7 @@ permalink: /.wip/chef/
 }
 
 .nav-footer a:hover {
-  color: var(--accent);
+  color: var(--text-bright);
   text-decoration: underline;
 }
 

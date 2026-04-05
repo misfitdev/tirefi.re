@@ -6,7 +6,7 @@ permalink: /.wip/s3/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>S3</span>
+        <a href="/.wip/">Home</a> → <span>S3</span>
     </div>
     <h1>🪣 503 Slow Down</h1>
     <p class="page-subtitle">Simple Storage Service: simply not working</p>

@@ -6,7 +6,7 @@ permalink: /.wip/microservices/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Microservices</span>
+        <a href="/.wip/">Home</a> → <span>Microservices</span>
     </div>
     <h1>🔬 Loosely coupled fires</h1>
     <p class="page-subtitle">Distributed monoliths with extra steps</p>

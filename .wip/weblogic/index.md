@@ -65,7 +65,7 @@ permalink: /.wip/weblogic/
 
 @keyframes enterprise-pulse {
   0%, 100% { border-color: var(--danger); color: var(--danger); }
-  50%       { border-color: var(--accent); color: var(--accent); }
+  50%       { border-color: var(--border-hi); color: var(--text-bright); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -197,7 +197,7 @@ permalink: /.wip/weblogic/
 }
 
 .edition-box h4 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
@@ -232,14 +232,14 @@ permalink: /.wip/weblogic/
 .nav-footer {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--border-hi);
   padding: 1.5rem;
   text-align: center;
   margin: 2rem 0;
 }
 
 .nav-footer h3 {
-  color: var(--accent);
+  color: var(--text-bright);
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
 }
@@ -253,7 +253,7 @@ permalink: /.wip/weblogic/
 }
 
 .nav-footer a:hover {
-  color: var(--accent);
+  color: var(--text-bright);
   text-decoration: underline;
 }
 

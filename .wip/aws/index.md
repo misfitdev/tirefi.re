@@ -6,7 +6,7 @@ permalink: /.wip/aws/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>AWS</span>
+        <a href="/.wip/">Home</a> → <span>AWS</span>
     </div>
     <h1>☁️ us-tirefire-1</h1>
     <p class="page-subtitle">Service is operating normally (narrator: it wasn't)</p>

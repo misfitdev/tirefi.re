@@ -6,7 +6,7 @@ permalink: /.wip/serverless/
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">🔥 Home</a> → <span>Serverless</span>
+        <a href="/.wip/">Home</a> → <span>Serverless</span>
     </div>
     <h1>⚡ The Emperor's New Servers</h1>
     <p class="page-subtitle">No servers! (Just someone else's servers)</p>

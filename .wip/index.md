@@ -69,9 +69,6 @@ permalink: /.wip/
     <li class="filter-item" data-name="windows" data-desc="Blue screens of death in the cloud" data-tags="enterprise,os,microsoft">
         <a href="/.wip/windows/"><span class="item-name">windows</span><span class="item-desc">Blue screens of death in the cloud</span></a>
     </li>
-    <li class="filter-separator" id="filterSeparator" aria-hidden="true" style="display:none">
-        <div class="filter-separator-inner"></div>
-    </li>
     <li class="filter-item" data-name="in memoriam" data-desc="The ones we lost along the way" data-tags="">
         <a href="/.wip/in-memoriam/"><span class="item-name">in memoriam</span><span class="item-desc">The ones we lost along the way</span></a>
     </li>
@@ -83,91 +80,79 @@ permalink: /.wip/
 (function() {
     var input = document.getElementById('filterInput');
     var list = document.getElementById('filterList');
-    var separator = document.getElementById('filterSeparator');
     var emptyMsg = document.getElementById('filterEmpty');
-    var items = Array.prototype.slice.call(
-        list.querySelectorAll('.filter-item:not(.filter-separator)')
-    );
-
-    /* Store original order */
+    var items = Array.prototype.slice.call(list.querySelectorAll('.filter-item'));
     var originalOrder = items.slice();
 
     input.addEventListener('input', filter);
 
-    function filter() {
-        var text = (input.value || '').toLowerCase().trim();
+    /* fzf-style fuzzy subsequence scoring.
+     * All query chars must appear in target in order.
+     * Score rewards: early start, consecutive runs, word boundaries, exact substring. */
+    function fuzzyScore(query, target) {
+        var q = query.toLowerCase();
+        var t = target.toLowerCase();
+        var qi = 0, positions = [];
+        for (var ti = 0; ti < t.length && qi < q.length; ti++) {
+            if (t[ti] === q[qi]) { positions.push(ti); qi++; }
+        }
+        if (qi < q.length) return 0;
 
-        if (!text) {
-            /* Restore original order, show everything */
+        var score = 100;
+        score -= positions[0] * 3;                          /* earlier start = better */
+        for (var i = 1; i < positions.length; i++) {
+            if (positions[i] === positions[i - 1] + 1) score += 15; /* consecutive bonus */
+        }
+        var c = positions[0];
+        if (c === 0 || /[\s\-_,]/.test(t[c - 1])) score += 25;    /* word boundary bonus */
+        if (t.indexOf(q) !== -1) score += 20;               /* exact substring bonus */
+        return Math.max(1, score);
+    }
+
+    function itemScore(query, item) {
+        var name = item.dataset.name || '';
+        var desc = item.dataset.desc || '';
+        var tags = (item.dataset.tags || '').replace(/,/g, ' ');
+        return Math.max(
+            fuzzyScore(query, name) * 4,
+            fuzzyScore(query, desc) * 2,
+            fuzzyScore(query, tags) * 1
+        );
+    }
+
+    function filter() {
+        var query = (input.value || '').trim();
+
+        if (!query) {
             originalOrder.forEach(function(item) {
                 list.appendChild(item);
                 item.style.display = '';
             });
-            separator.style.display = 'none';
             emptyMsg.style.display = 'none';
-            setBorderTop();
+            setBorderTop(originalOrder);
             return;
         }
 
-        var textMatches = [];
-        var tagMatches = [];
+        var scored = items.map(function(item) {
+            return { item: item, score: itemScore(query, item) };
+        }).sort(function(a, b) { return b.score - a.score; });
 
-        items.forEach(function(item) {
-            var name = (item.dataset.name || '').toLowerCase();
-            var desc = (item.dataset.desc || '').toLowerCase();
-            var tags = (item.dataset.tags || '').toLowerCase();
-
-            var inText = name.indexOf(text) !== -1 || desc.indexOf(text) !== -1;
-            var inTags = tags.indexOf(text) !== -1;
-
-            if (inText) {
-                textMatches.push(item);
-            } else if (inTags) {
-                tagMatches.push(item);
-            }
+        var visible = [];
+        scored.forEach(function(s) {
+            list.appendChild(s.item);
+            if (s.score > 0) { s.item.style.display = ''; visible.push(s.item); }
+            else              { s.item.style.display = 'none'; }
         });
 
-        /* Reorder: text matches → separator → tag matches → hidden */
-        textMatches.forEach(function(item) {
-            list.insertBefore(item, separator);
-            item.style.display = '';
-        });
-
-        var showSep = textMatches.length > 0 && tagMatches.length > 0;
-        separator.style.display = showSep ? 'list-item' : 'none';
-
-        if (tagMatches.length) {
-            /* Insert separator first, then tag matches after it */
-            tagMatches.forEach(function(item) {
-                list.appendChild(item);
-                item.style.display = '';
-            });
-        }
-
-        /* Hide items that matched neither */
-        items.forEach(function(item) {
-            if (textMatches.indexOf(item) === -1 && tagMatches.indexOf(item) === -1) {
-                item.style.display = 'none';
-                list.appendChild(item); /* park at end */
-            }
-        });
-
-        var anyVisible = textMatches.length + tagMatches.length > 0;
-        emptyMsg.style.display = anyVisible ? 'none' : '';
-
-        setBorderTop();
+        emptyMsg.style.display = visible.length ? 'none' : '';
+        setBorderTop(visible);
     }
 
-    function setBorderTop() {
-        /* First visible item needs a top border; others don't need special handling */
-        var first = null;
-        items.forEach(function(item) {
-            if (!first && item.style.display !== 'none') first = item;
-            item.classList.remove('first-visible');
-        });
-        if (first) first.classList.add('first-visible');
+    function setBorderTop(visible) {
+        items.forEach(function(item) { item.classList.remove('first-visible'); });
+        if (visible.length) visible[0].classList.add('first-visible');
     }
 
-    setBorderTop();
+    setBorderTop(originalOrder);
 })();
 </script>

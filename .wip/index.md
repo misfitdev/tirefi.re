@@ -69,9 +69,6 @@ permalink: /.wip/
     <li class="filter-item" data-name="windows" data-desc="Blue screens of death in the cloud" data-tags="enterprise,os,microsoft">
         <a href="/.wip/windows/"><span class="item-name">windows</span><span class="item-desc">Blue screens of death in the cloud</span></a>
     </li>
-    <li class="filter-item" data-name="in memoriam" data-desc="The ones we lost along the way" data-tags="">
-        <a href="/.wip/in-memoriam/"><span class="item-name">in memoriam</span><span class="item-desc">The ones we lost along the way</span></a>
-    </li>
 </ul>
 
 <p class="filter-empty" id="filterEmpty" style="display:none">no matches</p>

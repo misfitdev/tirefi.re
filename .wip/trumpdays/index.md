@@ -1,79 +1,52 @@
 ---
 layout: wip
-title: "The System That Cannot Come Down for Maintenance"
+title: "How long has it been for this madness?"
 permalink: /.wip/trumpdays/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>The Unmaintainable System</span>
+        <a href="/.wip/">Home</a> → <span>Trump Days</span>
     </div>
-    <h1>We'll Fix It After the Launch</h1>
-    <p class="page-subtitle">the production system held together with duct tape and institutional inertia</p>
+    <h1>How long has it been for this madness?</h1>
+    <p class="page-subtitle">a duration clock. the duration completed. then it started again.</p>
 </div>
 
 <div class="content-section">
-    <h2>The System That Cannot Come Down</h2>
-    <p>Every organization has one. You know it the moment you ask about the maintenance window and someone laughs. Not a dismissive laugh — a specific, exhausted laugh that means "we tried that conversation already."</p>
-
-    <p>The system is running. It has been running. It will continue running until it doesn't, and when it doesn't the failure will be spectacular and completely predictable because everyone in the ops room has been predicting it for eighteen months. The postmortem will describe it as "unexpected."</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"Leadership is aware of the technical debt. It's in the roadmap for next quarter. It has been in the roadmap for next quarter for three quarters."</p>
-            <cite>— a project manager, not lying exactly</cite>
-        </blockquote>
-    </div>
+    <link rel="stylesheet" href="/flipclock.css">
+    <div class="clock" style="margin:2em;"></div>
+    <p><em>The above was a FlipClock.js counter measuring elapsed time from January 20, 2017. It targeted January 20, 2021 as the endpoint. That date has passed. The clock completed its run.</em></p>
 </div>
 
 <div class="content-section">
-    <h2>Anatomy of the Unmaintainable System</h2>
-    <p>It started as a temporary solution. The temporary solution shipped. The temporary solution became load-bearing. The original engineer left. The documentation was the original engineer.</p>
+    <h2>The Duration</h2>
+    <p>This page was a duration clock, not a countdown. Where the <a href="/.wip/president/">president page</a> asked "how long until it ends," this one asked "how long has it been" — a subtle but meaningful framing difference. Duration clocks measure suffering in progress. Countdown timers measure anticipated relief. Both were running simultaneously on this site, targeting the same end date, from different angles.</p>
 
-    <p>Now it sits in the middle of the architecture diagram with lines going to everything. The lines are not labeled. Everyone who could label them has left or been promoted to a role where they no longer touch infrastructure. Touching it requires understanding it. Understanding it requires archaeology. Nobody has time for archaeology because the system is still running and therefore not a priority.</p>
-
-    <div class="fun-facts">
-        <h3>Signs Your System Cannot Come Down for Maintenance</h3>
-        <ul>
-            <li>The deployment process is a wiki page last updated in a year that starts with 201-</li>
-            <li>There is a Slack channel dedicated to the system that is mostly quiet except when it breaks</li>
-            <li>The person who knows the most about it has "transitioning off this project" as a recurring calendar event that keeps getting rescheduled</li>
-            <li>"We should rewrite it" has been said at two different architecture reviews and never made it to a sprint</li>
-            <li>The monitoring alerts go to a distribution list that includes at least one person who left the company</li>
-            <li>You have run <code>kill -9</code> on it in production and prayed</li>
-            <li>The system has a nickname and the nickname is not kind</li>
-        </ul>
-    </div>
+    <p>The duration: January 20, 2017 to January 20, 2021. Four years. 1,461 days. The clock measured it in real time and the answer was always accurate to the second.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Leadership Relationship with Technical Debt</h2>
-    <p>Leadership knows. This is important to understand. They know it is fragile. They know the team is worried. They have sat in the room while the ops team explained, with slides, what will happen and approximately when.</p>
+    <h2>The Clock Stopped</h2>
+    <p>On January 20, 2021, Joe Biden was inaugurated as the 46th President of the United States. The FlipClock hit its target. The madness, as measured by the original page, had lasted exactly four years. The clock was correct.</p>
 
-    <p>The problem is that the system has not failed yet. From the outside, not-failed looks identical to fine. The probability of failure is invisible until the moment it becomes a Slack incident channel. The cost of fixing it now is visible and real and appears on a budget spreadsheet. This asymmetry is why the duct tape stays.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"We'll fix it after the launch." — said before the launch that was supposed to be the last excuse. Said before that launch too. And the one before that.</p>
-            <cite>— the launch calendar, stretching infinitely into the future</cite>
-        </blockquote>
-    </div>
+    <p>The transition completed. There was, notably, a period between Election Day 2020 and January 20, 2021 during which the validity of the election results was contested through legal challenges and public statements. The certification of electoral votes on January 7, 2021 was preceded by a breach of the Capitol building on January 6. These are facts of record. The duration clock was running throughout. It did not editorialize. It counted.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Eventual Failure</h2>
-    <p>The countdown is not a question of if. Everyone in the ops room knows this. They have documented it. They have escalated it. They have written the runbook for when it happens, which is the only form of "addressing" technical debt that leadership consistently approves budget for.</p>
+    <h2>The Problem With Clocks That End</h2>
+    <p>Donald Trump ran again in 2024 and won. He was inaugurated for a second term on January 20, 2025. The "how long has it been for this madness" clock, which was designed to measure a specific bounded interval, now has to contend with the fact that the interval is not over — it has resumed, after a four-year interruption, with a new start date.</p>
 
-    <p>When it fails, it will fail at the worst possible time by definition — the best possible time is when you're already in a maintenance window and prepared, which is the time that was never scheduled. The incident will be novel in its specifics and completely familiar in its shape.</p>
+    <p>A faithful reconstruction of the original page's intent would require a new clock: one that either measures the total elapsed time across both terms (skipping the Biden years), or measures elapsed time from January 20, 2025, or acknowledges that "the madness" is now a discontinuous time series and the original measurement instrument was not designed for this. Systems that measure ongoing phenomena often have this problem. The metric that made sense for one operational period stops making sense when the operational parameters change.</p>
 
-    <p>The postmortem will identify contributing factors. It will not identify the fundamental cause, which is that the system could not come down for maintenance and now it has come down, on its own terms, at 11pm on a Friday before a long weekend.</p>
+    <p>The clock ran. The clock stopped. The question it was asking is not finished yet.</p>
+</div>
 
-    <p>But that's future-ops's problem. Current-ops is just keeping the countdown running.</p>
+<div class="quote-box">
+    <blockquote>The original measurement was accurate. The follow-up measurement requires a different instrument.</blockquote>
+    <cite>— the FlipClock, having done exactly what it was asked to do</cite>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/incident-management/" class="nav-button">Incident Management</a>
-    <a href="/.wip/monitoring/" class="nav-button">Monitoring</a>
-    <a href="/.wip/postmortems/" class="nav-button">Postmortems</a>
-    <a href="/.wip/" class="nav-button">All Disasters</a>
+    <a href="/.wip/president/" class="nav-button">Countdown to the History</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

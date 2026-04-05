@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "DNS - It's always DNS"
+title: "It's always DNS. Always."
 permalink: /.wip/dns/
 ---
 
@@ -8,248 +8,47 @@ permalink: /.wip/dns/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>DNS</span>
     </div>
-    <h1>It's always DNS</h1>
-    <p class="page-subtitle">The mystery resolver of our digital age</p>
+    <h1>It's always DNS. Always.</h1>
+    <p class="page-subtitle">the cache is valid for another 3599 seconds</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner error">
-        <strong>❌ Status:</strong> NXDOMAIN (as is tradition)
+    <a href="http://hipku.gabrielmartin.net/" target="_blank">
+        <img src="/dns/dns_haiku.png" alt="DNS haiku generator" />
+    </a>
+
+    <div class="quote-box">
+        <blockquote>It's not DNS.<br>There's no way it's DNS.<br>It was DNS.</blockquote>
+        <cite>— every network engineer, eventually</cite>
     </div>
+</div>
 
-    <div class="main-content-area">
-        <div class="dns-haiku-container">
-            <a href="http://hipku.gabrielmartin.net/" target="_blank">
-                <img src="/dns/dns_haiku.png" alt="DNS haiku generator - Words of wisdom for the network-weary" class="dns-haiku-image">
-            </a>
-            <p class="haiku-caption">Ancient wisdom speaks through the tubes</p>
-        </div>
-        
-        <div class="content-text">
-            <p><em>In the beginning was the Word, and the Word was DNS, and DNS was with Root, and DNS was broken.</em></p>
+<div class="content-section">
+    <h2>Why It's Always DNS</h2>
+    <p>DNS is a distributed caching system built on the assumption that delegated authority is trustworthy and that eventually-consistent state is acceptable for name resolution. Both of these assumptions are mostly fine and occasionally catastrophic. The TTL — the Time to Live — tells resolvers how long to cache an answer. When you change a record, the old answer is correct until the TTL expires everywhere. "DNS propagation" is the polite name for the window during which some resolvers have the new answer and some have the old one, and there is no reliable way to know which you're getting.</p>
 
-            <div class="quote-box">
-                <blockquote>
-                    <p>"It's not DNS. There's no way it's DNS. It was DNS."</p>
-                    <cite>— Every Network Engineer, Eventually</cite>
-                </blockquote>
-            </div>
+    <p>The TTL is the number you set when you're feeling optimistic. A 24-hour TTL means you should lower it before any planned change, wait for the old TTL to expire, make the change, then raise it again. Most people remember this approximately half the time. The other half, they make the change and then wait, and the waiting is unpredictable, and there is no progress bar, and <code>dig @8.8.8.8</code> and <code>dig @1.1.1.1</code> return different answers, and the person in Sydney is seeing something different from the person in Frankfurt, and everything is technically correct and also not working.</p>
+</div>
 
-            <div class="dns-resolution-steps">
-                <h3>DNS Resolution Process</h3>
-                <div class="resolution-step">
-                    <strong>Step 1:</strong> Application asks resolver for example.com
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 2:</strong> Resolver asks root server "Who handles .com?"
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 3:</strong> Root server responds "Ask the .com servers"
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 4:</strong> Resolver asks .com server "Who handles example.com?"
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 5:</strong> .com server responds "Ask example.com's nameservers"
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 6:</strong> Resolver asks example.com nameserver for the record
-                </div>
-                <div class="resolution-step">
-                    <strong>Step 7:</strong> Something goes wrong. It's always Step 7.
-                </div>
-            </div>
+<div class="content-section">
+    <h2>The Debugging Loop</h2>
+    <p>The DNS debugging loop is short and circular. You check with <code>dig</code>. You check with <code>nslookup</code> because someone on the team only knows <code>nslookup</code>. You flush your local cache. You check again. The answer changed, or it didn't. You check a public resolver. You check the authoritative nameserver directly. The authoritative nameserver has the right answer. The resolver you're using does not. You wait. You check again. It still doesn't. You wait more. Eventually it resolves correctly, or you change something, and you're not sure which was causal.</p>
 
-            <div class="dns-record-types">
-                <h3>Essential DNS Record Types</h3>
-                <div class="record-type">
-                    <strong>A:</strong> Points to an IPv4 address (probably wrong)
-                </div>
-                <div class="record-type">
-                    <strong>AAAA:</strong> Points to an IPv6 address (definitely wrong)
-                </div>
-                <div class="record-type">
-                    <strong>CNAME:</strong> Points to another name (which points to wrong address)
-                </div>
-                <div class="record-type">
-                    <strong>MX:</strong> Mail server (hosted by someone who quit 3 years ago)
-                </div>
-                <div class="record-type">
-                    <strong>NS:</strong> Authoritative nameserver (authority questionable)
-                </div>
-                <div class="record-type">
-                    <strong>SOA:</strong> Start of Authority (authority disputed)
-                </div>
-                <div class="record-type">
-                    <strong>TXT:</strong> Random text (usually from that intern in 2019)
-                </div>
-            </div>
+    <p>The negative cache TTL — the SOA's minimum field, the time to cache NXDOMAIN responses — catches people more than the positive TTL. You deploy something, the name doesn't exist yet, a resolver caches the NXDOMAIN, you create the record, the resolver still returns NXDOMAIN for the cached duration. The record exists. The cache says it doesn't. The application can't connect. The logs say the name doesn't resolve. You check the authoritative server, the record is there, everything is fine, except it isn't.</p>
+</div>
 
-            <div class="troubleshooting-guide">
-                <h3>DNS Troubleshooting Guide</h3>
-                <ol>
-                    <li>Check if it's DNS (it is)</li>
-                    <li>Clear your DNS cache</li>
-                    <li>Use a different DNS server</li>
-                    <li>Check TTL values (they're all wrong)</li>
-                    <li>Restart DNS service</li>
-                    <li>Sacrifice a network cable to the packet gods</li>
-                    <li>Accept that it was DNS all along</li>
-                </ol>
-            </div>
+<div class="quote-box">
+    <blockquote>The record exists. The record has always existed. The authoritative nameserver serves it correctly. The application cannot resolve the name. The TTL expires in four minutes. We are waiting.</blockquote>
+    <cite>— incident timeline, T+47 minutes</cite>
+</div>
 
-            <div class="fun-facts">
-                <h3>DNS Fun Facts</h3>
-                <ul>
-                    <li>DNS was designed when the internet had 12 computers, all named after Tolkien characters</li>
-                    <li>TTL stands for "Time To Live" but really means "Time To Lie"</li>
-                    <li>The root DNS servers know everything but tell you nothing useful</li>
-                    <li>DNS caching: keeping wrong answers fast since 1983</li>
-                    <li>Every DNS query contains the hopes and dreams of a developer who just wants their site to work</li>
-                    <li>"DNS propagation" is just a fancy way of saying "nobody knows when this will work"</li>
-                    <li>The most secure DNS is one that doesn't resolve anything</li>
-                    <li>DNSSEC: making DNS queries fail in cryptographically verifiable ways</li>
-                </ul>
-            </div>
+<div class="content-section">
+    <h2>Split-Horizon and the Special Cases</h2>
+    <p>Split-horizon DNS means you have at least two different answers for the same name, served to different clients based on where they're querying from. Internal clients get internal IPs. External clients get public IPs. This is correct behavior for many architectures and a persistent source of "it works for me" problems when the internal and external answers diverge beyond their intended differences, or when a developer queries from their laptop and gets the internal answer for a name that should be public, or when a monitoring agent outside the VPC can't reach the internal address it resolved and the alert fires and the service is actually fine.</p>
 
-            <div class="dns-philosophy">
-                <h3>The DNS Philosophy</h3>
-                <p>DNS operates on the principle of eventual consistency, which in practice means eventually inconsistent. It's a distributed system where everyone agrees on the protocol but disagrees on everything else.</p>
-                
-                <p>The beauty of DNS lies in its simplicity: you ask for a name, you get an address. The horror of DNS lies in its complexity: cache poisoning, race conditions, split-brain scenarios, and the eternal question of whether it's really DNS this time.</p>
-                
-                <p>Remember: DNS is not just a naming system. It's a state of mind. A way of life. A constant reminder that in a distributed system, trust is temporary and authority is always questionable.</p>
-            </div>
-        </div>
-    </div>
+    <p>The resolution is straightforward once you understand split-horizon is in play. Getting to "this is a split-horizon DNS issue" from "the health check is failing and I don't know why" takes longer. You are checking network routes, checking firewall rules, checking the application logs, before someone thinks to ask what address the monitoring agent is actually trying to reach. This is always DNS. It was always going to be DNS. The only variable is how long it takes to arrive at that conclusion.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/docker/" class="nav-button">Next Disaster: Docker →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-
-<style>
-.dns-haiku-container {
-    text-align: center;
-    margin: 2rem 0 3rem;
-}
-
-.dns-haiku-image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid var(--border);
-    cursor: pointer;
-}
-
-.dns-haiku-image:hover {
-    border-color: var(--border-hi);
-}
-
-.haiku-caption {
-    margin-top: 1rem;
-    color: var(--text-dim);
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-.dns-resolution-steps {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.dns-resolution-steps h3 {
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
-}
-
-.resolution-step {
-    background: var(--bg);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid var(--border-hi);
-    color: var(--text);
-}
-
-.dns-record-types {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.dns-record-types h3 {
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
-}
-
-.record-type {
-    background: var(--bg);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid var(--border-hi);
-    color: var(--text);
-}
-
-.record-type strong {
-    color: var(--text-bright);
-    font-family: var(--font);
-}
-
-.troubleshooting-guide {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.troubleshooting-guide h3 {
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
-}
-
-.troubleshooting-guide ol {
-    color: var(--text);
-    padding-left: 1.5rem;
-}
-
-.troubleshooting-guide li {
-    margin: 0.8rem 0;
-    line-height: 1.5;
-}
-
-.dns-philosophy {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.dns-philosophy h3 {
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-}
-
-.dns-philosophy p {
-    color: var(--text-dim);
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    
-    
-    .dns-resolution-steps,
-    .dns-record-types,
-    .troubleshooting-guide {
-        padding: 1.5rem;
-    }
-    
-    .resolution-step,
-    .record-type {
-        padding: 0.8rem;
-        margin: 0.8rem 0;
-    }
-}
-</style>

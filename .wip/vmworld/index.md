@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "VMworld - The Cert That Now Costs $80k Per Year"
+title: "Tire Fire"
 permalink: /.wip/vmworld/
 ---
 
@@ -8,67 +8,46 @@ permalink: /.wip/vmworld/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>VMworld</span>
     </div>
-    <h1>VMware: The Hypervisor That Ate the Data Center</h1>
-    <p class="page-subtitle">gotta get those enterprise monies, every single year, forever</p>
+    <h1>VMworld</h1>
+    <p class="page-subtitle">gotta get those fluffing CEUs to keep the cert.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Golden Age</h2>
-    <p>There was a time when VMware was the answer to almost every data center question. Consolidate physical servers? VMware. Disaster recovery? VMware. Dev/test environments? VMware. The hypervisor that ran everything, that made modern virtualization practical at enterprise scale, that turned "bare metal" from a requirement into a choice.</p>
+    <p><img src="/vmworld/vmworld.gif" alt="let's be honest, everyone needs those enterprise monies to stay in business"></p>
 
-    <p>You got certified. The VCP was a real credential that meant something real. You knew ESXi deeply. You understood vCenter. You could explain vMotion to a VP without losing them. You went to VMworld and it was genuinely useful and the badge said "VMware" on it and everything was fine.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"VMware vSphere is the industry standard enterprise virtualization platform." — your resume, 2016, when that sentence still opened doors without a follow-up question.</p>
-            <cite>— a VMUG attendance badge collecting dust</cite>
-        </blockquote>
-    </div>
+    <p>VMworld: gotta get those fluffing CEUs to keep the cert.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Broadcom Acquisition</h2>
-    <p>Broadcom acquired VMware in November 2023 for $69 billion. This is the number people say when they want to explain why their VMware renewal is not going the way it used to go.</p>
+    <h2>The Certification Industrial Complex</h2>
+    <p>The VMware certification track was real and it meant something. VCP — VMware Certified Professional — was a credential that required passing a proctored exam after completing a required training course. Not just the exam: you had to do the training first, and the training cost money, and the exam cost money, and the recertification every two years cost more money because you had to retake training or accumulate CEUs from VMworld sessions and VMware User Group events.</p>
 
-    <p>Broadcom's business model is not complicated: acquire enterprise software companies, focus on the largest enterprise customers, discontinue or restructure everything else. They have done this before. They were quite clear about the plan. The market watched it happen and the enterprise world watched it happen and somehow everyone was still surprised when the licensing changes came.</p>
+    <p>The pipeline was elegant if you squinted: you go to VMworld, you attend sessions, the sessions count as CEUs, your cert stays current, and VMware gets to count you as an engaged community member in their marketing materials. You get the badge. They get the attendance numbers. Everyone needs those enterprise monies to stay in business.</p>
 
-    <div class="fun-facts">
-        <h3>The Licensing Arc</h3>
-        <ul>
-            <li><strong>Before:</strong> Perpetual licenses. You bought it once. You owned it. Annual support and subscription on top, but the core product was yours.</li>
-            <li><strong>After:</strong> Subscription-only. No more perpetual. All bundles. Smaller tiers eliminated. The math changed in one direction.</li>
-            <li><strong>The negotiation:</strong> Everyone is in it. Every large enterprise customer simultaneously started their "evaluate alternatives" project in Q1 2024. Some of them will actually migrate. Most will renew.</li>
-            <li><strong>The reason most will renew:</strong> The migration is real work. The workload is already there. The VMware team knows the stack. The timeline to complete migration is longer than the renewal deadline. Broadcom knows this.</li>
-        </ul>
-    </div>
+    <p>The conference itself was genuinely useful for a long time. VMworld was where the product roadmap got announced, where the hands-on labs ran, where you could spend two hours in a deep-dive with a product engineer who actually understood why vSAN had the behavior you'd been fighting in production. The trade show floor was a tire fire but the technical content was real.</p>
+</div>
+
+<div class="content-section">
+    <h2>The Broadcom Chapter</h2>
+    <p>Broadcom acquired VMware in November 2023 for $69 billion. Broadcom's approach to acquired enterprise software companies is not complicated and was not a surprise to anyone who had watched them acquire CA Technologies or Symantec: focus on the largest enterprise customers, restructure licensing toward subscription bundles, and rationalize everything else. The rationalization began immediately.</p>
+
+    <p>Perpetual licenses went away. The product lineup was consolidated into bundles. The smaller tiers that mid-market customers had been using disappeared or became significantly more expensive. The renewal conversations that enterprise procurement teams had been accustomed to conducting in a certain way became different conversations. VMworld itself was already renamed "VMware Explore" before the acquisition closed, which in retrospect was less a rebrand and more a weather vane.</p>
+
+    <p>Every large VMware shop started an "evaluate alternatives" project in Q1 2024. Nutanix. Proxmox. OpenShift Virtualization. The hyperscalers for whatever could move to cloud. Most of those projects are still running. The migration timeline consistently exceeds the renewal deadline, and Broadcom's pricing is set with full awareness of this fact. The hypervisor hums. The invoices arrive.</p>
 </div>
 
 <div class="content-section">
     <h2>The VCP You Got in 2016</h2>
-    <p>The certification is still technically valid. The technology it certifies still runs in production environments worldwide. The company that issued it has been acquired and the brand is slowly being replaced with "Broadcom" in the collateral.</p>
+    <p>It is still a real credential that reflects real knowledge. The technology it certifies still runs in production environments worldwide. The CEUs required to maintain it now flow through a conference that is called something different and has a different energy than it had when VMware was an independent company setting its own direction.</p>
 
-    <p>The CEUs to maintain the cert cost money. The technology to use the cert in production also costs money, more than it did. The conference that used to be called VMworld is now called "VMware Explore" and the session content has a different energy than it had in the years when VMware was charting its own course.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"Everyone needs those enterprise monies to stay in business. Including, now, your enterprise."</p>
-            <cite>— the renewal invoice, arriving earlier than last year</cite>
-        </blockquote>
-    </div>
+    <p>The cert is worth maintaining if you work in environments that still run vSphere, and many environments still do. Whether it opens the same doors it opened in 2016 depends on which doors you're trying to open. The VMUG attendance badge is collecting dust. The production environment is still running ESXi 7. The upgrade to ESXi 8 is on the roadmap for next quarter.</p>
 </div>
 
-<div class="content-section">
-    <h2>The Alternatives Evaluation</h2>
-    <p>The alternatives exist. Nutanix. OpenStack (good luck). Red Hat OpenShift Virtualization. Proxmox for the brave. Hyper-V for the committed. The public cloud hyperscalers for the workloads that can move.</p>
-
-    <p>Every large shop has a Confluence page titled something like "Virtualization Platform Review 2024" that was last updated six months ago and ended at "pending executive sponsorship." The sponsorship came in the form of a budget conversation that concluded "the migration cost exceeds the license cost delta for this renewal cycle."</p>
-
-    <p>This is rational. The math is real. VMware still runs most of what it used to run, on infrastructure managed by people who have strong opinions about vSAN that they have not had occasion to share publicly. The hypervisor hums. The invoices arrive. The CEUs expire. The cycle continues.</p>
+<div class="quote-box">
+    <blockquote>Everyone needs those enterprise monies to stay in business. Including, now, your enterprise.</blockquote>
+    <cite>— the renewal invoice, arriving earlier than last year</cite>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/ibm/" class="nav-button">IBM</a>
-    <a href="/.wip/weblogic/" class="nav-button">WebLogic</a>
-    <a href="/.wip/openjdk/" class="nav-button">OpenJDK</a>
-    <a href="/.wip/" class="nav-button">All Disasters</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

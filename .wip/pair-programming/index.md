@@ -1,70 +1,39 @@
 ---
 layout: wip
-title: "Pair Programming - Two People, One Keyboard, Zero Agreement"
+title: "Pare Programming"
 permalink: /.wip/pair-programming/
 tags: [culture]
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Pair Programming</span>
+        <a href="/.wip/">Home</a> → <span>Pare Programming</span>
     </div>
-    <h1>Two People, One Keyboard, Zero Agreement</h1>
-    <p class="page-subtitle">the theory: two brains catch more bugs. the practice: one person types while the other suffers in silence.</p>
+    <h1>Teamwork makes the tirefire work, no?</h1>
+    <p class="page-subtitle">two developers, one problem, an infinite supply of unspoken corrections</p>
 </div>
 
 <div class="content-section">
-    <h2>The Theory</h2>
-    <p>The research is clear: pair programming produces better code. Fewer defects. Better design. Shared knowledge. Two developers catch mistakes the other would miss. The navigator sees the forest; the driver sees the trees.</p>
-    <p>This is all true in controlled studies using well-rested developers who agreed to pair, work on clearly scoped problems, and do not have strong opinions about tabs vs spaces.</p>
+    <img src="/pair-programming/pair-programming.gif" alt="3-2-1, boom" />
 </div>
 
 <div class="content-section">
-    <h2>The Practice</h2>
-    <p>In practice, pairing means one person is typing and one person is watching someone else type at a speed and in a style that is not how they would type. The navigator has suggestions. The navigator is trying to decide how many of those suggestions to say out loud and how many to absorb internally at the cost of a small piece of their soul.</p>
-    <p>The driver has their own opinions. The driver knows how they would solve this. The driver is solving it. The navigator is watching them solve it slightly wrong and evaluating whether the wrongness is worth an interruption.</p>
+    <h2>The 80/20</h2>
+    <p>In most pairing sessions, one person types for about eighty percent of the time. This is not a rule anyone set. It emerges from the fact that one person was already in the flow, or one person is more familiar with the codebase, or one person opened the laptop first and now the session has a driver by default.</p>
+    <p>The other person is the navigator. The navigator's job is to hold the big picture while the driver handles the immediate code. In practice, the navigator's job is to watch someone solve a problem in a way that is not quite how the navigator would solve it, and to make a series of real-time decisions about which gaps are worth bridging out loud. This requires a kind of restraint that is genuinely difficult. The navigator is not silent because they have nothing to say. They are silent because they are rationing.</p>
+    <p>Eventually someone says "do you want to drive?" This is not really a question. It is a negotiation. It almost always gets resolved, but the moment before it does is its own small test of how the two of you are doing.</p>
 
     <div class="quote-box">
-        <blockquote>
-            <p>"Actually, I would probably extract that into a function at this point."</p>
-            <cite>— The navigator, after twelve minutes of watching the driver not extract that into a function</cite>
-        </blockquote>
-    </div>
-
-    <h3>The Keyboard</h3>
-    <p>There is one keyboard. The pairing station has been configured by whoever used it last. The font size is wrong for you. The keymap has something unusual in it. There is a snippet for something you would never type that keeps firing accidentally. You do not change any of this because you will be handing back in forty minutes.</p>
-    <p>Remote pairing has solved the keyboard problem by introducing the cursor problem. There are now two cursors. They do not agree on where focus is. The shared terminal session has a latency that makes fast typists look like they are actively trying to cause merge conflicts.</p>
-</div>
-
-<div class="content-section">
-    <h2>The Dynamics</h2>
-    <p>Pairing works differently depending on the experience gap. If both developers are at the same level, it is collaborative and occasionally tense. If one developer is significantly more senior, it is tutoring whether anyone has agreed to that or not. The senior developer is trying not to just take the keyboard. The junior developer is trying to not feel like they are failing a test.</p>
-    <p>Neither is failing. Both are tired.</p>
-
-    <div class="fun-facts">
-        <h3>Things That Are Harder When Pairing</h3>
-        <ul>
-            <li>Reading documentation without the other person asking what you're looking at</li>
-            <li>Trying something you're not sure about without narrating it first</li>
-            <li>Disagreeing about an architectural decision without it becoming a whole thing</li>
-            <li>Taking a break when you need one</li>
-            <li>Admitting you don't know what that function does</li>
-            <li>The part where you stare at the screen for two minutes thinking</li>
-        </ul>
+        <blockquote>The backseat driver problem is real. The front-seat problem — where the driver knows someone is watching and starts performing instead of thinking — is also real and discussed less.</blockquote>
+        <cite>— From the part of the pairing literature nobody reads</cite>
     </div>
 </div>
 
 <div class="content-section">
-    <h2>When It Works</h2>
-    <p>Pairing works well for onboarding. It works for debugging thorny problems. It works when both people want to be there, the task is well-defined, and neither person has been in meetings for five hours already.</p>
-    <p>It also produces, occasionally, that thing where two people build something in an afternoon that neither would have built alone in a week. These moments are real. They are worth all of it. They are also not representative of a typical Tuesday at 2pm when you have both been in standup, two syncs, and a planning session, and the task is to add a column to a database table.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"We should pair on this one."</p>
-            <cite>— Fine. Yes. Fine.</cite>
-        </blockquote>
-    </div>
+    <h2>When It Actually Works</h2>
+    <p>There are two categories of work where pairing reliably produces something better than either person would have produced alone. The first is security review — two people reading code for vulnerabilities catch things one person misses, full stop, the research on this is not ambiguous. The second is navigating an unfamiliar codebase, where the overhead of narrating your mental model out loud is actually useful because it forces you to form one.</p>
+    <p>Outside of those categories, the value is real but situational. Pairing on a well-understood task with a clear spec and a familiar stack is mostly theater. Pairing on a gnarly debugging problem where one person has context and the other has fresh eyes is genuinely valuable. Pairing because the team decided pairing is how we work, on everything, always, is how you get engineers who are exhausted by 2pm and have no idea why.</p>
+    <p>Pairing is a tool. Tools are for specific jobs. The version of pairing that works is the version where both people are there because the problem is the right shape for two heads, not because someone read a book about XP in 2003 and made it a policy.</p>
 </div>
 
 <div class="navigation-footer">

@@ -1,348 +1,59 @@
 ---
 layout: wip
-title: "Docker - ಠ_ಠ in containers"
+title: "ಠ_ಠ in docker"
 permalink: /.wip/docker/
+docker1: true
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Docker</span>
     </div>
-    <h1>🐳 ಠ_ಠ in docker</h1>
-    <p class="page-subtitle">Containerizing disappointment since 2013</p>
+    <h1>ಠ_ಠ in docker</h1>
+    <p class="page-subtitle">containerizing the problem does not solve the problem</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner warning">
-        <strong>⚠️ Status:</strong> All containers are running (but none of them are working)
-    </div>
+    <p>Docker</p>
+</div>
 
-    <div class="main-content-area">
-        <div class="docker-inception">
-            <div class="container-layer">
-                <h3>🐳 docker</h3>
-                <div class="container-layer">
-                    <h4>📦 moby</h4>
-                    <div class="container-layer">
-                        <h5>🐋 docker</h5>
-                        <div class="container-layer">
-                            <h6>🐳 moby</h6>
-                            <div class="container-layer">
-                                <strong>🐋 docker</strong>
-                                <div class="container-layer">
-                                    <strong>📦 moby</strong>
-                                    <div class="container-layer">
-                                        <em>🐳 docker</em>
-                                        <div class="container-layer">
-                                            <em>🐋 moby</em>
-                                            <div class="container-layer">
-                                                <small>🐳 docker</small>
-                                                <div class="container-layer">
-                                                    <small>📦 moby</small>
-                                                    <div class="container-layer">
-                                                        <span class="tiny">🐋 docker</span>
-                                                        <div class="container-layer">
-                                                            <span class="tiny">🐳 moby</span>
-                                                            <div class="container-layer">
-                                                                <span class="micro">📦 docker</span>
-                                                                <div class="container-layer">
-                                                                    <span class="micro">🐋 moby</span>
-                                                                    <div class="container-layer">
-                                                                        <span class="nano">🐳 docker</span>
-                                                                        <div class="container-layer">
-                                                                            <span class="nano">📦 moby</span>
-                                                                            <div class="container-layer">
-                                                                                <span class="pico">🐋 docker</span>
-                                                                                <div class="container-layer">
-                                                                                    <span class="pico">🐳 moby</span>
-                                                                                    <div class="container-layer">
-                                                                                        <span class="femto">📦 docker</span>
-                                                                                        <div class="container-layer">
-                                                                                            <span class="femto">🐋 moby</span>
-                                                                                            <div class="container-layer">
-                                                                                                <span class="atto">🐳 docker</span>
-                                                                                                <div class="container-layer">
-                                                                                                    <span class="atto">📦 moby</span>
-                                                                                                    <div class="container-layer">
-                                                                                                        <span class="zepto">🐋 docker</span>
-                                                                                                        <div class="container-layer">
-                                                                                                            <span class="zepto">🐳 moby</span>
-                                                                                                            <div class="final-container">
-                                                                                                                <div class="kernel-truth">
-                                                                                                                    <span class="yocto">🎯 /proc/1/root/proc/1/root/...</span>
-                                                                                                                    <div class="victory-text">
-                                                                                                                        <p class="achievement">🎉 You found the kernel!</p>
-                                                                                                                        <p class="reality-check">Reality: It's turtles all the way down.</p>
-                                                                                                                        <p class="exit-code">Exit code: ∞ (container overflow)</p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="content-text">
-            <p><em>Welcome to the wonderful world of Docker, where we solve the problem of "it works on my machine" by creating an infinite regress of machines that don't work anywhere.</em></p>
+<div class="content-section">
+    <h2>The Redirect You Just Experienced</h2>
+    <p>The original tirefi.re Docker page had one piece of content: the word "Docker." It also had a meta-refresh redirect that sent you to <code>/docker/moby/docker/</code>. That page redirected to <code>/docker/moby/docker/moby/docker/</code>. Which redirected further. The URL grew until the browser gave up.</p>
 
-            <div class="quote-box">
-                <blockquote>
-                    <p>"Docker is like a Russian nesting doll, but instead of dolls, it's problems all the way down."</p>
-                    <cite>— Anonymous DevOps Engineer, 3 AM</cite>
-                </blockquote>
-            </div>
+    <p>This was the joke. The Docker page was an infinite loop. You went looking for information about Docker and instead you got a recursive redirect that consumed your browser tab and eventually errored out, which is about as accurate a representation of debugging Docker in 2016 as you're going to find.</p>
 
-            <div class="docker-commands">
-                <h3>🔧 Essential Docker Commands</h3>
-                <div class="command-list">
-                    <div class="command-item">
-                        <code>docker run --rm -it ubuntu bash</code>
-                        <p>Start a container you'll immediately forget how to exit</p>
-                    </div>
-                    <div class="command-item">
-                        <code>docker ps -a | grep -v CONTAINER | wc -l</code>
-                        <p>Count your sins (stopped containers)</p>
-                    </div>
-                    <div class="command-item">
-                        <code>docker system prune -a --volumes --force</code>
-                        <p>The nuclear option (pray you don't need those volumes)</p>
-                    </div>
-                    <div class="command-item">
-                        <code>docker-compose up -d</code>
-                        <p>Start 47 containers to run one simple web app</p>
-                    </div>
-                    <div class="command-item">
-                        <code>docker exec -it container_name /bin/bash</code>
-                        <p>Enter the nested nightmare (prepare to get lost)</p>
-                    </div>
-                    <div class="command-item">
-                        <code>docker run --privileged --pid=host -it alpine nsenter -t 1 -m -u -n -i sh</code>
-                        <p>Break out of the container matrix (sometimes)</p>
-                    </div>
-                </div>
-            </div>
+    <p>The loop looked like this:</p>
 
-            <div class="fun-facts">
-                <h3>🔥 Docker Fun Facts</h3>
-                <ul>
-                    <li>Docker solves "works on my machine" by making nothing work on any machine</li>
-                    <li>Every Dockerfile starts simple and ends with 47 layers of technical debt</li>
-                    <li>The phrase "it's just a container" has ruined more production systems than any other</li>
-                    <li>Docker Hub is where images go to become mysteriously unavailable during deployments</li>
-                    <li>Moby Dick was actually about a DevOps engineer chasing the perfect container orchestration</li>
-                    <li>The real treasure was the disk space we wasted along the way</li>
-                    <li>Every container thinks it's the only container that matters</li>
-                    <li>Container escape vulnerabilities are just features for the determined</li>
-                    <li>The docker/moby directory structure is a recursive metaphor for containerization itself</li>
-                    <li>Building images is fast, debugging why they don't work is eternal</li>
-                </ul>
-            </div>
+    <pre style="background: var(--surface); border: 1px solid var(--border); padding: 1rem; overflow-x: auto;">/docker/
+  → /docker/moby/docker/
+    → /docker/moby/docker/moby/docker/
+      → /docker/moby/docker/moby/docker/moby/docker/
+        → /docker/moby/docker/moby/docker/moby/docker/moby/docker/
+          → ...</pre>
+</div>
 
-            <div class="container-philosophy">
-                <h3>🐋 The Container Philosophy</h3>
-                <p>In the beginning, there was a VM. It was heavy and slow, but it worked. Then came containers - lightweight, fast, and ephemeral. Like a butterfly emerging from a cocoon, except the butterfly is on fire and the cocoon was also on fire.</p>
-                
-                <p>Docker promised us reproducible environments, but instead gave us reproducible problems. The beauty of containers is that you can now fail consistently across all environments.</p>
-                
-                <p>The nested docker/moby/docker/moby structure above isn't just art - it's a perfect representation of how container namespaces actually work. Each layer thinks it's the "real" system, blissfully unaware of the containers above and below it.</p>
-                
-                <p>Eventually, if you go deep enough, you reach the host kernel - the one true source of truth. But by then, you've forgotten why you started this journey in the first place.</p>
-            </div>
+<div class="content-section">
+    <h2>Why This Is Accurate</h2>
+    <p>Docker renamed itself to Moby in 2017, or rather, spun the open-source components into a project called Moby while keeping the commercial product named Docker. This caused genuine confusion about what Docker was, what Moby was, whether they were the same thing, and which one you were actually running. The Docker CLI talked to the Docker daemon. The Docker daemon was built from Moby. Moby contained Docker. You were inside Docker which contained Moby which built Docker.</p>
 
-            <div class="escape-sequence">
-                <h3>🔓 Container Escape Sequence</h3>
-                <p>If you've made it this far down the rabbit hole, here's how to get back to reality:</p>
-                <ol>
-                    <li><code>Ctrl+C</code> - Stop what you're doing</li>
-                    <li><code>exit</code> - Exit the current shell</li>
-                    <li><code>docker stop $(docker ps -q)</code> - Stop all containers</li>
-                    <li><code>docker system prune -a --volumes</code> - Clean up the mess</li>
-                    <li>Take a walk - Remember what the sun looks like</li>
-                    <li>Question your life choices</li>
-                    <li>Return to your IDE and do it all again tomorrow</li>
-                </ol>
-            </div>
-        </div>
-    </div>
+    <p>This is also an accurate description of what happens when you try to debug a containerized application. You are in a container. The container is running on a host. The host might be a VM. The VM is running in a cloud provider's hypervisor. The network your container thinks it's on is virtual. The network your host is on is also virtual. The IP address you can see from inside the container is not the IP address anyone outside can use. The port you bound is accessible, unless it isn't, depending on how many layers of NAT and iptables rules exist between you and the thing you're trying to reach.</p>
+</div>
+
+<div class="quote-box">
+    <blockquote>It works in the container. It doesn't work outside the container. It works outside the container on my machine. It doesn't work outside the container in production. The container is identical. The environment is the same. It is not the same.</blockquote>
+    <cite>— docker run, solved eventually</cite>
+</div>
+
+<div class="content-section">
+    <h2>The Layer Cache and Other Gifts</h2>
+    <p>Docker's layer cache is clever. Build steps that haven't changed use the cached result. Change one step and everything after it rebuilds. This is efficient and also means that moving your <code>RUN apt-get install</code> line to the top of the Dockerfile is a significant performance optimization, which is knowledge that is not obvious from first principles and costs you time before you acquire it.</p>
+
+    <p>Image sizes grow. Every <code>RUN</code> step that downloads something and doesn't clean up after itself adds a layer with the downloaded files, and then another layer that deletes them, and both layers are in the image, and the image is larger than it needs to be. You learn to chain your <code>RUN</code> commands with <code>&&</code> to stay in a single layer. You audit your images with <code>docker history</code>. You write multi-stage builds. You chase the number down from 2GB to 800MB to 200MB, and somewhere in there you wonder whether the size reduction is worth the Dockerfile complexity, and the answer depends on how many times a day the image is pulled.</p>
+
+    <p>The containers solved the "works on my machine" problem by making "my machine" portable. What they didn't solve is the configuration problem, the secret management problem, the networking problem, or the "what is actually running in production right now" problem. They moved those problems into a different layer of the stack, which is not the same as solving them. The redirect continues.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/monitoring/" class="nav-button">Next Disaster: Monitoring →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-
-<style>
-.docker-inception {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 2rem 0;
-    text-align: center;
-    overflow-x: auto;
-    max-height: 600px;
-    overflow-y: auto;
-}
-
-.container-layer {
-    border: 1px solid var(--border);
-    padding: 1rem;
-    margin: 0.8rem;
-    background: var(--surface);
-}
-
-.container-layer h3, .container-layer h4, .container-layer h5, .container-layer h6 {
-    color: var(--text-bright);
-    margin: 0.5rem 0;
-}
-
-.final-container {
-    background: var(--surface);
-    border: 1px solid var(--border-hi);
-    padding: 1rem;
-    margin: 0.5rem;
-}
-
-.kernel-truth {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 0.8rem;
-    margin: 0.3rem;
-}
-
-.victory-text {
-    margin-top: 0.5rem;
-}
-
-.achievement {
-    color: var(--success);
-    font-weight: bold;
-    font-size: 0.8em;
-    margin: 0.2rem 0;
-}
-
-.reality-check {
-    color: var(--text-dim);
-    font-style: italic;
-    font-size: 0.7em;
-    margin: 0.2rem 0;
-}
-
-.exit-code {
-    color: var(--danger);
-    font-family: var(--font);
-    font-size: 0.6em;
-    margin: 0.2rem 0;
-}
-
-.tiny { font-size: 0.8em; }
-.micro { font-size: 0.7em; }
-.nano { font-size: 0.6em; }
-.pico { font-size: 0.5em; }
-.femto { font-size: 0.4em; }
-.atto { font-size: 0.3em; }
-.zepto { font-size: 0.25em; }
-.yocto { font-size: 0.2em; }
-
-.docker-commands {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.command-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.command-item {
-    background: var(--bg);
-    padding: 1.5rem;
-    border-left: 4px solid var(--border-hi);
-}
-
-.command-item code {
-    display: block;
-    background: var(--bg);
-    color: var(--text-bright);
-    padding: 0.8rem;
-    font-family: var(--font);
-    margin-bottom: 0.8rem;
-    overflow-x: auto;
-    font-size: 0.9rem;
-}
-
-.command-item p {
-    color: var(--text-dim);
-    margin: 0;
-    font-style: italic;
-}
-
-.container-philosophy {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.escape-sequence {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.escape-sequence ol {
-    color: var(--text);
-    padding-left: 1.5rem;
-}
-
-.escape-sequence li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-}
-
-.escape-sequence code {
-    background: var(--surface);
-    padding: 0.2rem 0.4rem;
-    font-family: var(--font);
-    color: var(--text-bright);
-}
-
-@media (max-width: 768px) {
-    .container-layer {
-        margin: 0.5rem;
-        padding: 0.8rem;
-    }
-
-    .command-item code {
-        font-size: 0.8rem;
-    }
-
-    .docker-inception {
-        max-height: 400px;
-    }
-}
-</style>

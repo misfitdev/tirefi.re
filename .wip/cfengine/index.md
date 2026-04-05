@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "CFEngine - In the Beginning Was the Promise"
+title: "CFEngine - Bundle stacks, and bundle stacks, and bundle stacks"
 permalink: /.wip/cfengine/
 ---
 
@@ -8,8 +8,16 @@ permalink: /.wip/cfengine/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>CFEngine</span>
     </div>
-    <h1>CFEngine</h1>
+    <h1>🎧 "Promises, promises ... "🎶</h1>
     <p class="page-subtitle">Mark Burgess was right. Nobody listened. Then everyone listened to the wrong lessons.</p>
+</div>
+
+<div class="content-section">
+    <img src="/cfengine/cfengine.jpeg" alt="At least it ain't bcfg2!" />
+
+    <p>Because everythings better in 3! 😎</p>
+
+    <p>A massive shout out to Mark Burgess for being like fifteen years ahead of his time. He is truly our OG DevOp Configuration Management Godfather. 💖</p>
 </div>
 
 <div class="content-section">

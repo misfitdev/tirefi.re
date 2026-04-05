@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "tirefi.re - About This Site"
+title: "Well, Actually..."
 permalink: /.wip/mansplaining/
 ---
 
@@ -8,47 +8,31 @@ permalink: /.wip/mansplaining/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>About</span>
     </div>
-    <h1>About This Place</h1>
-    <p class="page-subtitle">why tire fires are the right metaphor for ops</p>
+    <h1>2 W's of Tirefi.re</h1>
+    <p class="page-subtitle">the when and why of this particular fire</p>
 </div>
 
 <div class="content-section">
-    <h2>What This Is</h2>
-    <p>tirefi.re is a catalog of the things in tech ops that are, or have been, or remain, tire fires. Not failures exactly — a failure ends. A tire fire burns for a long time, produces tremendous smoke, resists every attempt to put it out, and mostly has to be contained rather than extinguished. You don't fix a tire fire. You manage it until you don't have to anymore.</p>
+    <p>In 2016 I went to interview at a shop about 35 miles from where I live in Austin. I normally wouldn't take a job on the other side of the river, but the way the hiring manager understood things (he was a recent hire himself), we'd be helping an org develop and deploy a new version of their 15-year old application onto AWS, and migrate some hosting workloads into the cloud as well. Shortly after joining it became apparent that there were some entrenched development patterns that would make that difficult. Tight coupling of application logic with the infrastructure meant that if we wanted to get something into AWS quickly, we'd likely have to replicate a decent amount of the internal network logic in AWS. We started looking deeper into the network and compute infrastructure, and realized things were going to be far, far more difficult than anyone with any internal context had communicated to us.</p>
 
-    <p>The entries here are written with what we hope is the right spirit: affectionate exasperation. The subjects of the jokes are things we've worked with, built on, cursed at, and occasionally defended in architecture reviews. This is not a site for people who have never had to work with these things. It's for the people who have.</p>
+    <p>In our primary datacenter, we had at least 3 hypervisors, 5 network vendors, Puppet 2.7, Puppet 3.4, Rundeck, Jenkins, and Octopus deploy, our business-critical MySQL databases were running on 5+ year old machines with in OpenVZ, provisioning new sites required orchestrating network configuration changes in Cisco, A10, Vyatta, a central Nginx proxy, and probably more but just writing this down makes me tired. Anyway, I needed a way to cope with the constant surprises and despair this caused, so that I could keep maintaining as positive an attitude as possible and inspiring people to dive into more positive patterns. There was an emergent meme at the time that 2016 was a tire fire in general, so when I realized that I wanted to make a website about tire fires I did a domain search. Turns out, tirefi.re was available and so I grabbed it.</p>
+
+    <p>The idea of the site is basically this: When one feels like whatever they're working on is a tire fire, they can fork the code, add an entry for their thing with a well-intentioned joke about the thing (hopefully involving imagery), make a PR, and have a bit of a cathartic laugh on the internet that others can share in. I'm incredibly grateful to the people who've become part of the project through their contributions, whether in the github repository or elsewhere. If you tell someone about the project, link to it, whatever, my hope is that everyone comes away with a sensible chuckle or two and their day is just a little better.</p>
+
+    <p>Feel free to add your own story or experience with this Super Duper Web Sight below. That's my When and Why story.</p>
+
+    <p>Thanks,<br>Shaun</p>
 </div>
 
 <div class="content-section">
-    <h2>Why Tire Fires</h2>
-    <p>The tire fire metaphor holds up on close inspection, which not all metaphors do.</p>
+    <h2>What Happened Next</h2>
+    <p>The job didn't work out the way the hiring manager had framed it. It rarely does when the discovery phase reveals that the migration scope was understood only by people who had every incentive to understate it. The MySQL on OpenVZ stayed where it was. The five network vendors stayed. The domain search, however, yielded tirefi.re for a few dollars a year, and that turned out to be the thing worth keeping.</p>
 
-    <p>A tire fire starts because something that was supposed to be managed wasn't. Once it's going, standard fire suppression doesn't work — the burning rubber keeps reigniting. The smoke is thick and persistent and drifts into places it wasn't supposed to reach. The heat is enough to damage nearby infrastructure. And critically: the tire fire is not actually destroying anything you were using. The tires were already out of service. The waste pile was already there. The fire is the natural end state of deferred decisions.</p>
+    <p>Since 2016, the site has accumulated contributors who recognized the feeling — the specific ops experience of inheriting something that has been technically functional long past the point where anyone fully understands why, and needing somewhere to put the laugh about it. The entries have grown. The technologies have changed. The underlying experience of being handed a tire pile and a match and asked to please not let it spread to the servers next door has not changed at all.</p>
 
-    <p>That's ops. Every major incident has a tire pile behind it — the deferred migration, the config no one fully understood, the dependency that was supposed to be temporary in 2015, the alert that had been going off so long that everyone muted it. The incident itself is just the pile finally lighting.</p>
-</div>
-
-<div class="content-section">
-    <h2>Who This Is For</h2>
-    <p>People who have been paged at 3am. People who have said "it's probably fine" and been wrong, and also people who have said "it's probably fine" and been right, and have since lost the ability to tell which situation they're in. People who have worked at companies that were "just about to migrate off the mainframe" for longer than some of their coworkers have been alive.</p>
-
-    <p>People who know that the incident was caused by a change made on a Friday, and who also know that pointing this out in the postmortem will not actually prevent the next change made on a Friday, because the company has not staffed for Monday deployments.</p>
-
-    <p>People who have a strong opinion about log formats. People who have survived a reorg that was announced as a simplification. People who have read a postmortem that identified the root cause as "human error" and known, with certainty, that this meant the process had failed and the human was being blamed for it.</p>
-
-    <p>If you recognize these experiences: this site is for you. The goal is a sensible chuckle, the recognition that you are not alone in this, and maybe a slightly better day than you were having before you got here.</p>
-</div>
-
-<div class="content-section">
-    <h2>The Invitation</h2>
-    <p>The site is open for contributions. If something in your world is a tire fire — and something in your world is a tire fire — fork the repo, add an entry, make a PR. The joke should involve some kind of imagery if you can manage it. The tone should be affectionate rather than mean. The target should be the situation, not the people who got stuck managing it.</p>
-
-    <p>We've all gotten stuck managing tire fires. That's the whole point.</p>
-
-    <p>Thanks for being here.</p>
+    <p>The tire fire metaphor has held up. A tire fire starts because something deferred finally ignites. Standard suppression doesn't work — burning rubber keeps reigniting. The smoke drifts into places it wasn't supposed to reach. And critically: the tires were already out of service. The pile was already there. The fire is just the natural end state of accumulated decisions. That's ops. That's this site.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/ops/" class="nav-button">Related: Ops →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

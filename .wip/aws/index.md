@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "AWS - Service is operating normally"
+title: "AWS - us-tirefire-1"
 permalink: /.wip/aws/
 ---
 
@@ -8,45 +8,38 @@ permalink: /.wip/aws/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>AWS</span>
     </div>
-    <h1>☁️ us-tirefire-1</h1>
-    <p class="page-subtitle">Service is operating normally (narrator: it wasn't)</p>
+    <h1>us-tirefire-1</h1>
+    <p class="page-subtitle">Yeah, the db is in us-east-1, but we will move it later.</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner warning">
-        <strong>⚠️ Status:</strong> All systems operational (please ignore the smoke)
-    </div>
+    <img src="/aws/cloud.jpg" alt="It's probably fine..." class="hero-image">
 
-    <div class="main-content-area">
-        <img src="/aws/cloud.jpg" alt="It's probably fine..." class="hero-image">
-        
-        <div class="content-text">
-            <p>Yeah, the db is in us-east-1, but we will move it later.</p>
-            
-            <p><em>"Later" has been redefined as "when the heat death of the universe forces our hand."</em></p>
-            
-            <div class="quote-box">
-                <blockquote>
-                    <p>"us-tirefire-1"</p>
-                    <cite>— @grepory, July 30, 2016</cite>
-                </blockquote>
-            </div>
+    <p>Yeah, the db is in us-east-1, but we will move it later.</p>
 
-            <div class="fun-facts">
-                <h3>🔥 Fun AWS Facts</h3>
-                <ul>
-                    <li>Every region is technically "us-tirefire" if you're doing it wrong</li>
-                    <li>The "A" in AWS stands for "Absolutely going to cost more than you budgeted"</li>
-                    <li>Cross-region replication means your data gets corrupted in multiple locations simultaneously</li>
-                    <li>Auto-scaling: automatically scaling your costs to bankruptcy</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">us-tirefire-1</p>&mdash; Largo al factotum (@grepory) <a href="https://twitter.com/grepory/status/759204528382210049">July 30, 2016</a></blockquote>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<div class="content-section">
+    <h2>The Region Problem</h2>
+    <p>Everyone is in us-east-1. This is not an accident — it was the first region, it has the most services, and inertia is a hell of a drug. When us-east-1 has a bad day, which it does with the regularity of a quarterly all-hands, every SaaS product, startup dashboard, and "serverless" architecture that ever promised geographic redundancy finds out simultaneously that redundancy requires actually putting things in multiple places. The AWS Service Health Dashboard turns into a shared community experience. Slack fills with the same screenshot.</p>
+
+    <p>The migration story is older than the cloud. "We'll move it later" is the technical debt of infrastructure — a promise that feels reasonable when made and absurd when examined. The database is in us-east-1 because moving a production database is genuinely unpleasant, and the current situation is only theoretically bad, and nothing has gone wrong yet this quarter. The migration stays in the backlog. The backlog grows. Later never arrives on its own.</p>
+</div>
+
+<div class="content-section">
+    <h2>The Bill</h2>
+    <p>The cloud was sold on elasticity — pay for what you use, scale up and down, no capital expenditure. This is true. It is also true that "what you use" turns out to be quite a lot once you add data transfer between regions, NAT gateway hours, API calls to services you forgot were running, and the three experimental Lambda functions from 2021 that never got cleaned up. The invoice is elastic in one direction.</p>
+
+    <p>The promise was that you would stop thinking about hardware. You have stopped thinking about hardware. You now think about egress costs, reserved instance coverage ratios, and whether the Savings Plans commitment from 18 months ago still reflects your actual usage. The on-call rotation now includes a finance review.</p>
+</div>
+
+<div class="quote-box">
+    <blockquote>The database migration is always next quarter. Next quarter it will also be next quarter.</blockquote>
+    <cite>— anyone who has owned a production RDS instance</cite>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/s3/" class="nav-button">Next Disaster: S3 →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-

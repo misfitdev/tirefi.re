@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Microservices - You get a fire, you get a fire"
+title: "loosely coupled fires"
 permalink: /.wip/microservices/
 ---
 
@@ -8,393 +8,51 @@ permalink: /.wip/microservices/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Microservices</span>
     </div>
-    <h1>🔬 Loosely coupled fires</h1>
-    <p class="page-subtitle">Distributed monoliths with extra steps</p>
+    <h1>loosely coupled fires</h1>
+    <p class="page-subtitle">distributed monolith with extra steps</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner warning">
-        <strong>⚠️ Status:</strong> All 47 services are running (3 are actually working)
+    <img src="/microservices/microservices.gif" alt="sick burn" />
+
+    <div class="quote-box">
+        <blockquote>We replaced our monolith with micro services so that every outage could be more like a murder mystery.</blockquote>
+        <cite>— @honest_update, October 7, 2015</cite>
     </div>
+</div>
 
-    <div class="main-content-area">
-        <img src="/microservices/microservices.gif" alt="Microservices in action" class="hero-image">
-        
-        <div class="content-text">
-            <p><em>Welcome to microservices, where we solved the problem of having one thing that can break by creating 200 things that can break independently, simultaneously, and in creative new ways.</em></p>
+<div class="content-section">
+    <h2>Why We Did This</h2>
+    <p>Around 2015, the monolith became a dirty word. The pitch was persuasive: small, independently deployable services, each owning its own data, each scalable in isolation. Teams could work autonomously. Deploys would be surgical. The big ball of mud would finally be decomposed into something comprehensible.</p>
 
-            <div class="quote-box">
-                <blockquote>
-                    <p>"We replaced our monolith with micro services so that every outage could be more like a murder mystery."</p>
-                    <cite>— @honest_update, October 7, 2015</cite>
-                </blockquote>
-            </div>
+    <p>What actually happened is that the big ball of mud became a distributed big ball of mud. The coupling didn't go away — it just moved from function calls to HTTP. The shared database became ten databases that needed to agree with each other, and they never agreed. The monolithic deploy became 47 pipelines, 12 of which were always broken in ways nobody had time to investigate.</p>
 
-            <div class="microservices-evolution">
-                <h3>🚀 The Microservices Evolution</h3>
-                <div class="evolution-stages">
-                    <div class="stage">
-                        <h4>Stage 1: The Dream</h4>
-                        <p>"We'll have small, independent services that are easy to understand and deploy!"</p>
-                    </div>
-                    <div class="stage">
-                        <h4>Stage 2: The Reality</h4>
-                        <p>"Why do we have 47 repos, 23 databases, and 14 different ways to handle authentication?"</p>
-                    </div>
-                    <div class="stage">
-                        <h4>Stage 3: The Denial</h4>
-                        <p>"This is fine. The increased complexity is totally worth the... benefits."</p>
-                    </div>
-                    <div class="stage">
-                        <h4>Stage 4: The Awakening</h4>
-                        <p>"We've accidentally created a distributed monolith with network calls."</p>
-                    </div>
-                </div>
-            </div>
+    <p>By 2017 or so, most teams had discovered what distributed systems researchers had known since the 80s: the network is not reliable, latency is not zero, bandwidth is not infinite, and the network is not secure. The fallacies of distributed computing are not edge cases. They are the default operating conditions.</p>
+</div>
 
-            <div class="service-map">
-                <h3>🗺️ Your Service Map</h3>
-                <div class="services-grid">
-                    <div class="service-node">user-service</div>
-                    <div class="service-arrow">→</div>
-                    <div class="service-node">auth-service</div>
-                    <div class="service-arrow">→</div>
-                    <div class="service-node">profile-service</div>
-                    <div class="service-arrow">↓</div>
-                    <div class="service-node">notification-service</div>
-                    <div class="service-arrow">→</div>
-                    <div class="service-node">email-service</div>
-                    <div class="service-arrow">↓</div>
-                    <div class="service-node">analytics-service</div>
-                    <div class="service-arrow">→</div>
-                    <div class="service-node">logging-service</div>
-                    <div class="service-arrow">↓</div>
-                    <div class="service-node error-node">💥 cascade failure</div>
-                </div>
-                <p class="map-caption">*Simplified view. Actual service map requires 4K monitor and magnifying glass.</p>
-            </div>
+<div class="content-section">
+    <h2>The Murder Mystery</h2>
+    <p>The tweet aged perfectly. When a request fails in a microservices architecture, you have a murder and a list of suspects. The auth service says it returned 200. The user service claims it never received the request. The API gateway logged a timeout. The tracing span shows a 400ms gap between two hops that nobody can explain. The service that actually failed logged nothing, because the pod was evicted during the incident and took its logs with it.</p>
 
-            <div class="microservices-problems">
-                <h3>🔥 Common Microservices Problems</h3>
-                <div class="problems-grid">
-                    <div class="problem-card">
-                        <h4>🕸️ Distributed Debugging</h4>
-                        <p>Error spans 12 services, 47 log files, and 3 different time zones</p>
-                    </div>
-                    <div class="problem-card">
-                        <h4>🔄 Circular Dependencies</h4>
-                        <p>Service A calls B calls C calls A. It's turtles all the way down.</p>
-                    </div>
-                    <div class="problem-card">
-                        <h4>📊 Data Consistency</h4>
-                        <p>Eventually consistent means eventually correct, right? Right?</p>
-                    </div>
-                    <div class="problem-card">
-                        <h4>🌐 Network Partitions</h4>
-                        <p>The network is reliable. Until it isn't. Which is always.</p>
-                    </div>
-                    <div class="problem-card">
-                        <h4>🔐 Security Boundaries</h4>
-                        <p>47 different authentication schemes, none of them perfect</p>
-                    </div>
-                    <div class="problem-card">
-                        <h4>📈 Monitoring Chaos</h4>
-                        <p>You need a service to monitor your monitoring services</p>
-                    </div>
-                </div>
-            </div>
+    <p>You add distributed tracing. Now you have a very detailed picture of exactly where things go wrong, which is helpful until you realize that fixing the problem requires coordinating changes across four repositories owned by three teams, two of which haven't touched their service in eight months and aren't sure who the on-call is.</p>
 
-            <div class="fun-facts">
-                <h3>🎯 Microservices Fun Facts</h3>
-                <ul>
-                    <li>The optimal number of microservices is n-1, where n is your current number</li>
-                    <li>Conway's Law applies: your services will mirror your org chart's dysfunction</li>
-                    <li>Every microservice starts as "simple" and ends as "legacy"</li>
-                    <li>The distributed transaction is the monolith's revenge</li>
-                    <li>Service mesh: because your network wasn't complicated enough</li>
-                    <li>Breaking down the monolith is easy; putting it back together is therapy</li>
-                    <li>The two hardest problems in microservices: cache invalidation, naming services, and off-by-one errors</li>
-                    <li>Microservices scale your problems, not just your architecture</li>
-                </ul>
-            </div>
+    <p>Eventually consistent means eventually incorrect. The saga pattern means your rollback logic is now as complex as your forward logic. Circuit breakers help, until they trip at the wrong time and the degraded fallback path turns out to have a bug that nobody noticed because it was never exercised in production.</p>
+</div>
 
-            <div class="microservices-bingo">
-                <h3>🎲 Microservices Bingo</h3>
-                <div class="bingo-grid">
-                    <div class="bingo-cell">"It works on my local cluster"</div>
-                    <div class="bingo-cell">"The network is fine"</div>
-                    <div class="bingo-cell">"Just add a queue"</div>
-                    <div class="bingo-cell">"Database per service"</div>
-                    <div class="bingo-cell">"Eventual consistency"</div>
-                    <div class="bingo-cell">"Distributed tracing"</div>
-                    <div class="bingo-cell">"Circuit breaker"</div>
-                    <div class="bingo-cell">"Service mesh"</div>
-                    <div class="bingo-cell">"Saga pattern"</div>
-                </div>
-            </div>
+<div class="quote-box">
+    <blockquote>Conway's Law guarantees that your service boundaries will mirror your org chart. Your org chart does not reflect a sensible system architecture. This is fine.</blockquote>
+    <cite>— observed in the wild, repeatedly</cite>
+</div>
 
-            <div class="monolith-comparison">
-                <h3>🏗️ Monolith vs. Microservices</h3>
-                <div class="comparison-table">
-                    <div class="comparison-header">
-                        <div class="comparison-col">Monolith</div>
-                        <div class="comparison-col">Microservices</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-col">One big problem</div>
-                        <div class="comparison-col">Many small problems that compound</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-col">Single point of failure</div>
-                        <div class="comparison-col">Multiple points of failure</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-col">Easy to debug locally</div>
-                        <div class="comparison-col">Impossible to debug anywhere</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-col">One deployment pipeline</div>
-                        <div class="comparison-col">47 deployment pipelines, 12 are broken</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-col">Shared database</div>
-                        <div class="comparison-col">Shared nothing, including knowledge</div>
-                    </div>
-                </div>
-            </div>
+<div class="content-section">
+    <h2>The Monolith Returns</h2>
+    <p>By the early 2020s, a quieter counter-narrative had emerged. Shopify, Stack Overflow, 37signals — organizations running significant production workloads — were publishing pieces with titles like "The Majestic Monolith" and "We Ditched Microservices." The argument was simple: if your team is small enough that people can talk to each other, a monolith is operationally cheaper, easier to debug, and just as scalable for most workloads.</p>
 
-            <div class="wisdom-section">
-                <p class="wisdom-quote"><em>"Microservices: because your problems weren't distributed enough."</em></p>
-                <p class="wisdom-subtitle">— Every architect after the third outage</p>
-            </div>
-        </div>
-    </div>
+    <p>This did not stop new projects from starting with microservices. The cargo cult is durable. The conference talks were compelling. The LinkedIn posts about "cloud-native architecture" accumulate endorsements. And so teams of eight engineers build service meshes for applications that serve a few thousand users, and wonder why their incident rate is so high.</p>
+
+    <p>The honest version of the microservices story is that they solve real problems at real scale — the kind of scale where having 200 engineers working on the same codebase actually creates coordination problems that network overhead is worth paying to solve. At that scale, the investment makes sense. At most scales, you are paying the tax without receiving the benefit, and the next architecture review will be about consolidating services.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/monitoring/" class="nav-button">Next Disaster: Monitoring →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-
-<style>
-.microservices-evolution {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.evolution-stages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.stage {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-}
-
-.stage h4 {
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.stage p {
-    color: var(--text);
-    font-size: 0.9rem;
-    margin: 0;
-}
-
-.service-map {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    align-items: center;
-    justify-items: center;
-    margin: 2rem 0;
-}
-
-.service-node {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1rem;
-    text-align: center;
-    font-family: var(--font);
-    font-size: 0.9rem;
-    color: var(--text);
-    min-width: 120px;
-}
-
-.error-node {
-    background: var(--surface);
-    border-color: var(--danger);
-    color: var(--danger);
-    grid-column: 1 / -1;
-}
-
-.service-arrow {
-    color: var(--text-dim);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.map-caption {
-    color: var(--text-dim);
-    font-style: italic;
-    font-size: 0.8rem;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.microservices-problems {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.problems-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.problem-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-}
-
-.problem-card h4 {
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.problem-card p {
-    color: var(--text);
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-.microservices-bingo {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.bingo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.bingo-cell {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1rem;
-    text-align: center;
-    color: var(--text);
-    font-size: 0.9rem;
-}
-
-.monolith-comparison {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.comparison-table {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid var(--border);
-    overflow: hidden;
-}
-
-.comparison-header {
-    display: contents;
-}
-
-.comparison-header .comparison-col {
-    background: var(--surface-hi);
-    border-bottom: 2px solid var(--border-hi);
-    padding: 1rem;
-    font-weight: bold;
-    color: var(--text-bright);
-    text-align: center;
-}
-
-.comparison-row {
-    display: contents;
-}
-
-.comparison-col {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-    font-size: 0.9rem;
-}
-
-.comparison-col:nth-child(odd) {
-    border-right: 1px solid var(--border);
-}
-
-.wisdom-section {
-    text-align: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-}
-
-.wisdom-quote {
-    font-size: 1.3rem;
-    color: var(--text-bright);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.wisdom-subtitle {
-    color: var(--text-dim);
-    font-size: 0.95rem;
-}
-
-@media (max-width: 768px) {
-    .evolution-stages {
-        grid-template-columns: 1fr;
-    }
-
-    .problems-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .bingo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .comparison-table {
-        grid-template-columns: 1fr;
-    }
-
-    .comparison-header .comparison-col:last-child {
-        border-top: 1px solid var(--border);
-    }
-}
-</style>

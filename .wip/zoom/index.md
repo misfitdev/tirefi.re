@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Zoom - Accidental Critical Infrastructure"
+title: "OK, Zoomers"
 permalink: /.wip/zoom/
 ---
 
@@ -8,68 +8,47 @@ permalink: /.wip/zoom/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Zoom</span>
     </div>
-    <h1>Putting the Tell into Teleconferencing Since 2011</h1>
-    <p class="page-subtitle">approved by nobody in IT, depended on by everyone in the company</p>
+    <h1>putting the tell into teleconferencing since 2011</h1>
+    <p class="page-subtitle">approved by nobody in IT. depended on by everyone in the company.</p>
+</div>
+
+<div class="content-section">
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">was it DNS?</p>&mdash; shaun of the 🍞 (@sdmouton) <a href="https://twitter.com/sdmouton/status/1317231192672997377?ref_src=twsrc%5Etfw">October 16, 2020</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <p>Thanks very much to our friend Jerry for this wonderful animated Zoom background, linked <a href="https://tirefi.re/tire_fire.mp4">here</a> for your enjoyment.</p>
 </div>
 
 <div class="content-section">
     <h2>The Accidental Infrastructure Story</h2>
-    <p>In February 2020, Zoom had approximately 10 million daily meeting participants. By April 2020, that number was 300 million. The entire global workforce discovered, more or less simultaneously, that their company's ability to function now depended on a video calling application that IT had not selected, evaluated, or approved.</p>
+    <p>In February 2020, Zoom had approximately 10 million daily meeting participants. By April 2020, that number was 300 million. The entire global workforce discovered, more or less simultaneously, that its ability to function depended on a video calling application that IT had not selected, evaluated, or approved for enterprise use.</p>
 
-    <p>It was just there. Someone on a sales team had started using it in 2018 because the screensharing worked better. Then their team. Then the team they met with. By the time the offices closed, Zoom was load-bearing and the people who would normally have had opinions about this had not been consulted.</p>
+    <p>It was just there. Someone on a sales team had started using it in 2018 because the screensharing worked better than WebEx. Then their team. Then the teams they met with. Then their customers' teams. By the time the offices closed in March 2020, Zoom was load-bearing and the people who would normally have had opinions about the enterprise software stack had not been consulted. The SSO integration happened after employees were already using personal accounts. The security hardening policies were written for a system already in production.</p>
 
-    <div class="quote-box">
-        <blockquote>
-            <p>"was it DNS?"</p>
-            <cite>— @sdmouton, October 2020, on the eternal question</cite>
-        </blockquote>
-    </div>
+    <p>This is shadow IT at civilizational scale. The IT team's job was, in a compressed timeline, to retroactively govern critical infrastructure they did not select and could not have shut down even if they'd wanted to. This is a genuinely hard problem. Most of them did it without complaining, which deserves acknowledgment.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Security Situation</h2>
-    <p>When something goes from 10 million to 300 million users in three months, the security assumptions built for the smaller number do not automatically scale. Zoom had a period where "Zoombombing" was a word that existed and was covered in news outlets that do not normally cover video conferencing architecture.</p>
+    <h2>The Security Issues, Documented</h2>
+    <p>When something goes from 10 million to 300 million users in three months, the security assumptions built for the smaller number do not automatically scale. Meeting IDs were short enough to enumerate. Waiting rooms were not on by default. End-to-end encryption was described in ways that turned out to be optimistic for certain configurations. "Zoombombing" — uninvited participants joining meetings with publicly-shared IDs — became a real operational problem for school boards, recovery groups, and corporate all-hands presentations.</p>
 
-    <p>Uninvited attendees were joining calls. Meeting IDs were short enough to enumerate. The waiting room feature existed but was not on by default. The default was set for the smaller, more controlled environment that had existed before everything changed.</p>
+    <p>Zoom fixed these things. By mid-2020, the defaults were better, the encryption claims were more precise, and the meeting security controls were more prominent in the UI. The company had roughly 90 days to address problems that ideally would have been addressed before 300 million people depended on the software. They addressed most of them. The postmortem, which nobody formally wrote, would note that the speed of the response was impressive and that the root cause was the speed of the adoption rather than negligence in the original engineering.</p>
 
-    <div class="fun-facts">
-        <h3>The 2020 Zoom Incident Log (Abbreviated)</h3>
-        <ul>
-            <li><strong>March 2020:</strong> Meetings do not require passwords by default. This becomes a relevant fact very quickly.</li>
-            <li><strong>April 2020:</strong> End-to-end encryption claims investigated. The encryption was real. The "end-to-end" description was, in some configurations, optimistic.</li>
-            <li><strong>April 2020:</strong> Attention Tracking feature (which notified hosts when a participant hadn't had the Zoom window in focus for 30 seconds) discovered, reported, removed within days.</li>
-            <li><strong>April 2020:</strong> Zoombomb incidents at school board meetings, recovery group meetings, corporate all-hands. The attack surface was any meeting ID that anyone had shared in an email.</li>
-            <li><strong>Ongoing:</strong> Zoom fixed things. Zoom is a better product than it was in March 2020. This is true. It is also true that the company had 90 days to fix problems that ideally would have been addressed before 300 million people depended on the software.</li>
-        </ul>
-    </div>
+    <p>Zoom had a DNS incident in 2020, during the period when it was carrying the world's video traffic. Of course it did. Everything is DNS eventually. @sdmouton knew.</p>
 </div>
 
 <div class="content-section">
-    <h2>IT's Relationship with Zoom</h2>
-    <p>IT didn't choose Zoom. IT inherited Zoom. There is a meaningful difference between these two situations, which is that in the first case you have evaluated security, negotiated a contract, integrated SSO, and set sensible defaults before anyone is depending on the thing. In the second case, you are doing all of that while the thing is already in production and the CEO is using it for the board meeting.</p>
+    <h2>Zoom Fatigue Is a Medical Term Now</h2>
+    <p>"Zoom fatigue" entered the clinical literature in 2021. The hypothesis, supported by subsequent research, is that video calls require more cognitive effort than in-person conversation: maintaining eye contact with a camera, monitoring your own face in the corner of the screen, parsing facial expressions on a tiled grid of faces at varying levels of compression and latency. The effort is real. It's measurable. It's the reason the 4pm all-hands on video feels worse than the 4pm all-hands in a conference room felt.</p>
 
-    <p>The enterprise licensing conversation happened after the usage was already there. The SSO integration happened while employees were already connecting with personal accounts. The security hardening guidance was distributed to users who had been on the platform for six months and had existing habits.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"The entire company's remote work capability is built on a video app that the shadow IT inventory found after it was already deployed. We're retroactively governing critical infrastructure. This is fine."</p>
-            <cite>— an IT manager, not saying this out loud</cite>
-        </blockquote>
-    </div>
+    <p>"You're on mute" became the defining phrase of the era. As an ops metaphor it works on multiple levels: the person with important information who cannot be heard, the interface that defaults to silencing participants, the organizational situation where the infrastructure team has been saying the thing but the channel is muted and nobody noticed. You're on mute. You've been on mute. We're not sure when you got muted. Can you unmute?</p>
 </div>
 
-<div class="content-section">
-    <h2>The Animated Background</h2>
-    <p>Our friend <a href="https://github.com/jraidan">Jerry</a> contributed a wonderful animated tire fire Zoom background, which is available <a href="/tire_fire.mp4">here</a> and represents the correct energy for most video calls.</p>
-
-    <p>The background is a metaphor. It is also a video file. Put it behind you in your next all-hands and watch how long it takes anyone to notice, which tells you something about how closely people are paying attention to the thing that replaced in-person meetings and became the primary medium through which the organization understands itself.</p>
-
-    <p>Was it DNS? It's always DNS. Zoom itself had a DNS incident in 2020. Of course it did. Everything is DNS eventually.</p>
+<div class="quote-box">
+    <blockquote>The animated tire fire background is available at <a href="https://tirefi.re/tire_fire.mp4">tirefi.re/tire_fire.mp4</a>. Put it behind you in your next all-hands and observe how long it takes anyone to mention it. That interval is your answer.</blockquote>
+    <cite>— Jerry, who made this, correctly understanding the assignment</cite>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/dns/" class="nav-button">DNS</a>
-    <a href="/.wip/aws/" class="nav-button">AWS</a>
-    <a href="/.wip/incident-management/" class="nav-button">Incident Management</a>
-    <a href="/.wip/" class="nav-button">All Disasters</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

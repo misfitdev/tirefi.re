@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "logrotate - Just Makes More Smoke to Grep"
+title: "Logrotate"
 permalink: /.wip/logrotate/
 ---
 
@@ -8,65 +8,29 @@ permalink: /.wip/logrotate/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>logrotate</span>
     </div>
-    <h1>logrotate Doesn't Put Out the Fire</h1>
+    <h1>Logrotate doesn't put out the fire</h1>
     <p class="page-subtitle">it just makes more smoke for you to grep</p>
 </div>
 
 <div class="content-section">
-    <h2>The Promise of Logging</h2>
-    <p>The promise of logging is that you will know what is happening in your systems. Something breaks, you look at the logs, you find the error, you understand what happened, you fix it. The logs are the truth. The logs are the record. The logs will save you.</p>
-
-    <p>This is a beautiful lie that the industry has been telling itself since the first <code>printf</code> statement was redirected to a file.</p>
-
-    <p>The reality of logging is 500GB of nginx access logs on a load balancer that proxies to 40 application servers, none of which are logging the actual application errors, because the developer who set up the logging configuration in 2017 thought the access logs were the important part and no one has looked at the config since.</p>
+    <img src="/logrotate/logrotate.gif" alt="Just keeps going round and round and round..." />
+    <p>It just makes more smoke for you to grep.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Incident That Will Teach You This</h2>
-    <p>Every engineer learns the logging lesson the same way: during an incident, at 2am, when you need to know exactly what happened at 11:47pm and the logs from that window are gone.</p>
+    <h2>The Incident at 2am</h2>
+    <p>Every engineer learns the logrotate lesson the same way: during an incident, when you need to know exactly what happened at 11:47pm and the logs from that window are gone. Not gone because of a failure. Gone because the rotation schedule compressed them on a seven-day window and the incident happened on day eight. Or gone because the volume exceeded the disk quota and logrotate started dropping rather than rotating, which it will do silently, without complaint, in direct violation of what you thought the configuration meant. Or the disk hit a 40GB log that grew because the directive that should have rotated it daily had a syntax error in the size parameter and logrotate was reading the config file without error-checking the field types.</p>
 
-    <p>Not gone because of a failure. Gone because they were rotated and compressed and then rotated again and the retention window was 7 days and the incident happened on day 8. Or gone because the log volume exceeded the disk quota and logrotate starting dropping rather than rotating. Or gone because the application was configured to write to <code>/tmp</code> and <code>/tmp</code> was cleared on reboot and the system rebooted during the incident.</p>
+    <p>The error that would have caught the incident was logged. It fired at the exact moment things went wrong, in plain English. It is now in <code>/dev/null</code>, spiritually speaking. What you have instead is 90 days of nginx access logs — 2TB of successful health check responses from the load balancer, retained with full fidelity, rotated and compressed on a meticulous schedule, searchable and intact and completely useless for diagnosing anything.</p>
 
-    <p>The error that would have caught the incident was there. It logged exactly what went wrong, at the exact moment it went wrong, in plain English. It is now in <code>/dev/null</code>, spiritually speaking.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"We have comprehensive logging across all our services."</p>
-            <cite>— Your team, before the incident</cite>
-        </blockquote>
-    </div>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"The logs from that time period don't appear to be available."</p>
-            <cite>— Your team, during the postmortem</cite>
-        </blockquote>
-    </div>
+    <p>journald inherited logrotate's job and added structured logging, persistent storage, and centralized rate limiting. It also added new and different ways to lose the logs you needed. Progress is not always linear. The logrotate config last touched in 2009 will outlive all of us.</p>
 </div>
 
-<div class="content-section">
-    <h2>What Is Actually Logged</h2>
-    <p>Log what matters. This is the advice. Here is what actually gets logged in practice:</p>
-
-    <ul>
-        <li>Every HTTP request to every load balancer, including health check endpoints, at a rate of 40,000 requests per minute, retained for 90 days, totaling approximately 2TB that no one has ever queried.</li>
-        <li>Detailed debug output from a background job that was debugged in 2019 and never had its log level changed back.</li>
-        <li>Successful logins. Not failed logins. The security team asked for failed logins. The ticket is still open.</li>
-        <li>Application startup messages, including the full classpath, every time the application restarts, which it does approximately four times per day due to a memory leak that is "being investigated."</li>
-        <li>The actual error that caused the incident: not logged, because it occurred in a library that wrote to stderr and the supervisor was configured to discard stderr.</li>
-    </ul>
-</div>
-
-<div class="content-section">
-    <h2>The logrotate Config Last Touched in 2009</h2>
-    <p>It works. This is why no one has touched it. It faithfully rotates logs on a schedule that made sense for the server topology of 2009, which no longer exists. It compresses logs that were once grepped from disk and are now shipped to a log aggregation service that also has them, so the disk copies exist as redundant backup for a system that backs itself up separately.</p>
-
-    <p>You will not change this config. Changing it requires understanding what it does, which requires understanding the original intent, which requires finding the person who wrote it, who left in 2014. The risk of breaking something important is higher than the cost of the disk space. The disk space costs four dollars a month. The config will remain.</p>
-
-    <p>When the disk fills up — not if, when — someone will increase the disk size. This is the correct decision. Then they will add a ticket to review the logrotate config. The ticket will sit in the backlog until the next time the disk fills up.</p>
+<div class="quote-box">
+    <blockquote>We have comprehensive logging across all our services.</blockquote>
+    <cite>— The team, before the incident. The logs from that time period do not appear to be available.</cite>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/monitoring/" class="nav-button">Related: Monitoring →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

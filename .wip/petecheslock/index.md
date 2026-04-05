@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Pete Cheslock - Someone Who Does the Work"
+title: "Pete Cheslock"
 permalink: /.wip/petecheslock/
 tags: [culture]
 ---
@@ -10,53 +10,29 @@ tags: [culture]
         <a href="/.wip/">Home</a> → <span>Pete Cheslock</span>
     </div>
     <h1>Pete Cheslock</h1>
-    <p class="page-subtitle">someone who does the work and talks about the real problems</p>
+    <p class="page-subtitle">thought leader in the monotoring space</p>
 </div>
 
 <div class="content-section">
-    <h2>Who He Is</h2>
-    <p>Pete Cheslock is an ops person. Not an "ops thought leader" or a "DevOps evangelist" or a "cloud transformation architect." An ops person. The kind who has been paged at 2am and knew what to do, who has sat in rooms full of people arguing about tooling and waited until someone asked what the actual problem was, and then said it.</p>
-    <p>He has worked at places that were genuinely hard to operate. He has done the work of making them less hard. He has then talked about that work in public, with specificity, in a way that is useful to other people who are in the middle of making something less hard right now.</p>
-    <p>This is rarer than it sounds. Most conference talks are about how someone succeeded. Pete's conversations include the parts that didn't work and why.</p>
+    <img src="/petecheslock/pete.png" alt="this is really pete cheslock" />
+
+    <p>Pete Cheslock is a thought leader in the monotoring space. Not only is he one of the core contributors to the Grafight project, but he is also righting a book about it based on the movie of the same name "Grafight Club", Pete also runs the very popular Monortorama conference and hosts the Arrested DeveloperOps Podcast with John Willis.</p>
+
+    <p>You can follow him on twitter <a href="https://twitter.com/cheeseplus">@cheeseplus</a>.</p>
+
+    <p>Get your very own desktop background here! <a href="/year-of-cheslock-on-the-desktop/cheslock-on-the-desktop-original.png">link to cheslock-on-the-desktop-original.png</a></p>
 </div>
 
 <div class="content-section">
-    <h2>The Grafana Contribution</h2>
-    <p>Pete was an early contributor to Grafana before Grafana was a company with a nine-figure valuation and a logo at every conference. When it was just software that needed people to work on it, Pete worked on it.</p>
-    <p>There is a certain kind of person in this industry who contributed to the tools before the tools were cool, who shows up in the git log before the Series B, who does not make a big deal out of any of this. Pete is that kind of person. He did not get a press release when Grafana went big. He got the knowledge that the software works, which is better.</p>
+    <h2>Why Pete Shows Up Here More Than Once</h2>
+    <p>This site has more than one Pete Cheslock page. There is this one, and there is the ELB page, and there is the Simon and Czarfunkel situation. This is not an accident or a structural deficiency in the site's taxonomy. Pete is genuinely a recurring figure in a certain era of ops culture, the way that some people just keep appearing at the center of the things that matter.</p>
+    <p>He ran DevOps engineering at companies where running DevOps was hard. He was involved in monitoring tooling before monitoring was a VC-funded category with twelve competing products and an analyst report. He co-hosted a podcast about operations that treated operations as a discipline worth sustained attention rather than a series of hot takes. None of this is remarkable on its own, but the combination — the longevity, the consistency, the specificity of what he actually worked on — is why he keeps showing up.</p>
+    <p>The "for Pete's sake" ELB page exists because Pete said something honest about a specific AWS service in public and it resonated with everyone who had spent time fighting that specific service. That is how you become a recurring character on a site about infrastructure disasters: you show up for the real problems and you say true things about them out loud.</p>
 
     <div class="quote-box">
-        <blockquote>
-            <p>"Monitoring is not about the tool. The tool is just the thing that shows you what you should have already known."</p>
-            <cite>— Paraphrased from too many conversations to cite specifically</cite>
-        </blockquote>
+        <blockquote>Being findable on the internet as someone who tells the truth about hard operational problems is a form of community service that does not come with a title.</blockquote>
+        <cite>— The monitoring space, collectively, 2am</cite>
     </div>
-</div>
-
-<div class="content-section">
-    <h2>Monitorama</h2>
-    <p>Monitorama is a conference Pete has been deeply involved in for years. It is a conference about monitoring and observability that does not pretend those are simple problems. The talks are technical. The speakers are people who operate real systems and have real opinions formed by real failures.</p>
-    <p>There is a type of tech conference where the talks are thinly disguised sales pitches and the hallway track is people exchanging LinkedIn profiles. Monitorama is not that conference. Monitorama is where people say "here is something that broke and here is what we learned and here is what we still don't know."</p>
-    <p>Running a conference like that every year requires someone who believes that the honest conversation about hard problems is more valuable than the polished presentation about solved ones. Pete believes that.</p>
-</div>
-
-<div class="content-section">
-    <h2>Arrested DevOps</h2>
-    <p>Pete co-hosts Arrested DevOps with Matt Stratton and others. The podcast has been running for years, which means Pete has been showing up consistently to talk about real ops problems for years, without a product to sell or a platform to grow, just because the conversations are worth having.</p>
-    <p>Consistency is underrated in this industry. Everyone has a hot take. Fewer people are still doing the work, still having the conversations, still willing to say "I don't know yet" five years after they started.</p>
-
-    <div class="fun-facts">
-        <h3>What Pete Represents</h3>
-        <ul>
-            <li>You can do important work without a title that has "principal" or "distinguished" in it</li>
-            <li>The best conference speakers are the ones who are still operators</li>
-            <li>Contributing to open source before it's cool is more valuable than talking about it after</li>
-            <li>Consistency over a long period of time is how you actually change how an industry thinks</li>
-            <li>The real experts are usually the ones who say "it depends" and then explain what it depends on</li>
-        </ul>
-    </div>
-
-    <p>You can find Pete at <a href="https://twitter.com/cheeseplus">@cheeseplus</a>. He is probably talking about something real.</p>
 </div>
 
 <div class="navigation-footer">

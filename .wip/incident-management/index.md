@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Incident Management - Hi, who just joined?"
+title: "Hi, who just joined?"
 permalink: /.wip/incident-management/
 ---
 
@@ -8,173 +8,47 @@ permalink: /.wip/incident-management/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Incident Management</span>
     </div>
-    <h1>🚨 Hi, who just joined?</h1>
-    <p class="page-subtitle">elevated error rates & existential dread</p>
+    <h1>Hi, who just joined?</h1>
+    <p class="page-subtitle">can everyone please mute</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner critical">
-        <strong>🚨 Status:</strong> Everything is fine (Severity 1 incident in progress)
-    </div>
+    <p style="font-family: monospace; color: var(--danger);">elevated error rates &amp;<br>
+    elevated error rates &amp;<br>
+    elevated error rates &amp;<br>
+    elevated error rates</p>
 
-    <div class="main-content-area">
-        <div class="incident-chant">
-            <p class="error-rate">elevated error rates &</p>
-            <p class="error-rate">elevated error rates &</p>
-            <p class="error-rate">elevated error rates &</p>
-            <p class="error-rate">elevated error rates</p>
-        </div>
+    <img src="/incident-management/incident-management.gif" alt="apis up" />
+</div>
 
-        <img src="/incident-management/incident-management.gif" alt="apis up" class="hero-image">
-        
-        <div class="content-text">
-            <p><em>In the ancient ritual of incident management, we gather in digital war rooms to chant the sacred mantras while our systems burn around us. "Hi, who just joined?" becomes the greeting that haunts our dreams.</em></p>
+<div class="content-section">
+    <h2>The Bridge</h2>
+    <p>The incident bridge is a specific genre of human experience. It starts with a page, a Slack alert, or someone in #ops saying "has anyone seen elevated errors on the API?" Within five minutes there are eight people on a call. Within fifteen there are twenty. Nobody invited most of them. They joined because the Slack message got a fire emoji react and they felt compelled to participate.</p>
 
-            <div class="incident-roles">
-                <h3>🎭 The Cast of Characters</h3>
-                <div class="role-grid">
-                    <div class="role-card">
-                        <h4>The Incident Commander</h4>
-                        <p>Frantically trying to appear calm while everything burns</p>
-                    </div>
-                    <div class="role-card">
-                        <h4>The Person Who Just Joined</h4>
-                        <p>"Hi, who just joined? Can someone give me a quick summary?"</p>
-                    </div>
-                    <div class="role-card">
-                        <h4>The Expert Who's On Vacation</h4>
-                        <p>"Sorry, I'm in airplane mode, what's the issue?"</p>
-                    </div>
-                    <div class="role-card">
-                        <h4>The Person Who Caused It</h4>
-                        <p>Suspiciously quiet in the channel</p>
-                    </div>
-                </div>
-            </div>
+    <p>The "elevated error rates &amp;" text above is a real artifact. It's an XMPP status field from an incident call, the kind of status line that got copied and pasted into a bridge update and then got copied again, and the HTML entity for ampersand came through as a literal <code>&amp;</code>, and then that got copied again, and by the fourth repetition nobody was sure whether the message was truncated or whether the incident was somehow still ongoing and the next update was still coming. It wasn't. That was the whole message. The ampersand was an encoding error. The errors were real.</p>
+</div>
 
-            <div class="quote-box">
-                <blockquote>
-                    <p>"Can everyone please mute except the incident commander?"</p>
-                    <cite>— Last words before chaos erupts in voice chat</cite>
-                </blockquote>
-            </div>
+<div class="content-section">
+    <h2>The Rotating Cast</h2>
+    <p>"Hi, who just joined?" is the question that gets asked when the bridge has grown large enough that the incident commander has lost track of who is on it. The answer is rarely just one person. It's the on-call engineer from the payments team, who got paged by the escalation policy. It's a director who saw the SEV-1 in the incident channel. It's the engineer who wrote the service three years ago and has been mentioned several times. It's someone from the monitoring team who joined to see if they could help. It's a vendor support rep who was already on a call about something else.</p>
 
-            <div class="fun-facts">
-                <h3>🔥 Incident Management Fun Facts</h3>
-                <ul>
-                    <li>The first rule of incident management: someone will always join and ask for a summary</li>
-                    <li>The second rule: that someone is usually a manager</li>
-                    <li>"Elevated error rates" is the grown-up way of saying "everything is broken"</li>
-                    <li>Every incident starts with "it was working yesterday"</li>
-                    <li>The severity is always inversely proportional to how prepared you are</li>
-                    <li>Post-mortems are where we pretend we've learned from our mistakes</li>
-                    <li>The real incident was the friends we stressed out along the way</li>
-                </ul>
-            </div>
+    <p>Each new joiner gets a summary. The summary takes two minutes. During those two minutes, someone else joins. The summary loops. The person who is doing the summarizing is also the person who was actively debugging, and they have now lost their train of thought. The actual investigation has been paused to onboard people who will contribute zero actionable items to the incident because they don't have access to the affected systems and didn't know the service existed until fifteen minutes ago.</p>
+</div>
 
-            <div class="incident-timeline">
-                <h3>📅 Typical Incident Timeline</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <strong>T-0:</strong> "Has anyone noticed elevated error rates?"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+5min:</strong> "Hi, who just joined?"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+10min:</strong> "Let me get the expert on the call"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+15min:</strong> "The expert is unreachable"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+30min:</strong> "Have we tried turning it off and on again?"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+45min:</strong> "It just started working again"
-                    </div>
-                    <div class="timeline-item">
-                        <strong>T+60min:</strong> "Let's schedule a post-mortem"
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="quote-box">
+    <blockquote>We have identified the issue. The issue is being mitigated. We will provide an update in fifteen minutes. That was forty minutes ago.</blockquote>
+    <cite>— status page, Sev-1, still open</cite>
+</div>
+
+<div class="content-section">
+    <h2>The Postmortem That Becomes a Debriefing</h2>
+    <p>The postmortem is where the incident gets processed into a document. The document has a timeline, a root cause, contributing factors, and action items. The action items get assigned owners. Most action items are reasonable: add monitoring, improve runbooks, fix the race condition that caused the cascade. The postmortem meeting has good intent. Everyone agrees the thing that happened was bad and the action items are the right ones.</p>
+
+    <p>Then the tickets age. The monitoring improvement is waiting on an infrastructure change that hasn't been scheduled. The runbook update is in draft. The race condition fix requires understanding the codebase of a service that nobody currently working at the company fully understands, and it's been tagged as "complex" in the backlog. The next incident happens in a different system, so the action items from the first one don't directly apply, and they sit longer.</p>
+
+    <p>The "blameless postmortem" is the right model. The thing that makes incidents recur is rarely individual malice; it's the system, the conditions, the gap between documentation and reality. The problem is that "blameless" sometimes slides into "actionless," where identifying systemic issues is thorough but fixing them competes with feature work and loses. The next incident writes a new postmortem. The contributing factors look familiar.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/monitoring/" class="nav-button">Next Disaster: Monitoring →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-
-<style>
-.incident-chant {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 2rem 0;
-    text-align: center;
-    font-family: var(--font);
-}
-
-.error-rate {
-    color: var(--danger);
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
-
-.incident-roles {
-    margin: 3rem 0;
-}
-
-.role-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.role-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-}
-
-.role-card h4 {
-    color: var(--text-bright);
-    margin-bottom: 1rem;
-}
-
-.role-card p {
-    color: var(--text);
-    font-style: italic;
-    margin: 0;
-}
-
-.incident-timeline {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.timeline-item {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 3px solid var(--border-hi);
-    background: transparent;
-    color: var(--text);
-}
-
-.timeline-item strong {
-    color: var(--text-bright);
-}
-
-@media (max-width: 768px) {
-    
-    
-    .role-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>

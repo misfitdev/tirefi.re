@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Australia - Everything Is Trying to Kill Your Uptime"
+title: "ಠ_ಠ STRAYA!"
 permalink: /.wip/australia/
 ---
 
@@ -8,40 +8,37 @@ permalink: /.wip/australia/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Australia</span>
     </div>
-    <h1>Australia</h1>
-    <p class="page-subtitle">A continent-sized lesson in hostile environments</p>
+    <h1>When you see it you'll shit bricks</h1>
+    <p class="page-subtitle">That's not a tirefire. THIS is a tirefire.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Infrastructure Problem</h2>
-    <p>Australia is physically large, sparsely populated outside a handful of coastal cities, and historically underserved by subsea cable capacity relative to its economic weight. For most of the internet's history, "ap-southeast-2" meant your traffic was taking a long round trip to Sydney and you were paying latency penalties for it. The continent also has a habit of catching fire in ways that close data centers, knock out power grids, and remind infrastructure engineers that the environment is not, in fact, an abstraction layer.</p>
+    <img src="/australia/australia.gif" alt="pay no attention to the @mattray behind the curtain" />
 
-    <p>The Melbourne industrial fire that the original page linked to — that's not metaphor. That's a tirefire. A literal one. Australia does that.</p>
+    <p>That's not a tirefire, THIS is a tirefire.</p>
+
+    <p><a href="https://www.abc.net.au/news/2016-01-11/melbourne-industrial-fire-in-pictures/7080620">Melbourne industrial fire in pictures</a></p>
 </div>
 
 <div class="content-section">
-    <h2>Everything Is Trying to Kill You</h2>
-    <p>Australia's fauna is famously lethal. This is true, but it's not the interesting part. The interesting part is the infrastructure equivalent: bushfires that spread faster than incident response can react, flash flooding in cities built around rivers that forget they're rivers, heat events that push data center cooling systems past their rated capacity, and a power grid that has been described by its own operators as "interesting" during summer peak load, which is the Australian utility equivalent of a severity-1 page.</p>
+    <h2>The APAC Timezone Problem</h2>
+    <p>Running infrastructure that serves Australian users from anywhere else in the world means your on-call rotation is getting paged at 3am for what is, on the east coast of Australia, a completely ordinary Tuesday afternoon. The inverse is also true: your Australian colleagues, running their own infrastructure, are handling the morning peak load while your US team is asleep, and when something breaks at 9am Sydney time the escalation path leads to someone's phone in California at 4pm the day before, which is its own kind of temporal confusion.</p>
 
-    <p>Running infrastructure in Australia is a graduate seminar in failure modes that don't appear in the standard curriculum. Your runbooks were written for US-East failure scenarios. The scenario you're facing involves a smoke event affecting ambient air intake temperatures at a physical facility and a cooling vendor who is also in the affected area. Good luck. The postmortem will be instructive.</p>
-</div>
-
-<div class="fun-facts">
-    <h3>Australian infrastructure facts, unverified but plausible</h3>
-    <ul>
-        <li>The cloud region opened in 2012. The first major outage involved an event that AWS described as "unusual environmental conditions," which in Sydney means it was hot.</li>
-        <li>Latency from Sydney to the US West Coast: approximately 150ms. Latency from the internal team trying to reach you during an incident: also approximately 150ms, but felt longer.</li>
-        <li>The NBN (National Broadband Network) is a cautionary tale about large-scale infrastructure programs that started one way and finished a different, worse way. This is not unique to Australia but they really committed to the bit.</li>
-        <li>Australia has strict data sovereignty requirements. Your "deploy everywhere" strategy stops at the customs declaration.</li>
-        <li>The time zone offset makes on-call interesting. "Business hours" support from your Australian team lands during the US night shift. This is not their problem.</li>
-    </ul>
+    <p>This is not a complaint. It is a structural feature of a planet that is round and continues to rotate regardless of your deployment schedule. The teams that handle it well treat APAC as a first-class operational concern rather than an afterthought. The teams that don't handle it well have a Slack channel called #apac-issues that nobody in APAC is awake to read.</p>
 </div>
 
 <div class="content-section">
-    <h2>The Actual Tirefire</h2>
-    <p>The original page linked to an ABC News photo essay about a Melbourne industrial fire. Large-scale industrial fires in Australia are a real and recurring infrastructure event — tyre dumps, chemical facilities, recycling centers. They produce smoke plumes visible from space. They close roads, affect air quality across regions, and occasionally require evacuation of nearby facilities.</p>
+    <h2>@mattray and the Ecosystem</h2>
+    <p>Australian ops engineers punched well above their weight in the Puppet and Chef ecosystems. Matt Ray was part of that cohort — the people who showed up at PuppetConf and ChefConf and were building real infrastructure automation before most of the audience had heard of it. The community was small enough that everyone knew everyone, large enough that the tools got real production use, and located far enough from Silicon Valley to have healthy skepticism about the hype cycle.</p>
 
-    <p>The reason this page exists on a site called tirefi.re is that the metaphor is literal here. Sometimes the tire fire is a tire fire. Sometimes the infrastructure disaster is an actual fire at an infrastructure facility. The postmortem template covers both cases. The "contributing factors" section will need more room.</p>
+    <p>That skepticism is an Australian export. It doesn't show up in the tech stack documentation but it does show up in the postmortems, which tend to be more direct about what actually happened and less concerned with protecting anyone's feelings about it.</p>
+</div>
+
+<div class="content-section">
+    <h2>The Literal Tirefire</h2>
+    <p>The Melbourne industrial fire linked above is not metaphor. It is a photo essay about an actual large-scale fire at an actual industrial facility in an actual Australian city. Australia has these with some regularity. The continent is large, dry, and contains a significant amount of stored combustible material at any given time. When an industrial fire starts, it produces smoke plumes visible from space, closes roads across a region, and occasionally forces the evacuation of facilities that happened to be nearby.</p>
+
+    <p>The reason this page exists on a site called tirefi.re is that the metaphor and the literal thing are occasionally the same event. Sometimes infrastructure fails because of distributed systems complexity. Sometimes it fails because there is an actual fire. The postmortem template covers both. The contributing factors section will need more room for the second one.</p>
 </div>
 
 <div class="quote-box">
@@ -49,12 +46,6 @@ permalink: /.wip/australia/
     <cite>— The unofficial region onboarding guide</cite>
 </div>
 
-<div class="content-section">
-    <h2>Straya</h2>
-    <p>There is a specific brand of Australian tech culture that is deeply unimpressed by everything Silicon Valley considers revolutionary. They have seen enough failed infrastructure projects, lived through enough budget cuts, and dealt with enough "she'll be right" capacity planning to have a natural immunity to hype. This is probably the most useful trait an ops person can have. They didn't develop it intentionally. The continent just produces it as a survival mechanism.</p>
-</div>
-
 <div class="navigation-footer">
-    <a href="/.wip/americancraft/" class="nav-button">← American Craft</a>
-    <a href="/.wip/byod/" class="nav-button">BYOD →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

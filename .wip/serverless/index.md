@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Serverless - The Emperor's New Servers"
+title: "What idiot called it serverless and not \"The Emperor's New Servers\""
 permalink: /.wip/serverless/
 ---
 
@@ -8,230 +8,46 @@ permalink: /.wip/serverless/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Serverless</span>
     </div>
-    <h1>⚡ The Emperor's New Servers</h1>
-    <p class="page-subtitle">No servers! (Just someone else's servers)</p>
+    <h1>What idiot called it serverless and not "The Emperor's New Servers"</h1>
+    <p class="page-subtitle">just somebody else's servers</p>
 </div>
 
 <div class="content-section">
-    <div class="status-banner serverless">
-        <strong>🌟 Status:</strong> Functions are executing (somewhere in the cloud)
-    </div>
+    <img src="/serverless/noserverless.png" alt="Just Somebody Else's" />
 
-    <div class="main-content-area">
-        <div class="serverless-hero">
-            <img src="/serverless/noserverless.png" alt="What idiot called it serverless and not 'The Emperor's New Servers'" class="hero-image">
-            <p class="hero-caption">Just somebody else's servers</p>
-        </div>
-        
-        <div class="content-text">
-            <p><em>"What idiot called it serverless and not 'The Emperor's New Servers'?"</em></p>
+    <p>Stickers coming soon to the TireFire cafepress store. All profits go to the "Drunk Domain Purchasing" fund.</p>
 
-            <p>Welcome to the magical world of serverless computing, where servers don't exist until your bill arrives. It's like having a data center, but with extra steps and vendor lock-in.</p>
+    <p>Special thanks to @sdmouton for spending his hard earned devop bucks on dumb jokes.</p>
+</div>
 
-            <div class="quote-box">
-                <blockquote>
-                    <p>"There is no server."</p>
-                    <cite>— Morpheus, if he worked in cloud architecture</cite>
-                </blockquote>
-            </div>
+<div class="content-section">
+    <h2>The Abstraction Sells Itself</h2>
+    <p>Serverless is a great pitch. You write a function. You deploy the function. The function runs when it needs to run and doesn't cost anything when it doesn't. No capacity planning, no patching, no on-call for the runtime. It is, in theory, infrastructure that disappears until needed.</p>
 
-            <div class="serverless-principles">
-                <h3>☁️ Core Serverless Principles</h3>
-                <div class="principle-item">
-                    <strong>No Servers:</strong> Just someone else's servers that you can't see, touch, or debug
-                </div>
-                <div class="principle-item">
-                    <strong>Event-Driven:</strong> Your code runs when events happen (or don't happen, mysteriously)
-                </div>
-                <div class="principle-item">
-                    <strong>Auto-Scaling:</strong> Automatically scales from zero to bankruptcy
-                </div>
-                <div class="principle-item">
-                    <strong>Pay-Per-Use:</strong> You pay for every millisecond your code thinks about running
-                </div>
-                <div class="principle-item">
-                    <strong>Stateless:</strong> Your application forgets everything, including why it exists
-                </div>
-                <div class="principle-item">
-                    <strong>Managed:</strong> Someone else manages the servers you don't have
-                </div>
-            </div>
+    <p>In practice, the servers did not disappear. They are in a warehouse somewhere, owned by Amazon or Google or Microsoft, and you are paying for them on a consumption model with a billing dashboard that is genuinely difficult to read. The "no servers" part means "no servers you control," which is a different and in some ways worse situation. When your function runs in a broken execution environment, you will file a support ticket and wait.</p>
+</div>
 
-            <div class="lambda-lifecycle">
-                <h3>🔄 Lambda Function Lifecycle</h3>
-                <div class="lifecycle-step">
-                    <strong>Cold Start:</strong> Your function wakes up like a grumpy teenager (3+ seconds)
-                </div>
-                <div class="lifecycle-step">
-                    <strong>Initialization:</strong> Loading dependencies from the dawn of time
-                </div>
-                <div class="lifecycle-step">
-                    <strong>Execution:</strong> Your code runs for 0.003 seconds
-                </div>
-                <div class="lifecycle-step">
-                    <strong>Billing:</strong> You're charged for the full minute because math
-                </div>
-                <div class="lifecycle-step">
-                    <strong>Sleep:</strong> Function goes back to sleep until next century
-                </div>
-                <div class="lifecycle-step">
-                    <strong>Repeat:</strong> The eternal cycle of serverless suffering
-                </div>
-            </div>
+<div class="content-section">
+    <h2>Cold Starts and the Debugging Void</h2>
+    <p>The cold start problem is simple: if your function hasn't run recently, the platform needs to spin up a new execution environment, load your code, initialize your dependencies, and then run your handler. This takes somewhere between 100ms and several seconds depending on the runtime, your package size, and what the platform feels like doing. It is not configurable in any meaningful sense. You can pay for provisioned concurrency, which is just "reserved capacity" with a different name, which is just "servers" with a different billing model.</p>
 
-            <div class="serverless-vendors">
-                <h3>🏢 Major Serverless Vendors</h3>
-                <div class="vendor-item">
-                    <strong>AWS Lambda:</strong> The original "there is no server" server
-                </div>
-                <div class="vendor-item">
-                    <strong>Azure Functions:</strong> Microsoft's answer to problems nobody asked about
-                </div>
-                <div class="vendor-item">
-                    <strong>Google Cloud Functions:</strong> Functions that run on Google's secret servers
-                </div>
-                <div class="vendor-item">
-                    <strong>Cloudflare Workers:</strong> Edge computing at the edge of sanity
-                </div>
-                <div class="vendor-item">
-                    <strong>Vercel:</strong> Serverless for people who think Next.js is a lifestyle
-                </div>
-                <div class="vendor-item">
-                    <strong>Netlify:</strong> JAMstack with a side of existential crisis
-                </div>
-            </div>
+    <p>Debugging a failed function invocation is an exercise in inference. You have logs if you wrote them. You have a duration and a status code. You have whatever the platform decided to surface in its observability tooling, which is usually less than you want. If the function timed out, you know it timed out but not necessarily why. If it ran for 18ms and returned a 500, you have 18ms of execution to account for, and the platform may have thrown away the runtime before the logs fully flushed. You are not debugging code. You are reading tea leaves.</p>
+</div>
 
-            <div class="troubleshooting-serverless">
-                <h3>🔧 Serverless Troubleshooting Guide</h3>
-                <ol>
-                    <li>Check CloudWatch logs (if you remember the function name)</li>
-                    <li>Increase timeout from 3 seconds to 4 seconds</li>
-                    <li>Add more memory until the cold start feels warm</li>
-                    <li>Rewrite everything in Go for "performance"</li>
-                    <li>Question why you chose serverless in the first place</li>
-                    <li>Add retry logic for the retry logic</li>
-                    <li>Migrate back to containers</li>
-                    <li>Realize containers are just someone else's servers too</li>
-                </ol>
-            </div>
+<div class="quote-box">
+    <blockquote>The function ran. The function failed. The logs show the start and not the end. This is the complete diagnostic information available. The function has since run successfully forty times.</blockquote>
+    <cite>— Lambda investigation, closed as transient</cite>
+</div>
 
-            <div class="fun-facts">
-                <h3>🔥 Serverless Fun Facts</h3>
-                <ul>
-                    <li>Serverless computing uses 100% servers, 0% of the time</li>
-                    <li>Cold starts are just your function practicing mindfulness meditation</li>
-                    <li>Every serverless function is stateless, except for the state of despair</li>
-                    <li>The phrase "it works on my local" has been replaced with "it works in my region"</li>
-                    <li>Serverless billing is like metered parking: you always owe more than you expect</li>
-                    <li>Vendor lock-in is just a feature for building long-term relationships</li>
-                    <li>Event-driven architecture means your code only runs when events remember to show up</li>
-                    <li>Microservices became nanoscopic services that require microscopes to debug</li>
-                </ul>
-            </div>
+<div class="content-section">
+    <h2>Vendor Lock-In at the Function Level</h2>
+    <p>The lock-in story for serverless is rarely discussed honestly at the point of adoption. Your functions are portable — they're just code. Your event sources are not. Your IAM bindings, your VPC configurations, your DLQ setup, your cold start mitigations, your layer dependencies, your concurrency limits: these are all platform-specific. The wiring that makes functions useful is entirely proprietary.</p>
 
-            <div class="serverless-philosophy">
-                <h3>⚡ The Serverless Philosophy</h3>
-                <p>Serverless computing represents the ultimate abstraction: we've abstracted away the very concept of computation itself. It's Schrödinger's infrastructure - the servers both exist and don't exist until you need to debug them.</p>
-                
-                <p>The beauty of serverless lies in its simplicity: you write a function, deploy it to the cloud, and someone else's servers run it. The horror of serverless lies in its complexity: cold starts, execution limits, memory constraints, and billing models that would make a tax attorney weep.</p>
-                
-                <p>In the serverless world, we've achieved the dream of "NoOps" by replacing operational complexity with existential dread. We no longer manage servers; instead, we manage our expectations and our cloud bills.</p>
-            </div>
+    <p>The billing surprise comes later. Serverless is cheap for spiky, unpredictable workloads where you'd otherwise be provisioning for peak. It is not always cheap for steady, predictable workloads, where a small instance would cost less and not have cold starts. The sales pitch focuses on the first case. Most workloads, once they reach production and users, start looking like the second case. The cloud bill review meeting is where this gets discovered.</p>
 
-            <div class="tribute-section">
-                <h3>🙏 Special Thanks</h3>
-                <p>Special thanks to <a href="https://twitter.com/sdmouton">@sdmouton</a> for spending his hard-earned DevOps bucks on dumb jokes and making the internet a more sarcastic place.</p>
-                <p><em>Stickers available soon at the TireFire CafePress store. All profits go to the "Drunk Domain Purchasing" fund.</em></p>
-            </div>
-        </div>
-    </div>
+    <p>None of this means serverless is bad. For the right workload, it genuinely eliminates operational overhead. The problem is that "the right workload" is a narrower category than the sales materials suggest, and the discovery process involves a production incident or an unexpectedly large invoice.</p>
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← Back to All Disasters</a>
-    <a href="/.wip/microservices/" class="nav-button">Next Disaster: Microservices →</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>
-
-<style>
-.serverless-hero {
-    text-align: center;
-    margin: 2rem 0 3rem;
-}
-
-.hero-caption {
-    margin-top: 1rem;
-    color: var(--text-dim);
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-.serverless-principles,
-.lambda-lifecycle,
-.serverless-vendors,
-.troubleshooting-serverless,
-.serverless-philosophy,
-.tribute-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 2rem;
-    margin: 3rem 0;
-}
-
-.serverless-principles h3,
-.lambda-lifecycle h3,
-.serverless-vendors h3,
-.troubleshooting-serverless h3,
-.serverless-philosophy h3,
-.tribute-section h3 {
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
-}
-
-.principle-item,
-.lifecycle-step,
-.vendor-item {
-    background: var(--surface-hi);
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid var(--border-hi);
-    color: var(--text);
-}
-
-.principle-item strong,
-.lifecycle-step strong,
-.vendor-item strong {
-    color: var(--text-bright);
-}
-
-.troubleshooting-serverless ol {
-    color: var(--text);
-    padding-left: 1.5rem;
-}
-
-.troubleshooting-serverless li {
-    margin: 0.8rem 0;
-    line-height: 1.5;
-}
-
-.serverless-philosophy p,
-.tribute-section p {
-    color: var(--text);
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .serverless-principles,
-    .lambda-lifecycle,
-    .serverless-vendors,
-    .troubleshooting-serverless {
-        padding: 1.5rem;
-    }
-
-    .principle-item,
-    .lifecycle-step,
-    .vendor-item {
-        padding: 0.8rem;
-        margin: 0.8rem 0;
-    }
-}
-</style>

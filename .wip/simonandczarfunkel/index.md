@@ -1,6 +1,6 @@
 ---
 layout: wip
-title: "Simon and Czarfunkel - Hello Czarkness My Old Friend"
+title: "Hello Czarkness My Old Friend."
 permalink: /.wip/simonandczarfunkel/
 ---
 
@@ -8,66 +8,55 @@ permalink: /.wip/simonandczarfunkel/
     <div class="breadcrumb">
         <a href="/.wip/">Home</a> → <span>Simon and Czarfunkel</span>
     </div>
-    <h1>Hello Czarkness My Old Friend</h1>
-    <p class="page-subtitle">on the coping mechanisms of the ops community</p>
+    <h1>the jolliest banana bender</h1>
+    <p class="page-subtitle">hello czarkness, my old friend</p>
 </div>
 
 <div class="content-section">
-    <h2>The Mascot Tradition</h2>
-    <p>Every ops community eventually adopts a weird mascot. This is not an accident. It is a survival strategy.</p>
-
-    <p>When you spend your working hours staring at dashboards that only light up when something is on fire, when your expertise is most visible at 3am and completely invisible at the quarterly all-hands, when the measure of your success is nothing happening — you develop a relationship with absurdity. The mascot is how you know you're among people who understand.</p>
-
-    <div class="quote-box">
-        <blockquote>
-            <p>"Hello czarkness, my old friend. I've come to page with you again."</p>
-            <cite>— the ops community, collectively, at 2:47am</cite>
-        </blockquote>
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_FE6a9H7MzQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div class="content-section">
-    <h2>Pete Cheslock: Jolliest of Banana Benders</h2>
-    <p>The Australian ops community produced Pete Cheslock, which is either a gift or a warning, depending on your timezone. Pete was responsible for the particular joy that launched a thousand Slack reactions and at least one dedicated subdirectory on this website.</p>
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have watched this video 3 times now and I am not ashamed. <a href="https://t.co/example1">twitter.com/filler/status/…</a></p>&mdash; filler (@filler) <a href="https://twitter.com/filler">filler</a></blockquote>
 
-    <p>The <a href="https://www.youtube.com/watch?v=_FE6a9H7MzQ">video</a> is still out there. It has been watched more times than any production runbook has ever been read. This is the correct outcome.</p>
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I cannot stop watching this video. I don't know what's happening to me.</p>&mdash; Pete Cheslock (@petecheslock) <a href="https://twitter.com/petecheslock">petecheslock</a></blockquote>
 
-    <div class="fun-facts">
-        <h3>Properties of a Good Ops Mascot</h3>
-        <ul>
-            <li>Must be inexplicable to anyone outside the community</li>
-            <li>Must have emerged organically — forced mascots die in a sprint</li>
-            <li>Must survive being posted in a Slack channel at any hour with no context</li>
-            <li>Must make a specific subset of people immediately understand each other</li>
-            <li>Does not need to be work-appropriate in any formal sense</li>
-            <li>Pete Cheslock meets all criteria</li>
-        </ul>
-    </div>
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">OK fine. I watched it four times. Fine.</p>&mdash; claco (@claco) <a href="https://twitter.com/claco">claco</a></blockquote>
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is the best thing I have seen all year and I have seen a lot of things this year.</p>&mdash; vmtyler (@vmtyler) <a href="https://twitter.com/vmtyler">vmtyler</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <div class="content-section">
-    <h2>Why Inside Jokes Are Infrastructure</h2>
-    <p>The in-joke is a load-bearing component of ops team culture. It is how you identify someone who has been in the room long enough to have opinions. It is how you decompress after an incident. It is how you communicate "I have also experienced this specific flavor of suffering" without a twenty-minute retrospective.</p>
+    <p>@petechesbot gets his revenge: <a href="/.wip/petecheslock/">petecheslock</a></p>
 
-    <p>The Simon and Garfunkel pun is perfect because it requires exactly enough context to be funny and zero additional explanation once you have that context. This is the entire design goal. If you have to explain it, it isn't working. If you don't have to explain it, you've found your people.</p>
+    <p><img src="/petecheslock/pete.png" alt="Our Director of Devops"></p>
 
-    <div class="quote-box">
-        <blockquote>
-            <p>"The ops community doesn't have good work-life balance. We compensate with better memes than any other engineering discipline."</p>
-            <cite>— unverified, but accurate</cite>
-        </blockquote>
-    </div>
+    <p>The most of thanks to <a href="https://twitter.com/notnownikki">@notnownikki</a> for the best video filler's cried to this year!</p>
 </div>
 
 <div class="content-section">
-    <h2>The Czar Lineage</h2>
-    <p>The czar in question is @petecheslock, perpetual director of DevOps, originator of correct opinions about infrastructure, and subject of what might be the most replayed video in ops Slack history. The full origin story lives at <a href="/.wip/petecheslock/">the Pete Cheslock page</a>.</p>
+    <h2>Simon and Czarfunkel, Explained to No One</h2>
+    <p>Paul Czarkowski — @pczarkowski on the internet, the czar — is Australian. Queensland, specifically, which makes him a banana bender in the classic Australian state-based insult tradition. The "czar" handle was not chosen to invite the Simon and Garfunkel pun, but once someone made it, it could not be unmade.</p>
 
-    <p>None of this needs to make sense from the outside. It makes perfect sense from the inside, which is the whole point. The community built its own mythology, its own shorthand, its own recurring characters. It is, at minimum, a better coping mechanism than the alternatives.</p>
+    <p>"Hello Czarkness My Old Friend" arrived fully formed, the way the best ops-community puns do: exactly enough context required, no explanation needed once you have that context. If you know who the czar is, the pun lands immediately and completely. If you don't, the pun means nothing and the explanation doesn't help. This is the correct behavior for an in-joke.</p>
+
+    <p>The video is whatever the video is. The important thing is that @filler watched it, then @petecheslock, then @claco, then @vmtyler, each one logging their viewcount in public like a confession. The Twitter thread of people admitting they cannot stop watching something is a specific genre of ops community cultural artifact. The thing doesn't have to be explicable. It just has to be real.</p>
+</div>
+
+<div class="content-section">
+    <h2>Why This Happened</h2>
+    <p>The ops community in a certain era of Twitter was a genuinely small place. The same hundred or so people kept appearing in each other's timelines, which meant that when one of them found something good and posted it, the rest would see it within minutes. The thread of repeat viewings is not a coincidence — it's a small room where everyone can hear each other laugh.</p>
+
+    <p>@notnownikki made the video. She gets credit, as she should. The rest of them just kept watching it, which is the sincerest form of acknowledgment the internet offers.</p>
+</div>
+
+<div class="quote-box">
+    <blockquote>Hello czarkness, my old friend. I've come to page with you again.</blockquote>
+    <cite>— the ops community, collectively, at 2:47am</cite>
 </div>
 
 <div class="navigation-footer">
     <a href="/.wip/petecheslock/" class="nav-button">Pete Cheslock</a>
-    <a href="/.wip/ops/" class="nav-button">Ops</a>
-    <a href="/.wip/" class="nav-button">All Disasters</a>
+    <a href="/.wip/" class="nav-button">← All Disasters</a>
 </div>

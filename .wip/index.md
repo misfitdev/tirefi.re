@@ -5,11 +5,9 @@ permalink: /.wip/
 ---
 
 <div class="index-header">
+    <img src="/tirefirebillow.gif" alt="tire fire" class="index-fire">
     <h1>This is a tire fire</h1>
-    <div class="index-fire">
-        <img src="/tirefirebillow.gif" alt="Moving image of a field of tires on fire.">
-    </div>
-    <p class="index-tagline">tirefi.re</p>
+    <p class="index-tagline">the tire fire burns eternal</p>
 </div>
 
 <div class="filter-controls">

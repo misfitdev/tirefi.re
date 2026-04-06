@@ -593,12 +593,26 @@
             margin-bottom: 0.75rem;
         }
 
-        .index-fire {
-            float: right;
-            width: 64px;
-            height: 64px;
-            margin: 0 0 0.5rem 1rem;
-            opacity: 0.7;
+        /* ascii fire background */
+        #ascii-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.055;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #ascii-bg-pre {
+            font-family: var(--font);
+            font-size: 11px;
+            line-height: 1.35;
+            color: var(--text);
+            white-space: pre;
+            user-select: none;
         }
 
         .index-tagline {
@@ -758,6 +772,8 @@
             </div>
         </div>
     </header>
+
+    {% if page.firebg %}<div id="ascii-bg" aria-hidden="true"><pre id="ascii-bg-pre"></pre></div>{% endif %}
 
     <main class="main-content" id="main-content">
         <div class="container">
@@ -990,5 +1006,6 @@
             window.openOverlay = openOverlay;
         })();
     </script>
+    {% if page.firebg %}<script src="/assets/js/ascii-fire.js"></script>{% endif %}
 </body>
 </html>

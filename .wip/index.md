@@ -2,10 +2,10 @@
 layout: wip
 title: "tirefi.re"
 permalink: /.wip/
+firebg: true
 ---
 
 <div class="index-header">
-    <img src="/tirefirebillow.gif" alt="tire fire" class="index-fire">
     <h1>This is a tire fire</h1>
     <p class="index-tagline">the tire fire burns eternal</p>
 </div>

@@ -9,7 +9,7 @@ permalink: /.wip/infrakit/
         <a href="/.wip/">Home</a> → <span>InfraKit</span>
     </div>
     <h1>Declarative, self-igniting tirefires</h1>
-    <p class="page-subtitle">breaking infrastructure into simple, pluggable tirefires</p>
+    <p class="page-subtitle">Presented at DockerCon 2016. Last commit: 2019. The pattern survived. The project did not.</p>
 </div>
 
 <div class="content-section">

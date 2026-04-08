@@ -9,7 +9,7 @@ permalink: /.wip/devops/
         <a href="/.wip/">Home</a> → <span>DevOps</span>
     </div>
     <h1>, Director of.</h1>
-    <p class="page-subtitle">it's tiaras all the way down</p>
+    <p class="page-subtitle">A methodology so thoroughly absorbed by organizations that it now has a reporting line.</p>
 </div>
 
 <div class="content-section">

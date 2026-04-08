@@ -9,7 +9,7 @@ permalink: /.wip/vmworld/
         <a href="/.wip/">Home</a> → <span>VMworld</span>
     </div>
     <h1>VMworld</h1>
-    <p class="page-subtitle">gotta get those fluffing CEUs to keep the cert.</p>
+    <p class="page-subtitle">Broadcom sends its regards, and also a new invoice structure you're going to want to sit down for.</p>
 </div>
 
 <div class="content-section">

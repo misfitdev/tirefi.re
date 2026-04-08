@@ -9,7 +9,7 @@ permalink: /.wip/systemd/
         <a href="/.wip/">Home</a> → <span>systemd</span>
     </div>
     <h1>service blob stop</h1>
-    <p class="page-subtitle">systemd shall eat the world, even as you set it on fire</p>
+    <p class="page-subtitle">PID 1 has opinions about your cron jobs, your DNS, and your logs, whether you asked or not.</p>
 </div>
 
 <div class="content-section">

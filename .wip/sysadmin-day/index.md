@@ -9,7 +9,7 @@ permalink: /.wip/sysadmin-day/
         <a href="/.wip/">Home</a> → <span>SysAdmin Day</span>
     </div>
     <h1>Totally fictitious holiday that nobody but sysadmins care about.</h1>
-    <p class="page-subtitle">I am jack's cost center.</p>
+    <p class="page-subtitle">The uptime you preserved today is invisible, and that's exactly how you know it worked.</p>
 </div>
 
 <div class="content-section">

@@ -9,7 +9,7 @@ permalink: /.wip/australia/
         <a href="/.wip/">Home</a> → <span>Australia</span>
     </div>
     <h1>When you see it you'll shit bricks</h1>
-    <p class="page-subtitle">That's not a tirefire. THIS is a tirefire.</p>
+    <p class="page-subtitle">160ms latency, 3am on-call, and everything there is trying to kill you.</p>
 </div>
 
 <div class="content-section">

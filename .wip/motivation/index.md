@@ -9,7 +9,7 @@ permalink: /.wip/motivation/
         <a href="/.wip/">Home</a> → <span>Motivation</span>
     </div>
     <h1>Everything is terrible, may as well burn some tires.</h1>
-    <p class="page-subtitle">one is the loneliest tirefire</p>
+    <p class="page-subtitle">The dark humor is load-bearing. Do not remove it.</p>
 </div>
 
 <div class="content-section">

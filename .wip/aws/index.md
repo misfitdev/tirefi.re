@@ -9,7 +9,7 @@ permalink: /.wip/aws/
         <a href="/.wip/">Home</a> → <span>AWS</span>
     </div>
     <h1>us-tirefire-1</h1>
-    <p class="page-subtitle">Yeah, the db is in us-east-1, but we will move it later.</p>
+    <p class="page-subtitle">The region where good intentions go to accumulate egress charges and false confidence.</p>
 </div>
 
 <div class="content-section">

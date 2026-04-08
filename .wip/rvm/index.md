@@ -9,7 +9,7 @@ permalink: /.wip/rvm/
         <a href="/.wip/">Home</a> → <span>RVM</span>
     </div>
     <h1>This is a tire fire that is "easy to install, manage, and work with"</h1>
-    <p class="page-subtitle">I just need to wrap this tire with more tire, this will work great.</p>
+    <p class="page-subtitle">Managing your Ruby version manager manager since the curl-to-bash era.</p>
 </div>
 
 <div class="content-section">

@@ -9,7 +9,7 @@ permalink: /.wip/monitoring/
         <a href="/.wip/">Home</a> → <span>Monitoring</span>
     </div>
     <h1>The forever war: #monitoringsucks vs #monitoringlove</h1>
-    <p class="page-subtitle">I know I'm not the only one who learned Outlook rules because of Nagios...</p>
+    <p class="page-subtitle">A decade of tooling evolution, and the disk still fills up before anyone notices.</p>
 </div>
 
 <div class="content-section">

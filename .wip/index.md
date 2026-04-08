@@ -296,7 +296,7 @@ firebg: true
         });
 
         emptyMsg.style.display = visible.length ? 'none' : '';
-        if (meta) meta.textContent = visible.length + ' / ' + total;
+        if (meta) meta.textContent = (query && visible.length) ? visible.length + ' / ' + total : '';
         setBorderTop(visible);
     }
 

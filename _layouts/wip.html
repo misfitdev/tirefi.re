@@ -156,6 +156,14 @@
             background: var(--surface-hi);
         }
 
+        .search-key-hint {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            margin-left: 0.4rem;
+            opacity: 0.6;
+            font-family: var(--font);
+        }
+
         /* === SEARCH OVERLAY === */
         .search-overlay {
             position: fixed;
@@ -667,6 +675,13 @@
             animation: crt-scan-sweep 0.22s linear forwards;
         }
 
+        /* visual rhythm — prompt prefix on content section headings */
+        .content-section h2::before {
+            content: '> ';
+            color: var(--text-dim);
+            opacity: 0.5;
+        }
+
         /* B — matched character highlight */
         .match-char {
             color: #c87820;
@@ -833,6 +848,7 @@
                                         <circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.5"/>
                                         <line x1="8.5" y1="8.5" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
                                     </svg>
+                                    <span class="search-key-hint">[/]</span>
                                 </button>
                             </li>
                         </ul>

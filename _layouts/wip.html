@@ -824,7 +824,63 @@
                 color: #000;
             }
         }
+
+        /* === CLASSIC MODE === */
+        :root.classic-mode {
+            --bg:          #fdfdfd;
+            --surface:     #ffffff;
+            --surface-hi:  #f0f0f0;
+            --border:      #e0e0e0;
+            --border-hi:   #cccccc;
+            --text:        #333333;
+            --text-bright: #111111;
+            --text-dim:    #666666;
+            --link:        #2a7ae2;
+            --danger:      #c0392b;
+            --success:     #27ae60;
+        }
+
+        html.classic-mode body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        html.classic-mode #fire-bg,
+        html.classic-mode #crt { display: none !important; }
+
+        html.classic-mode h1,
+        html.classic-mode h2,
+        html.classic-mode h3 { text-shadow: none !important; }
+
+        html.classic-mode .content-section h2::before { display: none; }
+
+        .mode-toggle {
+            background: transparent;
+            border: none;
+            border-left: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 0 1rem;
+            min-height: 44px;
+            cursor: pointer;
+            font-family: var(--font);
+            font-size: 0.8rem;
+            transition: color 0.1s, background 0.1s;
+        }
+
+        .mode-toggle:hover {
+            color: var(--text-bright);
+            background: var(--surface-hi);
+        }
+
+        .mode-toggle .wip-label   { display: inline; }
+        .mode-toggle .classic-label { display: none; }
+        html.classic-mode .mode-toggle .wip-label   { display: none; }
+        html.classic-mode .mode-toggle .classic-label { display: inline; }
     </style>
+    <script>
+        if (localStorage.getItem('classicMode') === 'true') {
+            document.documentElement.classList.add('classic-mode');
+        }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -841,7 +897,12 @@
                         <ul class="nav-menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/in-memoriam/">In Memoriam</a></li>
-                            <li><a href="/classic/">Classic</a></li>
+                            <li>
+                                <button class="mode-toggle" id="modeToggle" aria-label="Toggle classic mode">
+                                    <span class="wip-label">Classic</span>
+                                    <span class="classic-label">Modern</span>
+                                </button>
+                            </li>
                             <li>
                                 <button class="search-trigger" id="searchTrigger" aria-label="Search (press / to open)">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -1093,9 +1154,17 @@
         })();
     </script>
     <script>
+    document.getElementById('modeToggle').addEventListener('click', function() {
+        var next = localStorage.getItem('classicMode') !== 'true';
+        localStorage.setItem('classicMode', next);
+        location.reload();
+    });
+    </script>
+    <script>
     /* A — CRT glitch trigger */
     (function() {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (document.documentElement.classList.contains('classic-mode')) return;
         function glitch() {
             document.body.classList.add('crt-glitch');
             setTimeout(function() { document.body.classList.remove('crt-glitch'); }, 260);

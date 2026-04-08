@@ -9,7 +9,6 @@ permalink: /mansplaining/
         <a href="/">Home</a> → <span>About</span>
     </div>
     <h1>2 W's of Tirefi.re</h1>
-    <p class="page-subtitle">the when and why of this particular fire</p>
 </div>
 
 <div class="content-section">
@@ -24,14 +23,6 @@ permalink: /mansplaining/
     <p>Thanks,<br>Shaun</p>
 </div>
 
-<div class="content-section">
-    <h2>What Happened Next</h2>
-    <p>The job didn't work out the way the hiring manager had framed it. It rarely does when the discovery phase reveals that the migration scope was understood only by people who had every incentive to understate it. The MySQL on OpenVZ stayed where it was. The five network vendors stayed. The domain search, however, yielded tirefi.re for a few dollars a year, and that turned out to be the thing worth keeping.</p>
-
-    <p>Since 2016, the site has accumulated contributors who recognized the feeling — the specific ops experience of inheriting something that has been technically functional long past the point where anyone fully understands why, and needing somewhere to put the laugh about it. The entries have grown. The technologies have changed. The underlying experience of being handed a tire pile and a match and asked to please not let it spread to the servers next door has not changed at all.</p>
-
-    <p>The tire fire metaphor has held up. A tire fire starts because something deferred finally ignites. Standard suppression doesn't work — burning rubber keeps reigniting. The smoke drifts into places it wasn't supposed to reach. And critically: the tires were already out of service. The pile was already there. The fire is just the natural end state of accumulated decisions. That's ops. That's this site.</p>
-</div>
 
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

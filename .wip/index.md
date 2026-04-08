@@ -5,6 +5,26 @@ permalink: /
 firebg: true
 ---
 
+<div class="classic-home">
+    <div class="home">
+        <h1 class="page-heading">This is a tire fire</h1>
+        <p class="main">
+            <img src="/tirefirebillow.gif" alt="Moving image of a field of tires on fire.">
+        </p>
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+    </div>
+</div>
+
+<div class="wip-home">
+
 <div class="index-header">
     <h1>This is a tire fire</h1>
     <p class="index-tagline">the tire fire burns eternal</p>
@@ -308,3 +328,5 @@ firebg: true
     setBorderTop(original);
 })();
 </script>
+
+</div>

@@ -875,17 +875,66 @@
         .mode-toggle .classic-label { display: none; }
         html.classic-mode .mode-toggle .wip-label   { display: none; }
         html.classic-mode .mode-toggle .classic-label { display: inline; }
+
+        /* === CLASSIC SHELL SWAP === */
+        #classic-header,
+        #classic-footer { display: none; }
+
+        html.classic-mode #wip-header,
+        html.classic-mode #wip-footer { display: none; }
+
+        html.classic-mode #classic-header,
+        html.classic-mode #classic-footer { display: block; }
+
+        html.classic-mode .main-content {
+            background: none;
+            padding: 0;
+            max-width: none;
+        }
+
+        html.classic-mode .main-content > .container {
+            max-width: none;
+            padding: 0;
+        }
+
+        /* Mode toggle stays visible in both shells */
+        #classic-header .mode-toggle-wrapper {
+            position: fixed;
+            top: 0.5rem;
+            right: 1rem;
+            z-index: 200;
+        }
+
+        #classic-header .mode-toggle-wrapper .mode-toggle {
+            border: 1px solid #ccc;
+            background: #fdfdfd;
+            color: #666;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            min-height: unset;
+        }
     </style>
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" id="classicCSS" media="not all">
     <script>
         if (localStorage.getItem('classicMode') === 'true') {
             document.documentElement.classList.add('classic-mode');
+            document.getElementById('classicCSS').media = 'all';
         }
     </script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
 
-    <header class="site-header" role="banner">
+    <div id="classic-header">
+        {% include header.html %}
+        <div class="mode-toggle-wrapper">
+            <button class="mode-toggle" aria-label="Switch to modern view">
+                <span class="classic-label">Modern</span>
+            </button>
+        </div>
+    </div>
+
+    <header id="wip-header" class="site-header" role="banner">
         <div class="container">
             <div class="header-content">
                 <div class="site-title-section">
@@ -922,17 +971,25 @@
     <div id="crt" aria-hidden="true"></div>
     {% if page.firebg %}<div id="fire-bg" aria-hidden="true"><img src="/tirefirebillow.gif" alt=""></div>{% endif %}
 
-    <main class="main-content" id="main-content">
-        <div class="container">
-            {{ content }}
+    <div class="page-content">
+        <div class="wrapper">
+            <main class="main-content" id="main-content">
+                <div class="container">
+                    {{ content }}
+                </div>
+            </main>
         </div>
-    </main>
+    </div>
 
-    <footer class="site-footer" role="contentinfo">
+    <footer id="wip-footer" class="site-footer" role="contentinfo">
         <div class="container">
             <p>tirefi.re &mdash; the tire fire burns eternal</p>
         </div>
     </footer>
+
+    <div id="classic-footer">
+        {% include footer.html %}
+    </div>
 
     <div class="image-overlay" id="imageOverlay" role="dialog" aria-modal="true" aria-label="Tire fire image fullscreen">
         <div class="overlay-content">
@@ -1154,10 +1211,14 @@
         })();
     </script>
     <script>
-    document.getElementById('modeToggle').addEventListener('click', function() {
+    function toggleMode() {
         var next = localStorage.getItem('classicMode') !== 'true';
         localStorage.setItem('classicMode', next);
         location.reload();
+    }
+    document.getElementById('modeToggle').addEventListener('click', toggleMode);
+    document.querySelectorAll('#classic-header .mode-toggle').forEach(function(btn) {
+        btn.addEventListener('click', toggleMode);
     });
     </script>
     <script>

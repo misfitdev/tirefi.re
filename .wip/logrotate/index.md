@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "Logrotate"
-permalink: /.wip/logrotate/
+permalink: /logrotate/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>logrotate</span>
+        <a href="/">Home</a> → <span>logrotate</span>
     </div>
     <h1>Logrotate doesn't put out the fire</h1>
     <p class="page-subtitle">it just makes more smoke for you to grep</p>
 </div>
 
 <div class="content-section">
-    <img src="/logrotate/logrotate.gif" alt="Just keeps going round and round and round..." />
+    <img src="/classic/logrotate/logrotate.gif" alt="Just keeps going round and round and round..." />
     <p>It just makes more smoke for you to grep.</p>
 </div>
 
@@ -32,5 +32,5 @@ permalink: /.wip/logrotate/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

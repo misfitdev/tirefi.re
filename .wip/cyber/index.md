@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "ಠ_ಠ Cyber"
-permalink: /.wip/cyber/
+permalink: /cyber/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Cyber</span>
+        <a href="/">Home</a> → <span>Cyber</span>
     </div>
     <h1>CYBER</h1>
     <p class="page-subtitle">The prefix that launders nonsense into a budget line item</p>
@@ -34,5 +34,5 @@ permalink: /.wip/cyber/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Join us now and share the software"
-permalink: /.wip/opensource/
+permalink: /opensource/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Open Source</span>
+        <a href="/">Home</a> → <span>Open Source</span>
     </div>
     <h1>Join us now and share the software</h1>
     <p class="page-subtitle">the software that runs the world, maintained in someone's spare time</p>
@@ -36,5 +36,5 @@ permalink: /.wip/opensource/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

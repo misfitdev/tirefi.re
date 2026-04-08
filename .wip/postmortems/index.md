@@ -1,20 +1,20 @@
 ---
 layout: wip
 title: "Postmortems"
-permalink: /.wip/postmortems/
+permalink: /postmortems/
 tags: [incidents]
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Postmortems</span>
+        <a href="/">Home</a> → <span>Postmortems</span>
     </div>
     <h1>If we all get together, maybe we can work out what kind of fire Pete caused.</h1>
     <p class="page-subtitle">blameless accusations only</p>
 </div>
 
 <div class="content-section">
-    <img src="/postmortems/postmortems.jpg" alt="former tirefire" />
+    <img src="/classic/postmortems/postmortems.jpg" alt="former tirefire" />
 
     <p>In this <del>postmortem</del>debriefing session<sup><a href="#fn1">1</a></sup>, only blameless accusations are acceptable.</p>
 
@@ -41,6 +41,6 @@ tags: [incidents]
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/playbook/" class="nav-button">← Playbook</a>
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/playbook/" class="nav-button">← Playbook</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

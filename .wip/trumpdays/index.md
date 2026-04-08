@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "How long has it been for this madness?"
-permalink: /.wip/trumpdays/
+permalink: /trumpdays/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Trump Days</span>
+        <a href="/">Home</a> → <span>Trump Days</span>
     </div>
     <h1>How long has it been for this madness?</h1>
     <p class="page-subtitle">a duration clock. the duration completed. then it started again.</p>
@@ -20,7 +20,7 @@ permalink: /.wip/trumpdays/
 
 <div class="content-section">
     <h2>The Duration</h2>
-    <p>This page was a duration clock, not a countdown. Where the <a href="/.wip/president/">president page</a> asked "how long until it ends," this one asked "how long has it been" — a subtle but meaningful framing difference. Duration clocks measure suffering in progress. Countdown timers measure anticipated relief. Both were running simultaneously on this site, targeting the same end date, from different angles.</p>
+    <p>This page was a duration clock, not a countdown. Where the <a href="/president/">president page</a> asked "how long until it ends," this one asked "how long has it been" — a subtle but meaningful framing difference. Duration clocks measure suffering in progress. Countdown timers measure anticipated relief. Both were running simultaneously on this site, targeting the same end date, from different angles.</p>
 
     <p>The duration: January 20, 2017 to January 20, 2021. Four years. 1,461 days. The clock measured it in real time and the answer was always accurate to the second.</p>
 </div>
@@ -47,6 +47,6 @@ permalink: /.wip/trumpdays/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/president/" class="nav-button">Countdown to the History</a>
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/president/" class="nav-button">Countdown to the History</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

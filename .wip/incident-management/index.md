@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Hi, who just joined?"
-permalink: /.wip/incident-management/
+permalink: /incident-management/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Incident Management</span>
+        <a href="/">Home</a> → <span>Incident Management</span>
     </div>
     <h1>Hi, who just joined?</h1>
     <p class="page-subtitle">can everyone please mute</p>
@@ -18,7 +18,7 @@ permalink: /.wip/incident-management/
     elevated error rates &amp;<br>
     elevated error rates</p>
 
-    <img src="/incident-management/incident-management.gif" alt="apis up" />
+    <img src="/classic/incident-management/incident-management.gif" alt="apis up" />
 </div>
 
 <div class="content-section">
@@ -50,5 +50,5 @@ permalink: /.wip/incident-management/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Monitoring - The forever war"
-permalink: /.wip/monitoring/
+permalink: /monitoring/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Monitoring</span>
+        <a href="/">Home</a> → <span>Monitoring</span>
     </div>
     <h1>The forever war: #monitoringsucks vs #monitoringlove</h1>
     <p class="page-subtitle">A decade of tooling evolution, and the disk still fills up before anyone notices.</p>
@@ -40,5 +40,5 @@ permalink: /.wip/monitoring/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

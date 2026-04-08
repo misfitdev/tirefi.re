@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "kickstart and flip"
-permalink: /.wip/sk8-die/
+permalink: /sk8-die/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>sk8 or die</span>
+        <a href="/">Home</a> → <span>sk8 or die</span>
     </div>
     <h1>the fire starts under your feet</h1>
     <p class="page-subtitle">flip it. forget the backslash.</p>
 </div>
 
 <div class="content-section">
-    <p><img src="/sk8-die/kickflip.gif" alt="sk8 or die.."></p>
+    <p><img src="/classic/sk8-die/kickflip.gif" alt="sk8 or die.."></p>
 
     <p>flip it . forget the backslash</p>
 
@@ -47,5 +47,5 @@ permalink: /.wip/sk8-die/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

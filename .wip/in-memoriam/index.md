@@ -1,7 +1,7 @@
 ---
 layout: wip
 title: "In Memoriam - Victims of the Great Tire Fire"
-permalink: /.wip/in-memoriam/
+permalink: /in-memoriam/
 ---
 
 <div class="memorial-intro">

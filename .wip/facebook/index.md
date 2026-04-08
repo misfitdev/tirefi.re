@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Facebook - Move Fast and Break the Internet"
-permalink: /.wip/facebook/
+permalink: /facebook/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Facebook</span>
+        <a href="/">Home</a> → <span>Facebook</span>
     </div>
     <h1>Move Fast and Break Things</h1>
     <p class="page-subtitle">The philosophy that works great until you break the DNS for 3.5 billion people.</p>
@@ -55,6 +55,6 @@ permalink: /.wip/facebook/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">Back to All Disasters</a>
-    <a href="/.wip/dns/" class="nav-button">Related: DNS</a>
+    <a href="/" class="nav-button">Back to All Disasters</a>
+    <a href="/dns/" class="nav-button">Related: DNS</a>
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: wip
 title: "ಠ_ಠ in docker"
-permalink: /.wip/docker/
+permalink: /docker/
 docker1: true
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Docker</span>
+        <a href="/">Home</a> → <span>Docker</span>
     </div>
     <h1>ಠ_ಠ in docker</h1>
     <p class="page-subtitle">containerizing the problem does not solve the problem</p>
@@ -55,5 +55,5 @@ docker1: true
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

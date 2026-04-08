@@ -1,20 +1,20 @@
 ---
 layout: wip
 title: "Ops Roulette"
-permalink: /.wip/opsroulette/
+permalink: /opsroulette/
 tags: [incidents, culture]
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Ops Roulette</span>
+        <a href="/">Home</a> → <span>Ops Roulette</span>
     </div>
     <h1>Late Nights at Tech Conferences</h1>
     <p class="page-subtitle">everyone at the table goes quiet at the same moment</p>
 </div>
 
 <div class="content-section">
-    <img src="/opsroulette/opsroulette.png" alt="Ops Roulette" />
+    <img src="/classic/opsroulette/opsroulette.png" alt="Ops Roulette" />
     <p><a href="https://www.commitstrip.com/en/2014/05/16/russian-roulette/">Source</a></p>
 </div>
 
@@ -38,6 +38,6 @@ tags: [incidents, culture]
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
-    <a href="/.wip/pair-programming/" class="nav-button">Next: Pair Programming →</a>
+    <a href="/" class="nav-button">← All Disasters</a>
+    <a href="/pair-programming/" class="nav-button">Next: Pair Programming →</a>
 </div>

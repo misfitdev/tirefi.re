@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "This is a Equifax tire fire"
-permalink: /.wip/equifax/
+permalink: /equifax/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Equifax</span>
+        <a href="/">Home</a> → <span>Equifax</span>
     </div>
     <h1>This is a Equifax tire fire</h1>
     <p class="page-subtitle">get your shit together</p>
 </div>
 
 <div class="content-section">
-    <img src="/equifax/equifuct.gif" alt="get you shit together equifax" />
+    <img src="/classic/equifax/equifuct.gif" alt="get you shit together equifax" />
 
     <p>Seriously? get your shit together Equifax!</p>
 </div>
@@ -43,5 +43,5 @@ permalink: /.wip/equifax/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

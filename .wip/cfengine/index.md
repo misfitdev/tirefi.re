@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "CFEngine - Bundle stacks, and bundle stacks, and bundle stacks"
-permalink: /.wip/cfengine/
+permalink: /cfengine/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>CFEngine</span>
+        <a href="/">Home</a> → <span>CFEngine</span>
     </div>
     <h1>🎧 "Promises, promises ... "🎶</h1>
     <p class="page-subtitle">Mark Burgess was right. Nobody listened. Then everyone listened to the wrong lessons.</p>
 </div>
 
 <div class="content-section">
-    <img src="/cfengine/cfengine.jpeg" alt="At least it ain't bcfg2!" />
+    <img src="/classic/cfengine/cfengine.jpeg" alt="At least it ain't bcfg2!" />
 
     <p>Because everythings better in 3! 😎</p>
 
@@ -67,6 +67,6 @@ permalink: /.wip/cfengine/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
-    <a href="/.wip/cryops/" class="nav-button">CryOps →</a>
+    <a href="/" class="nav-button">← All Disasters</a>
+    <a href="/cryops/" class="nav-button">CryOps →</a>
 </div>

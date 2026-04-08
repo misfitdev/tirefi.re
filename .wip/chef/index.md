@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "This is a kitchen fire"
-permalink: /.wip/chef/
+permalink: /chef/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Chef</span>
+        <a href="/">Home</a> → <span>Chef</span>
     </div>
     <h1>This is a kitchen fire</h1>
     <p class="page-subtitle">infrastructure as code, cookbooks as debt</p>
 </div>
 
 <div class="content-section">
-    <img src="/chef/chef_kitchen_fire.gif" alt="chef exec kitchen test --yolo" />
+    <img src="/classic/chef/chef_kitchen_fire.gif" alt="chef exec kitchen test --yolo" />
 
     <p>Chef was supposed to help get the cooks out of the kitchen, right....?</p>
 </div>
@@ -49,5 +49,5 @@ permalink: /.wip/chef/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

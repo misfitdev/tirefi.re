@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "What idiot called it serverless and not \"The Emperor's New Servers\""
-permalink: /.wip/serverless/
+permalink: /serverless/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Serverless</span>
+        <a href="/">Home</a> → <span>Serverless</span>
     </div>
     <h1>What idiot called it serverless and not "The Emperor's New Servers"</h1>
     <p class="page-subtitle">just somebody else's servers</p>
 </div>
 
 <div class="content-section">
-    <img src="/serverless/noserverless.png" alt="Just Somebody Else's" />
+    <img src="/classic/serverless/noserverless.png" alt="Just Somebody Else's" />
 
     <p>Stickers coming soon to the TireFire cafepress store. All profits go to the "Drunk Domain Purchasing" fund.</p>
 
@@ -49,5 +49,5 @@ permalink: /.wip/serverless/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

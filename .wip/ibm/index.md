@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "ಠ_ಠ in Big Blue"
-permalink: /.wip/ibm/
+permalink: /ibm/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>IBM</span>
+        <a href="/">Home</a> → <span>IBM</span>
     </div>
     <h1>IBM is still IBM.</h1>
     <p class="page-subtitle">pivoting since 1993, still winning government contracts</p>
 </div>
 
 <div class="content-section">
-    <img src="/ibm/ibm_fire.jpg" alt="zLinux is going to be big this year" />
+    <img src="/classic/ibm/ibm_fire.jpg" alt="zLinux is going to be big this year" />
 
     <p>In procurement they say "No one gets fired for buying IBM" but idk...</p>
 </div>
@@ -43,5 +43,5 @@ permalink: /.wip/ibm/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

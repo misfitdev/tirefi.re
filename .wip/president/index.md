@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Countdown to the history."
-permalink: /.wip/president/
+permalink: /president/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>President</span>
+        <a href="/">Home</a> → <span>President</span>
     </div>
     <h1>Countdown to the history.</h1>
     <p class="page-subtitle">the clock ran. then it stopped. then, somehow, it started again.</p>
@@ -45,5 +45,5 @@ permalink: /.wip/president/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

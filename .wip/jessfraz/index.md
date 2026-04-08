@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "sometimes the tire fires you, sometimes you fire the tire."
-permalink: /.wip/jessfraz/
+permalink: /jessfraz/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Jess Frazelle</span>
+        <a href="/">Home</a> → <span>Jess Frazelle</span>
     </div>
     <h1>sometimes the tire fires you, sometimes you fire the tire.</h1>
     <p class="page-subtitle">a rarity, documented for posterity</p>
 </div>
 
 <div class="content-section">
-    <img src="/jessfraz/jessfire.png" alt="Jess Tirefire Frazelle" />
+    <img src="/classic/jessfraz/jessfire.png" alt="Jess Tirefire Frazelle" />
     <p><a href="https://blog.jessfraz.com/post/spontaneous-combustion/">AZ never gets any good press</a></p>
 </div>
 
@@ -32,5 +32,5 @@ permalink: /.wip/jessfraz/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

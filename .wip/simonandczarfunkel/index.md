@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Hello Czarkness My Old Friend."
-permalink: /.wip/simonandczarfunkel/
+permalink: /simonandczarfunkel/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Simon and Czarfunkel</span>
+        <a href="/">Home</a> → <span>Simon and Czarfunkel</span>
     </div>
     <h1>the jolliest banana bender</h1>
     <p class="page-subtitle">hello czarkness, my old friend</p>
@@ -28,9 +28,9 @@ permalink: /.wip/simonandczarfunkel/
 </div>
 
 <div class="content-section">
-    <p>@petechesbot gets his revenge: <a href="/.wip/petecheslock/">petecheslock</a></p>
+    <p>@petechesbot gets his revenge: <a href="/petecheslock/">petecheslock</a></p>
 
-    <p><img src="/petecheslock/pete.png" alt="Our Director of Devops"></p>
+    <p><img src="/classic/petecheslock/pete.png" alt="Our Director of Devops"></p>
 
     <p>The most of thanks to <a href="https://twitter.com/notnownikki">@notnownikki</a> for the best video filler's cried to this year!</p>
 </div>
@@ -57,6 +57,6 @@ permalink: /.wip/simonandczarfunkel/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/petecheslock/" class="nav-button">Pete Cheslock</a>
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/petecheslock/" class="nav-button">Pete Cheslock</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

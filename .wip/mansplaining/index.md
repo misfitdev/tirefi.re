@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Well, Actually..."
-permalink: /.wip/mansplaining/
+permalink: /mansplaining/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>About</span>
+        <a href="/">Home</a> → <span>About</span>
     </div>
     <h1>2 W's of Tirefi.re</h1>
     <p class="page-subtitle">the when and why of this particular fire</p>
@@ -34,5 +34,5 @@ permalink: /.wip/mansplaining/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

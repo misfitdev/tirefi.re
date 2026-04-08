@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "AWS - us-tirefire-1"
-permalink: /.wip/aws/
+permalink: /aws/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>AWS</span>
+        <a href="/">Home</a> → <span>AWS</span>
     </div>
     <h1>us-tirefire-1</h1>
     <p class="page-subtitle">The region where good intentions go to accumulate egress charges and false confidence.</p>
 </div>
 
 <div class="content-section">
-    <img src="/aws/cloud.jpg" alt="It's probably fine..." class="hero-image">
+    <img src="/classic/aws/cloud.jpg" alt="It's probably fine..." class="hero-image">
 
     <p>Yeah, the db is in us-east-1, but we will move it later.</p>
 
@@ -41,5 +41,5 @@ permalink: /.wip/aws/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

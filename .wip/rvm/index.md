@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "RVM - easy to install, manage, and work with"
-permalink: /.wip/rvm/
+permalink: /rvm/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>RVM</span>
+        <a href="/">Home</a> → <span>RVM</span>
     </div>
     <h1>This is a tire fire that is "easy to install, manage, and work with"</h1>
     <p class="page-subtitle">Managing your Ruby version manager manager since the curl-to-bash era.</p>
 </div>
 
 <div class="content-section">
-    <img src="/rvm/tire-test2.jpg" alt="A tire fire that is &quot;easy to install, manage, and work with&quot;" class="hero-image">
+    <img src="/classic/rvm/tire-test2.jpg" alt="A tire fire that is &quot;easy to install, manage, and work with&quot;" class="hero-image">
 
     <p>I just need to wrap this tire with more tire, this will work great.</p>
 </div>
@@ -45,5 +45,5 @@ permalink: /.wip/rvm/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

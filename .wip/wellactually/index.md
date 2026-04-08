@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Well, Actually..."
-permalink: /.wip/wellactually/
+permalink: /wellactually/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Well, Actually</span>
+        <a href="/">Home</a> → <span>Well, Actually</span>
     </div>
     <h1>Well, Actually...</h1>
     <p class="page-subtitle">technically correct. contextually useless. delivered with confidence.</p>
@@ -48,5 +48,5 @@ permalink: /.wip/wellactually/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

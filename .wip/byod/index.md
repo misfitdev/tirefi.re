@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "Corporate BYOD Strategy"
-permalink: /.wip/byod/
+permalink: /byod/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>BYOD</span>
+        <a href="/">Home</a> → <span>BYOD</span>
     </div>
     <h1>Corporate BYOD Strategy</h1>
     <p class="page-subtitle">Bring your own device. Also your own vulnerabilities.</p>
 </div>
 
 <div class="content-section">
-    <img src="/byod/byod.png" alt="Bring Your Own Device Strategy" />
+    <img src="/classic/byod/byod.png" alt="Bring Your Own Device Strategy" />
 
     <p>... sure, you can wifi your phone from our network.</p>
 </div>
@@ -43,5 +43,5 @@ permalink: /.wip/byod/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

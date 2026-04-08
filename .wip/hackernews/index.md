@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Hacker News - Don't Read the Comments"
-permalink: /.wip/hackernews/
+permalink: /hackernews/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Hacker News</span>
+        <a href="/">Home</a> → <span>Hacker News</span>
     </div>
     <h1>Don't Read the Comments</h1>
     <p class="page-subtitle">You won't listen. You never listen. Then you read the comments.</p>
@@ -55,6 +55,6 @@ permalink: /.wip/hackernews/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">Back to All Disasters</a>
-    <a href="/.wip/debate/" class="nav-button">Related: Debates</a>
+    <a href="/" class="nav-button">Back to All Disasters</a>
+    <a href="/debate/" class="nav-button">Related: Debates</a>
 </div>

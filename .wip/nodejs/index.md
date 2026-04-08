@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "I/O is non-blocking, your ops team is not"
-permalink: /.wip/nodejs/
+permalink: /nodejs/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Node.js</span>
+        <a href="/">Home</a> → <span>Node.js</span>
     </div>
     <h1>I/O is non-blocking, your ops team is not.</h1>
     <p class="page-subtitle">node fires are small but there are so many they will consume all your inodes</p>
 </div>
 
 <div class="content-section">
-    <img src="/nodejs/node.gif" alt="node fire" />
+    <img src="/classic/nodejs/node.gif" alt="node fire" />
 
     <div style="font-family: monospace; border: 1px solid #ccc; padding: 1em; margin: 1em 0; background: #f9f9f9;">
         <h2 style="font-family: monospace; font-size: 1.1em;">Internal Server Error</h2>
@@ -47,5 +47,5 @@ permalink: /.wip/nodejs/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

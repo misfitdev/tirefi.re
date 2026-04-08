@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "ಠ_ಠ Airbnb"
-permalink: /.wip/airbnb/
+permalink: /airbnb/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Airbnb</span>
+        <a href="/">Home</a> → <span>Airbnb</span>
     </div>
     <h1>Airbnb</h1>
     <p class="page-subtitle">Party on Wayne. File the incident ticket first.</p>
@@ -15,7 +15,7 @@ permalink: /.wip/airbnb/
 <div class="content-section">
     <p>Party on Wayne and be Excellent to Each other.</p>
 
-    <img src="/airbnb/airbnb.gif" alt="beavis and butthead playing air guitar" />
+    <img src="/classic/airbnb/airbnb.gif" alt="beavis and butthead playing air guitar" />
 </div>
 
 <div class="content-section">
@@ -38,5 +38,5 @@ permalink: /.wip/airbnb/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

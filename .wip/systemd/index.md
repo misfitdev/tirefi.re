@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "service blob stop"
-permalink: /.wip/systemd/
+permalink: /systemd/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>systemd</span>
+        <a href="/">Home</a> → <span>systemd</span>
     </div>
     <h1>service blob stop</h1>
     <p class="page-subtitle">PID 1 has opinions about your cron jobs, your DNS, and your logs, whether you asked or not.</p>
 </div>
 
 <div class="content-section">
-    <img src="/systemd/systemd.gif" alt="service blob stop" />
+    <img src="/classic/systemd/systemd.gif" alt="service blob stop" />
 
     <p>systemd shall eat the world, even as you set it on fire.</p>
 </div>
@@ -49,5 +49,5 @@ permalink: /.wip/systemd/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

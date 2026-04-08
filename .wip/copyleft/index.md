@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Copyleft License"
-permalink: /.wip/copyleft/
+permalink: /copyleft/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Copyleft</span>
+        <a href="/">Home</a> → <span>Copyleft</span>
     </div>
     <h1>Copyleft License</h1>
     <p class="page-subtitle">Free as in "please read the entire license before shipping anything"</p>
@@ -51,5 +51,5 @@ permalink: /.wip/copyleft/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

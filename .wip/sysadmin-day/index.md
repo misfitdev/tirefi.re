@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "SysAdmin Day - 29 July"
-permalink: /.wip/sysadmin-day/
+permalink: /sysadmin-day/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>SysAdmin Day</span>
+        <a href="/">Home</a> → <span>SysAdmin Day</span>
     </div>
     <h1>Totally fictitious holiday that nobody but sysadmins care about.</h1>
     <p class="page-subtitle">The uptime you preserved today is invisible, and that's exactly how you know it worked.</p>
@@ -15,7 +15,7 @@ permalink: /.wip/sysadmin-day/
 <div class="content-section">
     <h4>see also Pete Cheslock was right day.</h4>
 
-    <p><img src="/sysadmin-day/sysadmin-day.png" alt="seriously, nobody cares"></p>
+    <p><img src="/classic/sysadmin-day/sysadmin-day.png" alt="seriously, nobody cares"></p>
 
     <p>I am jack's cost center.</p>
 </div>
@@ -49,5 +49,5 @@ permalink: /.wip/sysadmin-day/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

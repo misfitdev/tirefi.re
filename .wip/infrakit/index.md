@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "Declarative, self-igniting tirefires"
-permalink: /.wip/infrakit/
+permalink: /infrakit/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>InfraKit</span>
+        <a href="/">Home</a> → <span>InfraKit</span>
     </div>
     <h1>Declarative, self-igniting tirefires</h1>
     <p class="page-subtitle">Presented at DockerCon 2016. Last commit: 2019. The pattern survived. The project did not.</p>
 </div>
 
 <div class="content-section">
-    <img src="/infrakit/infrakit.jpg" alt="It's probably fine..." />
+    <img src="/classic/infrakit/infrakit.jpg" alt="It's probably fine..." />
     <p>Breaking infrastructure into simple, pluggable <a href="https://tirefi.re">tirefires</a>.</p>
 </div>
 
@@ -32,5 +32,5 @@ permalink: /.wip/infrakit/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

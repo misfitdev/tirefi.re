@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "CryOps - shit's on fire, yo"
-permalink: /.wip/cryops/
+permalink: /cryops/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>CryOps</span>
+        <a href="/">Home</a> → <span>CryOps</span>
     </div>
     <h1>networking in 2016</h1>
     <p class="page-subtitle">Your infrastructure is managed by five competing tools simultaneously. Three of them are wrong.</p>
 </div>
 
 <div class="content-section">
-    <img src="/cryops/cry-a-lot.jpg" alt="😭it😭gets😭better😭" title="😭it😭gets😭better😭" />
+    <img src="/classic/cryops/cry-a-lot.jpg" alt="😭it😭gets😭better😭" title="😭it😭gets😭better😭" />
 
 ```
 $ vim ~/src/PUPPET/cisco-gear/hiera/prod/dc-1.yaml
@@ -36,7 +36,7 @@ $ echo "ok try it now" | mail -s "FYI: AR: outage update" devops@tirefi.re
 $ halt
 ```
 
-    <img src="/cryops/aaaaand-im-out.gif" alt="problem solving is an overwhelmingly positive experience overall" title="problem solving is an overwhelmingly positive experience overall" />
+    <img src="/classic/cryops/aaaaand-im-out.gif" alt="problem solving is an overwhelmingly positive experience overall" title="problem solving is an overwhelmingly positive experience overall" />
 </div>
 
 <div class="content-section">
@@ -91,6 +91,6 @@ $ halt
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/cfengine/" class="nav-button">← CFEngine</a>
-    <a href="/.wip/incident-management/" class="nav-button">Incident Management →</a>
+    <a href="/cfengine/" class="nav-button">← CFEngine</a>
+    <a href="/incident-management/" class="nav-button">Incident Management →</a>
 </div>

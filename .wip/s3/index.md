@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "S3 - 503 Slow Down"
-permalink: /.wip/s3/
+permalink: /s3/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>S3</span>
+        <a href="/">Home</a> → <span>S3</span>
     </div>
     <h1>503 Slow Down</h1>
     <p class="page-subtitle">Please reduce your request rate.</p>
@@ -42,5 +42,5 @@ permalink: /.wip/s3/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

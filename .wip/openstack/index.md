@@ -1,20 +1,20 @@
 ---
 layout: wip
 title: "ಠ_ಠ in OpenStack"
-permalink: /.wip/openstack/
+permalink: /openstack/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>OpenStack</span>
+        <a href="/">Home</a> → <span>OpenStack</span>
     </div>
     <h1>Hey, I was told OpenStack is Free VMware.</h1>
     <p class="page-subtitle">don't worry, in less than 6 months we'll change the underlying networking again</p>
 </div>
 
 <div class="content-section">
-    <img src="/openstack/openstack.png" alt="not even once" />
-    <img src="/openstack/openstack_fire.png" alt="Don't worry in less then 6 months we'll change the underlying networking again." />
+    <img src="/classic/openstack/openstack.png" alt="not even once" />
+    <img src="/classic/openstack/openstack_fire.png" alt="Don't worry in less then 6 months we'll change the underlying networking again." />
 
     <p>If you need some continued inspiration, <a href="/openstack/cube-drone-openstack.gif">there's always Cube Drone</a>.</p>
 
@@ -40,5 +40,5 @@ permalink: /.wip/openstack/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

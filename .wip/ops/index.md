@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "Ops - here, hold this."
-permalink: /.wip/ops/
+permalink: /ops/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Ops</span>
+        <a href="/">Home</a> → <span>Ops</span>
     </div>
     <h1>here, hold this.</h1>
     <p class="page-subtitle">the three most dangerous words in any datacenter</p>
@@ -19,7 +19,7 @@ $ ansible production -m command extinguish
 $ for host in $(cat ~/production) ; do \
   ssh ${host} "sudo production" ; done</code></pre>
 
-    <img src="/ops/ops.png" alt="ops" class="hero-image">
+    <img src="/classic/ops/ops.png" alt="ops" class="hero-image">
 </div>
 
 <div class="content-section">
@@ -42,5 +42,5 @@ $ for host in $(cat ~/production) ; do \
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

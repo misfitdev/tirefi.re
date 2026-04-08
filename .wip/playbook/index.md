@@ -1,20 +1,20 @@
 ---
 layout: wip
 title: "playbook"
-permalink: /.wip/playbook/
+permalink: /playbook/
 tags: [incidents, culture]
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>playbook</span>
+        <a href="/">Home</a> → <span>playbook</span>
     </div>
     <h1>I'm really sure I copy pasted all the commands exactly as written</h1>
     <p class="page-subtitle">a document written in the past, for a system that no longer exists, consulted in the present</p>
 </div>
 
 <div class="content-section">
-    <img src="/playbook/playbook.jpg" alt="A scorchingly executed playbook" />
+    <img src="/classic/playbook/playbook.jpg" alt="A scorchingly executed playbook" />
 
     <p>Oh maybe there was a typo right here... Wait when was the last time this was updated? Wait.. how much of S3 is down?... Can someone update the status... no? Hmmmmm</p>
 
@@ -41,6 +41,6 @@ tags: [incidents, culture]
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/petecheslock/" class="nav-button">← Pete Cheslock</a>
-    <a href="/.wip/postmortems/" class="nav-button">Next: Postmortems →</a>
+    <a href="/petecheslock/" class="nav-button">← Pete Cheslock</a>
+    <a href="/postmortems/" class="nav-button">Next: Postmortems →</a>
 </div>

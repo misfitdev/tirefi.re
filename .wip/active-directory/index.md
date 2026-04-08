@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "I still use dcpromo right?"
-permalink: /.wip/active-directory/
+permalink: /active-directory/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Active Directory</span>
+        <a href="/">Home</a> → <span>Active Directory</span>
     </div>
     <h1>I still use dcpromo right?</h1>
     <p class="page-subtitle">15 characters were enough for anyone, circa 1987</p>
@@ -15,7 +15,7 @@ permalink: /.wip/active-directory/
 <div class="content-section">
     <p>NETBIOS will only allow for 15 characters, but AD will allow a lot more.</p>
 
-    <img src="/active-directory/tirefir.png" alt="Don't forget to change your computer name" />
+    <img src="/classic/active-directory/tirefir.png" alt="Don't forget to change your computer name" />
 </div>
 
 <div class="content-section">
@@ -46,5 +46,5 @@ permalink: /.wip/active-directory/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

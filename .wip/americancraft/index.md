@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "ಠ_ಠ at the hyatt"
-permalink: /.wip/americancraft/
+permalink: /americancraft/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>American Craft</span>
+        <a href="/">Home</a> → <span>American Craft</span>
     </div>
     <h1>Sometimes the worst service is the best.</h1>
     <p class="page-subtitle">Artisanal disappointment, small-batch and locally sourced</p>
 </div>
 
 <div class="content-section">
-    <img src="/americancraft/american_craft_fire.gif" alt="they might give you wrong beer?" />
+    <img src="/classic/americancraft/american_craft_fire.gif" alt="they might give you wrong beer?" />
 
     <p>Seriously, only go here if you have to.</p>
 </div>
@@ -36,5 +36,5 @@ permalink: /.wip/americancraft/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

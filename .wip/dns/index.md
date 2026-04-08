@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "It's always DNS. Always."
-permalink: /.wip/dns/
+permalink: /dns/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>DNS</span>
+        <a href="/">Home</a> → <span>DNS</span>
     </div>
     <h1>It's always DNS. Always.</h1>
     <p class="page-subtitle">the cache is valid for another 3599 seconds</p>
@@ -14,7 +14,7 @@ permalink: /.wip/dns/
 
 <div class="content-section">
     <a href="http://hipku.gabrielmartin.net/" target="_blank">
-        <img src="/dns/dns_haiku.png" alt="DNS haiku generator" />
+        <img src="/classic/dns/dns_haiku.png" alt="DNS haiku generator" />
     </a>
 
     <div class="quote-box">
@@ -50,5 +50,5 @@ permalink: /.wip/dns/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

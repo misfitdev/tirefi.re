@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "ಠ_ಠ STRAYA!"
-permalink: /.wip/australia/
+permalink: /australia/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Australia</span>
+        <a href="/">Home</a> → <span>Australia</span>
     </div>
     <h1>When you see it you'll shit bricks</h1>
     <p class="page-subtitle">160ms latency, 3am on-call, and everything there is trying to kill you.</p>
 </div>
 
 <div class="content-section">
-    <img src="/australia/australia.gif" alt="pay no attention to the @mattray behind the curtain" />
+    <img src="/classic/australia/australia.gif" alt="pay no attention to the @mattray behind the curtain" />
 
     <p>That's not a tirefire, THIS is a tirefire.</p>
 
@@ -47,5 +47,5 @@ permalink: /.wip/australia/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

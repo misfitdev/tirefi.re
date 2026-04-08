@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "loosely coupled fires"
-permalink: /.wip/microservices/
+permalink: /microservices/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Microservices</span>
+        <a href="/">Home</a> → <span>Microservices</span>
     </div>
     <h1>loosely coupled fires</h1>
     <p class="page-subtitle">distributed monolith with extra steps</p>
 </div>
 
 <div class="content-section">
-    <img src="/microservices/microservices.gif" alt="sick burn" />
+    <img src="/classic/microservices/microservices.gif" alt="sick burn" />
 
     <div class="quote-box">
         <blockquote>We replaced our monolith with micro services so that every outage could be more like a murder mystery.</blockquote>
@@ -54,5 +54,5 @@ permalink: /.wip/microservices/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

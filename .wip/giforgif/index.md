@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "GIF - On the Pronunciation of Things That Don't Matter"
-permalink: /.wip/giforgif/
+permalink: /giforgif/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>GIF</span>
+        <a href="/">Home</a> → <span>GIF</span>
     </div>
     <h1>It's Pronounced GIF</h1>
     <p class="page-subtitle">Or JIF. The creator said JIF. The creator is wrong. Everyone is wrong.</p>
@@ -53,6 +53,6 @@ permalink: /.wip/giforgif/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">Back to All Disasters</a>
-    <a href="/.wip/debate/" class="nav-button">Related: Debates That Matter Even Less</a>
+    <a href="/" class="nav-button">Back to All Disasters</a>
+    <a href="/debate/" class="nav-button">Related: Debates That Matter Even Less</a>
 </div>

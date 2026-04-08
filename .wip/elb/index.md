@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "you're welcome @petecheslock"
-permalink: /.wip/elb/
+permalink: /elb/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>ELB</span>
+        <a href="/">Home</a> → <span>ELB</span>
     </div>
     <h1>just use HAProxy, for pete's sake!</h1>
     <p class="page-subtitle">Elastic LOL Balancers</p>
 </div>
 
 <div class="content-section">
-    <img src="/elb/elastic-LOL-balancer.gif" alt="teach them to balance, they said" />
+    <img src="/classic/elb/elastic-LOL-balancer.gif" alt="teach them to balance, they said" />
 
     <p>Elastic LOL Balancers.</p>
 </div>
@@ -38,5 +38,5 @@ permalink: /.wip/elb/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

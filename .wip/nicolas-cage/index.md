@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "put the bunny down"
-permalink: /.wip/nicolas-cage/
+permalink: /nicolas-cage/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Nicolas Cage</span>
+        <a href="/">Home</a> → <span>Nicolas Cage</span>
     </div>
     <h1>Nicolas Cage is not a tire fire</h1>
     <p class="page-subtitle">he just plays one on TV</p>
 </div>
 
 <div class="content-section">
-    <img src="/nicolas-cage/nicholas-cage.jpg" alt="that's a negative ghost rider" />
+    <img src="/classic/nicolas-cage/nicholas-cage.jpg" alt="that's a negative ghost rider" />
     <p>this man is a national treasure</p>
 </div>
 
@@ -32,5 +32,5 @@ permalink: /.wip/nicolas-cage/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

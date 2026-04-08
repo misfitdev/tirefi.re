@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "GNU - The Philosophy That Became a License Compliance Problem"
-permalink: /.wip/gnu/
+permalink: /gnu/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>GNU</span>
+        <a href="/">Home</a> → <span>GNU</span>
     </div>
     <h1>GNU/Linux</h1>
     <p class="page-subtitle">Well, actually.</p>
@@ -61,6 +61,6 @@ permalink: /.wip/gnu/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">Back to All Disasters</a>
-    <a href="/.wip/debate/" class="nav-button">Related: Debates</a>
+    <a href="/" class="nav-button">Back to All Disasters</a>
+    <a href="/debate/" class="nav-button">Related: Debates</a>
 </div>

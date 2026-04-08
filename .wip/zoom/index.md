@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "OK, Zoomers"
-permalink: /.wip/zoom/
+permalink: /zoom/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Zoom</span>
+        <a href="/">Home</a> → <span>Zoom</span>
     </div>
     <h1>putting the tell into teleconferencing since 2011</h1>
     <p class="page-subtitle">approved by nobody in IT. depended on by everyone in the company.</p>
@@ -50,5 +50,5 @@ permalink: /.wip/zoom/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

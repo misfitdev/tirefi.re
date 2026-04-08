@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "DevOps - , Director of."
-permalink: /.wip/devops/
+permalink: /devops/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>DevOps</span>
+        <a href="/">Home</a> → <span>DevOps</span>
     </div>
     <h1>, Director of.</h1>
     <p class="page-subtitle">A methodology so thoroughly absorbed by organizations that it now has a reporting line.</p>
 </div>
 
 <div class="content-section">
-    <img src="/devops/devops.jpg" alt="Pete Cheslock, princess of chef scripts" class="hero-image">
+    <img src="/classic/devops/devops.jpg" alt="Pete Cheslock, princess of chef scripts" class="hero-image">
 
     <p><strong>Pete Cheslock, princess of chef scripts</strong></p>
 
@@ -40,5 +40,5 @@ permalink: /.wip/devops/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

@@ -833,15 +833,15 @@
         <div class="container">
             <div class="header-content">
                 <div class="site-title-section">
-                    <a href="/.wip/" class="site-title">tirefi.re</a>
+                    <a href="/" class="site-title">tirefi.re</a>
                     <div class="putin-message" aria-label="Ukrainian phrase: Putin is a dickhead">Пу́тін хуйло́</div>
                 </div>
                 <div class="nav-area">
                     <nav aria-label="Primary navigation">
                         <ul class="nav-menu">
-                            <li><a href="/.wip/">Home</a></li>
-                            <li><a href="/.wip/in-memoriam/">In Memoriam</a></li>
-                            <li><a href="/">Classic</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/in-memoriam/">In Memoriam</a></li>
+                            <li><a href="/classic/">Classic</a></li>
                             <li>
                                 <button class="search-trigger" id="searchTrigger" aria-label="Search (press / to open)">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -894,29 +894,29 @@
         /* === SITE SEARCH === */
         (function() {
             var ITEMS = [
-                {name:'aws',                desc:"Amazon's infinite money extraction service",          tags:'cloud,amazon',                          url:'/.wip/aws/'},
-                {name:'chef',               desc:'Too many cooks in the infrastructure kitchen',        tags:'config-mgmt,configmanagement,ruby',      url:'/.wip/chef/'},
-                {name:'devops',             desc:'You build it, you break it, you cry about it',        tags:'culture,process',                        url:'/.wip/devops/'},
-                {name:'dns',                desc:"It's always DNS. Always.",                            tags:'networking,infra',                       url:'/.wip/dns/'},
-                {name:'docker',             desc:'Containerizing your problems since 2013',             tags:'containers,infra',                       url:'/.wip/docker/'},
-                {name:'incident management',desc:'Managing incidents by creating more incidents',       tags:'incidents,oncall,on-call',               url:'/.wip/incident-management/'},
-                {name:'microservices',      desc:'Distributed monoliths with extra steps',              tags:'containers,architecture,distributed',    url:'/.wip/microservices/'},
-                {name:'monitoring',         desc:'Watching everything burn in real-time',               tags:'observability,incidents,oncall,alerting', url:'/.wip/monitoring/'},
-                {name:'ops',                desc:'Where hope goes to die',                              tags:'culture,oncall,on-call,infra',           url:'/.wip/ops/'},
-                {name:'puppet',             desc:'Configuration management with strings attached',      tags:'config-mgmt,configmanagement,ruby',      url:'/.wip/puppet/'},
-                {name:'s3',                 desc:'Simple storage service. Simply not working.',         tags:'cloud,amazon,storage',                   url:'/.wip/s3/'},
-                {name:'serverless',         desc:'No servers. Just someone else\'s servers.',           tags:'cloud,architecture',                     url:'/.wip/serverless/'},
-                {name:'systemd',            desc:"Doing everything so you don't have to understand anything", tags:'linux,infra,os',                  url:'/.wip/systemd/'},
-                {name:'rvm',                desc:'The wrapper that manages the thing that manages the thing', tags:'culture,config-mgmt',              url:'/.wip/rvm/'},
-                {name:'simon and czarfunkel',desc:'Hello czarkness my old friend',                      tags:'culture',                                url:'/.wip/simonandczarfunkel/'},
-                {name:'sk8 or die',         desc:'Kickstart files as a form of creative expression',    tags:'linux,culture',                          url:'/.wip/sk8-die/'},
-                {name:'sysadmin day',       desc:'The one day a year ops gets acknowledged',             tags:'culture',                                url:'/.wip/sysadmin-day/'},
-                {name:'trumpdays',          desc:'The production system that cannot come down for maintenance', tags:'culture',                          url:'/.wip/trumpdays/'},
-                {name:'vmworld',            desc:'The cert that now costs $80k per year to use',        tags:'enterprise',                             url:'/.wip/vmworld/'},
-                {name:'weblogic',           desc:'Logic not included',                                  tags:'enterprise,java,oracle',                 url:'/.wip/weblogic/'},
-                {name:'well actually',      desc:'Technically correct, contextually useless',           tags:'culture',                                url:'/.wip/wellactually/'},
-                {name:'windows',            desc:'Blue screens of death in the cloud',                  tags:'enterprise,os,microsoft',                url:'/.wip/windows/'},
-                {name:'zoom',               desc:'Accidental critical infrastructure, approved by nobody in IT', tags:'culture',                        url:'/.wip/zoom/'},
+                {name:'aws',                desc:"Amazon's infinite money extraction service",          tags:'cloud,amazon',                          url:'/aws/'},
+                {name:'chef',               desc:'Too many cooks in the infrastructure kitchen',        tags:'config-mgmt,configmanagement,ruby',      url:'/chef/'},
+                {name:'devops',             desc:'You build it, you break it, you cry about it',        tags:'culture,process',                        url:'/devops/'},
+                {name:'dns',                desc:"It's always DNS. Always.",                            tags:'networking,infra',                       url:'/dns/'},
+                {name:'docker',             desc:'Containerizing your problems since 2013',             tags:'containers,infra',                       url:'/docker/'},
+                {name:'incident management',desc:'Managing incidents by creating more incidents',       tags:'incidents,oncall,on-call',               url:'/incident-management/'},
+                {name:'microservices',      desc:'Distributed monoliths with extra steps',              tags:'containers,architecture,distributed',    url:'/microservices/'},
+                {name:'monitoring',         desc:'Watching everything burn in real-time',               tags:'observability,incidents,oncall,alerting', url:'/monitoring/'},
+                {name:'ops',                desc:'Where hope goes to die',                              tags:'culture,oncall,on-call,infra',           url:'/ops/'},
+                {name:'puppet',             desc:'Configuration management with strings attached',      tags:'config-mgmt,configmanagement,ruby',      url:'/puppet/'},
+                {name:'s3',                 desc:'Simple storage service. Simply not working.',         tags:'cloud,amazon,storage',                   url:'/s3/'},
+                {name:'serverless',         desc:'No servers. Just someone else\'s servers.',           tags:'cloud,architecture',                     url:'/serverless/'},
+                {name:'systemd',            desc:"Doing everything so you don't have to understand anything", tags:'linux,infra,os',                  url:'/systemd/'},
+                {name:'rvm',                desc:'The wrapper that manages the thing that manages the thing', tags:'culture,config-mgmt',              url:'/rvm/'},
+                {name:'simon and czarfunkel',desc:'Hello czarkness my old friend',                      tags:'culture',                                url:'/simonandczarfunkel/'},
+                {name:'sk8 or die',         desc:'Kickstart files as a form of creative expression',    tags:'linux,culture',                          url:'/sk8-die/'},
+                {name:'sysadmin day',       desc:'The one day a year ops gets acknowledged',             tags:'culture',                                url:'/sysadmin-day/'},
+                {name:'trumpdays',          desc:'The production system that cannot come down for maintenance', tags:'culture',                          url:'/trumpdays/'},
+                {name:'vmworld',            desc:'The cert that now costs $80k per year to use',        tags:'enterprise',                             url:'/vmworld/'},
+                {name:'weblogic',           desc:'Logic not included',                                  tags:'enterprise,java,oracle',                 url:'/weblogic/'},
+                {name:'well actually',      desc:'Technically correct, contextually useless',           tags:'culture',                                url:'/wellactually/'},
+                {name:'windows',            desc:'Blue screens of death in the cloud',                  tags:'enterprise,os,microsoft',                url:'/windows/'},
+                {name:'zoom',               desc:'Accidental critical infrastructure, approved by nobody in IT', tags:'culture',                        url:'/zoom/'},
             ];
 
             var trigger   = document.getElementById('searchTrigger');

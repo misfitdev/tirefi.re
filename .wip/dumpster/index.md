@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "Dumpster Fire"
-permalink: /.wip/dumpster/
+permalink: /dumpster/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Dumpster Fire</span>
+        <a href="/">Home</a> → <span>Dumpster Fire</span>
     </div>
     <h1>Your Project is a </h1>
     <p class="page-subtitle">It's in production. Nobody knows why it works.</p>
 </div>
 
 <div class="content-section">
-    <img src="/dumpster/dumpsterfire.gif" alt="Your Project is on fire" />
+    <img src="/classic/dumpster/dumpsterfire.gif" alt="Your Project is on fire" />
 
     <p>...fire.</p>
 </div>
@@ -38,5 +38,5 @@ permalink: /.wip/dumpster/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

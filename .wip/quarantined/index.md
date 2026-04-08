@@ -1,12 +1,12 @@
 ---
 layout: wip
 title: "We're all WFH now"
-permalink: /.wip/quarantined/
+permalink: /quarantined/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>Quarantined</span>
+        <a href="/">Home</a> → <span>Quarantined</span>
     </div>
     <h1>COVID-19!!!</h1>
     <p class="page-subtitle">the ops incident with no postmortem, no resolution, and no agreed-upon end time</p>
@@ -48,5 +48,5 @@ permalink: /.wip/quarantined/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

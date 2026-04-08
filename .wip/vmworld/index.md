@@ -1,19 +1,19 @@
 ---
 layout: wip
 title: "Tire Fire"
-permalink: /.wip/vmworld/
+permalink: /vmworld/
 ---
 
 <div class="page-header">
     <div class="breadcrumb">
-        <a href="/.wip/">Home</a> → <span>VMworld</span>
+        <a href="/">Home</a> → <span>VMworld</span>
     </div>
     <h1>VMworld</h1>
     <p class="page-subtitle">Broadcom sends its regards, and also a new invoice structure you're going to want to sit down for.</p>
 </div>
 
 <div class="content-section">
-    <p><img src="/vmworld/vmworld.gif" alt="let's be honest, everyone needs those enterprise monies to stay in business"></p>
+    <p><img src="/classic/vmworld/vmworld.gif" alt="let's be honest, everyone needs those enterprise monies to stay in business"></p>
 
     <p>VMworld: gotta get those fluffing CEUs to keep the cert.</p>
 </div>
@@ -49,5 +49,5 @@ permalink: /.wip/vmworld/
 </div>
 
 <div class="navigation-footer">
-    <a href="/.wip/" class="nav-button">← All Disasters</a>
+    <a href="/" class="nav-button">← All Disasters</a>
 </div>

@@ -1,7 +1,8 @@
 set shell := ["bash", "-uc"]
 
-# mise exec keeps recipes working whether or not mise is shell-activated
-bundle := "mise exec -- bundle"
+# mise shims resolve through nested shells (the Rakefile shells out to
+# `bundle exec jekyll`); `mise exec` only rewrites the direct command
+export PATH := env('HOME') / ".local/share/mise/shims:" + env('PATH')
 
 # List available recipes
 default:
@@ -10,35 +11,35 @@ default:
 # Install ruby toolchain and gems
 setup:
     mise install
-    {{ bundle }} install
+    bundle install
 
 # Serve the site locally with live reload at http://127.0.0.1:4000
 serve:
-    {{ bundle }} exec jekyll serve --livereload
+    bundle exec jekyll serve --livereload
 
 # Build the site into _site/
 build:
-    {{ bundle }} exec jekyll build
+    bundle exec jekyll build
 
 # Build the site as GitHub Pages does
 build-prod:
-    JEKYLL_ENV=production {{ bundle }} exec jekyll build
+    JEKYLL_ENV=production bundle exec jekyll build
 
 # Remove generated site and caches
 clean:
-    {{ bundle }} exec jekyll clean
+    bundle exec jekyll clean
 
 # Lint ruby sources
 lint:
-    {{ bundle }} exec rubocop
+    bundle exec rubocop
 
 # Autocorrect ruby lint offenses
 fmt:
-    {{ bundle }} exec rubocop --autocorrect
+    bundle exec rubocop --autocorrect
 
 # Build and validate the generated HTML with html-proofer
 test:
-    {{ bundle }} exec rake proof_sitedir
+    bundle exec rake proof_sitedir
 
 # Full quality gate
 check: lint build test

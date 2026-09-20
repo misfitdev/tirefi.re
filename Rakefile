@@ -22,16 +22,23 @@ task :proof_sitedir do
   HTMLProofer.check_directory(
     './_site/',
     allow_hash_href: true,
-    assume_extension: true,
-    url_ignore: [
+    assume_extension: '.html',
+    ignore_urls: [
       'http://localhost:4000/feed.xml',
       'http://validator.w3.org/check?uri=referer',
       'https://validator.w3.org/check?uri=referer',
       'https://blog.jessfraz.com/post/spontaneous-combustion/',
       'https://lmgtfy.com/?q=Checking+the+proxy%2C+firewall%2C+and+DNS+configuration',
       'https://lmgtfy.com/?q=Running+Network+Diagnostics',
-      'https://t.co/Gk4MxPlhjb', # this will be fixed after publishing
-      'https://t.co/Qg1iGzrZyz' # linkedin does not like htmlproofer
+      # X returns 404 to every unauthenticated request, so every link reads as dead
+      %r{^https?://(twitter\.com|x\.com|t\.co)/},
+      # 403 to non-browser clients
+      'https://hangops.slack.com',
+      'https://www.w3schools.com/css/',
+      %r{^https://codeascraft\.com/},
+      'https://hipku.gabrielmartin.net/', # TLS cert no longer valid for the name
+      'https://whatdayofmarchisit.com', # domain no longer resolves
+      'https://review.openstack.org/#/c/122962/' # gerrit retired, hash no longer resolves
     ]
   ).run
   puts 'YOLO that shit straight to prod, fam!'

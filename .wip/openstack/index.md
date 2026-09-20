@@ -15,7 +15,7 @@ permalink: /openstack/
     <img src="/classic/openstack/openstack.png" alt="not even once" />
     <img src="/classic/openstack/openstack_fire.png" alt="Don't worry in less then 6 months we'll change the underlying networking again." />
 
-    <p>If you need some continued inspiration, <a href="/openstack/cube-drone-openstack.gif">there's always Cube Drone</a>.</p>
+    <p>If you need some continued inspiration, <a href="/classic/openstack/cube-drone-openstack.gif">there's always Cube Drone</a>.</p>
 
     <p>This image is of a release from a while ago, <a href="https://review.openstack.org/#/c/122962/">it's worse now...</a></p>
 

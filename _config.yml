@@ -41,6 +41,8 @@ include:
   - .wip
 
 exclude:
+  - AGENTS.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - Rakefile
@@ -49,6 +51,8 @@ exclude:
   - .travis.yml
   - docker-compose.yml
   - Makefile
+  - justfile
+  - lefthook.yml
 
 # Analytics
 google_analytics_tracking_id: UA-79918240-1

@@ -23,6 +23,8 @@ task :proof_sitedir do
     './_site/',
     allow_hash_href: true,
     assume_extension: '.html',
+    # Third-party link rot would otherwise fail builds that changed nothing
+    disable_external: ENV['PROOF_EXTERNAL'] == '0',
     ignore_urls: [
       'http://localhost:4000/feed.xml',
       'http://validator.w3.org/check?uri=referer',

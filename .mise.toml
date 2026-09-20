@@ -1,5 +1,7 @@
 [tools]
 ruby = "3.3.0"
+just = "latest"
+lefthook = "latest"
 
 [env]
 JEKYLL_ENV = "development"

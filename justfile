@@ -52,9 +52,9 @@ up:
 down:
     docker compose down
 
-# Install git hooks (lefthook first, then bd appends its sync block)
+# Install bd git hooks (requires bd on PATH: https://github.com/steveyegge/beads)
 hooks:
-    lefthook install
+    @command -v bd >/dev/null || { echo "bd not found on PATH; install beads first"; exit 1; }
     bd hooks install
 
 # Show work that is ready to pick up

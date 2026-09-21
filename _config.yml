@@ -52,7 +52,6 @@ exclude:
   - docker-compose.yml
   - Makefile
   - justfile
-  - lefthook.yml
 
 # Analytics
 google_analytics_tracking_id: UA-79918240-1

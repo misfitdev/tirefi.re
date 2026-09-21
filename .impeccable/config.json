@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T02:52:21.785Z",
+        "reason": "false positive: .nav-menu ul carries the border, its <a> children carry the inset (0 1rem, 44px min-height)"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T02:52:21.800Z",
+        "reason": "CRT scanline overlay and the 5-cell severity meter are the pinned Retro Industrial brief, not surface decoration"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T02:52:21.814Z",
+        "reason": "remaining caps are short instrument-panel labels (status strip, breadcrumb, column heads); the one long run, memorial-title, was converted to sentence case"
+      }
+    ]
+  }
+}

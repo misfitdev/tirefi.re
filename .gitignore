@@ -84,3 +84,5 @@ Temporary Items
 .dolt/
 *.db
 .beads-credential-key
+
+.impeccable/hook.cache.json

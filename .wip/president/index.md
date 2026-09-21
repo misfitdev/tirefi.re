@@ -12,9 +12,12 @@ permalink: /president/
 </div>
 
 <div class="content-section">
-    <link rel="stylesheet" href="/flipclock.css">
-    <div class="clock" style="margin:2em;"></div>
-    <p><em>The above clock targeted January 20, 2021 at noon Eastern. That date has passed. The FlipClock.js countdown this page was built around has expired. What you're looking at now is the archaeological record of a running timer.</em></p>
+    <div class="readout">
+        <div class="readout-value">0</div>
+        <div class="readout-unit">days remaining</div>
+        <div class="readout-state">Counter halted &mdash; target 2021-01-20 12:00 ET</div>
+    </div>
+    <p><em>This page was built around a FlipClock.js countdown to January 20, 2021 at noon Eastern. That date has passed and the countdown expired. What you're looking at now is the archaeological record of a running timer.</em></p>
 </div>
 
 

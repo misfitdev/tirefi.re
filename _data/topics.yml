@@ -1,0 +1,208 @@
+# Topic table for the WIP index and the site search overlay.
+# sev drives the 1-5 severity meter; desc is reused as the search snippet.
+
+- name: "active directory"
+  desc: "NetBIOS: 15 characters of permanent regret"
+  tags: "enterprise,windows,microsoft"
+  url: "/active-directory/"
+  sev: 5
+- name: "airbnb"
+  desc: "Disrupting hospitality and uptime simultaneously"
+  tags: "culture,startups"
+  url: "/airbnb/"
+  sev: 2
+- name: "american craft"
+  desc: "Small-batch, locally-sourced, thoroughly unmaintainable"
+  tags: "culture"
+  url: "/americancraft/"
+  sev: 2
+- name: "australia"
+  desc: "Everything is trying to kill your uptime"
+  tags: "culture,infra"
+  url: "/australia/"
+  sev: 3
+- name: "aws"
+  desc: "Amazon's infinite money extraction service"
+  tags: "cloud,amazon"
+  url: "/aws/"
+  sev: 4
+- name: "byod"
+  desc: "Bring your own device. Also your own vulnerabilities."
+  tags: "enterprise,culture,security"
+  url: "/byod/"
+  sev: 4
+- name: "cafepress"
+  desc: "The password reset email contains your password"
+  tags: "culture,security"
+  url: "/cafepress/"
+  sev: 5
+- name: "cfengine"
+  desc: "Mark Burgess was right. Nobody listened correctly."
+  tags: "config-mgmt,configmanagement"
+  url: "/cfengine/"
+  sev: 3
+- name: "chef"
+  desc: "Too many cooks in the infrastructure kitchen"
+  tags: "config-mgmt,configmanagement,ruby"
+  url: "/chef/"
+  sev: 3
+- name: "copyleft"
+  desc: "Free as in please consult legal before shipping"
+  tags: "culture,licensing"
+  url: "/copyleft/"
+  sev: 2
+- name: "cryops"
+  desc: "Five tools, zero sources of truth, one hailmary ACL"
+  tags: "culture,incidents,config-mgmt"
+  url: "/cryops/"
+  sev: 5
+- name: "devops"
+  desc: "You build it, you break it, you cry about it"
+  tags: "culture,process"
+  url: "/devops/"
+  sev: 3
+- name: "dns"
+  desc: "It's always DNS. Always."
+  tags: "networking,infra"
+  url: "/dns/"
+  sev: 5
+- name: "docker"
+  desc: "Containerizing your problems since 2013"
+  tags: "containers,infra"
+  url: "/docker/"
+  sev: 4
+- name: "ibm"
+  desc: "Pivoting since 1993, still winning government contracts"
+  tags: "enterprise"
+  url: "/ibm/"
+  sev: 4
+- name: "incident management"
+  desc: "Managing incidents by creating more incidents"
+  tags: "incidents,oncall,on-call"
+  url: "/incident-management/"
+  sev: 4
+- name: "infrakit"
+  desc: "The infrastructure abstraction graveyard"
+  tags: "containers"
+  url: "/infrakit/"
+  sev: 2
+- name: "jess frazelle"
+  desc: "Someone who actually ships things"
+  tags: "containers,culture"
+  url: "/jessfraz/"
+  sev: 1
+- name: "logrotate"
+  desc: "Just makes more smoke for you to grep"
+  tags: "linux,observability"
+  url: "/logrotate/"
+  sev: 2
+- name: "about"
+  desc: "Why tire fires are the right metaphor for ops"
+  tags: "culture"
+  url: "/mansplaining/"
+  sev: 1
+- name: "microservices"
+  desc: "Distributed monoliths with extra steps"
+  tags: "containers,architecture,distributed"
+  url: "/microservices/"
+  sev: 5
+- name: "monitoring"
+  desc: "Watching everything burn in real-time"
+  tags: "observability,incidents,oncall,alerting"
+  url: "/monitoring/"
+  sev: 4
+- name: "motivation"
+  desc: "The ops motivation experience"
+  tags: "culture"
+  url: "/motivation/"
+  sev: 1
+- name: "nicolas cage"
+  desc: "The spirit animal of ops"
+  tags: "culture"
+  url: "/nicolas-cage/"
+  sev: 1
+- name: "nodejs"
+  desc: "I/O is non-blocking, your ops team is not"
+  tags: "culture"
+  url: "/nodejs/"
+  sev: 3
+- name: "openjdk"
+  desc: "It's all equal. Right?"
+  tags: "enterprise"
+  url: "/openjdk/"
+  sev: 4
+- name: "ops"
+  desc: "Where hope goes to die"
+  tags: "culture,oncall,on-call,infra"
+  url: "/ops/"
+  sev: 4
+- name: "puppet"
+  desc: "Configuration management with strings attached"
+  tags: "config-mgmt,configmanagement,ruby"
+  url: "/puppet/"
+  sev: 3
+- name: "rvm"
+  desc: "The wrapper that manages the thing that manages the thing"
+  tags: "culture,config-mgmt"
+  url: "/rvm/"
+  sev: 3
+- name: "s3"
+  desc: "Simple storage service. Simply not working."
+  tags: "cloud,amazon,storage"
+  url: "/s3/"
+  sev: 4
+- name: "serverless"
+  desc: "No servers. Just someone else's servers."
+  tags: "cloud,architecture"
+  url: "/serverless/"
+  sev: 4
+- name: "simon and czarfunkel"
+  desc: "Hello czarkness my old friend"
+  tags: "culture"
+  url: "/simonandczarfunkel/"
+  sev: 1
+- name: "sk8 or die"
+  desc: "Kickstart files as a form of creative expression"
+  tags: "linux,culture"
+  url: "/sk8-die/"
+  sev: 2
+- name: "sysadmin day"
+  desc: "The one day a year ops gets acknowledged"
+  tags: "culture"
+  url: "/sysadmin-day/"
+  sev: 1
+- name: "systemd"
+  desc: "Doing everything so you don't have to understand anything"
+  tags: "linux,infra,os"
+  url: "/systemd/"
+  sev: 5
+- name: "trumpdays"
+  desc: "The production system that cannot come down for maintenance"
+  tags: "culture"
+  url: "/trumpdays/"
+  sev: 3
+- name: "vmworld"
+  desc: "The cert that now costs $80k per year to use"
+  tags: "enterprise"
+  url: "/vmworld/"
+  sev: 4
+- name: "weblogic"
+  desc: "Logic not included"
+  tags: "enterprise,java,oracle"
+  url: "/weblogic/"
+  sev: 5
+- name: "well actually"
+  desc: "Technically correct, contextually useless"
+  tags: "culture"
+  url: "/wellactually/"
+  sev: 2
+- name: "windows"
+  desc: "Blue screens of death in the cloud"
+  tags: "enterprise,os,microsoft"
+  url: "/windows/"
+  sev: 4
+- name: "zoom"
+  desc: "Accidental critical infrastructure, approved by nobody in IT"
+  tags: "culture"
+  url: "/zoom/"
+  sev: 3

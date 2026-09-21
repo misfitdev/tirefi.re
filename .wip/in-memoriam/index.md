@@ -5,7 +5,7 @@ permalink: /in-memoriam/
 ---
 
 <div class="memorial-intro">
-  <h1>🔥 In Memoriam 🔥</h1>
+  <h1>In Memoriam</h1>
   <p class="memorial-subtitle">Remembering those who have succumbed to the eternal tire fire</p>
 </div>
 
@@ -61,7 +61,7 @@ permalink: /in-memoriam/
 </div>
 
 <div class="memorial-thanks">
-  <h2>🙏 Special Thanks 🙏</h2>
+  <h2>Special Thanks</h2>
   <p><strong>Computer machines</strong> - For trying their best despite everything</p>
   <p><strong>☁️ 🔥</strong> - The eternal dance continues</p>
   <p><strong>@cube_drone</strong> - For documenting the tire fire through interpretive pictures</p>

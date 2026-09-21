@@ -19,7 +19,7 @@ tags: [culture]
 
     <p>You can follow him on twitter <a href="https://twitter.com/cheeseplus">@cheeseplus</a>.</p>
 
-    <p>Get your very own desktop background here! <a href="/year-of-cheslock-on-the-desktop/cheslock-on-the-desktop-original.png">link to cheslock-on-the-desktop-original.png</a></p>
+    <p>Get your very own desktop background here! <a href="/classic/year-of-cheslock-on-the-desktop/cheslock-on-the-desktop-original.png">link to cheslock-on-the-desktop-original.png</a></p>
 </div>
 
 

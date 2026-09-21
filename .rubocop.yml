@@ -1,13 +1,15 @@
-inherit_from: .rubocop_todo.yml
-
 AllCops:
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 3.3
+  NewCops: enable
   Include:
     - '**/Rakefile'
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
 
 Style/Encoding:
   Enabled: false
 
-Metrics/LineLength:
-  #Enabled: false
+Layout/LineLength:
   Max: 99

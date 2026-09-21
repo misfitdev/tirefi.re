@@ -12,9 +12,12 @@ permalink: /trumpdays/
 </div>
 
 <div class="content-section">
-    <link rel="stylesheet" href="/flipclock.css">
-    <div class="clock" style="margin:2em;"></div>
-    <p><em>The above was a FlipClock.js counter measuring elapsed time from January 20, 2017. It targeted January 20, 2021 as the endpoint. That date has passed. The clock completed its run.</em></p>
+    <div class="readout">
+        <div class="readout-value">1461</div>
+        <div class="readout-unit">days elapsed</div>
+        <div class="readout-state">Counter halted &mdash; 2017-01-20 &rarr; 2021-01-20</div>
+    </div>
+    <p><em>This page ran a FlipClock.js counter measuring elapsed time from January 20, 2017, targeting January 20, 2021 as the endpoint. That date has passed. The figure above is where it stopped.</em></p>
 </div>
 
 

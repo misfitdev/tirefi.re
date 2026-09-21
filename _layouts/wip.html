@@ -609,10 +609,6 @@
             font-style: normal;
         }
 
-        .quote-box cite::before {
-            content: '-- ';
-        }
-
         .twitter-tweet {
             display: block;
             border: 1px solid var(--border);
@@ -883,6 +879,46 @@
         }
 
         /* === SHARED COMPONENTS === */
+        :where(.content-section, .main-content-area) img {
+            max-width: 100%;
+            max-height: 78vh;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+
+        .readout {
+            background: var(--surface);
+            padding: 1.25rem 1.35rem;
+            margin: 0 0 1rem;
+            text-align: center;
+        }
+
+        .readout-value {
+            font-size: clamp(2.5rem, 12vw, 4.5rem);
+            line-height: 1;
+            font-weight: 700;
+            color: var(--hot);
+            letter-spacing: -0.03em;
+        }
+
+        .readout-unit {
+            font-size: 0.8rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-top: 0.5rem;
+        }
+
+        .readout-state {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 0.9rem;
+            padding-top: 0.7rem;
+            border-top: 1px solid var(--border);
+        }
+
         .hero-image {
             width: 100%;
             max-width: 600px;
@@ -1233,8 +1269,29 @@
             }
 
             .main-content > .container.console {
+                background: none;
                 border-left: none;
                 border-right: none;
+                padding-top: 0;
+            }
+
+            /* full-bleed background leaves no visible margin at this width,
+               so the fire runs as a banded masthead instead */
+            #fire-bg {
+                position: static;
+                height: 150px;
+                opacity: 1;
+                animation: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            #fire-bg::after {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(18, 17, 15, 0.1) 0%,
+                    rgba(18, 17, 15, 0.45) 60%,
+                    var(--bg) 100%
+                );
             }
         }
 
@@ -1479,7 +1536,7 @@
                 </div>
             </div>
             <div class="status-strip">
-                <div class="status-cell is-minor"><span class="status-key">Pages</span><span class="status-val">{{ site.pages | where_exp: "p", "p.layout == 'wip'" | size }}</span></div>
+                <div class="status-cell is-minor"><span class="status-key">Topics</span><span class="status-val">{{ site.data.topics | size }}</span></div>
                 <div class="status-cell is-minor"><span class="status-key">Uptime</span><span class="status-val">0d</span></div>
                 <div class="status-cell"><span class="status-key">Incidents</span><span class="status-val">&#8734;</span></div>
                 <div class="status-cell"><span class="status-key">Status</span><span class="status-val is-hot">Burning</span></div>

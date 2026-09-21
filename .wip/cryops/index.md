@@ -12,7 +12,7 @@ permalink: /cryops/
 </div>
 
 <div class="content-section">
-    <img src="/classic/cryops/cry-a-lot.jpg" alt="😭it😭gets😭better😭" title="😭it😭gets😭better😭" />
+    <img src="/classic/cryops/cry-a-lot.jpg" alt="😭it😭gets😭better😭" title="😭it😭gets😭better😭" loading="lazy" decoding="async" />
 
 ```
 $ vim ~/src/PUPPET/cisco-gear/hiera/prod/dc-1.yaml
@@ -35,7 +35,7 @@ $ echo "ok try it now" | mail -s "FYI: AR: outage update" devops@tirefi.re
 $ halt
 ```
 
-    <img src="/classic/cryops/aaaaand-im-out.gif" alt="problem solving is an overwhelmingly positive experience overall" title="problem solving is an overwhelmingly positive experience overall" />
+    <img src="/classic/cryops/aaaaand-im-out.gif" alt="problem solving is an overwhelmingly positive experience overall" title="problem solving is an overwhelmingly positive experience overall" loading="lazy" decoding="async" />
 </div>
 
 

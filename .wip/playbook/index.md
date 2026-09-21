@@ -13,7 +13,7 @@ tags: [incidents, culture]
 </div>
 
 <div class="content-section">
-    <img src="/classic/playbook/playbook.jpg" alt="A scorchingly executed playbook" />
+    <img src="/classic/playbook/playbook.jpg" alt="A scorchingly executed playbook" loading="lazy" decoding="async" />
 
     <p>Oh maybe there was a typo right here... Wait when was the last time this was updated? Wait.. how much of S3 is down?... Can someone update the status... no? Hmmmmm</p>
 

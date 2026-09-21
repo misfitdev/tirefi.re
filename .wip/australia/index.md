@@ -12,7 +12,7 @@ permalink: /australia/
 </div>
 
 <div class="content-section">
-    <img src="/classic/australia/australia.gif" alt="pay no attention to the @mattray behind the curtain" />
+    <img src="/classic/australia/australia.gif" alt="pay no attention to the @mattray behind the curtain" loading="lazy" decoding="async" />
 
     <p>That's not a tirefire, THIS is a tirefire.</p>
 

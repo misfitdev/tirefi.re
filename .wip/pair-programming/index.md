@@ -13,7 +13,7 @@ tags: [culture]
 </div>
 
 <div class="content-section">
-    <img src="/classic/pair-programming/pair-programming.gif" alt="3-2-1, boom" />
+    <img src="/classic/pair-programming/pair-programming.gif" alt="3-2-1, boom" loading="lazy" decoding="async" />
 </div>
 
 

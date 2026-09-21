@@ -12,7 +12,7 @@ permalink: /equifax/
 </div>
 
 <div class="content-section">
-    <img src="/classic/equifax/equifuct.gif" alt="get you shit together equifax" />
+    <img src="/classic/equifax/equifuct.gif" alt="get you shit together equifax" loading="lazy" decoding="async" />
 
     <p>Seriously? get your shit together Equifax!</p>
 </div>

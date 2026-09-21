@@ -12,7 +12,7 @@ permalink: /sk8-die/
 </div>
 
 <div class="content-section">
-    <p><img src="/classic/sk8-die/kickflip.gif" alt="sk8 or die.."></p>
+    <p><img src="/classic/sk8-die/kickflip.gif" alt="sk8 or die.." loading="lazy" decoding="async"></p>
 
     <p>flip it . forget the backslash</p>
 

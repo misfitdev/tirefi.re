@@ -12,7 +12,7 @@ permalink: /logrotate/
 </div>
 
 <div class="content-section">
-    <img src="/classic/logrotate/logrotate.gif" alt="Just keeps going round and round and round..." />
+    <img src="/classic/logrotate/logrotate.gif" alt="Just keeps going round and round and round..." loading="lazy" decoding="async" />
     <p>It just makes more smoke for you to grep.</p>
 </div>
 

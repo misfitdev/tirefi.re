@@ -12,7 +12,7 @@ permalink: /dumpster/
 </div>
 
 <div class="content-section">
-    <img src="/classic/dumpster/dumpsterfire.gif" alt="Your Project is on fire" />
+    <img src="/classic/dumpster/dumpsterfire.gif" alt="Your Project is on fire" loading="lazy" decoding="async" />
 
     <p>...fire.</p>
 </div>

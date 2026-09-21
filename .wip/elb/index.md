@@ -12,7 +12,7 @@ permalink: /elb/
 </div>
 
 <div class="content-section">
-    <img src="/classic/elb/elastic-LOL-balancer.gif" alt="teach them to balance, they said" />
+    <img src="/classic/elb/elastic-LOL-balancer.gif" alt="teach them to balance, they said" loading="lazy" decoding="async" />
 
     <p>Elastic LOL Balancers.</p>
 </div>

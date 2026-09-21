@@ -12,7 +12,7 @@ permalink: /microservices/
 </div>
 
 <div class="content-section">
-    <img src="/classic/microservices/microservices.gif" alt="sick burn" />
+    <img src="/classic/microservices/microservices.gif" alt="sick burn" loading="lazy" decoding="async" />
 
     <div class="quote-box">
         <blockquote>We replaced our monolith with micro services so that every outage could be more like a murder mystery.</blockquote>

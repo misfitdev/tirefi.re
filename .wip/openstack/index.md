@@ -12,8 +12,8 @@ permalink: /openstack/
 </div>
 
 <div class="content-section">
-    <img src="/classic/openstack/openstack.png" alt="not even once" />
-    <img src="/classic/openstack/openstack_fire.png" alt="Don't worry in less then 6 months we'll change the underlying networking again." />
+    <img src="/classic/openstack/openstack.png" alt="not even once" loading="lazy" decoding="async" />
+    <img src="/classic/openstack/openstack_fire.png" alt="Don't worry in less then 6 months we'll change the underlying networking again." loading="lazy" decoding="async" />
 
     <p>If you need some continued inspiration, <a href="/classic/openstack/cube-drone-openstack.gif">there's always Cube Drone</a>.</p>
 

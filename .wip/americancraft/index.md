@@ -12,7 +12,7 @@ permalink: /americancraft/
 </div>
 
 <div class="content-section">
-    <img src="/classic/americancraft/american_craft_fire.gif" alt="they might give you wrong beer?" />
+    <img src="/classic/americancraft/american_craft_fire.gif" alt="they might give you wrong beer?" loading="lazy" decoding="async" />
 
     <p>Seriously, only go here if you have to.</p>
 </div>

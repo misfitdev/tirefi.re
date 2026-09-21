@@ -12,7 +12,7 @@ permalink: /nicolas-cage/
 </div>
 
 <div class="content-section">
-    <img src="/classic/nicolas-cage/nicholas-cage.jpg" alt="that's a negative ghost rider" />
+    <img src="/classic/nicolas-cage/nicholas-cage.jpg" alt="that's a negative ghost rider" loading="lazy" decoding="async" />
     <p>this man is a national treasure</p>
 </div>
 

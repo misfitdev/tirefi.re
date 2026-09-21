@@ -12,7 +12,7 @@ permalink: /chef/
 </div>
 
 <div class="content-section">
-    <img src="/classic/chef/chef_kitchen_fire.gif" alt="chef exec kitchen test --yolo" />
+    <img src="/classic/chef/chef_kitchen_fire.gif" alt="chef exec kitchen test --yolo" loading="lazy" decoding="async" />
 
     <p>Chef was supposed to help get the cooks out of the kitchen, right....?</p>
 </div>

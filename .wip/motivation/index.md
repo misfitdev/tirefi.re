@@ -12,7 +12,7 @@ permalink: /motivation/
 </div>
 
 <div class="content-section">
-    <img src="/classic/motivation/motivation.png" alt="its 2016, who the fuck even uses alts?" />
+    <img src="/classic/motivation/motivation.png" alt="its 2016, who the fuck even uses alts?" loading="lazy" decoding="async" />
     <p>one is the loneliest tirefire</p>
 </div>
 

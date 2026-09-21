@@ -12,7 +12,7 @@ permalink: /cfengine/
 </div>
 
 <div class="content-section">
-    <img src="/classic/cfengine/cfengine.jpeg" alt="At least it ain't bcfg2!" />
+    <img src="/classic/cfengine/cfengine.jpeg" alt="At least it ain't bcfg2!" loading="lazy" decoding="async" />
 
     <p>Because everythings better in 3! 😎</p>
 

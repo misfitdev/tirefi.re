@@ -13,7 +13,7 @@ permalink: /openjdk/
 
 <div class="content-section">
     <p>Right?</p>
-    <img src="/classic/openjdk/openjdk-tomcat.jpg" alt="🔥" />
+    <img src="/classic/openjdk/openjdk-tomcat.jpg" alt="🔥" loading="lazy" decoding="async" />
 </div>
 
 

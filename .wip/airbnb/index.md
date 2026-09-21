@@ -14,7 +14,7 @@ permalink: /airbnb/
 <div class="content-section">
     <p>Party on Wayne and be Excellent to Each other.</p>
 
-    <img src="/classic/airbnb/airbnb.gif" alt="beavis and butthead playing air guitar" />
+    <img src="/classic/airbnb/airbnb.gif" alt="beavis and butthead playing air guitar" loading="lazy" decoding="async" />
 </div>
 
 

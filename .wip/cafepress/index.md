@@ -14,15 +14,15 @@ permalink: /cafepress/
 <div class="content-section">
     <p>Teespring has a longer run-up to gratification than I'd like, let's see about that snarkowski alternative.</p>
 
-    <img src="/classic/cafepress/violation-one.png" alt="thanks for the inspiration @pczarkowski" />
+    <img src="/classic/cafepress/violation-one.png" alt="thanks for the inspiration @pczarkowski" loading="lazy" decoding="async" />
 
     <p>Uhh... ok, if you absolutely insist...</p>
 
-    <img src="/classic/cafepress/violation-two.png" alt="seriously though its probably fine" />
+    <img src="/classic/cafepress/violation-two.png" alt="seriously though its probably fine" loading="lazy" decoding="async" />
 
     <p>How 'bout fuckin no.</p>
 
-    <img src="/classic/cafepress/stand-there-in-your-wrongness.gif" alt="excuse me while i nope the fuck outta here" />
+    <img src="/classic/cafepress/stand-there-in-your-wrongness.gif" alt="excuse me while i nope the fuck outta here" loading="lazy" decoding="async" />
 
     <p>Eff an Cafepress, too.</p>
 </div>

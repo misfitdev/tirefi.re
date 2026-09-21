@@ -12,7 +12,7 @@ permalink: /nodejs/
 </div>
 
 <div class="content-section">
-    <img src="/classic/nodejs/node.gif" alt="node fire" />
+    <img src="/classic/nodejs/node.gif" alt="node fire" loading="lazy" decoding="async" />
 
     <div style="font-family: monospace; border: 1px solid #ccc; padding: 1em; margin: 1em 0; background: #f9f9f9;">
         <h2 style="font-family: monospace; font-size: 1.1em;">Internal Server Error</h2>

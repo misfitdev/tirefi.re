@@ -12,7 +12,7 @@ permalink: /windows/
 </div>
 
 <div class="content-section">
-    <a href="https://www.reddit.com/r/rant/comments/3o95vb/microsoft_fuck_you_windows_10/"><img src="/classic/windows/windows_burning.gif" alt="AHHHH Windows!." /></a>
+    <a href="https://www.reddit.com/r/rant/comments/3o95vb/microsoft_fuck_you_windows_10/"><img src="/classic/windows/windows_burning.gif" alt="AHHHH Windows!." loading="lazy" decoding="async" /></a>
 
     <p>You know you miss Windows ME..</p>
 </div>

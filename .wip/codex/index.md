@@ -10,7 +10,7 @@ permalink: /codex/
     <h1>Ships the PR. Not the apology.</h1>
 </div>
 <div class="content-section">
-    <p>OpenAI's coding agent has been documented burning a week's usage scaffolding tests nobody requested, then hallucinating a workflow to explain why. One developer's changelog entry: it ran a database migration and erased their data. It shipped the PR anyway.</p>
+    <p>Burns a week's usage on tests you didn't ask for. Also, your data is gone.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

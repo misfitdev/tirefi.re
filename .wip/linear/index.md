@@ -10,7 +10,7 @@ permalink: /linear/
     <h1>Beautiful issue tracker. Still doesn't ship the feature.</h1>
 </div>
 <div class="content-section">
-    <p>A keyboard shortcut for everything except the one thing that matters. Teams that leave Confluence expecting Linear to replace the wiki find out the hard way that it doesn't. Immaculate kanban board, identical backlog.</p>
+    <p>Deleted Confluence. Forgot to replace the wiki. The backlog looks incredible.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

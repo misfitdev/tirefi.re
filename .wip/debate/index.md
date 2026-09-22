@@ -12,11 +12,11 @@ permalink: /debate/
 </div>
 
 <div class="content-section">
-    <img src="/classic/debate/picked-the-wrong-week.jpg" alt="looks like I picked the wrong year to stop sniffing glue" />
+    <img src="/classic/debate/picked-the-wrong-week.jpg" alt="looks like I picked the wrong year to stop sniffing glue" loading="lazy" decoding="async" />
 
     <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Yes, Trump, debate with the fucking moderator. <a href="https://twitter.com/hashtag/debatenight?src=hash">#debatenight</a></p>&mdash; @nickf</blockquote>
 
-    <img src="https://media.giphy.com/media/3o7TKnxwpUqCkdb5Li/giphy.gif" alt="Shimmy Shimmy" />
+    <img src="https://media.giphy.com/media/3o7TKnxwpUqCkdb5Li/giphy.gif" alt="Shimmy Shimmy" loading="lazy" decoding="async" />
 </div>
 
 

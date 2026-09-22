@@ -12,7 +12,7 @@ permalink: /infrakit/
 </div>
 
 <div class="content-section">
-    <img src="/classic/infrakit/infrakit.jpg" alt="It's probably fine..." />
+    <img src="/classic/infrakit/infrakit.jpg" alt="It's probably fine..." loading="lazy" decoding="async" />
     <p>Breaking infrastructure into simple, pluggable <a href="https://tirefi.re">tirefires</a>.</p>
 </div>
 

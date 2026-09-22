@@ -17,7 +17,7 @@ permalink: /incident-management/
     elevated error rates &amp;<br>
     elevated error rates</p>
 
-    <img src="/classic/incident-management/incident-management.gif" alt="apis up" />
+    <img src="/classic/incident-management/incident-management.gif" alt="apis up" loading="lazy" decoding="async" />
 </div>
 
 

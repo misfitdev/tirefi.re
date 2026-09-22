@@ -12,7 +12,7 @@ permalink: /jessfraz/
 </div>
 
 <div class="content-section">
-    <img src="/classic/jessfraz/jessfire.png" alt="Jess Tirefire Frazelle" />
+    <img src="/classic/jessfraz/jessfire.png" alt="Jess Tirefire Frazelle" loading="lazy" decoding="async" />
     <p><a href="https://blog.jessfraz.com/post/spontaneous-combustion/">AZ never gets any good press</a></p>
 </div>
 

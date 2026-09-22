@@ -12,7 +12,7 @@ permalink: /systemd/
 </div>
 
 <div class="content-section">
-    <img src="/classic/systemd/systemd.gif" alt="service blob stop" />
+    <img src="/classic/systemd/systemd.gif" alt="service blob stop" loading="lazy" decoding="async" />
 
     <p>systemd shall eat the world, even as you set it on fire.</p>
 </div>

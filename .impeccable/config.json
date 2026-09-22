@@ -29,6 +29,96 @@
         ],
         "createdAt": "2026-09-21T02:52:21.814Z",
         "reason": "remaining caps are short instrument-panel labels (status strip, breadcrumb, column heads); the one long run, memorial-title, was converted to sentence case"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "helvetica neue",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:03:26.703Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own font stack; DESIGN.md documents WIP tokens only, not Classic's"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.646Z",
+        "reason": "@media print override: white/black is the intentional print-safe palette, not a WIP dark-theme token"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(0, 0, 0)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.660Z",
+        "reason": "@media print override: white/black is the intentional print-safe palette, not a WIP dark-theme token"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(6, 5, 4, 0.78)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.672Z",
+        "reason": "search-overlay scrim is a translucent tint of --bg, not a new palette color"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#ccc",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.685Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own light palette; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#fdfdfd",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.698Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own light palette; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#666",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.711Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own light palette; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.35rem",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.724Z",
+        "reason": "html.classic-mode mobile override intentionally restores Classic's own heading size; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2rem",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.738Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own heading size; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.2rem",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-21T17:18:19.752Z",
+        "reason": "html.classic-mode override intentionally restores Classic's own memorial-flame size; DESIGN.md documents WIP tokens only"
       }
     ]
   }

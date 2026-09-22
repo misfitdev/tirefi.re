@@ -12,7 +12,7 @@ permalink: /weblogic/
 </div>
 
 <div class="content-section">
-    <img src="/classic/weblogic/javafire.jpg" alt="java on fire" />
+    <img src="/classic/weblogic/javafire.jpg" alt="java on fire" loading="lazy" decoding="async" />
 
     <p><code>weblogic.nodemanager.NMConnectException: Connection refused. Could not connect to NodeManager.</code></p>
 </div>

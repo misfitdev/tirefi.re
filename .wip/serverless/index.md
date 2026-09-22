@@ -12,7 +12,7 @@ permalink: /serverless/
 </div>
 
 <div class="content-section">
-    <img src="/classic/serverless/noserverless.png" alt="Just Somebody Else's" />
+    <img src="/classic/serverless/noserverless.png" alt="Just Somebody Else's" loading="lazy" decoding="async" />
 
     <p>Stickers coming soon to the TireFire cafepress store. All profits go to the "Drunk Domain Purchasing" fund.</p>
 

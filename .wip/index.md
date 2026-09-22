@@ -9,7 +9,7 @@ firebg: true
     <div class="home">
         <h1 class="page-heading">This is a tire fire</h1>
         <p class="main">
-            <img src="/tirefirebillow.gif" alt="Moving image of a field of tires on fire.">
+            <img src="/tirefirebillow.gif" alt="Moving image of a field of tires on fire." loading="lazy" decoding="async">
         </p>
         <ul class="post-list">
             {% for post in site.posts %}

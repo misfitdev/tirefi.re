@@ -12,7 +12,7 @@ permalink: /byod/
 </div>
 
 <div class="content-section">
-    <img src="/classic/byod/byod.png" alt="Bring Your Own Device Strategy" />
+    <img src="/classic/byod/byod.png" alt="Bring Your Own Device Strategy" loading="lazy" decoding="async" />
 
     <p>... sure, you can wifi your phone from our network.</p>
 </div>

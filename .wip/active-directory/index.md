@@ -14,7 +14,7 @@ permalink: /active-directory/
 <div class="content-section">
     <p>NETBIOS will only allow for 15 characters, but AD will allow a lot more.</p>
 
-    <img src="/classic/active-directory/tirefir.png" alt="Don't forget to change your computer name" />
+    <img src="/classic/active-directory/tirefir.png" alt="Don't forget to change your computer name" loading="lazy" decoding="async" />
 </div>
 
 

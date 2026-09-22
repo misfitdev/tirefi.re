@@ -13,7 +13,7 @@ tags: [incidents, culture]
 </div>
 
 <div class="content-section">
-    <img src="/classic/opsroulette/opsroulette.png" alt="Ops Roulette" />
+    <img src="/classic/opsroulette/opsroulette.png" alt="Ops Roulette" loading="lazy" decoding="async" />
     <p><a href="https://www.commitstrip.com/en/2014/05/16/russian-roulette/">Source</a></p>
 </div>
 

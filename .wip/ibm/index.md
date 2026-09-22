@@ -12,7 +12,7 @@ permalink: /ibm/
 </div>
 
 <div class="content-section">
-    <img src="/classic/ibm/ibm_fire.jpg" alt="zLinux is going to be big this year" />
+    <img src="/classic/ibm/ibm_fire.jpg" alt="zLinux is going to be big this year" loading="lazy" decoding="async" />
 
     <p>In procurement they say "No one gets fired for buying IBM" but idk...</p>
 </div>

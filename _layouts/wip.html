@@ -51,7 +51,24 @@
             --success:      var(--ok);
 
             --font: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+
+            /* shared rhythm; see DESIGN.md Layout for the roles these map to */
+            --space-xs: 0.6rem;
+            --space-sm: 1rem;
+            --space-md: 1.25rem;
+            --space-lg: 1.75rem;
         }
+
+        /*
+         * === COMPONENT INDEX ===
+         * Canonical reusable patterns, documented in DESIGN.md / .impeccable/design.json:
+         *   .sev            severity meter (5-cell discrete bar)
+         *   .status-cell    header status-strip key/value pair
+         *   .filter-item a  topic row (shared 4-col grid with .col-head)
+         *   .readout        halted-clock big-number display
+         *   .memorial-card  bordered content card
+         * New WIP chrome added here needs a matching html.classic-mode override below.
+         */
 
         *, *::before, *::after {
             margin: 0;
@@ -103,7 +120,8 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 1.25rem;
+            padding-left: max(1.25rem, env(safe-area-inset-left));
+            padding-right: max(1.25rem, env(safe-area-inset-right));
         }
 
         /* === SKIP NAV === */
@@ -392,7 +410,7 @@
 
         /* === PAGE HEADER (individual pages) === */
         .page-header {
-            margin-bottom: 1.75rem;
+            margin-bottom: var(--space-lg);
             padding-bottom: 0.9rem;
             border-bottom: 1px solid var(--border-hi);
         }
@@ -507,7 +525,7 @@
         }
 
         .main-content-area p {
-            margin-bottom: 1rem;
+            margin-bottom: var(--space-sm);
         }
 
         .content-section a,
@@ -565,7 +583,7 @@
             border: 1px solid var(--border);
             padding: 0.9rem 1.1rem;
             overflow-x: auto;
-            margin-bottom: 1rem;
+            margin-bottom: var(--space-sm);
             font-size: 0.82rem;
             line-height: 1.55;
         }
@@ -693,7 +711,7 @@
         .memorial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1rem;
+            gap: var(--space-sm);
             margin: 1.5rem 0;
         }
 
@@ -891,7 +909,7 @@
         .readout {
             background: var(--surface);
             padding: 1.25rem 1.35rem;
-            margin: 0 0 1rem;
+            margin: 0 0 var(--space-sm);
             text-align: center;
         }
 
@@ -951,7 +969,7 @@
         }
 
         .filter-controls {
-            margin-bottom: 1rem;
+            margin-bottom: var(--space-sm);
         }
 
         .filter-input {
@@ -991,7 +1009,7 @@
         .filter-item a {
             display: grid;
             grid-template-columns: 3.5ch 20ch 6rem 1fr;
-            gap: 1.25rem;
+            gap: var(--space-md);
             align-items: center;
             padding: 0 0.6rem;
         }
@@ -1017,6 +1035,12 @@
             flex-direction: column;
             border: 1px solid var(--border);
             border-top: none;
+            animation: list-boot-in 0.25s cubic-bezier(0.22,1,0.36,1) both;
+        }
+
+        @keyframes list-boot-in {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .filter-item + .filter-item {
@@ -1028,11 +1052,13 @@
             text-decoration: none;
             font-size: 0.85rem;
             min-height: 44px;
-            transition: background 0.08s;
+            border-left: 2px solid transparent;
+            transition: background 0.08s, border-color 0.08s;
         }
 
         .filter-item a:hover {
             background: var(--surface-hi);
+            border-left-color: var(--accent);
         }
 
         .idx {
@@ -1092,6 +1118,15 @@
         .sev[data-sev="3"]::after { color: var(--accent); }
         .sev[data-sev="4"]::after,
         .sev[data-sev="5"]::after { color: var(--hot-deep); }
+
+        /* severity 5 rows carry the emphasis in the row itself, not just the meter cell */
+        .filter-item[data-sev="5"] a {
+            border-left-color: var(--hot-deep);
+        }
+
+        .filter-item[data-sev="5"] .item-name {
+            color: var(--hot);
+        }
 
         .filter-empty {
             color: var(--text-dim);
@@ -1159,9 +1194,9 @@
 
         @keyframes crt-glitch-h {
             0%,100% { transform: none; }
-            25%     { transform: translateX(-5px) skewX(-0.4deg); }
-            50%     { transform: translateX(4px); }
-            75%     { transform: translateX(-3px) skewX(0.2deg); }
+            25%     { transform: translateX(-2px) skewX(-0.2deg); }
+            50%     { transform: translateX(2px); }
+            75%     { transform: translateX(-1px) skewX(0.1deg); }
         }
         @keyframes crt-scan-sweep {
             from { top: -4px; }
@@ -1373,10 +1408,20 @@
         html.classic-mode .filter-item a {
             grid-template-columns: 18ch 1fr;
             gap: 1.5rem;
+            border-left: none;
+        }
+
+        html.classic-mode .filter-item[data-sev="5"] a {
+            border-left-color: transparent;
+        }
+
+        html.classic-mode .filter-item[data-sev="5"] .item-name {
+            color: inherit;
         }
 
         html.classic-mode .filter-list {
             border: none;
+            animation: none;
         }
 
         html.classic-mode .page-header {

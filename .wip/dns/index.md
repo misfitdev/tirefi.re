@@ -13,7 +13,7 @@ permalink: /dns/
 
 <div class="content-section">
     <a href="https://hipku.gabrielmartin.net/" target="_blank">
-        <img src="/classic/dns/dns_haiku.png" alt="DNS haiku generator" />
+        <img src="/classic/dns/dns_haiku.png" alt="DNS haiku generator" loading="lazy" decoding="async" />
     </a>
 
     <div class="quote-box">

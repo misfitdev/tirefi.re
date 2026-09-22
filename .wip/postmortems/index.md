@@ -13,7 +13,7 @@ tags: [incidents]
 </div>
 
 <div class="content-section">
-    <img src="/classic/postmortems/postmortems.jpg" alt="former tirefire" />
+    <img src="/classic/postmortems/postmortems.jpg" alt="former tirefire" loading="lazy" decoding="async" />
 
     <p>In this <del>postmortem</del>debriefing session<sup><a href="#fn1">1</a></sup>, only blameless accusations are acceptable.</p>
 

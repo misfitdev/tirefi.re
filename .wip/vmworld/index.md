@@ -12,7 +12,7 @@ permalink: /vmworld/
 </div>
 
 <div class="content-section">
-    <p><img src="/classic/vmworld/vmworld.gif" alt="let's be honest, everyone needs those enterprise monies to stay in business"></p>
+    <p><img src="/classic/vmworld/vmworld.gif" alt="let's be honest, everyone needs those enterprise monies to stay in business" loading="lazy" decoding="async"></p>
 
     <p>VMworld: gotta get those fluffing CEUs to keep the cert.</p>
 </div>

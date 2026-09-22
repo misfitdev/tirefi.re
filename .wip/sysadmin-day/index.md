@@ -14,7 +14,7 @@ permalink: /sysadmin-day/
 <div class="content-section">
     <h4>see also Pete Cheslock was right day.</h4>
 
-    <p><img src="/classic/sysadmin-day/sysadmin-day.png" alt="seriously, nobody cares"></p>
+    <p><img src="/classic/sysadmin-day/sysadmin-day.png" alt="seriously, nobody cares" loading="lazy" decoding="async"></p>
 
     <p>I am jack's cost center.</p>
 </div>

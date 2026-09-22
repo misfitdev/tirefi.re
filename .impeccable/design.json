@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-21T00:00:00Z",
+  "title": "Design System: tirefi.re — WIP",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Void", "canonical": "#12110f" },
+      "surface": { "role": "neutral", "displayName": "Panel", "canonical": "#191713" },
+      "surface-hi": { "role": "neutral", "displayName": "Panel Hi", "canonical": "#211e19" },
+      "border": { "role": "neutral", "displayName": "Line", "canonical": "#2e2a24" },
+      "border-hi": { "role": "neutral", "displayName": "Line Hi", "canonical": "#46403a" },
+      "text": { "role": "neutral", "displayName": "Ash", "canonical": "#e4ded4" },
+      "text-bright": { "role": "neutral", "displayName": "Ash Bright", "canonical": "#f5f1ea" },
+      "text-dim": { "role": "neutral", "displayName": "Ash Dim", "canonical": "#b0a696" },
+      "accent": { "role": "primary", "displayName": "Signal Amber", "canonical": "#ffa62b" },
+      "accent-dim": { "role": "primary", "displayName": "Signal Amber Dim", "canonical": "#c98420" },
+      "ok": { "role": "secondary", "displayName": "Status Green", "canonical": "#3fe06b" },
+      "hot": { "role": "secondary", "displayName": "Alert Coral", "canonical": "#ff7a5c" },
+      "hot-deep": { "role": "secondary", "displayName": "Deep Ember", "canonical": "#ff4d2e" }
+    },
+    "typographyMeta": {
+      "body": { "displayName": "Body", "purpose": "Default prose and UI text, including headings." },
+      "label": { "displayName": "Label", "purpose": "Status strip, column headers, breadcrumb — uppercase micro-labels." },
+      "readout": { "displayName": "Readout", "purpose": "Large tabular-numeral display on the halted-clock pages." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out-quint", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Filter-list transitions; replaced an overshoot/bounce easing that read as playful rather than mechanical." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "760px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Severity Meter",
+      "kind": "custom",
+      "refersTo": "sev",
+      "description": "5-cell discrete horizontal bar indicating topic severity 1-5, driven by a --n custom property.",
+      "html": "<span class=\"ds-sev\" style=\"--n:4\" role=\"img\" aria-label=\"Severity 4 of 5\"></span>",
+      "css": ".ds-sev { display: block; position: relative; height: 8px; width: 100%; } .ds-sev::before, .ds-sev::after { content: ''; position: absolute; inset: 0 auto 0 0; height: 100%; width: 100%; background-size: 20% 100%; background-image: linear-gradient(to right, currentColor 0 calc(100% - 3px), transparent calc(100% - 3px) 100%); } .ds-sev::before { color: #46403a; } .ds-sev::after { color: #ff4d2e; clip-path: inset(0 calc((5 - var(--n)) * 20%) 0 0); }"
+    },
+    {
+      "name": "Status Cell",
+      "kind": "custom",
+      "refersTo": "status-cell",
+      "description": "One key/value pair in the header status strip.",
+      "html": "<div class=\"ds-status-cell\"><span class=\"ds-status-key\">Status</span><span class=\"ds-status-val\">Burning</span></div>",
+      "css": ".ds-status-cell { padding: 0 0.75rem; border-left: 1px solid #2e2a24; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; } .ds-status-key { color: #b0a696; margin-right: 0.4em; } .ds-status-val { color: #e4ded4; } .ds-status-val.is-hot { color: #ff7a5c; } .ds-status-val.is-ok { color: #3fe06b; }"
+    },
+    {
+      "name": "Topic Row",
+      "kind": "custom",
+      "refersTo": "filter-item",
+      "description": "One row of the topic index: row index, name, severity meter, description in a shared 4-column grid.",
+      "html": "<a class=\"ds-topic-row\"><span class=\"ds-idx\">07</span><span class=\"ds-item-name\">active directory</span><span class=\"ds-sev\" style=\"--n:5\"></span><span class=\"ds-item-desc\">NetBIOS: 15 characters of permanent regret</span></a>",
+      "css": ".ds-topic-row { display: grid; grid-template-columns: 3.5ch 20ch 6rem 1fr; gap: 1.25rem; align-items: center; padding: 0.6rem; color: #e4ded4; text-decoration: none; border-bottom: 1px solid #2e2a24; } .ds-topic-row:hover, .ds-topic-row:focus-visible { background: #211e19; } .ds-idx { color: #b0a696; } .ds-item-name { color: #f5f1ea; } .ds-item-desc { color: #b0a696; }"
+    },
+    {
+      "name": "Readout",
+      "kind": "custom",
+      "refersTo": "readout",
+      "description": "Large centered tabular-numeral display used on halted-clock pages.",
+      "html": "<div class=\"ds-readout\"><div class=\"ds-readout-value\">1461</div><div class=\"ds-readout-unit\">days elapsed</div></div>",
+      "css": ".ds-readout { background: #191713; padding: 1.25rem 1.35rem; text-align: center; } .ds-readout-value { font-size: clamp(2.5rem, 12vw, 4.5rem); line-height: 1; font-weight: 700; color: #ff7a5c; font-variant-numeric: tabular-nums; } .ds-readout-unit { font-size: 0.85rem; color: #b0a696; text-transform: uppercase; letter-spacing: 0.08em; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "memorial-card",
+      "description": "Bordered content card used in the in-memoriam grid and similar listing pages.",
+      "html": "<div class=\"ds-card\"><h3>Name</h3><p>Role, dates</p></div>",
+      "css": ".ds-card { background: #191713; border: 1px solid #2e2a24; padding: 1rem 1.15rem; transition: background 0.1s; } .ds-card:hover { background: #211e19; } .ds-card h3 { color: #f5f1ea; font-size: 0.95rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Incident Console",
+    "overview": "A dead-serious operations dashboard rendering the trivial and the absurd as if it were a live production outage. Every recurring tech annoyance in the catalogue gets treated with the visual gravity of a real severity-tracked incident: status strips, severity meters, tabular readouts, monospace throughout. The joke is entirely in the gap between the instrumentation and the subject matter — the system itself must never wink at the reader.",
+    "keyCharacteristics": [
+      "Amber-on-charcoal, zero rounded corners, zero drop shadows",
+      "Tabular numerals and monospace everywhere, including prose",
+      "Column-grid tables with row indices and inline severity meters",
+      "Status strip / breadcrumb chrome that classic mode strips out entirely"
+    ],
+    "rules": [
+      { "name": "The 7:1 Rule", "body": "Every color used for text meets WCAG AAA (7:1 body / 4.5:1 large). --hot-deep (5.68:1) is reserved for bars and rules and must never carry text.", "section": "colors" },
+      { "name": "The 12px Floor Rule", "body": "No text renders below a 12px (0.75rem) equivalent, even for instrument-panel micro-labels.", "section": "typography" },
+      { "name": "The Margin Fire Rule", "body": "The animated fire background must stay in page margins (or become a contained masthead band on mobile) and never sit directly behind body text without a scrim.", "section": "layout" },
+      { "name": "The Flat Console Rule", "body": "No box-shadow or blur-based glow. Hierarchy is tonal-step + border only.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every text color at or above 7:1 (4.5:1 for large text) against its background.",
+      "Do drive severity, count, and status displays from real data (_data/topics.yml), never hand-authored duplicates.",
+      "Do keep corners square and surfaces flat.",
+      "Do use --hot-deep only for bars/rules, never for text."
+    ],
+    "donts": [
+      "Don't touch classic/**, the classic layouts, or classic CSS. Any new WIP chrome needs a matching html.classic-mode override.",
+      "Don't add box-shadow, drop-shadow glow, or bounce/overshoot easing.",
+      "Don't let the fire background sit directly behind readable text without a scrim/panel.",
+      "Don't add third-party embeds that render a visible broken/empty state when the network call fails."
+    ]
+  }
+}

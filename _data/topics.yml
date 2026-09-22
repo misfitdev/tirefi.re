@@ -57,12 +57,12 @@
   url: "/claude/"
   sev: 3
 - name: "codex"
-  desc: "Burns a week's usage on tests you didn't ask for. Your data died with excellent coverage."
+  desc: "847 tests passed. The users table did not."
   tags: "ai,llm,openai"
   url: "/codex/"
   sev: 3
 - name: "confluence"
-  desc: "The page exists. Search can't find it. Have you tried asking the owner who left in 2021?"
+  desc: "The page exists. Search can't find it. The owner left in 2021. Knowledge: managed."
   tags: "atlassian,saas,enterprise"
   url: "/confluence/"
   sev: 4

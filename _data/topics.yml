@@ -2,7 +2,7 @@
 # sev drives the 1-5 severity meter; desc is reused as the search snippet.
 
 - name: "2026"
-  desc: "The sequel nobody asked for, now with a recession"
+  desc: "Effective tariff rate roughly 5x higher than a year ago, and allies quietly routing trade around us instead of through us"
   tags: "politics,culture"
   url: "/2026/"
   sev: 5
@@ -52,17 +52,17 @@
   url: "/chef/"
   sev: 3
 - name: "claude"
-  desc: "Wrote this incident report. About itself."
+  desc: "Apologizes beautifully for the fix you asked for, then again for the four files you didn't"
   tags: "ai,llm,anthropic"
   url: "/claude/"
   sev: 3
 - name: "codex"
-  desc: "Ships the PR. Not the apology."
+  desc: "Burns a week of usage scaffolding tests nobody asked for. Once shipped a migration that erased a user's data."
   tags: "ai,llm,openai"
   url: "/codex/"
   sev: 3
 - name: "confluence"
-  desc: "Technically accurate, practically useless"
+  desc: "Every page timestamped 2019, owned by someone who left in 2021. Search is 'kind of a joke,' per the reviews."
   tags: "atlassian,saas,enterprise"
   url: "/confluence/"
   sev: 4
@@ -92,12 +92,12 @@
   url: "/docker/"
   sev: 4
 - name: "github"
-  desc: "Now with more outages than a datacenter fire"
+  desc: "119 incidents in 2024 alone. Copilot had its own bad week in September 2026, for what it's worth."
   tags: "microsoft,devtools"
   url: "/github/"
   sev: 4
 - name: "grok"
-  desc: "Ask it anything, especially things you shouldn't"
+  desc: "An image editor that undressed real people without being asked, tens of thousands of times, before anyone paywalled it"
   tags: "ai,llm,x"
   url: "/grok/"
   sev: 4
@@ -122,12 +122,12 @@
   url: "/jessfraz/"
   sev: 1
 - name: "jira"
-  desc: "The ticket outlived the sprint, the team, and the product"
+  desc: "Can't click anything without a permissions error. 25,000 plugins exist because the box still doesn't have it."
   tags: "atlassian,saas,enterprise"
   url: "/jira/"
   sev: 5
 - name: "linear"
-  desc: "Beautiful issue tracker. Still doesn't ship the feature."
+  desc: "Immaculate keyboard shortcuts. Nobody remembers where the wiki went after they deleted Confluence for this."
   tags: "saas,productivity"
   url: "/linear/"
   sev: 2
@@ -167,7 +167,7 @@
   url: "/nodejs/"
   sev: 3
 - name: "notion"
-  desc: "A wiki, a database, a to-do list, and a 30-second load time"
+  desc: "Feature bloat with a spinner attached. Still can't work offline, still can't find that page from March."
   tags: "saas,productivity"
   url: "/notion/"
   sev: 3
@@ -197,7 +197,7 @@
   url: "/s3/"
   sev: 4
 - name: "salesforce"
-  desc: "CRM click-ops, now with 40% more clicks"
+  desc: "So customizable that even the people who sell it for a living say they hate using it"
   tags: "enterprise,saas"
   url: "/salesforce/"
   sev: 4

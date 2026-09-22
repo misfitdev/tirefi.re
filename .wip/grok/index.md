@@ -10,7 +10,7 @@ permalink: /grok/
     <h1>Ask it anything, especially things you shouldn't</h1>
 </div>
 <div class="content-section">
-    <p>An AI chatbot with the safety rails of a go-kart and the confidence of a keynote speaker. Built by the same person who decided Twitter needed an edit button more than it needed content moderation.</p>
+    <p>xAI shipped an image editor that would alter photos of real people without their consent, at a scale researchers measured in the tens of thousands. California's Attorney General opened an investigation. So did UK regulator Ofcom. Congress sent letters. xAI's fix was to put image generation behind a paywall.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

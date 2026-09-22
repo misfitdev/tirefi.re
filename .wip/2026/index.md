@@ -10,7 +10,7 @@ permalink: /2026/
     <h1>The sequel nobody asked for</h1>
 </div>
 <div class="content-section">
-    <p>Same script, new administration, worse special effects. The economy is doing something between "correction" and "freefall," and nobody in charge has agreed which one yet.</p>
+    <p>The effective tariff rate is running roughly 5x higher than it was a year ago, and the pass-through to consumers is now over 50%. Allies aren't waiting around for it to sort itself out either — they're rerouting trade around the US instead of through it.</p>
     <pre><code>$ echo "this is fine" | tee -a /dev/economy
 $ tail -f /var/log/everything</code></pre>
 </div>

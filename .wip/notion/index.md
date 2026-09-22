@@ -10,7 +10,7 @@ permalink: /notion/
     <h1>A wiki, a database, a to-do list, and a 30-second load time</h1>
 </div>
 <div class="content-section">
-    <p>The company handbook, the roadmap, and the lunch order form all live in one workspace, and every one of them loads like it's on dial-up.</p>
+    <p>Feature bloat with a loading spinner attached. Reviewers who used to call it charming now call it "complicated and slow." Still can't work offline, still can't reliably find the page you wrote three months ago.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

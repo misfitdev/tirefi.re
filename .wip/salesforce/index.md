@@ -10,7 +10,7 @@ permalink: /salesforce/
     <h1>CRM click-ops, now with 40% more clicks</h1>
 </div>
 <div class="content-section">
-    <p>A platform so customizable that no two implementations work the same way, including the two you built yourself six months apart.</p>
+    <p>Powerful enough to run a Fortune 500 sales org, and disliked by nearly everyone who has to click through it to do their job. Even people who sell it for a living have said, on the record, that the UI is bad and they'd rather use something else.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

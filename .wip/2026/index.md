@@ -10,7 +10,7 @@ permalink: /2026/
     <h1>The sequel nobody asked for</h1>
 </div>
 <div class="content-section">
-    <p>Effective tariff rate: up 5x. Half lands on consumers. Allies are routing around us.</p>
+    <p>Tariffs up 5x. Half lands on consumers. Making America pay again.</p>
     <pre><code>$ echo "this is fine" | tee -a /dev/economy
 $ tail -f /var/log/everything</code></pre>
 </div>

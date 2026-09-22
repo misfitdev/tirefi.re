@@ -2,7 +2,7 @@
 # sev drives the 1-5 severity meter; desc is reused as the search snippet.
 
 - name: "2026"
-  desc: "Effective tariff rate up 5x. Allies are routing around us."
+  desc: "Tariffs up 5x. Making America pay again."
   tags: "politics,culture"
   url: "/2026/"
   sev: 5

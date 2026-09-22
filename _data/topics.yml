@@ -1,6 +1,11 @@
 # Topic table for the WIP index and the site search overlay.
 # sev drives the 1-5 severity meter; desc is reused as the search snippet.
 
+- name: "2026"
+  desc: "The sequel nobody asked for, now with a recession"
+  tags: "politics,culture"
+  url: "/2026/"
+  sev: 5
 - name: "active directory"
   desc: "NetBIOS: 15 characters of permanent regret"
   tags: "enterprise,windows,microsoft"
@@ -46,6 +51,21 @@
   tags: "config-mgmt,configmanagement,ruby"
   url: "/chef/"
   sev: 3
+- name: "claude"
+  desc: "Wrote this incident report. About itself."
+  tags: "ai,llm,anthropic"
+  url: "/claude/"
+  sev: 3
+- name: "codex"
+  desc: "Ships the PR. Not the apology."
+  tags: "ai,llm,openai"
+  url: "/codex/"
+  sev: 3
+- name: "confluence"
+  desc: "Technically accurate, practically useless"
+  tags: "atlassian,saas,enterprise"
+  url: "/confluence/"
+  sev: 4
 - name: "copyleft"
   desc: "Free as in please consult legal before shipping"
   tags: "culture,licensing"
@@ -71,6 +91,16 @@
   tags: "containers,infra"
   url: "/docker/"
   sev: 4
+- name: "github"
+  desc: "Now with more outages than a datacenter fire"
+  tags: "microsoft,devtools"
+  url: "/github/"
+  sev: 4
+- name: "grok"
+  desc: "Ask it anything, especially things you shouldn't"
+  tags: "ai,llm,x"
+  url: "/grok/"
+  sev: 4
 - name: "ibm"
   desc: "Pivoting since 1993, still winning government contracts"
   tags: "enterprise"
@@ -91,6 +121,16 @@
   tags: "containers,culture"
   url: "/jessfraz/"
   sev: 1
+- name: "jira"
+  desc: "The ticket outlived the sprint, the team, and the product"
+  tags: "atlassian,saas,enterprise"
+  url: "/jira/"
+  sev: 5
+- name: "linear"
+  desc: "Beautiful issue tracker. Still doesn't ship the feature."
+  tags: "saas,productivity"
+  url: "/linear/"
+  sev: 2
 - name: "logrotate"
   desc: "Just makes more smoke for you to grep"
   tags: "linux,observability"
@@ -126,6 +166,11 @@
   tags: "culture"
   url: "/nodejs/"
   sev: 3
+- name: "notion"
+  desc: "A wiki, a database, a to-do list, and a 30-second load time"
+  tags: "saas,productivity"
+  url: "/notion/"
+  sev: 3
 - name: "openjdk"
   desc: "It's all equal. Right?"
   tags: "enterprise"
@@ -150,6 +195,11 @@
   desc: "Simple storage service. Simply not working."
   tags: "cloud,amazon,storage"
   url: "/s3/"
+  sev: 4
+- name: "salesforce"
+  desc: "CRM click-ops, now with 40% more clicks"
+  tags: "enterprise,saas"
+  url: "/salesforce/"
   sev: 4
 - name: "serverless"
   desc: "No servers. Just someone else's servers."

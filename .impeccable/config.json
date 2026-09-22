@@ -119,6 +119,141 @@
         ],
         "createdAt": "2026-09-21T17:18:19.752Z",
         "reason": "html.classic-mode override intentionally restores Classic's own memorial-flame size; DESIGN.md documents WIP tokens only"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.590Z",
+        "reason": "legacy-marquee is a deliberate parody of old-web auto-scroll banners, opt-in via ?mode=legacy only"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "times new roman",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.603Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "comic sans ms",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.616Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(255, 45, 30, 0.12)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.629Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(18, 6, 4, 0.92)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.641Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(60, 8, 4, 0.92)",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.654Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#ff0000",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.667Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#000080",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.680Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#0000ee",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.693Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#551a8b",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.706Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#ffff00",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.719Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#eeeeee",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.732Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#c0c0c0",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.750Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#808080",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.767Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#0f0",
+        "files": [
+          "_layouts/wip.html"
+        ],
+        "createdAt": "2026-09-22T02:21:22.780Z",
+        "reason": "prank mode (?mode=...) is an intentional, opt-in, off-palette parody skin -- not part of the main WIP design system DESIGN.md documents"
       }
     ]
   }

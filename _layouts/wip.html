@@ -1534,17 +1534,358 @@
             font-size: 0.75rem;
             min-height: unset;
         }
+
+        /*
+         * === PRANK MODES ===
+         * Shareable via ?mode=<name> on any WIP page. Never persisted (no
+         * localStorage/cookie) -- the link IS the toggle. See MODES in the
+         * inline <head> script for the whitelist. WIP-only: the boot script
+         * skips these entirely when classic-mode is active.
+         */
+
+        /* --- war-room: everything is on fire, louder --- */
+        html.mode-war-room {
+            --bg:          #170a08;
+            --surface:     #241009;
+            --surface-hi:  #331309;
+            --border:      #4d1a0f;
+            --accent:      #ff6a3d;
+            --hot:         #ff2d1e;
+            --hot-deep:    #ff2d1e;
+        }
+
+        html.mode-war-room .status-strip { animation: war-room-pulse 1.1s ease-in-out infinite; }
+
+        @keyframes war-room-pulse {
+            0%, 100% { background: transparent; }
+            50%      { background: rgba(255, 45, 30, 0.12); }
+        }
+
+        /* --- cab: change advisory board gate --- */
+        html.mode-cab .cab-overlay:not([hidden]) {
+            position: fixed;
+            inset: 0;
+            z-index: 900;
+            background: rgba(6, 5, 4, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+        }
+
+        .cab-modal {
+            max-width: 460px;
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border-hi);
+            padding: 1.35rem;
+        }
+
+        .cab-modal h2 {
+            font-size: 1rem;
+            color: var(--text-bright);
+            margin-bottom: 0.6rem;
+        }
+
+        .cab-modal p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .cab-field {
+            margin-bottom: 0.85rem;
+        }
+
+        .cab-field label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.3rem;
+        }
+
+        .cab-field select,
+        .cab-field input {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 0.85rem;
+            padding: 0.5rem 0.6rem;
+        }
+
+        .cab-actions {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1.1rem;
+        }
+
+        .cab-actions button {
+            flex: 1;
+            font-family: var(--font);
+            font-size: 0.8rem;
+            padding: 0.6rem;
+            border: 1px solid var(--border-hi);
+            background: var(--surface-hi);
+            color: var(--text);
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .cab-actions button:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+
+        .cab-actions button.cab-submit {
+            background: var(--accent);
+            color: var(--bg);
+            border-color: var(--accent);
+            font-weight: 700;
+        }
+
+        .cab-status {
+            margin-top: 0.85rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            min-height: 1.2em;
+        }
+
+        /* --- incident: full-screen stall before every link --- */
+        html.mode-incident .incident-overlay:not([hidden]) {
+            position: fixed;
+            inset: 0;
+            z-index: 900;
+            background: rgba(18, 6, 4, 0.92);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            animation: incident-flash 0.5s steps(2, jump-none) infinite;
+        }
+
+        @keyframes incident-flash {
+            50% { background: rgba(60, 8, 4, 0.92); }
+        }
+
+        .incident-overlay .incident-label {
+            font-size: 0.95rem;
+            color: var(--hot);
+            letter-spacing: 0.08em;
+        }
+
+        .incident-overlay .incident-sub {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        /* --- chaos: routed-through banner + periodic glitch --- */
+        html.mode-chaos .chaos-banner:not([hidden]) {
+            background: var(--hot-deep);
+            color: var(--bg);
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0.4rem;
+        }
+
+        .chaos-glitch-target {
+            outline: 3px solid var(--hot-deep);
+            filter: grayscale(1) contrast(1.4);
+        }
+
+        /* --- legacy: parody of the pre-instrument-panel web --- */
+        html.mode-legacy {
+            color-scheme: light;
+            --bg:          #d6d3ce;
+            --surface:     #ffffff;
+            --surface-hi:  #ffffcc;
+            --border:      #808080;
+            --border-hi:   #000000;
+            --text:        #000000;
+            --text-bright: #000000;
+            --text-dim:    #444444;
+            --accent:      #0000ee;
+            --hot:         #ff0000;
+        }
+
+        html.mode-legacy body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        html.mode-legacy .site-header,
+        html.mode-legacy #wip-footer {
+            background: var(--surface);
+            border-color: var(--border-hi);
+        }
+
+        html.mode-legacy .site-title,
+        html.mode-legacy .page-header h1,
+        html.mode-legacy .index-header h1 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            color: #ff0000;
+            text-shadow: 2px 2px 0 #000080;
+        }
+
+        html.mode-legacy .content-section a,
+        html.mode-legacy .main-content-area a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+
+        html.mode-legacy .content-section a:visited,
+        html.mode-legacy .main-content-area a:visited {
+            color: #551a8b;
+        }
+
+        html.mode-legacy .filter-item a:hover,
+        html.mode-legacy .content-section a:hover {
+            background: #ffff00;
+        }
+
+        html.mode-legacy #fire-bg,
+        html.mode-legacy #crt,
+        html.mode-legacy .status-strip,
+        html.mode-legacy .col-head,
+        html.mode-legacy .idx,
+        html.mode-legacy .sev {
+            display: none;
+        }
+
+        html.mode-legacy .filter-item a {
+            grid-template-columns: 18ch 1fr;
+            gap: 1.5rem;
+        }
+
+        html.mode-legacy .item-name {
+            font-weight: bold;
+        }
+
+        html.mode-legacy .main-content > .container.console {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        html.mode-legacy .filter-item:nth-child(even) a {
+            background: #eeeeee;
+        }
+
+        html.mode-legacy .legacy-marquee:not([hidden]) {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #000080;
+            color: #ffff00;
+            font-family: "Comic Sans MS", cursive;
+            font-size: 0.85rem;
+            padding: 0.3rem 0;
+            border-bottom: 3px ridge #c0c0c0;
+        }
+
+        html.mode-legacy .legacy-marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: legacy-scroll 14s linear infinite;
+        }
+
+        @keyframes legacy-scroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-100%); }
+        }
+
+        html.mode-legacy .legacy-counter:not([hidden]) {
+            display: block;
+            text-align: center;
+            font-family: "Courier New", monospace;
+            font-size: 0.8rem;
+            color: #000;
+            background: #fff;
+            border: 2px inset #808080;
+            padding: 0.3rem;
+            margin: 0.75rem auto;
+            max-width: 220px;
+        }
+
+        html.mode-legacy .legacy-counter b {
+            background: #000;
+            color: #0f0;
+            padding: 0 0.2rem;
+            font-weight: normal;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html.mode-war-room .status-strip,
+            html.mode-incident .incident-overlay,
+            html.mode-legacy .legacy-marquee span {
+                animation: none !important;
+            }
+        }
     </style>
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" id="classicCSS" media="not all">
     <script>
         if (localStorage.getItem('classicMode') === 'true') {
             document.documentElement.classList.add('classic-mode');
             document.getElementById('classicCSS').media = 'all';
+        } else {
+            /* prank modes: shareable via ?mode=<name>, WIP-only, never persisted */
+            var MODES = ['cab', 'incident', 'chaos', 'war-room', 'legacy'];
+            var m = new URLSearchParams(location.search).get('mode');
+            if (m && MODES.indexOf(m) !== -1) {
+                document.documentElement.classList.add('mode-' + m);
+            }
         }
     </script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <div class="cab-overlay" id="cabOverlay" hidden>
+        <div class="cab-modal" role="dialog" aria-modal="true" aria-labelledby="cabTitle">
+            <h2 id="cabTitle">Change Advisory Board Request</h2>
+            <p>Navigation to another page is a production change. Complete the request to proceed.</p>
+            <div class="cab-field">
+                <label for="cabRisk">Risk level</label>
+                <select id="cabRisk">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option selected>High</option>
+                    <option>Catastrophic</option>
+                </select>
+            </div>
+            <div class="cab-field">
+                <label for="cabPlan">Rollback plan</label>
+                <input id="cabPlan" type="text" placeholder="e.g. pray">
+            </div>
+            <div class="cab-field">
+                <label for="cabApprover">Approver</label>
+                <input id="cabApprover" type="text" placeholder="your manager's manager">
+            </div>
+            <div class="cab-actions">
+                <button type="button" class="cab-cancel" id="cabCancel">Cancel</button>
+                <button type="button" class="cab-submit" id="cabSubmit">Submit Change Request</button>
+            </div>
+            <p class="cab-status" id="cabStatus"></p>
+        </div>
+    </div>
+
+    <div class="incident-overlay" id="incidentOverlay" hidden>
+        <span class="incident-label">RETICULATING SPLINES</span>
+        <span class="incident-sub">this is fine (click to skip &middot; esc to abort)</span>
+    </div>
+
+    <div class="chaos-banner" id="chaosBanner" hidden>this request was routed through us-tirefire-1</div>
+
+    <div class="legacy-marquee" id="legacyMarquee" hidden><span>Welcome to tirefi.re! Best viewed in Netscape Navigator at 800x600. This site is Y2K compliant.</span></div>
+    <div class="legacy-counter" id="legacyCounter" hidden>You are visitor number <b id="legacyCounterVal">000001</b></div>
 
     <div id="classic-header">
         {% include header.html %}
@@ -1836,6 +2177,214 @@
             setTimeout(glitch, 22000 + Math.random() * 38000);
         }
         setTimeout(glitch, 8000 + Math.random() * 12000);
+    })();
+    </script>
+    <script>
+    /* === PRANK MODES ===
+       Behavior for ?mode=<name>. Each mode only wires up if the matching
+       html.mode-<name> class was set by the boot script in <head>. */
+    (function() {
+        var html = document.documentElement;
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var MODES = ['cab', 'incident', 'chaos', 'war-room', 'legacy'];
+        var activeMode = MODES.filter(function(m) { return html.classList.contains('mode-' + m); })[0];
+
+        /* carry the mode forward on every same-page navigation -- otherwise
+           it only ever affects the one page the link was shared for */
+        if (activeMode) {
+            Array.prototype.slice.call(document.querySelectorAll('a[href]')).forEach(function(a) {
+                var href = a.getAttribute('href');
+                if (!href || href.charAt(0) === '#') return;
+                if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(href) && a.host !== location.host) return;
+                if (/^(mailto|tel):/i.test(href)) return;
+                var url = new URL(a.href, location.href);
+                if (url.searchParams.has('mode')) return;
+                url.searchParams.set('mode', activeMode);
+                a.href = url.pathname + url.search + url.hash;
+            });
+        }
+
+        function contentLinks() {
+            return Array.prototype.slice.call(
+                document.querySelectorAll('.main-content a[href], .content-section a[href], .filter-item a[href]')
+            );
+        }
+
+        /* --- cab: gate every content link behind a fake change ticket --- */
+        if (html.classList.contains('mode-cab')) {
+            var overlay  = document.getElementById('cabOverlay');
+            var status   = document.getElementById('cabStatus');
+            var cancel   = document.getElementById('cabCancel');
+            var submit   = document.getElementById('cabSubmit');
+            var risk     = document.getElementById('cabRisk');
+            var pending  = null;
+            var lastFocused = null;
+            var timers   = [];
+
+            function clearTimers() {
+                timers.forEach(clearTimeout);
+                timers = [];
+            }
+
+            function closeCab() {
+                clearTimers();
+                overlay.hidden = true;
+                pending = null;
+                status.textContent = '';
+                cancel.disabled = false;
+                submit.disabled = false;
+                submit.textContent = 'Submit Change Request';
+                if (lastFocused) lastFocused.focus();
+            }
+
+            function focusables() {
+                return Array.prototype.slice.call(
+                    overlay.querySelectorAll('select, input, button:not(:disabled)')
+                );
+            }
+
+            contentLinks().forEach(function(a) {
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    pending = a.href;
+                    status.textContent = '';
+                    lastFocused = document.activeElement;
+                    overlay.hidden = false;
+                    risk.focus();
+                });
+            });
+
+            /* click the backdrop (not the modal itself) to back out, same as search */
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeCab();
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (overlay.hidden) return;
+                if (e.key === 'Escape') { closeCab(); return; }
+                if (e.key !== 'Tab') return;
+                var items = focusables();
+                if (!items.length) return;
+                var first = items[0], last = items[items.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault(); last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault(); first.focus();
+                }
+            });
+
+            cancel.addEventListener('click', closeCab);
+
+            submit.addEventListener('click', function() {
+                if (!pending) return;
+                var dest = pending;
+                clearTimers();
+                cancel.disabled = true;
+                submit.disabled = true;
+                submit.textContent = 'Submitting...';
+                status.textContent = 'Submitting to the board...';
+                timers.push(setTimeout(function() {
+                    status.textContent = 'Escalating -- board is in a meeting about this meeting...';
+                    timers.push(setTimeout(function() {
+                        status.textContent = 'Approved. Proceeding.';
+                        timers.push(setTimeout(function() { location.href = dest; }, 500));
+                    }, 1200));
+                }, 900));
+            });
+        }
+
+        /* --- incident: stall every content-link navigation behind a fake outage,
+               but never trap the visitor -- click to skip, Escape to abort --- */
+        if (html.classList.contains('mode-incident')) {
+            var iOverlay = document.getElementById('incidentOverlay');
+            var iTimer   = null;
+            var iDest    = null;
+
+            function goNow() {
+                if (iTimer) clearTimeout(iTimer);
+                if (iDest) location.href = iDest;
+            }
+
+            function abortIncident() {
+                if (iTimer) clearTimeout(iTimer);
+                iOverlay.hidden = true;
+                iDest = null;
+            }
+
+            contentLinks().forEach(function(a) {
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    iDest = a.href;
+                    iOverlay.hidden = false;
+                    iTimer = setTimeout(goNow, 2600);
+                });
+            });
+
+            iOverlay.addEventListener('click', goNow);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !iOverlay.hidden) abortIncident();
+            });
+        }
+
+        /* --- chaos: routed-through banner + periodic cosmetic glitch on whatever
+               is actually visible -- most pages have no <img>, so fall back to a
+               table row or content block rather than glitching something hidden --- */
+        if (html.classList.contains('mode-chaos')) {
+            document.getElementById('chaosBanner').hidden = false;
+
+            function visible(el) {
+                return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+            }
+
+            if (!reduceMotion) {
+                (function glitchSomething() {
+                    var pool = Array.prototype.slice.call(
+                        document.querySelectorAll('.main-content img, .filter-item, .content-section, .memorial-card')
+                    ).filter(visible);
+                    if (pool.length) {
+                        var target = pool[Math.floor(Math.random() * pool.length)];
+                        target.classList.add('chaos-glitch-target');
+                        setTimeout(function() { target.classList.remove('chaos-glitch-target'); }, 550);
+                    }
+                    setTimeout(glitchSomething, 4000 + Math.random() * 3000);
+                })();
+            }
+        }
+
+        /* --- war-room: incidents counter climbs, status escalates --- */
+        if (html.classList.contains('mode-war-room')) {
+            var incidentsEl = document.querySelector('.status-cell .status-key');
+            var cells = Array.prototype.slice.call(document.querySelectorAll('.status-cell'));
+            var incidentsCell = cells.filter(function(c) {
+                return c.querySelector('.status-key') && c.querySelector('.status-key').textContent === 'Incidents';
+            })[0];
+            var statusCell = cells.filter(function(c) {
+                return c.querySelector('.status-key') && c.querySelector('.status-key').textContent === 'Status';
+            })[0];
+            if (statusCell) {
+                var statusVal = statusCell.querySelector('.status-val');
+                if (statusVal) statusVal.textContent = 'Nuclear';
+            }
+            if (incidentsCell && !reduceMotion) {
+                var val = incidentsCell.querySelector('.status-val');
+                var n = 1;
+                setInterval(function() {
+                    n += Math.floor(Math.random() * 3) + 1;
+                    if (val) val.textContent = n;
+                }, 1400);
+            }
+        }
+
+        /* --- legacy: reveal the parody chrome, run the visitor counter --- */
+        if (html.classList.contains('mode-legacy')) {
+            document.getElementById('legacyMarquee').hidden = false;
+            document.getElementById('legacyCounter').hidden = false;
+            var counterVal = document.getElementById('legacyCounterVal');
+            if (counterVal) {
+                var n = 41000 + Math.floor(Math.random() * 900);
+                counterVal.textContent = String(n).padStart(6, '0');
+            }
+        }
     })();
     </script>
 </body>

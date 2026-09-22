@@ -52,7 +52,7 @@
   url: "/chef/"
   sev: 3
 - name: "claude"
-  desc: "Done: Add to Cart is blue. I updated the load-bearing color token — along with four load-bearing consumers — and spawned three agents to verify that I'd preserved your intent."
+  desc: "Make the add-to-cart button blue. Done: I updated the load-bearing color token — along with four load-bearing consumers — and spawned three agents."
   tags: "ai,llm,anthropic"
   url: "/claude/"
   sev: 3

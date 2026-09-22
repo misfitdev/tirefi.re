@@ -1562,7 +1562,7 @@
         }
 
         /* --- cab: change advisory board gate --- */
-        html.mode-cab .cab-overlay {
+        html.mode-cab .cab-overlay:not([hidden]) {
             position: fixed;
             inset: 0;
             z-index: 900;
@@ -1636,6 +1636,11 @@
             min-height: 44px;
         }
 
+        .cab-actions button:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+
         .cab-actions button.cab-submit {
             background: var(--accent);
             color: var(--bg);
@@ -1651,7 +1656,7 @@
         }
 
         /* --- incident: full-screen stall before every link --- */
-        html.mode-incident .incident-overlay {
+        html.mode-incident .incident-overlay:not([hidden]) {
             position: fixed;
             inset: 0;
             z-index: 900;
@@ -1662,6 +1667,7 @@
             justify-content: center;
             gap: 0.75rem;
             text-align: center;
+            cursor: pointer;
             animation: incident-flash 0.5s steps(2, jump-none) infinite;
         }
 
@@ -1681,7 +1687,7 @@
         }
 
         /* --- chaos: routed-through banner + periodic glitch --- */
-        html.mode-chaos .chaos-banner {
+        html.mode-chaos .chaos-banner:not([hidden]) {
             background: var(--hot-deep);
             color: var(--bg);
             font-size: 0.75rem;
@@ -1773,7 +1779,7 @@
             background: #eeeeee;
         }
 
-        html.mode-legacy .legacy-marquee {
+        html.mode-legacy .legacy-marquee:not([hidden]) {
             display: block;
             overflow: hidden;
             white-space: nowrap;
@@ -1796,7 +1802,7 @@
             to   { transform: translateX(-100%); }
         }
 
-        html.mode-legacy .legacy-counter {
+        html.mode-legacy .legacy-counter:not([hidden]) {
             display: block;
             text-align: center;
             font-family: "Courier New", monospace;
@@ -1873,7 +1879,7 @@
 
     <div class="incident-overlay" id="incidentOverlay" hidden>
         <span class="incident-label">RETICULATING SPLINES</span>
-        <span class="incident-sub">this is fine</span>
+        <span class="incident-sub">this is fine (click to skip &middot; esc to abort)</span>
     </div>
 
     <div class="chaos-banner" id="chaosBanner" hidden>this request was routed through us-tirefire-1</div>
@@ -2189,9 +2195,20 @@
 
         /* --- cab: gate every content link behind a fake change ticket --- */
         if (html.classList.contains('mode-cab')) {
-            var overlay = document.getElementById('cabOverlay');
-            var status  = document.getElementById('cabStatus');
-            var pending = null;
+            var overlay  = document.getElementById('cabOverlay');
+            var status   = document.getElementById('cabStatus');
+            var cancel   = document.getElementById('cabCancel');
+            var submit   = document.getElementById('cabSubmit');
+            var pending  = null;
+
+            function closeCab() {
+                overlay.hidden = true;
+                pending = null;
+                status.textContent = '';
+                cancel.disabled = false;
+                submit.disabled = false;
+                submit.textContent = 'Submit Change Request';
+            }
 
             contentLinks().forEach(function(a) {
                 a.addEventListener('click', function(e) {
@@ -2202,49 +2219,87 @@
                 });
             });
 
-            document.getElementById('cabCancel').addEventListener('click', function() {
-                overlay.hidden = true;
-                pending = null;
+            /* click the backdrop (not the modal itself) to back out, same as search */
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeCab();
             });
 
-            document.getElementById('cabSubmit').addEventListener('click', function() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !overlay.hidden) closeCab();
+            });
+
+            cancel.addEventListener('click', closeCab);
+
+            submit.addEventListener('click', function() {
                 if (!pending) return;
+                cancel.disabled = true;
+                submit.disabled = true;
+                submit.textContent = 'Submitting...';
                 status.textContent = 'Submitting to the board...';
                 setTimeout(function() {
                     status.textContent = 'Escalating -- board is in a meeting about this meeting...';
                     setTimeout(function() {
                         status.textContent = 'Approved. Proceeding.';
                         setTimeout(function() { location.href = pending; }, 500);
-                    }, 1400);
-                }, 1200);
+                    }, 1200);
+                }, 900);
             });
         }
 
-        /* --- incident: stall every content-link navigation behind a fake outage --- */
+        /* --- incident: stall every content-link navigation behind a fake outage,
+               but never trap the visitor -- click to skip, Escape to abort --- */
         if (html.classList.contains('mode-incident')) {
             var iOverlay = document.getElementById('incidentOverlay');
+            var iTimer   = null;
+            var iDest    = null;
+
+            function goNow() {
+                if (iTimer) clearTimeout(iTimer);
+                if (iDest) location.href = iDest;
+            }
+
+            function abortIncident() {
+                if (iTimer) clearTimeout(iTimer);
+                iOverlay.hidden = true;
+                iDest = null;
+            }
+
             contentLinks().forEach(function(a) {
                 a.addEventListener('click', function(e) {
                     e.preventDefault();
-                    var dest = a.href;
+                    iDest = a.href;
                     iOverlay.hidden = false;
-                    setTimeout(function() { location.href = dest; }, 2600);
+                    iTimer = setTimeout(goNow, 2600);
                 });
+            });
+
+            iOverlay.addEventListener('click', goNow);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !iOverlay.hidden) abortIncident();
             });
         }
 
-        /* --- chaos: routed-through banner + periodic cosmetic image glitch --- */
+        /* --- chaos: routed-through banner + periodic cosmetic glitch on whatever
+               is actually visible -- most pages have no <img>, so fall back to a
+               table row or content block rather than glitching something hidden --- */
         if (html.classList.contains('mode-chaos')) {
             document.getElementById('chaosBanner').hidden = false;
+
+            function visible(el) {
+                return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+            }
+
             if (!reduceMotion) {
-                (function glitchImage() {
-                    var imgs = Array.prototype.slice.call(document.querySelectorAll('.main-content img'));
-                    if (imgs.length) {
-                        var target = imgs[Math.floor(Math.random() * imgs.length)];
+                (function glitchSomething() {
+                    var pool = Array.prototype.slice.call(
+                        document.querySelectorAll('.main-content img, .filter-item, .content-section, .memorial-card')
+                    ).filter(visible);
+                    if (pool.length) {
+                        var target = pool[Math.floor(Math.random() * pool.length)];
                         target.classList.add('chaos-glitch-target');
                         setTimeout(function() { target.classList.remove('chaos-glitch-target'); }, 550);
                     }
-                    setTimeout(glitchImage, 5000 + Math.random() * 4000);
+                    setTimeout(glitchSomething, 4000 + Math.random() * 3000);
                 })();
             }
         }

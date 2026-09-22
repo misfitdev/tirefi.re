@@ -10,6 +10,8 @@ permalink: /jira/
     <h1>The ticket outlived the sprint, the team, and the product</h1>
 </div>
 <div class="content-section">
+    <img src="/classic/jira/jira.png" alt="An impossibly tangled Jira workflow connects dozens of statuses, reviews, permissions, plugins, and external systems." class="hero-image">
+
     <p>25,000 plugins. Still can't click anything. Please file a ticket.</p>
 </div>
 <div class="navigation-footer">

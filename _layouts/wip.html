@@ -2186,6 +2186,23 @@
     (function() {
         var html = document.documentElement;
         var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var MODES = ['cab', 'incident', 'chaos', 'war-room', 'legacy'];
+        var activeMode = MODES.filter(function(m) { return html.classList.contains('mode-' + m); })[0];
+
+        /* carry the mode forward on every same-page navigation -- otherwise
+           it only ever affects the one page the link was shared for */
+        if (activeMode) {
+            Array.prototype.slice.call(document.querySelectorAll('a[href]')).forEach(function(a) {
+                var href = a.getAttribute('href');
+                if (!href || href.charAt(0) === '#') return;
+                if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(href) && a.host !== location.host) return;
+                if (/^(mailto|tel):/i.test(href)) return;
+                if (a.href.indexOf('mode=') !== -1) return;
+                var url = new URL(a.href, location.href);
+                url.searchParams.set('mode', activeMode);
+                a.href = url.pathname + url.search + url.hash;
+            });
+        }
 
         function contentLinks() {
             return Array.prototype.slice.call(
@@ -2199,15 +2216,31 @@
             var status   = document.getElementById('cabStatus');
             var cancel   = document.getElementById('cabCancel');
             var submit   = document.getElementById('cabSubmit');
+            var risk     = document.getElementById('cabRisk');
             var pending  = null;
+            var lastFocused = null;
+            var timers   = [];
+
+            function clearTimers() {
+                timers.forEach(clearTimeout);
+                timers = [];
+            }
 
             function closeCab() {
+                clearTimers();
                 overlay.hidden = true;
                 pending = null;
                 status.textContent = '';
                 cancel.disabled = false;
                 submit.disabled = false;
                 submit.textContent = 'Submit Change Request';
+                if (lastFocused) lastFocused.focus();
+            }
+
+            function focusables() {
+                return Array.prototype.slice.call(
+                    overlay.querySelectorAll('select, input, button:not(:disabled)')
+                );
             }
 
             contentLinks().forEach(function(a) {
@@ -2215,7 +2248,9 @@
                     e.preventDefault();
                     pending = a.href;
                     status.textContent = '';
+                    lastFocused = document.activeElement;
                     overlay.hidden = false;
+                    risk.focus();
                 });
             });
 
@@ -2225,24 +2260,36 @@
             });
 
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && !overlay.hidden) closeCab();
+                if (overlay.hidden) return;
+                if (e.key === 'Escape') { closeCab(); return; }
+                if (e.key !== 'Tab') return;
+                var items = focusables();
+                if (!items.length) return;
+                var first = items[0], last = items[items.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault(); last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault(); first.focus();
+                }
             });
 
             cancel.addEventListener('click', closeCab);
 
             submit.addEventListener('click', function() {
                 if (!pending) return;
+                var dest = pending;
+                clearTimers();
                 cancel.disabled = true;
                 submit.disabled = true;
                 submit.textContent = 'Submitting...';
                 status.textContent = 'Submitting to the board...';
-                setTimeout(function() {
+                timers.push(setTimeout(function() {
                     status.textContent = 'Escalating -- board is in a meeting about this meeting...';
-                    setTimeout(function() {
+                    timers.push(setTimeout(function() {
                         status.textContent = 'Approved. Proceeding.';
-                        setTimeout(function() { location.href = pending; }, 500);
-                    }, 1200);
-                }, 900);
+                        timers.push(setTimeout(function() { location.href = dest; }, 500));
+                    }, 1200));
+                }, 900));
             });
         }
 

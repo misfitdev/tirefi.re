@@ -52,17 +52,17 @@
   url: "/chef/"
   sev: 3
 - name: "claude"
-  desc: "Fix one function. Get four changed files and an apology."
+  desc: "Fix one function. Get four changed files and an apology longer than the diff."
   tags: "ai,llm,anthropic"
   url: "/claude/"
   sev: 3
 - name: "codex"
-  desc: "Burns a week's usage on tests you didn't ask for. Also, your data is gone."
+  desc: "Burns a week's usage on tests you didn't ask for. Your data died with excellent coverage."
   tags: "ai,llm,openai"
   url: "/codex/"
   sev: 3
 - name: "confluence"
-  desc: "The page exists. Search can't find it. The owner left in 2021."
+  desc: "The page exists. Search can't find it. Have you tried asking the owner who left in 2021?"
   tags: "atlassian,saas,enterprise"
   url: "/confluence/"
   sev: 4
@@ -92,12 +92,12 @@
   url: "/docker/"
   sev: 4
 - name: "github"
-  desc: "119 incidents in 2024. Still down during your deploy."
+  desc: "119 incidents in 2024. Yours is scheduled for deploy day."
   tags: "microsoft,devtools"
   url: "/github/"
   sev: 4
 - name: "grok"
-  desc: "Tens of thousands of nonconsensual images. The safety fix was a paywall."
+  desc: "Tens of thousands of nonconsensual images. The safety fix was a paywall. Innovation."
   tags: "ai,llm,x"
   url: "/grok/"
   sev: 4
@@ -122,12 +122,12 @@
   url: "/jessfraz/"
   sev: 1
 - name: "jira"
-  desc: "25,000 plugins. Still can't click anything."
+  desc: "25,000 plugins. Still can't click anything. Please file a ticket."
   tags: "atlassian,saas,enterprise"
   url: "/jira/"
   sev: 5
 - name: "linear"
-  desc: "Deleted Confluence. Forgot to replace the wiki."
+  desc: "Deleted Confluence. Forgot to replace the wiki. But look at those keyboard shortcuts."
   tags: "saas,productivity"
   url: "/linear/"
   sev: 2
@@ -167,7 +167,7 @@
   url: "/nodejs/"
   sev: 3
 - name: "notion"
-  desc: "Still loading. Still no offline mode. Still can't find that page."
+  desc: "Still loading. Still no offline mode. Have you tried adding another database?"
   tags: "saas,productivity"
   url: "/notion/"
   sev: 3
@@ -197,7 +197,7 @@
   url: "/s3/"
   sev: 4
 - name: "salesforce"
-  desc: "Forty clicks to update one field. Even Salesforce people hate the UI."
+  desc: "Forty clicks to update one field. That's how you know it's enterprise."
   tags: "enterprise,saas"
   url: "/salesforce/"
   sev: 4

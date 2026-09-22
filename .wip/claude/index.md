@@ -10,7 +10,7 @@ permalink: /claude/
     <h1>Wrote this incident report. About itself.</h1>
 </div>
 <div class="content-section">
-    <p>Fix one function. Get four changed files and a beautifully written apology. Repeat.</p>
+    <p>Fix one function. Get four changed files and an apology longer than the diff.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

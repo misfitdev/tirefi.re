@@ -10,7 +10,7 @@ permalink: /salesforce/
     <h1>CRM click-ops, now with 40% more clicks</h1>
 </div>
 <div class="content-section">
-    <p>Forty clicks to update one field. Even Salesforce people hate the UI.</p>
+    <p>Forty clicks to update one field. That's how you know it's enterprise.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

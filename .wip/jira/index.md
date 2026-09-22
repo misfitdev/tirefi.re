@@ -10,7 +10,7 @@ permalink: /jira/
     <h1>The ticket outlived the sprint, the team, and the product</h1>
 </div>
 <div class="content-section">
-    <p>25,000 plugins. Still can't click anything. Assignee: someone who left.</p>
+    <p>25,000 plugins. Still can't click anything. Please file a ticket.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

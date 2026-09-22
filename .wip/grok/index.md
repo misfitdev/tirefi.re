@@ -10,7 +10,7 @@ permalink: /grok/
     <h1>Ask it anything, especially things you shouldn't</h1>
 </div>
 <div class="content-section">
-    <p>Tens of thousands of nonconsensual images. Regulators noticed. The safety fix was a paywall.</p>
+    <p>Tens of thousands of nonconsensual images. The safety fix was a paywall. Innovation.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

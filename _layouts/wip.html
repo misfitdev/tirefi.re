@@ -2197,8 +2197,8 @@
                 if (!href || href.charAt(0) === '#') return;
                 if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(href) && a.host !== location.host) return;
                 if (/^(mailto|tel):/i.test(href)) return;
-                if (a.href.indexOf('mode=') !== -1) return;
                 var url = new URL(a.href, location.href);
+                if (url.searchParams.has('mode')) return;
                 url.searchParams.set('mode', activeMode);
                 a.href = url.pathname + url.search + url.hash;
             });

@@ -10,7 +10,9 @@ permalink: /github/
     <h1>Now with more outages than a datacenter fire</h1>
 </div>
 <div class="content-section">
-    <p>119 incidents in 2024. Yours is scheduled for deploy day.</p>
+    <img src="/classic/github/github.png" alt="A very long GitHub status history listing incidents across GitHub and Copilot services." class="hero-image">
+
+    <p>Bad news: GitHub is down. Good news: GitHub status page is up!</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

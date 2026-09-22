@@ -92,7 +92,7 @@
   url: "/docker/"
   sev: 4
 - name: "github"
-  desc: "119 incidents in 2024. Yours is scheduled for deploy day."
+  desc: "Bad news: GitHub is down. Good news: GitHub status page is up!"
   tags: "microsoft,devtools"
   url: "/github/"
   sev: 4

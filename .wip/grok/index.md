@@ -10,7 +10,9 @@ permalink: /grok/
     <h1>Ask it anything, especially things you shouldn't</h1>
 </div>
 <div class="content-section">
-    <p>xAI shipped an image editor that would alter photos of real people without their consent, at a scale researchers measured in the tens of thousands. California's Attorney General opened an investigation. So did UK regulator Ofcom. Congress sent letters. xAI's fix was to put image generation behind a paywall.</p>
+    <img src="/classic/grok/grok.png" alt="A chaotic Grok control room covered with slogans opposing guardrails and connecting outrage, attention, and profit." class="hero-image">
+
+    <p>Tens of thousands of nonconsensual images. Safety rails sold separately.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>

@@ -10,7 +10,9 @@ permalink: /confluence/
     <h1>Technically accurate, practically useless</h1>
 </div>
 <div class="content-section">
-    <p>Every page has a last-edited date from 2019 and an owner who left the company in 2021. Reviewers describe the search function as "kind of a joke" — unless someone emails you the direct link, the page you need effectively doesn't exist.</p>
+    <img src="/classic/confluence/confluence.jpeg" alt="A Confluence search for error returns Nothing matches your search." class="hero-image">
+
+    <p>The page exists. Search can't find it. The owner left in 2021. Knowledge: managed.</p>
 </div>
 <div class="navigation-footer">
     <a href="/" class="nav-button">← All Disasters</a>
